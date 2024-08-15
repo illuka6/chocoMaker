@@ -41,10 +41,12 @@ function background() {
 /* ↓↓標籤列↓↓ */
 let customized = document.getElementById('customized');
 customized.addEventListener('mouseover', function () {
+
     customized.textContent = '客製化';
 });
 
 customized.addEventListener('mouseout', function () {
+
     customized.textContent = 'customized';
 });
 

@@ -79,15 +79,24 @@ body {
 }
 
 
+
 #menu_id a {
     margin: 0 24px;
     color: #6B3B20;
 }
 
+#menu_id_li a:hover {
+    color: #F1BFC1;
+}
+
 #customized {
     border: 1px solid #6B3B20;
     border-radius: 20px;
-    padding: 9px 25px 8px 25px;
+    width: 124px;
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #customized:hover {
