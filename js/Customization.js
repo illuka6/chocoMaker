@@ -41,12 +41,12 @@ function background() {
 /* ↓↓標籤列↓↓ */
 let customized = document.getElementById('customized');
 customized.addEventListener('mouseover', function () {
-
+    customized.style.color='#FFFFFF';
     customized.textContent = '客製化';
 });
 
 customized.addEventListener('mouseout', function () {
-
+    customized.style.color='#3F1A09';
     customized.textContent = 'customized';
 });
 
