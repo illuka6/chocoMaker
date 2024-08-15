@@ -109,7 +109,7 @@ body {
 #left_sidebar {
     display: flex;
     /* margin: 86px 0 0 250px; */
-    margin: 86px 100px 0 0px;
+    margin: 0px 20px 0 0px;
     position: relative;
 }
 
@@ -119,6 +119,10 @@ body {
 
 #left_sidebar_ul {
     margin-left: 2px;
+}
+
+#left_sidebar_ul li {
+    margin-bottom: 10px;
 }
 
 #left_sidebar a {
@@ -145,7 +149,7 @@ body {
     border: 0px solid #F9F4EE;
     border-radius: 0 0 20px 20px;
     position: absolute;
-    margin-left: 55px;
+    margin-left: 80px;
     display: none;
 }
 
@@ -188,7 +192,7 @@ body {
     border: 0px solid #F9F4EE;
     border-radius: 0 0 20px 20px;
     position: absolute;
-    margin-left: 55px;
+    margin-left: 80px;
     display: none;
 }
 
@@ -243,7 +247,7 @@ body {
     border: 0px solid #F9F4EE;
     border-radius: 0 0 20px 20px;
     position: absolute;
-    margin-left: 55px;
+    margin-left: 80px;
     display: none;
 }
 
@@ -294,7 +298,7 @@ body {
     border: 0px solid #F9F4EE;
     border-radius: 0 0 20px 20px;
     position: absolute;
-    margin-left: 55px;
+    margin-left: 80px;
     display: none;
 }
 
@@ -393,7 +397,7 @@ body {
     border: 0px solid #F9F4EE;
     border-radius: 0 0 20px 20px;
     position: absolute;
-    margin-left: 55px;
+    margin-left: 80px;
     display: none;
 }
 
@@ -474,11 +478,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    border: 2pX solid #444;
+    border: 0pX solid #444;
     border-radius: 20px;
     width: 1058px;
     height: 510px;
-    margin-top: 86px;
+    margin-top: 0px;
     /* background-color: #FFFFFF; */
     background-image: url(../images/Custom_block/menu-background.svg);
     /* position: relative; */
@@ -517,7 +521,7 @@ body {
 }
 
 .middle_box {
-    border: 2px solid #444;
+    border: 2px solid #DEAD9C;
     border-radius: 10px;
     width: 218px;
     height: 218px;
@@ -536,8 +540,8 @@ body {
 .right_sidebar {
     /* border: 2px solid #444; */
     /* margin-right: 250px; */
-    margin-top: 86px;
-    margin-left: 100px;
+    margin-top: 0px;
+    margin-left: 20px;
 }
 
 .right_sidebar_div {
@@ -626,6 +630,7 @@ body {
     justify-content: center;
     /* align-items: center; */
     /* justify-content: space-between; */
+    margin-bottom: 100px;
 }
 
 #Prompt_field div {
@@ -692,7 +697,7 @@ body {
     /* flex-direction: column; */
     justify-content: center;
     /* margin-top: 86px; */
-    margin-right: 100px;
+    margin-right: 20px;
     position: relative;
 }
 
@@ -882,7 +887,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    border: 2pX solid #444;
+    border: pX solid #444;
     border-radius: 20px;
     width: 1058px;
     height: 510px;
@@ -898,7 +903,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 86px;
-    margin-left: 100px;
+    margin-left: 20px;
     justify-content: end;
 }
 

@@ -64,7 +64,7 @@ left_sidebar_btn1.addEventListener('click', function () {
     background();
     left_menu[0].style.display = "block";
     left_menu_right1.style.display = 'block';
-    left_sidebar_btn1.style.backgroundImage = "url(../image/background.svg)";
+    left_sidebar_btn1.style.backgroundImage = "url(../images/Custom_block/background.svg)";
     left_sidebar_btn1.style.borderRadius = '20px 0 0 20px';
 });
 
@@ -87,7 +87,7 @@ left_sidebar_btn2.addEventListener('click', function () {
     background();
     left_menu2[0].style.display = "block";
     left_menu_right2.style.display = 'block';
-    left_sidebar_btn2.style.backgroundImage = "url(../image/background.svg)";
+    left_sidebar_btn2.style.backgroundImage = "url(../images/Custom_block/background.svg)";
     left_sidebar_btn2.style.borderRadius = '20px 0 0 20px';
 });
 
@@ -110,7 +110,7 @@ left_sidebar_btn3.addEventListener('click', function () {
     background();
     left_menu3[0].style.display = "block";
     left_menu_right3.style.display = 'block';
-    left_sidebar_btn3.style.backgroundImage = "url(../image/background.svg)";
+    left_sidebar_btn3.style.backgroundImage = "url(../images/Custom_block/background.svg)";
     left_sidebar_btn3.style.borderRadius = '20px 0 0 20px';
 });
 
@@ -133,7 +133,7 @@ left_sidebar_btn4.addEventListener('click', function () {
     background();
     left_menu4[0].style.display = "block";
     left_menu_right4.style.display = 'block';
-    left_sidebar_btn4.style.backgroundImage = "url(../image/background.svg)";
+    left_sidebar_btn4.style.backgroundImage = "url(../images/Custom_block/background.svg)";
     left_sidebar_btn4.style.borderRadius = '20px 0 0 20px';
 });
 
@@ -156,7 +156,7 @@ left_sidebar_btn5.addEventListener('click', function () {
     background();
     left_menu5[0].style.display = "block";
     left_menu_right5.style.display = 'block';
-    left_sidebar_btn5.style.backgroundImage = "url(../image/background.svg)";
+    left_sidebar_btn5.style.backgroundImage = "url(../images/Custom_block/background.svg)";
     left_sidebar_btn5.style.borderRadius = '20px 0 0 20px';
 });
 
