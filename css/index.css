@@ -301,7 +301,7 @@ position: relative;
     z-index: 2;
     background-color: var(--block_brown);
     opacity: 0.3;
-    width: 1000px;
+    width: 60vw;
     height: 400px;
     top:280px;
     left:280px;
@@ -318,20 +318,51 @@ position: relative;
     animation: spin 10s linear infinite; 
 }
 
+.class_btn{
+    position: absolute;
+    top:60vh;
+    left: 30vw;
+    width: 10vw;
+    z-index: 5;
+}
+
 .title{
-    width: 400px;
+    width: 500px;
     position: absolute;
     z-index: 4;
-    right:660px;
+    right:700px;
     top:680px;
 }
 
 .main_pic{
     position: absolute;
     z-index: 3;
-    width: 570px;
+    width: 30vw;
     right:150px;
     top:200px;
+}
+
+.text_all {
+    position: absolute;
+    top:20vh;
+    left:40vw;
+    display: flex;
+    width: 400px;
+    height: auto;
+    color: var(--text);
+    font-size: 1rem;
+    align-items: flex-start;
+    font-style: 'Noto+Sans+TC';
+    font-weight: 400;
+
+}
+.text1,.text2,.text3,.text4{
+    writing-mode: vertical-rl; /* 设置文字竖排，从右到左 */
+            text-align: start;        /* 文字居中对齐 */
+            border: 1px solid black;   /* 边框，方便查看效果 */
+            padding: 10px;             /* 内边距 */
+            height: 300px;             /* 高度，可以根据需要调整 */
+            width: 50px;             
 }
 
 #ABOUT {
