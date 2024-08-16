@@ -41,12 +41,12 @@ function background() {
 /* ↓↓標籤列↓↓ */
 let customized = document.getElementById('customized');
 customized.addEventListener('mouseover', function () {
-    customized.style.color='#FFFFFF';
+    customized.style.color = '#FFFFFF';
     customized.textContent = '客製化';
 });
 
 customized.addEventListener('mouseout', function () {
-    customized.style.color='#3F1A09';
+    customized.style.color = '#3F1A09';
     customized.textContent = 'customized';
 });
 
@@ -248,3 +248,11 @@ left_menu_img6[0].addEventListener('click', function () {
 
 
 /* 右下角顯示方塊 */
+
+
+
+/* 中間小顯示區塊 */
+let middle_box = document.getElementsByClassName('middle_box');
+middle_box[0].addEventListener('resize', () => {
+    middle_box.style.margin = '0px 500px 0px 0px';
+});
