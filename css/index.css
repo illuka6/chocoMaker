@@ -338,6 +338,7 @@ font-family: "Lucida Bright";
 }
 
 
+
 #CLASSIC {
     position: relative;
     width: 100%;
@@ -349,7 +350,7 @@ font-family: "Lucida Bright";
     background-position:center;
 }
 
-.little_bg {
+#CLASSIC .little_bg {
     position: absolute;
     z-index: 2;
     background-color: var(--block_brown);
@@ -360,7 +361,7 @@ font-family: "Lucida Bright";
     left:280px;
 }
 
-.circle_title{
+#CLASSIC .circle_title{
     position: absolute;
     z-index: 1;
     top:150px;
@@ -371,7 +372,7 @@ font-family: "Lucida Bright";
     animation: spin 10s linear infinite; 
 }
 
-.class_btn{
+#CLASSIC .class_btn{
     position: absolute;
     top:60vh;
     left: 30vw;
@@ -379,7 +380,7 @@ font-family: "Lucida Bright";
     z-index: 5;
 }
 
-.title{
+#CLASSIC .title{
     width: 500px;
     position: absolute;
     z-index: 4;
@@ -387,7 +388,7 @@ font-family: "Lucida Bright";
     top:680px;
 }
 
-.main_pic{
+#CLASSIC .main_pic{
     position: absolute;
     z-index: 3;
     width: 30vw;
@@ -395,31 +396,38 @@ font-family: "Lucida Bright";
     top:200px;
 }
 
-.text_all {
+#CLASSIC .text_all {
+    z-index: 5;
     position: absolute;
     top:20vh;
     left:40vw;
     display: flex;
     width: 400px;
-    height: auto;
+    height: 100%;
     color: var(--text);
     font-size: 1rem;
     align-items: flex-start;
-    font-family: 'Noto+Sans+TC';
-    font-weight: 500;
-    letter-spacing: 1rem;
+    font-style: 'Noto+Sans+TC';
+    font-weight: 400;
 
 }
-.text1,.text2,.text3,.text4{
+
+#CLASSIC .text1,.text2,.text3,.text4{
     writing-mode: vertical-rl; /* 设置文字竖排，从右到左 */
-            text-align: start;        /* 文字居中对齐 */
-            border: 0px solid black;   /* 边框，方便查看效果 */
+            text-align: start;        /* 文字对齐 */
+            /* border: 1px solid black;   边框，方便查看效果 */
             padding: 10px;             /* 内边距 */
             height: 100%;             /* 高度，可以根据需要调整 */
             width: 50px;             
 }
 
+#CLASSIC .text2,.text3{
+    padding-top: 3rem ;
+}
+
+
 #ABOUT {
+    position: relative;
     width: 100%;
     /* height: 100%; */
     background-image: url(../index_images/bg-w.png);
@@ -428,7 +436,80 @@ font-family: "Lucida Bright";
     background-repeat: no-repeat;
     background-position:center;
 }
+#ABOUT .main_pic{
+    position: absolute;
+    z-index: 3;
+    width: 30vw;
+    left:150px;
+    top:200px;
+}
+
+#ABOUT .main_pic{
+    position: absolute;
+    z-index: 4;
+}
+#ABOUT .title {
+    position: absolute;
+    z-index: 5;
+    width: 500px;
+    right:700px;
+    top:40vh;
+
+}
+
+#ABOUT .little_bg{
+    position: absolute;
+    z-index: 2;
+    background-color: var(--primary_pink);
+    opacity: 0.3;
+    width: 50vw;
+    height: 400px;
+    top:280px;
+    right:280px;
+    
+}
+
+#ABOUT .circle_title{
+    position: absolute;
+    z-index: 1;
+    top:150px;
+    right:150px;
+    width: 260px;
+    margin: 0 auto; /* 图片居中 */
+    display: block; /* 将图片作为块级元素 */
+    animation: spin 10s linear infinite; 
+
+}
+
+#ABOUT .text_all {
+    z-index: 5;
+    position: absolute;
+    top:30vh;
+    left:50vw;
+    display: flex;
+    width: 400px;
+    height: 100%;
+    color: var(--text);
+    font-size: 1rem;
+    align-items: flex-start;
+    font-style: 'Noto+Sans+TC';
+    font-weight: 400;
+}
+
+#ABOUT .text1,.text2,.text3,.text4,.text5{
+    writing-mode: vertical-rl; /* 设置文字竖排，从右到左 */
+            text-align: start;        /* 文字对齐 */
+            /* border: 1px solid black;   边框，方便查看效果 */
+            padding: 10px ;             /* 内边距 */
+            height: 100%;             /* 高度，可以根据需要调整 */
+            width: 50px;             
+}
+#ABOUT .text2,.text3,.text4{
+    padding-top: 3rem ;
+}
+
 #QUALITY {
+    position: relative;
     width: 100%;
     /* height: 100%; */
     background-image: url(../index_images/bg-quality.png);
@@ -437,7 +518,28 @@ font-family: "Lucida Bright";
     background-repeat: no-repeat;
     background-position:center;
 }
+/* #QULATY .section_quality {
+    padding: 5vh;
+    
+} */
+#QUALITY .bg_bottom {
+    position: absolute;
+    width: 100vh;
+    color: var(--block_brown);
+    height: 50vh;
+    top:50%;
+    z-index: 1;
+
+}
+#QUALITY .quality_banner {
+    width: 100%;
+    height: 100%;
+    padding: 5vh;
+}
+
+
 #INGREDIENT {
+    position: relative;
     width: 100%;
     /* height: 100%; */
     background-image: url(../index_images/bg-b.png);
@@ -446,6 +548,101 @@ font-family: "Lucida Bright";
     background-repeat: no-repeat;
     background-position:center;
 }
+#INGREDIENT .cn_title{
+    position: absolute;
+    z-index: 6;
+    left:80vh;
+    top:35vh;
+    font-family: Noto Serif TC;
+    color: var(--text);
+    font-weight: 600;
+    font-size: 2rem;
+}
+#INGREDIENT .title{
+    position: absolute;
+    z-index: 5;
+    width: 350px;
+    left:50vh;
+    top:20vh;
+}
+
+#INGREDIENT .pic {
+    position: absolute;
+    z-index: 4;
+    width: 30vw;
+    left: 50vh;
+
+}
+
+#INGREDIENT .box_br {
+    position: absolute;
+    z-index: 2;
+    background-color: var(--block_brown-darker);
+    opacity: 0.3;
+    width: 330px;
+    height: 330px;
+    top:240px;
+    right:280px;
+}
+
+
+
+#INGREDIENT .text_all {
+    z-index: 5;
+    position: absolute;
+    top:30vh;
+    left:70vw;
+    display: flex;
+    width: 400px;
+    height: 100%;
+    color: var(--text);
+    font-size: 1rem;
+    align-items: flex-start;
+    font-style: 'Noto+Sans+TC';
+    font-weight: 400;
+}
+
+#INGREDIENT .text1,.text2,.text3,.text4{
+    writing-mode: vertical-rl; /* 设置文字竖排，从右到左 */
+            text-align: start;        /* 文字对齐 */
+            /* border: 1px solid black;   边框，方便查看效果 */
+            padding: 10px ;             /* 内边距 */
+            height: 100%;             /* 高度，可以根据需要调整 */
+            width: 50px;             
+}
+#INGREDIENT .text1{
+    padding-top: 1.5rem ;
+}
+#INGREDIENT .text2,.text3{
+    padding-top: 3rem ;
+}
+#INGREDIENT .arch {
+    position: absolute;
+    z-index:5;
+    width: 380px;
+    /* 拱门的宽度 */
+    height: 500px;
+    /* 拱门的高度，增加底部的拉长效果 */
+    right: 15vw;
+    top:40vh;
+    
+    text-align: center;
+    background-repeat: no-repeat;
+    /* 背景颜色 */
+    border-radius: 220px 220px 0 0;
+    /* 圆角设置成拱门的顶部弧形 */
+    overflow: hidden;
+    /* 隐藏溢出的部分 */
+    margin: 10px auto;
+    /* 居中拱门 */
+    border: white solid 2px;
+    width: 300px;
+    height: 420px;
+    transform: scaleY(-1);
+
+    
+}
+
 #TASTE {
     width: 100%;
     /* height: 100%; */
@@ -455,6 +652,10 @@ font-family: "Lucida Bright";
     background-repeat: no-repeat;
     background-position:center;
 }
+/* #TASTE .{
+    background-image: url(../index_images/taste.svg);
+} */
+
 #APPERANCE {
     width: 100%;
     /* height: 100%; */
