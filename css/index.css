@@ -67,10 +67,11 @@ a {
 /* 變數 */
 :root {
     /* 字 */
-    --textdark:##3F1A09;
-    --text:#6B3B20;
-    --primary_pink:#F1BFC1;
-    --block_brown:#E1CBAA;
+    --textdark: ##3F1A09;
+    --text: #6B3B20;
+    --primary_pink: #F1BFC1;
+    --block_brown: #E1CBAA;
+    --block_brown-darker:#CCA568;
 }
 
 /* 共用區 */
@@ -136,7 +137,7 @@ a {
 }
 
 .customized-btn {
-    
+
     padding: 5px 15px;
     border: 1px solid black;
     border-radius: 20px;
@@ -168,6 +169,13 @@ section {
 
 }
 
+.text_all {
+    letter-spacing: .8rem;
+}
+.cn_title {
+    letter-spacing: .2rem;
+}
+
 #BANNER {
     width: 100%;
     /* height: 100%; */
@@ -175,64 +183,71 @@ section {
     background-size: cover;
     text-align: center;
     background-repeat: no-repeat;
-    background-position:center;
+    background-position: center;
     overflow: hidden;
 }
 
 .choc {
     position: relative;
 }
-.choc .title_white{
+
+.choc .title_white {
     position: absolute;
-    right:0.5rem;
-    top:-40vh;
+    right: 0.5rem;
+    top: -40vh;
 }
-.choc .title_br{
+
+.choc .title_br {
     position: absolute;
-    right:0.5rem;
-    top:-30vh;
+    right: 0.5rem;
+    top: -30vh;
 
 }
+
 .olate {
     position: relative;
 }
-.olate .title_white{
+
+.olate .title_white {
     position: absolute;
-    left:0.5rem;
-    top:-40vh;
+    left: 0.5rem;
+    top: -40vh;
 }
-.olate .title_br{
-    position: absolute; 
-    left:0.5rem;
-    top:-30vh;
+
+.olate .title_br {
+    position: absolute;
+    left: 0.5rem;
+    top: -30vh;
 }
 
 .banner-content {
-align-items: center;
-display: flex;
-font-family: "Lucida Bright";
+    align-items: center;
+    display: flex;
+    font-family: "Lucida Bright";
 
 }
-.banner-content .title_white{
+
+.banner-content .title_white {
     font-size: 18.2vw;
     text-align: center;
     color: white;
-    
-    
+
+
 }
-.banner-content .title_br{
+
+.banner-content .title_br {
     z-index: 2;
     font-size: 18.2vw;
     text-align: center;
     color: var(--block_brown);
-   
+
 
 }
 
 
 .banner-content .arch {
-   
-    z-index:1;
+
+    z-index: 1;
     width: 380px;
     /* 拱门的宽度 */
     height: 500px;
@@ -248,62 +263,68 @@ font-family: "Lucida Bright";
     /* 隐藏溢出的部分 */
     margin: 10px auto;
     /* 居中拱门 */
-    
+
 }
 
 
 
-.banner-content .arch_wrap{
+.banner-content .arch_wrap {
     position: relative;
-    
+
 }
 
-.banner-content .circle_text{
+.banner-content .circle_text {
     position: absolute;
     z-index: 5;
-    top:70%;
-    left:60%;
+    top: 70%;
+    left: 60%;
     width: 65%;
-    margin: 0 auto; /* 图片居中 */
-    display: block; /* 将图片作为块级元素 */
-    animation: spin 10s linear infinite; /* 启动动画 */
+    margin: 0 auto;
+    /* 图片居中 */
+    display: block;
+    /* 将图片作为块级元素 */
+    animation: spin 10s linear infinite;
+    /* 启动动画 */
 }
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
 }
 
 #CUSTOMIZED {
-    
-    
+
+
     width: 100%;
     /* height: 100%; */
     background-image: url(../index_images/bg-customized3.svg);
     background-size: cover;
     text-align: center;
     background-repeat: no-repeat;
-    background-position:center;
- 
+    background-position: center;
+
 }
 
 
 
 
-.cust_item{
+.cust_item {
     padding-top: 45vh;
     /* left:50%; */
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
-.cust_item .step{
-    
-    padding: 0 20px ;
+
+.cust_item .step {
+
+    padding: 0 20px;
 }
 
 .cust_item a {
@@ -311,11 +332,11 @@ font-family: "Lucida Bright";
 }
 
 .btn_diy {
-    
-    
+
+
     background-color: var(--primary_pink);
     width: 200px;
-    height:20vh;
+    height: 20vh;
     clip-path: polygon(10% 38%, 90% 38%, 100% 50%, 90% 62%, 10% 62%, 0% 50%);
     display: flex;
     align-items: center;
@@ -324,17 +345,17 @@ font-family: "Lucida Bright";
 }
 
 .btn_diy .btn_content {
-    position:absolute;
+    position: absolute;
     color: white;
     letter-spacing: 2px;
     font-size: 22px;
-    
+
     /* top: 50%; 
     left: 50%;
     transform: translate(-50%, -50%);  */
-    z-index:1;
+    z-index: 1;
     text-align: center;
-    
+
 }
 
 
@@ -347,7 +368,7 @@ font-family: "Lucida Bright";
     background-size: cover;
     text-align: center;
     background-repeat: no-repeat;
-    background-position:center;
+    background-position: center;
 }
 
 #CLASSIC .little_bg {
@@ -357,50 +378,52 @@ font-family: "Lucida Bright";
     opacity: 0.3;
     width: 60vw;
     height: 400px;
-    top:280px;
-    left:280px;
+    top: 280px;
+    left: 280px;
 }
 
-#CLASSIC .circle_title{
+#CLASSIC .circle_title {
     position: absolute;
     z-index: 1;
-    top:150px;
-    left:150px;
+    top: 150px;
+    left: 150px;
     width: 260px;
-    margin: 0 auto; /* 图片居中 */
-    display: block; /* 将图片作为块级元素 */
-    animation: spin 10s linear infinite; 
+    margin: 0 auto;
+    /* 图片居中 */
+    display: block;
+    /* 将图片作为块级元素 */
+    animation: spin 10s linear infinite;
 }
 
-#CLASSIC .class_btn{
+#CLASSIC .class_btn {
     position: absolute;
-    top:60vh;
+    top: 60vh;
     left: 30vw;
     width: 10vw;
     z-index: 5;
 }
 
-#CLASSIC .title{
+#CLASSIC .title {
     width: 500px;
     position: absolute;
     z-index: 4;
-    right:700px;
-    top:680px;
+    right: 700px;
+    top: 680px;
 }
 
-#CLASSIC .main_pic{
+#CLASSIC .main_pic {
     position: absolute;
     z-index: 3;
     width: 30vw;
-    right:150px;
-    top:200px;
+    right: 150px;
+    top: 200px;
 }
 
 #CLASSIC .text_all {
     z-index: 5;
     position: absolute;
-    top:20vh;
-    left:40vw;
+    top: 20vh;
+    left: 40vw;
     display: flex;
     width: 400px;
     height: 100%;
@@ -412,17 +435,25 @@ font-family: "Lucida Bright";
 
 }
 
-#CLASSIC .text1,.text2,.text3,.text4{
-    writing-mode: vertical-rl; /* 设置文字竖排，从右到左 */
-            text-align: start;        /* 文字对齐 */
-            /* border: 1px solid black;   边框，方便查看效果 */
-            padding: 10px;             /* 内边距 */
-            height: 100%;             /* 高度，可以根据需要调整 */
-            width: 50px;             
+#CLASSIC .text1,
+.text2,
+.text3,
+.text4 {
+    writing-mode: vertical-rl;
+    /* 设置文字竖排，从右到左 */
+    text-align: start;
+    /* 文字对齐 */
+    /* border: 1px solid black;   边框，方便查看效果 */
+    padding: 10px;
+    /* 内边距 */
+    height: 100%;
+    /* 高度，可以根据需要调整 */
+    width: 50px;
 }
 
-#CLASSIC .text2,.text3{
-    padding-top: 3rem ;
+#CLASSIC .text2,
+.text3 {
+    padding-top: 3rem;
 }
 
 
@@ -434,58 +465,62 @@ font-family: "Lucida Bright";
     background-size: cover;
     text-align: center;
     background-repeat: no-repeat;
-    background-position:center;
+    background-position: center;
 }
-#ABOUT .main_pic{
+
+#ABOUT .main_pic {
     position: absolute;
     z-index: 3;
     width: 30vw;
-    left:150px;
-    top:200px;
+    left: 150px;
+    top: 200px;
 }
 
-#ABOUT .main_pic{
+#ABOUT .main_pic {
     position: absolute;
     z-index: 4;
 }
+
 #ABOUT .title {
     position: absolute;
     z-index: 5;
     width: 500px;
-    right:700px;
-    top:40vh;
+    right: 700px;
+    top: 40vh;
 
 }
 
-#ABOUT .little_bg{
+#ABOUT .little_bg {
     position: absolute;
     z-index: 2;
     background-color: var(--primary_pink);
     opacity: 0.3;
     width: 50vw;
     height: 400px;
-    top:280px;
-    right:280px;
-    
+    top: 280px;
+    right: 280px;
+
 }
 
-#ABOUT .circle_title{
+#ABOUT .circle_title {
     position: absolute;
     z-index: 1;
-    top:150px;
-    right:150px;
+    top: 150px;
+    right: 150px;
     width: 260px;
-    margin: 0 auto; /* 图片居中 */
-    display: block; /* 将图片作为块级元素 */
-    animation: spin 10s linear infinite; 
+    margin: 0 auto;
+    /* 图片居中 */
+    display: block;
+    /* 将图片作为块级元素 */
+    animation: spin 10s linear infinite;
 
 }
 
 #ABOUT .text_all {
     z-index: 5;
     position: absolute;
-    top:30vh;
-    left:50vw;
+    top: 30vh;
+    left: 50vw;
     display: flex;
     width: 400px;
     height: 100%;
@@ -496,16 +531,27 @@ font-family: "Lucida Bright";
     font-weight: 400;
 }
 
-#ABOUT .text1,.text2,.text3,.text4,.text5{
-    writing-mode: vertical-rl; /* 设置文字竖排，从右到左 */
-            text-align: start;        /* 文字对齐 */
-            /* border: 1px solid black;   边框，方便查看效果 */
-            padding: 10px ;             /* 内边距 */
-            height: 100%;             /* 高度，可以根据需要调整 */
-            width: 50px;             
+#ABOUT .text1,
+.text2,
+.text3,
+.text4,
+.text5 {
+    writing-mode: vertical-rl;
+    /* 设置文字竖排，从右到左 */
+    text-align: start;
+    /* 文字对齐 */
+    /* border: 1px solid black;   边框，方便查看效果 */
+    padding: 10px;
+    /* 内边距 */
+    height: 100%;
+    /* 高度，可以根据需要调整 */
+    width: 50px;
 }
-#ABOUT .text2,.text3,.text4{
-    padding-top: 3rem ;
+
+#ABOUT .text2,
+.text3,
+.text4 {
+    padding-top: 3rem;
 }
 
 #QUALITY {
@@ -516,8 +562,9 @@ font-family: "Lucida Bright";
     background-size: cover;
     text-align: center;
     background-repeat: no-repeat;
-    background-position:center;
+    background-position: center;
 }
+
 /* #QULATY .section_quality {
     padding: 5vh;
     
@@ -527,10 +574,11 @@ font-family: "Lucida Bright";
     width: 100vh;
     color: var(--block_brown);
     height: 50vh;
-    top:50%;
+    top: 50%;
     z-index: 1;
 
 }
+
 #QUALITY .quality_banner {
     width: 100%;
     height: 100%;
@@ -546,24 +594,26 @@ font-family: "Lucida Bright";
     background-size: cover;
     text-align: center;
     background-repeat: no-repeat;
-    background-position:center;
+    background-position: center;
 }
-#INGREDIENT .cn_title{
+
+#INGREDIENT .cn_title {
     position: absolute;
     z-index: 6;
-    left:80vh;
-    top:35vh;
+    left: 80vh;
+    top: 35vh;
     font-family: Noto Serif TC;
     color: var(--text);
     font-weight: 600;
     font-size: 2rem;
 }
-#INGREDIENT .title{
+
+#INGREDIENT .title {
     position: absolute;
     z-index: 5;
     width: 350px;
-    left:50vh;
-    top:20vh;
+    left: 50vh;
+    top: 20vh;
 }
 
 #INGREDIENT .pic {
@@ -581,8 +631,8 @@ font-family: "Lucida Bright";
     opacity: 0.3;
     width: 330px;
     height: 330px;
-    top:240px;
-    right:280px;
+    top: 240px;
+    right: 280px;
 }
 
 
@@ -590,8 +640,8 @@ font-family: "Lucida Bright";
 #INGREDIENT .text_all {
     z-index: 5;
     position: absolute;
-    top:30vh;
-    left:70vw;
+    top: 30vh;
+    left: 70vw;
     display: flex;
     width: 400px;
     height: 100%;
@@ -602,30 +652,41 @@ font-family: "Lucida Bright";
     font-weight: 400;
 }
 
-#INGREDIENT .text1,.text2,.text3,.text4{
-    writing-mode: vertical-rl; /* 设置文字竖排，从右到左 */
-            text-align: start;        /* 文字对齐 */
-            /* border: 1px solid black;   边框，方便查看效果 */
-            padding: 10px ;             /* 内边距 */
-            height: 100%;             /* 高度，可以根据需要调整 */
-            width: 50px;             
+#INGREDIENT .text1,
+.text2,
+.text3,
+.text4 {
+    writing-mode: vertical-rl;
+    /* 设置文字竖排，从右到左 */
+    text-align: start;
+    /* 文字对齐 */
+    /* border: 1px solid black;   边框，方便查看效果 */
+    padding: 10px;
+    /* 内边距 */
+    height: 100%;
+    /* 高度，可以根据需要调整 */
+    width: 50px;
 }
-#INGREDIENT .text1{
-    padding-top: 1.5rem ;
+
+#INGREDIENT .text1 {
+    padding-top: 1.5rem;
 }
-#INGREDIENT .text2,.text3{
-    padding-top: 3rem ;
+
+#INGREDIENT .text2,
+.text3 {
+    padding-top: 3rem;
 }
+
 #INGREDIENT .arch {
     position: absolute;
-    z-index:5;
+    z-index: 5;
     width: 380px;
     /* 拱门的宽度 */
     height: 500px;
     /* 拱门的高度，增加底部的拉长效果 */
     right: 15vw;
-    top:40vh;
-    
+    top: 40vh;
+
     text-align: center;
     background-repeat: no-repeat;
     /* 背景颜色 */
@@ -640,28 +701,256 @@ font-family: "Lucida Bright";
     height: 420px;
     transform: scaleY(-1);
 
-    
+
 }
 
 #TASTE {
+    position: relative;
     width: 100%;
     /* height: 100%; */
     background-image: url(../index_images/bg-b.png);
     background-size: cover;
     text-align: center;
     background-repeat: no-repeat;
-    background-position:center;
+    background-position: center;
 }
+
 /* #TASTE .{
     background-image: url(../index_images/taste.svg);
 } */
+#TASTE .title {
+    position: absolute;
+    z-index: 5;
+    width: 350px;
+    right: 20vw;
+    top: 45vh;
+}
+
+#TASTE .pic {
+    position: absolute;
+    z-index: 5;
+    width: 30vw;
+    left: 60vh;
+
+}
+
+#TASTE .box_br {
+    position: absolute;
+    z-index: 5;
+    background-color: var(--block_brown-darker);
+    opacity: 0.3;
+    width: 200px;
+    height: 200px;
+    top: 300px;
+    left: 40vh;
+}
+
+#TASTE .cn_title {
+    position: absolute;
+    z-index: 6;
+    left: 40vh;
+    top: 35vh;
+    font-family: Noto Serif TC;
+    color: var(--text);
+    font-weight: 600;
+    font-size: 2rem;
+    writing-mode: vertical-rl;
+    /* 设置文字竖排，从右到左 */
+    text-align: start;
+    /* 文字对齐 */
+    height: 100%;
+    /* 高度，可以根据需要调整 */
+
+}
+
+
+#TASTE .arch {
+    position: absolute;
+    z-index: 4;
+    width: 380px;
+    /* 拱门的宽度 */
+    height: 500px;
+    /* 拱门的高度，增加底部的拉长效果 */
+    left: 30vw;
+    top: 30vh;
+
+    text-align: center;
+    background-repeat: no-repeat;
+    /* 背景颜色 */
+    border-radius: 220px 220px 0 0;
+    /* 圆角设置成拱门的顶部弧形 */
+    overflow: hidden;
+    /* 隐藏溢出的部分 */
+    margin: 10px auto;
+    /* 居中拱门 */
+    border: white solid 2px;
+    width: 300px;
+    height: 420px;
+
+
+}
+
+#TASTE .text_all {
+    z-index: 5;
+    position: absolute;
+    top: 20vh;
+    left: 30vw;
+    display: flex;
+    width: 400px;
+    height: 100%;
+    color: var(--text);
+    font-size: 1rem;
+    align-items: flex-start;
+    font-style: 'Noto+Sans+TC';
+    font-weight: 400;
+
+}
+
+#TASTE .text1,
+.text2,
+.text3,
+.text4 {
+    writing-mode: vertical-rl;
+    /* 设置文字竖排，从右到左 */
+    text-align: start;
+    /* 文字对齐 */
+    /* border: 1px solid black;   边框，方便查看效果 */
+    padding: 10px;
+    /* 内边距 */
+    height: 100%;
+    /* 高度，可以根据需要调整 */
+    width: 50px;
+}
+
+#TASTE .text2,
+.text3 {
+    padding-top: 3rem;
+}
+
+#TASTE .text4 {
+    padding-top: -3rem;
+}
 
 #APPERANCE {
+    position: relative;
     width: 100%;
     /* height: 100%; */
-    background-image: url(../index_images/bg-b.png);
+    background-image: url(../index_images/appearance--bg.jpg);
     background-size: cover;
     text-align: center;
     background-repeat: no-repeat;
-    background-position:center;
+    background-position: center;
+}
+
+#APPERANCE .title {
+    position: absolute;
+    z-index: 6;
+    width: 350px;
+    left: 20vw;
+    top: 55vh;
+}
+
+#APPERANCE .pic {
+    position: absolute;
+    z-index: 5;
+    width: 40vw;
+    left: 30vw;
+    top: 65vh;
+
+}
+
+#APPERANCE .box_br {
+    position: absolute;
+    z-index: 4;
+    background-color: var(--block_brown-darker);
+    opacity: 0.3;
+    width: 250px;
+    height: 250px;
+    top: 40vh;
+    right: 20vw;
+}
+
+#APPERANCE .cn_title {
+    position: absolute;
+    z-index: 6;
+    right: 45vh;
+    top: 20vh;
+    font-family: Noto Serif TC;
+    color: var(--text);
+    font-weight: 600;
+    font-size: 2rem;
+    writing-mode: vertical-rl;
+    /* 设置文字竖排，从右到左 */
+    text-align: start;
+    /* 文字对齐 */
+    height: 100%;
+    /* 高度，可以根据需要调整 */
+
+}
+
+
+#APPERANCE .arch {
+    position: absolute;
+    z-index: 5;
+    width: 250px;
+    /* 拱门的宽度 */
+    height: 370px;
+    /* 拱门的高度，增加底部的拉长效果 */
+    right: 35vw;
+    top: 35vh;
+
+    text-align: center;
+    background-repeat: no-repeat;
+    /* 背景颜色 */
+    border-radius: 220px 220px 0 0;
+    /* 圆角设置成拱门的顶部弧形 */
+    overflow: hidden;
+    /* 隐藏溢出的部分 */
+    margin: 10px auto;
+    /* 居中拱门 */
+    border: white solid 2px;
+ 
+
+
+}
+
+#APPERANCE .text_all {
+    z-index: 5;
+    position: absolute;
+    top: 10vh;
+    right: 20vw;
+    display: flex;
+    width: 400px;
+    height: 100%;
+    color: var(--text);
+    font-size: 1rem;
+    align-items: flex-start;
+    font-style: 'Noto+Sans+TC';
+    font-weight: 400;
+
+}
+
+#APPERANCE .text1,
+.text2,
+.text3,
+.text4,.text5 {
+    writing-mode: vertical-rl;
+    /* 设置文字竖排，从右到左 */
+    text-align: start;
+    /* 文字对齐 */
+    /* border: 1px solid black;   边框，方便查看效果 */
+    padding: 10px;
+    /* 内边距 */
+    height: 100%;
+    /* 高度，可以根据需要调整 */
+    width: 50px;
+}
+
+#APPERANCE .text2,
+.text3 {
+    padding-top: 3rem;
+}
+
+#APPERANCE .text4 {
+    padding-top: -3rem;
 }
