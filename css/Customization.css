@@ -1578,6 +1578,7 @@ body {
 #product_details_page_tab_div1_left {
     display: flex;
     flex-direction: column;
+    margin-left: 100px;
 }
 
 #product_details_page_tab_div1_left a {
@@ -1608,9 +1609,9 @@ body {
 #product_details_page_tab_div1_product_name {
     /* width: 367px;
     height: 62px; */
-    width: 100%;
+    width: 80%;
     height: auto;
-    margin-top: 36px;
+    margin-top: 18px;
     margin-left: 106px;
 }
 
@@ -1625,9 +1626,9 @@ body {
 }
 
 #product_details_page_tab_div1_product_description {
-    width: 493px;
+    width: 50%;
     height: auto;
-    margin-top: 34px;
+    margin-top: 17px;
     margin-left: 120px;
     font-size: 18px;
 }
@@ -1635,7 +1636,7 @@ body {
 #product_details_page_tab_div1_product_cash {
     width: 195px;
     height: 51px;
-    margin-top: 44px;
+    margin-top: 22px;
     margin-left: 116px;
     font-size: 36px;
 }
@@ -1643,7 +1644,7 @@ body {
 #product_details_page_tab_div1_product_increase_or_decrease {
     width: 180px;
     height: 56px;
-    margin-top: 62px;
+    margin-top: 31px;
     margin-left: 116px;
     display: flex;
     justify-content: space-between;
@@ -1673,15 +1674,15 @@ body {
 #product_details_page_tab_div1_shoopping_cart {
     width: 322px;
     height: 65px;
-    margin-top: 102px;
-    margin-left: 110px
+    margin-top: 51px;
+    margin-left: 80px
 }
 
 #product_details_page_tab_div1_give_gifts {
     width: 322px;
     height: 65px;
-    margin-top: 34px;
-    margin-left: 110px;
+    margin-top: 17px;
+    margin-left: 80px;
 }
 
 /* ↓↓第二層↓↓ */
@@ -1710,8 +1711,11 @@ body {
 }
 
 #product_details_page_tab_div3_p1 {
-    margin-left: 533px;
+    /* margin-left: 533px; */
     margin-top: 31px;
+    /* margin-right: 434px; */
+    display: flex;
+justify-content: flex-end;
 }
 
 #product_details_page_tab_div3_p1 p {
@@ -1805,7 +1809,7 @@ body {
 
 #product_details_page_tab_div6_div {
     display: flex;
-    border: 2px solid #444;
+    border: 0px solid #444;
     background-image: url(../images/Product-details-page/background.svg);
     width: 80%;
     /* height: 80%; */
@@ -1910,11 +1914,50 @@ body {
 
 
 #product_details_page_tab_div6_div_cash_outin_p1,
-#product_details_page_tab_div6_div_cash_outin_p2,
+#product_detDails_page_tab_div6_div_cash_outin_p2,
 #product_details_page_tab_div6_div_cash_outin_p3,
 #product_details_page_tab_div6_div_cash_outin_p4,
 #product_details_page_tab_div6_div_cash_outin_p5 {
     display: flex;
     margin-bottom: 5px;
     margin-left: 25px;
+}
+
+/* 第六層 */
+
+#product_details_page_tab_div7 {
+    display: flex;
+    justify-content: center;
+}
+
+#product_details_page_tab_div7_p {
+    font-size: 44px;
+    margin: 81px 0 162px 0;
+}
+
+/* 第七層 */
+
+#product_details_page_tab_div8 {
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+    width: 100%;
+    height: auto;
+}
+
+#product_details_page_tab_div9 {
+    display: flex;
+    margin: 0 189px;
+}
+
+#product_details_page_tab_div9_img1,
+#product_details_page_tab_div9_img2,
+#product_details_page_tab_div9_img3 {
+    display: flex;
+    width: 50%;
+    height: auto;
+}
+
+#product_details_page_tab_div9_img2 {
+    margin: 0 176px;
 }
