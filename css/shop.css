@@ -178,12 +178,6 @@ ul.drop-down-menu li:hover>ul {
 
 
 
-.box__list img {
-    object-fit: cover;
-    /* 自動剪裁 尺寸適應外框 */
-    /* width: 100%; 共用區已設定 */
-    height: 100%;
-}
 
 
 .items_list {
@@ -198,6 +192,7 @@ ul.drop-down-menu li:hover>ul {
 }
 
 .item {
+    position: relative;
     flex: 1 1 calc(33.333% - 20px);
     /* 每行顯示 3 個項目，並考慮間隙 */
     box-sizing: border-box;
@@ -207,11 +202,31 @@ ul.drop-down-menu li:hover>ul {
 }
 
 
-
-.item_pic.box {
-    height: 20vh;
-    width: auto;
+.item .new_tag {
+    z-index: 99;
+position: absolute;
+width:24%;
+height: auto;
+top:55px;
 }
+
+.item_pic {
+   
+    overflow: hidden; /* 隱藏超出容器的部分 */
+}
+
+.item_pic img {
+    display: block; /* 去除底部的空白間隙 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 確保圖片覆蓋整個容器 */
+    transition: transform 0.3s ease; /* 平滑的縮放過渡效果 */
+}
+
+.item:hover .item_pic img {
+    transform: scale(1.1); /* 放大圖片到原來的 110% */
+}
+
 
 .item_name {
     font-weight: 600;
