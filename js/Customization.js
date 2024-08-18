@@ -181,12 +181,18 @@ let middle_img1 = document.getElementsByClassName('middle_img1');
 let middle_img2 = document.getElementsByClassName('middle_img2');
 let middle_img3 = document.getElementsByClassName('middle_img3');
 let middle_img4 = document.getElementsByClassName('middle_img4');
+let middle_img5 = document.getElementsByClassName('middle_img5');
+let middle_img6 = document.getElementsByClassName('middle_img6');
+let middle_img7 = document.getElementsByClassName('middle_img7');
 
 function middle_img_none() {
     middle_img1[0].style.display = 'none';
     middle_img2[0].style.display = 'none';
     middle_img3[0].style.display = 'none';
     middle_img4[0].style.display = 'none';
+    middle_img5[0].style.display = 'none';
+    middle_img6[0].style.display = 'none';
+    middle_img7[0].style.display = 'none';
 };
 
 /* ↑↑圖片顯示區塊↑↑ */
@@ -247,6 +253,44 @@ left_menu_img6[0].addEventListener('click', function () {
 /* ↑↑口味選擇共用區塊↑↑ */
 
 
+/* ↓↓模板選擇區塊↓↓ */
+
+/* ↓↓第一個選擇↓↓ */
+
+let left_menu4_img_a1 = document.getElementById('left_menu4_img_a1');
+
+left_menu4_img_a1.addEventListener('click', function () {
+    middle_img_none();
+    middle_img5[0].style.display = "block";
+});
+
+/* ↑↑第一個選擇↑↑ */
+
+/* ↓↓第二個選擇↓↓ */
+
+let left_menu4_img_a2 = document.getElementById('left_menu4_img_a2');
+
+left_menu4_img_a2.addEventListener('click', function () {
+    middle_img_none();
+    middle_img6[0].style.display = "block";
+});
+
+/* ↑↑第二個選擇↑↑ */
+
+/* ↓↓第三個選擇↓↓ */
+
+let left_menu4_img_a3 = document.getElementById('left_menu4_img_a3');
+
+left_menu4_img_a3.addEventListener('click', function () {
+    middle_img_none();
+    middle_img7[0].style.display = "block";
+});
+
+/* ↑↑第三個選擇↑↑ */
+
+
+
+
 /* 右下角顯示方塊 */
 
 
@@ -258,6 +302,8 @@ left_menu_img6[0].addEventListener('click', function () {
 //     middle_box.style.margin = '0px 500px 0px 0px';
 // });
 // left_menu = document.getElementsByClassName{'letf_menu'};
+
+/* 客製化第一頁的左邊選擇欄位 */
 let menu_below = document.getElementById('menu_below');
 let left_sidebar = document.getElementById('left_sidebar');
 let oldWidth = window.innerWidth;
@@ -266,8 +312,22 @@ window.addEventListener('resize', () => {
     // let allWidth = oldWidth - newWidth;
     // menu_below.style.left = window_width * 0.1 + 'px';
     // left_menu[0].style.right = allWidth + 'px';
-    left_menu[0].style.left = (left_sidebar.offsetWidth) + "px";
     // allWidth = newWidth;
     // let left_sidebar_left = left_sidebar[0].getBoundingClientRect().left;
     // left_menu[0].style.left = left_sidebar_left + 'px';
-}); 
+    left_menu[0].style.left = (left_sidebar.offsetWidth) + "px";
+    left_menu2[0].style.left = (left_sidebar.offsetWidth) + "px";
+    left_menu3[0].style.left = (left_sidebar.offsetWidth) + "px";
+    left_menu4[0].style.left = (left_sidebar.offsetWidth) + "px";
+    left_menu5[0].style.left = (left_sidebar.offsetWidth) + "px";
+});
+
+
+
+/* 客製化第一頁的中間小框框顯示區 */
+// let all = document.getElementById('all');
+// let middle = document.getElementsByClassName('middle')[0];
+// let middle_box = document.getElementsByClassName('middle_box')[0];
+// window.addEventListener('resize', () => {
+//     middle_box.style.right = (middle.offsetWidth) + 'px';
+// });
