@@ -164,6 +164,7 @@ body {
     position: absolute;
     /* margin-left: 80px; */
     left: 80px;
+    z-index: 1;
     display: none;
 }
 
@@ -209,8 +210,10 @@ body {
     border: 0px solid #F9F4EE;
     border-radius: 20px 0 20px 20px;
     position: absolute;
-    margin-left: 80px;
+    /* margin-left: 80px; */
+    left: 80px;
     display: none;
+    z-index: 1;
 }
 
 .left_menu2_div2 {
@@ -269,9 +272,11 @@ body {
     border: 0px solid #F9F4EE;
     border-radius: 20px 0 20px 20px;
     position: absolute;
-    margin-left: 80px;
+    /* margin-left: 80px; */
+    left: 80px;
     display: none;
     overflow: hidden;
+    z-index: 1;
 }
 
 .left_menu3_p {
@@ -293,6 +298,7 @@ body {
     height: 40px;
     border: 2px solid #ECDCC6;
     border-radius: 5px;
+    padding: 8px;
 }
 
 .left_menu3_p2 {
@@ -366,8 +372,10 @@ body {
     border: 0px solid #F9F4EE;
     border-radius: 20px 0 20px 20px;
     position: absolute;
-    margin-left: 80px;
+    /* margin-left: 80px; */
+    left: 80px;
     display: none;
+    z-index: 1;
 }
 
 .left_menu4_p {
@@ -388,6 +396,7 @@ body {
     height: 40px;
     border: 2px solid #ECDCC6;
     border-radius: 5px;
+    padding: 2px 0 2px 4px;
 }
 
 .left_menu4_search_p {
@@ -475,8 +484,10 @@ body {
     border: 0px solid #F9F4EE;
     border-radius: 20px 0 20px 20px;
     position: absolute;
-    margin-left: 80px;
+    /* margin-left: 80px; */
+    left: 80px;
     display: none;
+    z-index: 1;
 }
 
 .left_menu5_p {
@@ -561,18 +572,18 @@ body {
     border-radius: 20px;
     width: 1058px;
     height: 510px;
-    margin-top: 0px;
+    /* margin-top: 0px; */
     /* background-color: #FFFFFF; */
     background-image: url(../images/Custom_block/menu-background.svg);
-    /* position: relative; */
+    position: relative;
 }
 
-@media(max-width:1100px) {
+/* @media(max-width:1100px) {
     .middle {
         width: 800px;
-        /* height: auto; */
+        height: auto;
     }
-}
+} */
 
 .middle_img1 {
     width: 520px;
@@ -606,17 +617,42 @@ body {
     display: none;
 }
 
+.middle_img5 {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+
+.middle_img6 {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+
+.middle_img7 {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+
 .middle_box {
     border: 2px solid #DEAD9C;
     border-radius: 10px;
     width: 218px;
     height: 218px;
     position: absolute;
-    /* right: 10px; */
-    /* bottom: 0; */
-    /* margin-right: 70px; */
-    margin-bottom: 20px;
-    margin-left: 730px;
+    /* margin-right: 20px; */
+    /* margin-left: 750px;
+    margin-bottom: 20px; */
+    position: absolute;
+    right: 69px;
+    bottom: 19px;
 }
 
 @media(max-width:1100px) {
@@ -1716,7 +1752,7 @@ body {
     margin-top: 31px;
     /* margin-right: 434px; */
     display: flex;
-justify-content: flex-end;
+    justify-content: flex-end;
 }
 
 #product_details_page_tab_div3_p1 p {
@@ -1977,6 +2013,7 @@ footer {
     align-items: center;
 
 }
+
 footer .wrap {
     width: 80vw;
     display: flex;
@@ -2002,49 +2039,57 @@ footer .logo {
     justify-content: space-between;
     font-size: 0.8rem;
 }
+
 .bottom_nav .menu li {
     padding: 1.2vw;
 }
 
-.bottom_nav .menu li a{
+.bottom_nav .menu li a {
     color: white;
 }
+
 .icon {
     background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 120px;;
-    
+    width: 120px;
+    ;
+
 }
 
 .icon a {
     width: 30px;
     height: 30px;
-    
-    
+
+
 }
 
 .icon .fb {
     background-image: url(../images/footer_icon_fb.svg);
-    background-position: center; /* 置中背景圖片 */
-    background-size: cover; /* 背景圖片填滿整個元素 */
-    background-repeat: no-repeat; /
-
+    background-position: center;
+    /* 置中背景圖片 */
+    background-size: cover;
+    /* 背景圖片填滿整個元素 */
+    background-repeat: no-repeat;/
 }
 
 .icon .ig {
     background-image: url(../images/footer_icon_ig.svg);
-    background-position: center; /* 置中背景圖片 */
-    background-size: cover; /* 背景圖片填滿整個元素 */
-    background-repeat: no-repeat; /
+    background-position: center;
+    /* 置中背景圖片 */
+    background-size: cover;
+    /* 背景圖片填滿整個元素 */
+    background-repeat: no-repeat;/
 }
 
 .icon .x {
     background-image: url(../images/footer_icon_x.svg);
-    background-position: center; /* 置中背景圖片 */
-    background-size: cover; /* 背景圖片填滿整個元素 */
-    background-repeat: no-repeat; /
+    background-position: center;
+    /* 置中背景圖片 */
+    background-size: cover;
+    /* 背景圖片填滿整個元素 */
+    background-repeat: no-repeat;/
 }
 
 .copyRight {
