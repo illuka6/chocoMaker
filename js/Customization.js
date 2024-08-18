@@ -166,6 +166,8 @@ left_menu_right5.addEventListener('click', function () {
     left_sidebar_btn5.style.backgroundImage = "url('')";
 });
 
+
+
 /* ↑↑左邊側邊欄位(文字區塊顯示器)↑↑ */
 
 
@@ -331,3 +333,13 @@ window.addEventListener('resize', () => {
 // window.addEventListener('resize', () => {
 //     middle_box.style.right = (middle.offsetWidth) + 'px';
 // });
+
+
+
+/* 拖曳功能區塊 */
+let middle_box_box = document.getElementById("middle_box_box");
+
+middle_box_box.addEventListener('dragstart', () => {
+
+    
+ });
