@@ -251,8 +251,23 @@ left_menu_img6[0].addEventListener('click', function () {
 
 
 
+
 /* 中間小顯示區塊 */
-let middle_box = document.getElementsByClassName('middle_box');
-middle_box[0].addEventListener('resize', () => {
-    middle_box.style.margin = '0px 500px 0px 0px';
-});
+// let middle_box = document.getElementsByClassName('middle_box');
+// middle_box[0].addEventListener('resize', () => {
+//     middle_box.style.margin = '0px 500px 0px 0px';
+// });
+// left_menu = document.getElementsByClassName{'letf_menu'};
+let menu_below = document.getElementById('menu_below');
+let left_sidebar = document.getElementById('left_sidebar');
+let oldWidth = window.innerWidth;
+window.addEventListener('resize', () => {
+    // let newWidth = window.innerWidth;
+    // let allWidth = oldWidth - newWidth;
+    // menu_below.style.left = window_width * 0.1 + 'px';
+    // left_menu[0].style.right = allWidth + 'px';
+    left_menu[0].style.left = (left_sidebar.offsetWidth) + "px";
+    // allWidth = newWidth;
+    // let left_sidebar_left = left_sidebar[0].getBoundingClientRect().left;
+    // left_menu[0].style.left = left_sidebar_left + 'px';
+}); 
