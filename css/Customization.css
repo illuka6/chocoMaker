@@ -1962,3 +1962,93 @@ justify-content: flex-end;
 #product_details_page_tab_div9_img2 {
     margin: 0 176px;
 }
+
+/* 第八層fooder */
+
+
+
+footer {
+    width: 100%;
+    background-image: url(../images/foot--bg.svg);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+footer .wrap {
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottom_nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 20px;
+}
+
+footer .logo {
+    width: 120px;
+}
+
+.bottom_nav .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+.bottom_nav .menu li {
+    padding: 1.2vw;
+}
+
+.bottom_nav .menu li a{
+    color: white;
+}
+.icon {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;;
+    
+}
+
+.icon a {
+    width: 30px;
+    height: 30px;
+    
+    
+}
+
+.icon .fb {
+    background-image: url(../images/footer_icon_fb.svg);
+    background-position: center; /* 置中背景圖片 */
+    background-size: cover; /* 背景圖片填滿整個元素 */
+    background-repeat: no-repeat; /
+
+}
+
+.icon .ig {
+    background-image: url(../images/footer_icon_ig.svg);
+    background-position: center; /* 置中背景圖片 */
+    background-size: cover; /* 背景圖片填滿整個元素 */
+    background-repeat: no-repeat; /
+}
+
+.icon .x {
+    background-image: url(../images/footer_icon_x.svg);
+    background-position: center; /* 置中背景圖片 */
+    background-size: cover; /* 背景圖片填滿整個元素 */
+    background-repeat: no-repeat; /
+}
+
+.copyRight {
+    color: white;
+    font-family: "Noto Serif TC", "Noto Serif TC", serif;
+    padding: 20px 0;
+}
