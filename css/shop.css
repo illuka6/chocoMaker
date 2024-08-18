@@ -190,13 +190,16 @@ ul.drop-down-menu li:hover>ul {
     height: 100%;
     /* align-content:flex-start; */
 }
-
-.item {
-    position: relative;
+.item_wrap{
     flex: 1 1 calc(33.333% - 20px);
     /* 每行顯示 3 個項目，並考慮間隙 */
     box-sizing: border-box;
     padding: 40px;
+}
+
+.item {
+    position: relative;
+    
     text-align: start;
     min-width: 200px;
 }
@@ -207,7 +210,7 @@ ul.drop-down-menu li:hover>ul {
 position: absolute;
 width:24%;
 height: auto;
-top:55px;
+top:15px;
 }
 
 .item_pic {
@@ -220,11 +223,11 @@ top:55px;
     width: 100%;
     height: 100%;
     object-fit: cover; /* 確保圖片覆蓋整個容器 */
-    transition: transform 0.3s ease; /* 平滑的縮放過渡效果 */
+    transition: transform 0.4s ease-in-out; /* 平滑的縮放過渡效果 */
 }
 
 .item:hover .item_pic img {
-    transform: scale(1.1); /* 放大圖片到原來的 110% */
+    transform: scale(1.06); /* 放大圖片到原來的 110% */
 }
 
 
