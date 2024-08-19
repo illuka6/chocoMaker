@@ -166,6 +166,8 @@ left_menu_right5.addEventListener('click', function () {
     left_sidebar_btn5.style.backgroundImage = "url('')";
 });
 
+
+
 /* ↑↑左邊側邊欄位(文字區塊顯示器)↑↑ */
 
 
@@ -331,3 +333,42 @@ window.addEventListener('resize', () => {
 // window.addEventListener('resize', () => {
 //     middle_box.style.right = (middle.offsetWidth) + 'px';
 // });
+
+
+
+/* 拖曳功能區塊 */
+
+/* 拖曳開始 */
+let middle_div1 = document.getElementById("middle_div1");
+let left_menu4_img1 = document.getElementById('left_menu4_img1');
+left_menu4_img1.addEventListener('dragstart', () => {
+    left_menu4_img1.style.border = '2px solid #444';
+});
+
+/* 拖曳開始(進階用法) */
+left_menu4_img1.addEventListener('drag', () => {
+    left_menu4_img1.style.border = '2px solid #444';
+    middle_div1.style.border = '2px solid #444';
+});
+
+
+
+/* 拖曳結束 */
+left_menu4_img1.addEventListener('dragend', () => {
+    left_menu4_img1.style.border = "none";
+    middle_div1.style.border = 'none';
+});
+
+
+/* 拖曳進去目標時 */
+
+// left_menu4_img1.addEventListener('dragenter', () => {
+//     middle_div1.style.border = '2px solid #444';
+// });
+
+
+/* 讓圖片進去目標區域 */
+middle_div1.addEventListener('drag', () => {
+    img.src = 'img:src(./images/Custom_block/left menu/third floor/Ellipse 5.svg';
+    middle_div1.appendChild(img);
+});
