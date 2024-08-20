@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/Q&A.css">
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+    <title>Q&A</title>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <section className="QnA">
+            <div className="QAbox">
+                <div id="root"></div>
+                <script type="text/babel">
+
+                    function QnA(props) {
+                        return (
+
+                            <div className="per_qna_block">
+                                <div className="question" >
+                                    <a ><div className="ballwrap"><div className="pinkball"></div></div>{props.question}<div class="down_vector"></div></a>
+                                </div>
+                                <div className="ans" >{props.ans}</div>
+                            </div>
+
+
+                        )
+                    };
+
+
+                    const App = () => {
+                        const qnas = [
+                            {
+                                id: 1,
+                                question: '可以為特殊活動（如婚禮或企業活動）製作特別設計的巧克力嗎？',
+                                ans: '是的，我們可以為各種特殊活動提供特別設計的巧克力。無論是婚禮、生日派對還是其他慶祝場合，我們都能根據您的需求創作獨一無二的巧克力產品。同時我們 提供多種設計選項，包括在巧克力上印製文字、裝飾，並可以選擇多種形狀和口味。此外，我們還提供個性化的包裝服務，確保您的巧克力禮品既美觀又具紀念意義。無論您的活動規模大小，我們都能為您量身定制，提供高品質的巧克力產品來增添活動的亮點。',
+                            },
+                            {
+                                id: 2,
+                                question: '可以為特殊活動（如婚禮或企業活動）製作特別設計的巧克力嗎？',
+                                ans: '是的，我們可以為各種特殊活動提供特別設計的巧克力。無論是婚禮、生日派對還是其他慶祝場合，我們都能根據您的需求創作獨一無二的巧克力產品。同時我們 提供多種設計選項，包括在巧克力上印製文字、裝飾，並可以選擇多種形狀和口味。此外，我們還提供個性化的包裝服務，確保您的巧克力禮品既美觀又具紀念意義。無論您的活動規模大小，我們都能為您量身定制，提供高品質的巧克力產品來增添活動的亮點。',
+
+                            },
+                            {
+                                id: 3,
+                                question: '可以為特殊活動（如婚禮或企業活動）製作特別設計的巧克力嗎？',
+                                ans: '是的，我們可以為各種特殊活動提供特別設計的巧克力。無論是婚禮、生日派對還是其他慶祝場合，我們都能根據您的需求創作獨一無二的巧克力產品。同時我們 提供多種設計選項，包括在巧克力上印製文字、裝飾，並可以選擇多種形狀和口味。此外，我們還提供個性化的包裝服務，確保您的巧克力禮品既美觀又具紀念意義。無論您的活動規模大小，我們都能為您量身定制，提供高品質的巧克力產品來增添活動的亮點。',
+
+                            }
+                        ]
+
+                        React.useEffect(() => {
+                            toggleDropdown('question', 'ans');
+                        }, []); // 确保 toggleDropdown 在组件渲染后调用
+
+
+                        return (
+                            <>
+                                {qnas.map((item) => {
+                                    return (
+                                        <QnA key={item.id} question={item.question} ans={item.ans} />
+                                    )
+                                })
+                                }
+
+                            </>)
+                    }
+                    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+
+                </script>
+            </div>
+           
+             
+        </section>
+    </main>
+    <footer>
+        <div class="wrap">
+            <a class="logo" href="#"><img src="./images/footer_logo.svg" alt=""></a>
+            <div class="bottom_nav">
+                <ul class="menu">
+                    <li><a href="./index.html" id="home">首頁</a></li>
+                    <li><a href="#" id="news">最新消息</a></li>
+                    <li><a href="./shop.html" id="shop">商品一覽</a></li>
+                    <li><a href="#" id="about">關於我們</a></li>
+                    <li><a href="#" id="Q&A">Q&A</a></li>
+                    <li><a href="#" id="shopping_car">購物車</a></li>
+                    <li><a href="#" id="member">會員專區</a></li>
+                </ul>
+            </div>
+            <div class="icon">
+                <a class="fb" href="#"></a>
+                <a class="ig" href="#"></a>
+                <a class="x" href="#"></a>
+            </div>
+        </div>
+        <div class="copyRight">© Mélange. All Rights Reserved.</div>
+    </footer>
+
+    <script src="./js/Q&A.js"></script>
+</body>
+
+</html>

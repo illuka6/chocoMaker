@@ -171,10 +171,12 @@ section {
 
 .text_all {
     letter-spacing: .8rem;
+    font-weight: bold;
 }
 .cn_title {
     letter-spacing: .2rem;
 }
+
 
 #BANNER {
     width: 100%;
@@ -189,6 +191,7 @@ section {
 
 .choc {
     position: relative;
+    width: 100%;
 }
 
 .choc .title_white {
@@ -371,6 +374,14 @@ section {
     background-position: center;
 }
 
+.section_classic{
+    display: flex;
+    width: 100%;
+}
+
+.classic_left{
+    position: relative;
+}
 #CLASSIC .little_bg {
     position: absolute;
     z-index: 2;
@@ -378,52 +389,39 @@ section {
     opacity: 0.3;
     width: 60vw;
     height: 400px;
-    top: 280px;
-    left: 280px;
+    top:;
+    left:;
 }
 
 #CLASSIC .circle_title {
     position: absolute;
     z-index: 1;
-    top: 150px;
-    left: 150px;
-    width: 260px;
+    top: ;
+    left: ;
+    width: 16%;
     margin: 0 auto;
     /* 图片居中 */
     display: block;
     /* 将图片作为块级元素 */
     animation: spin 10s linear infinite;
+    width: ;
 }
 
 #CLASSIC .class_btn {
     position: absolute;
-    top: 60vh;
-    left: 30vw;
+    top: ;
+    left: ;
     width: 10vw;
     z-index: 5;
 }
 
-#CLASSIC .title {
-    width: 30%;
-    position: absolute;
-    z-index: 4;
-    right: 38vw;
-    top: 74vh;
-}
 
-#CLASSIC .main_pic {
-    position: absolute;
-    z-index: 3;
-    width: 30vw;
-    right: 10vw;
-    top: 200px;
-}
 
 #CLASSIC .text_all {
     z-index: 5;
     position: absolute;
-    top: 20vh;
-    left: 40vw;
+    top: ;
+    left: ;
     display: flex;
     width: 400px;
     height: 100%;
@@ -456,6 +454,25 @@ section {
     padding-top: 3rem;
 }
 
+.class_right{
+    position: relative;
+}
+
+#CLASSIC .title {
+    width: 30%;
+    position: absolute;
+    z-index: 4;
+    right: ;
+    top: ;
+}
+
+#CLASSIC .main_pic {
+    position: absolute;
+    z-index: 3;
+    width: 30vw;
+    right: ;
+    top: ;
+}
 
 #ABOUT {
     position: relative;
@@ -839,7 +856,7 @@ section {
     background-size: cover;
     text-align: center;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
 }
 
 #APPERANCE .title {
@@ -953,4 +970,8 @@ section {
 
 #APPERANCE .text4 {
     padding-top: -3rem;
+}
+
+.bg_bottom {
+    
 }
