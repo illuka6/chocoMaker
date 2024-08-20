@@ -1,0 +1,244 @@
+
+@charset "UTF-8";
+/*UTF-8 一定要在行數1 */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&Noto+Sans+TC+Noto+Serif+TC:wght@100..900&display=swap');
+
+/* @import只允許@charset在上面 註解行也會影響*/
+@font-face {
+    font-family: "Gary Downley Script";
+    src: url(../webfonts/GaryDownleyScript_PERSONAL_USE_ONLY.otf)
+}
+
+/*如果有套其他css框架 就不用reset免得出錯 */
+
+/* 重置所有標籤的樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* 不累加內距與邊框 */
+}
+
+/* 重置字體 */
+body {
+    font-family:
+        /*西文*/
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+        /*中文*/
+        "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+    /* 字體 英文先寫中文後 中文字體設定中英字體名都寫最保險 */
+    font-size: 100%;
+    line-height: 1.5;
+    /* background-color: #8f6b6d; */
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+/* 重置列表 */
+ul,
+ol {
+    list-style: none;
+}
+
+/* 重置圖片 */
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 重置連接 */
+a {
+    /* 預設inline改為block block才能支援尺寸設定*/
+    display: block;
+    /* 常設a為display:block  但若有文字超連結*/
+    text-decoration: none;
+    color: var(--deep);
+}
+
+/* 變數 */
+:root {
+    /* 字 */
+    --textdark: ##3F1A09;
+    --text: #6B3B20;
+    --primary_pink: #F1BFC1;
+    --block_brown: #E1CBAA;
+}
+
+
+/* 以下共用區 */
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+    width: 100vw;
+    /* RWD語法 */
+    /* 用vh 不要用vw不好控制 */
+    padding: 80px;
+
+}
+
+
+.QAbox{
+    height: 100vh; 
+    width: 90vw;
+    display: flex;
+    /* flex-direction: column; */
+    background-color: #ffa61f;
+    padding:100px;
+    margin: 20px;
+    border:var(--block_brown)  solid 3px ;
+    
+}
+
+.per_qna_block{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-color: rgb(250, 233, 252);
+    
+    padding:0px 50px;
+    
+}
+
+.question{    
+    font-size: 1rem;
+    color: #6B3B20;
+    font-weight: bold;
+    border-bottom: var(--block_brown) solid 3px ;
+    padding:18px 10px 0 0 ;
+    
+
+}
+.question a { display: flex;
+    align-items: center;
+    
+}
+.pinkball{
+    width: 0.8rem;         /* 圆形的直径 */
+    height: 0.8rem;        /* 圆形的直径 */
+    border-radius: 50%; /* 使元素的边角圆润，形成圆形 */
+    background-color: var(--primary_pink); /* 圆形的背景色，可以根据需要调整 */
+
+}
+.ballwrap{
+    padding: 0 12px 0 0 ;
+}
+
+.ans{
+    font-size: 0.9rem;
+    color: #6B3B20;
+    font-weight: bold;
+    padding: 15px;
+}
+
+
+/* 以下footer */
+footer {
+    display: none;
+    width: 100%;
+    background-image: url(../images/foot--bg.svg);
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer .wrap {
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottom_nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 20px;
+}
+
+footer .logo {
+    width: 120px;
+}
+
+.bottom_nav .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+
+.bottom_nav .menu li {
+    padding: 1.2vw;
+}
+
+.icon {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+    ;
+
+}
+
+.icon a {
+    width: 30px;
+    height: 30px;
+
+
+}
+
+.icon .fb {
+    background-image: url(../images/footer_icon_fb.svg);
+    background-position: center;
+    /* 置中背景圖片 */
+    background-size: cover;
+    /* 背景圖片填滿整個元素 */
+    background-repeat: no-repeat;/
+}
+
+.icon .ig {
+    background-image: url(../images/footer_icon_ig.svg);
+    background-position: center;
+    /* 置中背景圖片 */
+    background-size: cover;
+    /* 背景圖片填滿整個元素 */
+    background-repeat: no-repeat;/
+}
+
+.icon .x {
+    background-image: url(../images/footer_icon_x.svg);
+    background-position: center;
+    /* 置中背景圖片 */
+    background-size: cover;
+    /* 背景圖片填滿整個元素 */
+    background-repeat: no-repeat;/
+}
+
+.copyRight {
+    color: white;
+    font-family: "Noto Serif TC", "Noto Serif TC", serif;
+    padding: 20px 0;
+}
+
+iframe {
+    width: 100%;
+}
