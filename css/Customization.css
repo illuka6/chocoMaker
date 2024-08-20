@@ -561,7 +561,7 @@ body {
     max-width: 39px;
     max-height: 66px;
     position: absolute;
-    right: -37px;
+    right: -370px;
     top: 0px;
     display: none;
     z-index: 1;
@@ -630,7 +630,7 @@ body {
 #middle_div1_box_div6 {
     width: 75px;
     height: 115px;
-    border: 2px solid yellow;
+    border: 0px solid yellow;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
