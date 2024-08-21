@@ -82,21 +82,21 @@ let imgs = [
 
 for (let i = 0; i < imgs.length; i++) {
     imgs[i].addEventListener('dragstart', (e) => {
-        middle_div1_box_div1.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
-        middle_div1_box_div2.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
-        middle_div1_box_div3.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
-        middle_div1_box_div4.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
-        middle_div1_box_div5.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
-        middle_div1_box_div6.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
-        middle_div1_box_div7.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
-        middle_div1_box_div8.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
-        middle_div1_box_div9.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
-        middle_div1_box_div10.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
-        middle_div1_box_div11.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
-        middle_div1_box_div12.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
-        middle_div1_box_div13.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
-        middle_div1_box_div14.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
-        middle_div1_box_div15.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
+        middle_div1_box_div1.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div2.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div3.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div4.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div5.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div6.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div7.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div8.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div9.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div10.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div11.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div12.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div13.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div14.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div15.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
         // imgs[i].style.border='2px solid #444';
         // imgs[i].style.backgroundColor = '#444';
         // imgs[i].style.borderRadius = '12px    ';
@@ -203,12 +203,15 @@ for (let i = 0; i < imgs.length; i++) {
             console.log('在範圍內2');
             // let img = document.getElementById('left_menu4_img1');
             // img.src = './images/Custom_block/Ellipse 5.svg';
-            let imgsClone = imgs[i].cloneNode(true);
-            // imgsClone.style.position = 'absolute';
-            // imgsClone.style.zIndex = i + 1;
-
-            middle_div1_box_div1.appendChild(imgsClone);
-            middle_div1_box_div1.style.border = '0px solid #999'
+            if (middle_div1_box_div1.childElementCount < 2) {
+                let imgsClone = imgs[i].cloneNode(true);
+                // imgsClone.style.position = 'absolute';
+                // imgsClone.style.zIndex = i + 1;
+                middle_div1_box_div1.appendChild(imgsClone);
+                middle_div1_box_div1.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限')
+            }
         } else {
             console.log('不在盒子內2');
             console.log('不在範圍內2');
@@ -227,9 +230,13 @@ for (let i = 0; i < imgs.length; i++) {
             console.log('在範圍內2');
             // let img = document.getElementById('left_menu4_img1');
             // img.src = './images/Custom_block/Ellipse 5.svg';
-            let imgsClone = imgs[i].cloneNode(true);
-            middle_div1_box_div1.appendChild(imgsClone);
-            middle_div1_box_div1.style.border = '0px solid #999'
+            if (middle_div1_box_div2.childElementCount < 2) {
+                let imgsClone = imgs[i].cloneNode(true);
+                middle_div1_box_div1.appendChild(imgsClone);
+                middle_div1_box_div1.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限')
+            }
         } else {
             console.log('不在盒子內2');
             console.log('不在範圍內2');
@@ -248,9 +255,13 @@ for (let i = 0; i < imgs.length; i++) {
             console.log('在範圍內2');
             // let img = document.getElementById('left_menu4_img1');
             // img.src = './images/Custom_block/Ellipse 5.svg';
-            let imgsClone = imgs[i].cloneNode(true);
-            middle_div1_box_div3.appendChild(imgsClone);
-            middle_div1_box_div3.style.border = '0px solid #999'
+            if (middle_div1_box_div3.childElementCount < 2) {
+                let imgsClone = imgs[i].cloneNode(true);
+                middle_div1_box_div3.appendChild(imgsClone);
+                middle_div1_box_div3.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限')
+            }
         } else {
             console.log('不在盒子內2');
             console.log('不在範圍內2');
@@ -269,9 +280,13 @@ for (let i = 0; i < imgs.length; i++) {
             console.log('在範圍內2');
             // let img = document.getElementById('left_menu4_img1');
             // img.src = './images/Custom_block/Ellipse 5.svg';
-            let imgsClone = imgs[i].cloneNode(true);
-            middle_div1_box_div4.appendChild(imgsClone);
-            middle_div1_box_div4.style.border = '0px solid #999'
+            if (middle_div1_box_div4.childElementCount < 2) {
+                let imgsClone = imgs[i].cloneNode(true);
+                middle_div1_box_div4.appendChild(imgsClone);
+                middle_div1_box_div4.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限')
+            }
         } else {
             console.log('不在盒子內2');
             console.log('不在範圍內2');
@@ -290,9 +305,13 @@ for (let i = 0; i < imgs.length; i++) {
             console.log('在範圍內2');
             // let img = document.getElementById('left_menu4_img1');
             // img.src = './images/Custom_block/Ellipse 5.svg';
-            let imgsClone = imgs[i].cloneNode(true);
-            middle_div1_box_div5.appendChild(imgsClone);
-            middle_div1_box_div5.style.border = '0px solid #999'
+            if (middle_div1_box_div5.childElementCount < 2) {
+                let imgsClone = imgs[i].cloneNode(true);
+                middle_div1_box_div5.appendChild(imgsClone);
+                middle_div1_box_div5.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限')
+            }
         } else {
             console.log('不在盒子內2');
             console.log('不在範圍內2');
@@ -312,9 +331,13 @@ for (let i = 0; i < imgs.length; i++) {
             console.log('在範圍內2');
             // let img = document.getElementById('left_menu4_img1');
             // img.src = './images/Custom_block/Ellipse 5.svg';
-            let imgsClone = imgs[i].cloneNode(true);
-            middle_div1_box_div6.appendChild(imgsClone);
-            middle_div1_box_div6.style.border = '0px solid #999'
+            if (middle_div1_box_div6.childElementCount < 2) {
+                let imgsClone = imgs[i].cloneNode(true);
+                middle_div1_box_div6.appendChild(imgsClone);
+                middle_div1_box_div6.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限')
+            }
         } else {
             console.log('不在盒子內2');
             console.log('不在範圍內2');
@@ -333,9 +356,13 @@ for (let i = 0; i < imgs.length; i++) {
             console.log('在範圍內2');
             // let img = document.getElementById('left_menu4_img1');
             // img.src = './images/Custom_block/Ellipse 5.svg';
-            let imgsClone = imgs[i].cloneNode(true);
-            middle_div1_box_div7.appendChild(imgsClone);
-            middle_div1_box_div7.style.border = '0px solid #999'
+            if (middle_div1_box_div7.childElementCount < 2) {
+                let imgsClone = imgs[i].cloneNode(true);
+                middle_div1_box_div7.appendChild(imgsClone);
+                middle_div1_box_div7.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限')
+            }
         } else {
             console.log('不在盒子內2');
             console.log('不在範圍內2');
@@ -354,9 +381,13 @@ for (let i = 0; i < imgs.length; i++) {
             console.log('在範圍內2');
             // let img = document.getElementById('left_menu4_img1');
             // img.src = './images/Custom_block/Ellipse 5.svg';
-            let imgsClone = imgs[i].cloneNode(true);
-            middle_div1_box_div8.appendChild(imgsClone);
-            middle_div1_box_div8.style.border = '0px solid #999'
+            if (middle_div1_box_div8.childElementCount < 2) {
+                let imgsClone = imgs[i].cloneNode(true);
+                middle_div1_box_div8.appendChild(imgsClone);
+                middle_div1_box_div8.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限')
+            }
         } else {
             console.log('不在盒子內2');
             console.log('不在範圍內2');
@@ -375,9 +406,13 @@ for (let i = 0; i < imgs.length; i++) {
             console.log('在範圍內2');
             // let img = document.getElementById('left_menu4_img1');
             // img.src = './images/Custom_block/Ellipse 5.svg';
-            let imgsClone = imgs[i].cloneNode(true);
-            middle_div1_box_div9.appendChild(imgsClone);
-            middle_div1_box_div9.style.border = '0px solid #999'
+            if (middle_div1_box_div9.childElementCount < 2) {
+                let imgsClone = imgs[i].cloneNode(true);
+                middle_div1_box_div9.appendChild(imgsClone);
+                middle_div1_box_div9.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限')
+            }
         } else {
             console.log('不在盒子內2');
             console.log('不在範圍內2');
@@ -396,9 +431,13 @@ for (let i = 0; i < imgs.length; i++) {
             console.log('在範圍內2');
             // let img = document.getElementById('left_menu4_img1');
             // img.src = './images/Custom_block/Ellipse 5.svg';
-            let imgsClone = imgs[i].cloneNode(true);
-            middle_div1_box_div10.appendChild(imgsClone);
-            middle_div1_box_div10.style.border = '0px solid #999'
+            if (middle_div1_box_div10.childElementCount < 2) {
+                let imgsClone = imgs[i].cloneNode(true);
+                middle_div1_box_div10.appendChild(imgsClone);
+                middle_div1_box_div10.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限')
+            }
         } else {
             console.log('不在盒子內2');
             console.log('不在範圍內2');
@@ -417,9 +456,13 @@ for (let i = 0; i < imgs.length; i++) {
             console.log('在範圍內2');
             // let img = document.getElementById('left_menu4_img1');
             // img.src = './images/Custom_block/Ellipse 5.svg';
-            let imgsClone = imgs[i].cloneNode(true);
-            middle_div1_box_div11.appendChild(imgsClone);
-            middle_div1_box_div11.style.border = '0px solid #999'
+            if (middle_div1_box_div11.childElementCount < 2) {
+                let imgsClone = imgs[i].cloneNode(true);
+                middle_div1_box_div11.appendChild(imgsClone);
+                middle_div1_box_div11.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限')
+            }
         } else {
             console.log('不在盒子內2');
             console.log('不在範圍內2');
@@ -438,9 +481,13 @@ for (let i = 0; i < imgs.length; i++) {
             console.log('在範圍內2');
             // let img = document.getElementById('left_menu4_img1');
             // img.src = './images/Custom_block/Ellipse 5.svg';
-            let imgsClone = imgs[i].cloneNode(true);
-            middle_div1_box_div12.appendChild(imgsClone);
-            middle_div1_box_div12.style.border = '0px solid #999'
+            if (middle_div1_box_div12.childElementCount < 2) {
+                let imgsClone = imgs[i].cloneNode(true);
+                middle_div1_box_div12.appendChild(imgsClone);
+                middle_div1_box_div12.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限')
+            }
         } else {
             console.log('不在盒子內2');
             console.log('不在範圍內2');
@@ -459,9 +506,13 @@ for (let i = 0; i < imgs.length; i++) {
             console.log('在範圍內2');
             // let img = document.getElementById('left_menu4_img1');
             // img.src = './images/Custom_block/Ellipse 5.svg';
-            let imgsClone = imgs[i].cloneNode(true);
-            middle_div1_box_div13.appendChild(imgsClone);
-            middle_div1_box_div13.style.border = '0px solid #999'
+            if (middle_div1_box_div13.childElementCount < 2) {
+                let imgsClone = imgs[i].cloneNode(true);
+                middle_div1_box_div13.appendChild(imgsClone);
+                middle_div1_box_div13.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限')
+            }
         } else {
             console.log('不在盒子內2');
             console.log('不在範圍內2');
@@ -480,9 +531,13 @@ for (let i = 0; i < imgs.length; i++) {
             console.log('在範圍內2');
             // let img = document.getElementById('left_menu4_img1');
             // img.src = './images/Custom_block/Ellipse 5.svg';
-            let imgsClone = imgs[i].cloneNode(true);
-            middle_div1_box_div14.appendChild(imgsClone);
-            middle_div1_box_div14.style.border = '0px solid #999'
+            if (middle_div1_box_div14.childElementCount < 2) {
+                let imgsClone = imgs[i].cloneNode(true);
+                middle_div1_box_div14.appendChild(imgsClone);
+                middle_div1_box_div14.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限')
+            }
         } else {
             console.log('不在盒子內2');
             console.log('不在範圍內2');
@@ -501,9 +556,13 @@ for (let i = 0; i < imgs.length; i++) {
             console.log('在範圍內2');
             // let img = document.getElementById('left_menu4_img1');
             // img.src = './images/Custom_block/Ellipse 5.svg';
-            let imgsClone = imgs[i].cloneNode(true);
-            middle_div1_box_div15.appendChild(imgsClone);
-            middle_div1_box_div15.style.border = '0px solid #999'
+            if (middle_div1_box_div15.childElementCount < 2) {
+                let imgsClone = imgs[i].cloneNode(true);
+                middle_div1_box_div15.appendChild(imgsClone);
+                middle_div1_box_div15.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限')
+            }
         } else {
             console.log('不在盒子內2');
             console.log('不在範圍內2');
@@ -661,19 +720,26 @@ let ingredients = [
     dried_orange_img,
     dried_kiwi_fruit_img,
     dry_petals_img,
-    roses_img,
-    chrysanthemum_img,
-    lavender_img]
+]
 
 
 for (let i = 0; i < ingredients.length; i++) {
     ingredients[i].addEventListener('drag', (e) => {
-        middle_div1_box_div1.style.border = '2px solid red';
-        middle_div1_box_div2.style.border = '2px solid red';
-        middle_div1_box_div3.style.border = '2px solid red';
-        middle_div1_box_div4.style.border = '2px solid red';
-        middle_div1_box_div5.style.border = '2px solid red';
-        middle_div1_box_div6.style.border = '2px solid red';
+        middle_div1_box_div1.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div2.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div3.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div4.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div5.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div6.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div7.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div8.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div9.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div10.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div11.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div12.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div13.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div14.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div15.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
     }
     )
 };
@@ -687,6 +753,15 @@ for (let i = 0; i < ingredients.length; i++) {
         middle_div1_box_div4.style.border = 'none';
         middle_div1_box_div5.style.border = 'none';
         middle_div1_box_div6.style.border = 'none';
+        middle_div1_box_div7.style.border = 'none';
+        middle_div1_box_div8.style.border = 'none';
+        middle_div1_box_div9.style.border = 'none';
+        middle_div1_box_div10.style.border = 'none';
+        middle_div1_box_div11.style.border = 'none';
+        middle_div1_box_div12.style.border = 'none';
+        middle_div1_box_div13.style.border = 'none';
+        middle_div1_box_div14.style.border = 'none';
+        middle_div1_box_div15.style.border = 'none';
     }
     )
 };
@@ -707,8 +782,12 @@ for (let i = 0; i < ingredients.length; i++) {
             let imgsClone = ingredients[i].cloneNode(true);
             // imgsClone.style.position = 'absolute';
             // imgsClone.style.zIndex = i + 1;
-            middle_div1_box_div1.appendChild(imgsClone);
-            middle_div1_box_div1.style.border = '0px solid #999'
+            if (middle_div1_box_div1.childElementCount < 2) {
+                middle_div1_box_div1.appendChild(imgsClone);
+                middle_div1_box_div1.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限')
+            }
         } else {
             console.log('不在盒子內2');
             console.log('不在範圍內2');
@@ -727,9 +806,13 @@ for (let i = 0; i < ingredients.length; i++) {
             console.log('在範圍內2');
             // let img = document.getElementById('left_menu4_img1');
             // img.src = './images/Custom_block/Ellipse 5.svg';
-            let imgsClone = ingredients[i].cloneNode(true);
-            middle_div1_box_div1.appendChild(imgsClone);
-            middle_div1_box_div1.style.border = '0px solid #999'
+            if (middle_div1_box_div2.childElementCount < 2) {
+                let imgsClone = ingredients[i].cloneNode(true);
+                middle_div1_box_div1.appendChild(imgsClone);
+                middle_div1_box_div1.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限')
+            }
         } else {
             console.log('不在盒子內2');
             console.log('不在範圍內2');
@@ -748,9 +831,13 @@ for (let i = 0; i < ingredients.length; i++) {
             console.log('在範圍內2');
             // let img = document.getElementById('left_menu4_img1');
             // img.src = './images/Custom_block/Ellipse 5.svg';
-            let imgsClone = ingredients[i].cloneNode(true);
-            middle_div1_box_div3.appendChild(imgsClone);
-            middle_div1_box_div3.style.border = '0px solid #999'
+            if (middle_div1_box_div3.childElementCount < 2) {
+                let imgsClone = ingredients[i].cloneNode(true);
+                middle_div1_box_div3.appendChild(imgsClone);
+                middle_div1_box_div3.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限')
+            }
         } else {
             console.log('不在盒子內2');
             console.log('不在範圍內2');
@@ -769,9 +856,13 @@ for (let i = 0; i < ingredients.length; i++) {
             console.log('在範圍內2');
             // let img = document.getElementById('left_menu4_img1');
             // img.src = './images/Custom_block/Ellipse 5.svg';
-            let imgsClone = ingredients[i].cloneNode(true);
-            middle_div1_box_div4.appendChild(imgsClone);
-            middle_div1_box_div4.style.border = '0px solid #999'
+            if (middle_div1_box_div4.childElementCount < 2) {
+                let imgsClone = ingredients[i].cloneNode(true);
+                middle_div1_box_div4.appendChild(imgsClone);
+                middle_div1_box_div4.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限')
+            }
         } else {
             console.log('不在盒子內2');
             console.log('不在範圍內2');
@@ -790,9 +881,13 @@ for (let i = 0; i < ingredients.length; i++) {
             console.log('在範圍內2');
             // let img = document.getElementById('left_menu4_img1');
             // img.src = './images/Custom_block/Ellipse 5.svg';
-            let imgsClone = ingredients[i].cloneNode(true);
-            middle_div1_box_div5.appendChild(imgsClone);
-            middle_div1_box_div5.style.border = '0px solid #999'
+            if (middle_div1_box_div5.childElementCount < 2) {
+                let imgsClone = ingredients[i].cloneNode(true);
+                middle_div1_box_div5.appendChild(imgsClone);
+                middle_div1_box_div5.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限')
+            }
         } else {
             console.log('不在盒子內2');
             console.log('不在範圍內2');
@@ -812,9 +907,244 @@ for (let i = 0; i < ingredients.length; i++) {
             console.log('在範圍內2');
             // let img = document.getElementById('left_menu4_img1');
             // img.src = './images/Custom_block/Ellipse 5.svg';
-            let imgsClone = ingredients[i].cloneNode(true);
-            middle_div1_box_div6.appendChild(imgsClone);
-            middle_div1_box_div6.style.border = '0px solid #999'
+            if (middle_div1_box_div6.childElementCount < 2) {
+                let imgsClone = ingredients[i].cloneNode(true);
+                middle_div1_box_div6.appendChild(imgsClone);
+                middle_div1_box_div6.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限')
+            }
+        } else {
+            console.log('不在盒子內2');
+            console.log('不在範圍內2');
+        }
+    });
+};
+
+
+// 放開花時   (盒子七)
+for (let i = 0; i < ingredients.length; i++) {
+    ingredients[i].addEventListener('dragend', (e) => {
+        console.log('拖曳中');
+        console.log(ingredients[i]);
+        if (e.clientX >= middle_box7.left && e.clientX <= middle_box7.right &&
+            e.clientY >= middle_box7.top && e.clientY <= middle_box7.bottom) {
+            console.log('在盒子內2');
+            console.log('在範圍內2');
+            // let img = document.getElementById('left_menu4_img1');
+            // img.src = './images/Custom_block/Ellipse 5.svg';
+            if (middle_div1_box_div7.childElementCount < 2) {
+                let imgsClone = ingredients[i].cloneNode(true);
+                middle_div1_box_div7.appendChild(imgsClone);
+                middle_div1_box_div7.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限')
+            }
+        } else {
+            console.log('不在盒子內2');
+            console.log('不在範圍內2');
+        }
+    });
+};
+
+
+// 放開花時   (盒子八)
+for (let i = 0; i < ingredients.length; i++) {
+    ingredients[i].addEventListener('dragend', (e) => {
+        console.log('拖曳中');
+        console.log(ingredients[i]);
+        if (e.clientX >= middle_box8.left && e.clientX <= middle_box8.right &&
+            e.clientY >= middle_box8.top && e.clientY <= middle_box8.bottom) {
+            console.log('在盒子內2');
+            console.log('在範圍內2');
+            // let img = document.getElementById('left_menu4_img1');
+            // img.src = './images/Custom_block/Ellipse 5.svg';
+            if (middle_div1_box_div8.childElementCount < 2) {
+                let imgsClone = ingredients[i].cloneNode(true);
+                middle_div1_box_div8.appendChild(imgsClone);
+                middle_div1_box_div8.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限');
+            }
+        } else {
+            console.log('不在盒子內2');
+            console.log('不在範圍內2');
+        }
+    });
+};
+
+// 放開花時   (盒子九)
+for (let i = 0; i < ingredients.length; i++) {
+    ingredients[i].addEventListener('dragend', (e) => {
+        console.log('拖曳中');
+        console.log(ingredients[i]);
+        if (e.clientX >= middle_box9.left && e.clientX <= middle_box9.right &&
+            e.clientY >= middle_box9.top && e.clientY <= middle_box9.bottom) {
+            console.log('在盒子內2');
+            console.log('在範圍內2');
+            // let img = document.getElementById('left_menu4_img1');
+            // img.src = './images/Custom_block/Ellipse 5.svg';
+            if (middle_div1_box_div9.childElementCount < 2) {
+                let imgsClone = ingredients[i].cloneNode(true);
+                middle_div1_box_div9.appendChild(imgsClone);
+                middle_div1_box_div9.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限')
+            }
+        } else {
+            console.log('不在盒子內2');
+            console.log('不在範圍內2');
+        }
+    });
+};
+
+// 放開花時   (盒子十)
+for (let i = 0; i < ingredients.length; i++) {
+    ingredients[i].addEventListener('dragend', (e) => {
+        console.log('拖曳中');
+        console.log(ingredients[i]);
+        if (e.clientX >= middle_box10.left && e.clientX <= middle_box10.right &&
+            e.clientY >= middle_box10.top && e.clientY <= middle_box10.bottom) {
+            console.log('在盒子內2');
+            console.log('在範圍內2');
+            // let img = document.getElementById('left_menu4_img1');
+            // img.src = './images/Custom_block/Ellipse 5.svg';
+            if (middle_div1_box_div10.childElementCount < 2) {
+                let imgsClone = ingredients[i].cloneNode(true);
+                middle_div1_box_div10.appendChild(imgsClone);
+                middle_div1_box_div10.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限');
+            }
+        } else {
+            console.log('不在盒子內2');
+            console.log('不在範圍內2');
+        }
+    });
+};
+
+
+// 放開花時   (盒子十一)
+for (let i = 0; i < ingredients.length; i++) {
+    ingredients[i].addEventListener('dragend', (e) => {
+        console.log('拖曳中');
+        console.log(ingredients[i]);
+        if (e.clientX >= middle_box11.left && e.clientX <= middle_box11.right &&
+            e.clientY >= middle_box11.top && e.clientY <= middle_box11.bottom) {
+            console.log('在盒子內2');
+            console.log('在範圍內2');
+            // let img = document.getElementById('left_menu4_img1');
+            // img.src = './images/Custom_block/Ellipse 5.svg';
+            if (middle_div1_box_div11.childElementCount < 2) {
+                let imgsClone = ingredients[i].cloneNode(true);
+                middle_div1_box_div11.appendChild(imgsClone);
+                middle_div1_box_div11.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限');
+            }
+        } else {
+            console.log('不在盒子內2');
+            console.log('不在範圍內2');
+        }
+    });
+};
+
+
+// 放開花時   (盒子十二)
+for (let i = 0; i < ingredients.length; i++) {
+    ingredients[i].addEventListener('dragend', (e) => {
+        console.log('拖曳中');
+        console.log(ingredients[i]);
+        if (e.clientX >= middle_box12.left && e.clientX <= middle_box12.right &&
+            e.clientY >= middle_box12.top && e.clientY <= middle_box12.bottom) {
+            console.log('在盒子內2');
+            console.log('在範圍內2');
+            // let img = document.getElementById('left_menu4_img1');
+            // img.src = './images/Custom_block/Ellipse 5.svg';
+            if (middle_div1_box_div12.childElementCount < 2) {
+                let imgsClone = ingredients[i].cloneNode(true);
+                middle_div1_box_div12.appendChild(imgsClone);
+                middle_div1_box_div12.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限');
+            }
+        } else {
+            console.log('不在盒子內2');
+            console.log('不在範圍內2');
+        }
+    });
+};
+
+
+// 放開花時   (盒子十三)
+for (let i = 0; i < ingredients.length; i++) {
+    ingredients[i].addEventListener('dragend', (e) => {
+        console.log('拖曳中');
+        console.log(ingredients[i]);
+        if (e.clientX >= middle_box13.left && e.clientX <= middle_box13.right &&
+            e.clientY >= middle_box13.top && e.clientY <= middle_box13.bottom) {
+            console.log('在盒子內2');
+            console.log('在範圍內2');
+            // let img = document.getElementById('left_menu4_img1');
+            // img.src = './images/Custom_block/Ellipse 5.svg';
+            if (middle_div1_box_div13.childElementCount < 2) {
+                let imgsClone = ingredients[i].cloneNode(true);
+                middle_div1_box_div13.appendChild(imgsClone);
+                middle_div1_box_div13.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限');
+            }
+        } else {
+            console.log('不在盒子內2');
+            console.log('不在範圍內2');
+        }
+    });
+};
+
+// 放開花時   (盒子十四)
+for (let i = 0; i < ingredients.length; i++) {
+    ingredients[i].addEventListener('dragend', (e) => {
+        console.log('拖曳中');
+        console.log(ingredients[i]);
+        if (e.clientX >= middle_box14.left && e.clientX <= middle_box14.right &&
+            e.clientY >= middle_box14.top && e.clientY <= middle_box14.bottom) {
+            console.log('在盒子內2');
+            console.log('在範圍內2');
+            // let img = document.getElementById('left_menu4_img1');
+            // img.src = './images/Custom_block/Ellipse 5.svg';
+            if (middle_div1_box_div14.childElementCount < 2) {
+                let imgsClone = ingredients[i].cloneNode(true);
+                middle_div1_box_div14.appendChild(imgsClone);
+                middle_div1_box_div14.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限')
+            }
+        } else {
+            console.log('不在盒子內2');
+            console.log('不在範圍內2');
+        }
+    });
+};
+
+
+// 放開花時   (盒子十五)
+for (let i = 0; i < ingredients.length; i++) {
+    ingredients[i].addEventListener('dragend', (e) => {
+        console.log('拖曳中');
+        console.log(ingredients[i]);
+        if (e.clientX >= middle_box15.left && e.clientX <= middle_box15.right &&
+            e.clientY >= middle_box15.top && e.clientY <= middle_box15.bottom) {
+            console.log('在盒子內2');
+            console.log('在範圍內2');
+            if (middle_div1_box_div15.childElementCount < 2) {
+                // let img = document.getElementById('left_menu4_img1');
+                // img.src = './images/Custom_block/Ellipse 5.svg';
+                let imgsClone = ingredients[i].cloneNode(true);
+                middle_div1_box_div15.appendChild(imgsClone);
+                middle_div1_box_div15.style.border = '0px solid #999'
+            } else {
+                console.log('目標區域已達上限');
+            }
         } else {
             console.log('不在盒子內2');
             console.log('不在範圍內2');

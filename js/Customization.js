@@ -187,6 +187,10 @@ let middle_img4 = document.getElementsByClassName('middle_img4');
 let middle_img5 = document.getElementsByClassName('middle_img5');
 let middle_img6 = document.getElementsByClassName('middle_img6');
 let middle_img7 = document.getElementsByClassName('middle_img7');
+let middle_img8 = document.getElementsByClassName('middle_img8');
+let middle_img9 = document.getElementsByClassName('middle_img9');
+let middle_img10 = document.getElementsByClassName('middle_img10');
+
 
 function middle_img_none() {
     middle_img1[0].style.display = 'none';
@@ -196,6 +200,9 @@ function middle_img_none() {
     middle_img5[0].style.display = 'none';
     middle_img6[0].style.display = 'none';
     middle_img7[0].style.display = 'none';
+    middle_img8[0].style.display = 'none';
+    middle_img9[0].style.display = 'none';
+    middle_img10[0].style.display = 'none';
 };
 
 
@@ -339,9 +346,9 @@ left_menu_img6[0].addEventListener('click', function () {
 
 /* ↓↓第一個選擇↓↓ */
 
-let left_menu4_img_a1 = document.getElementById('left_menu4_img_a1');
+let left_menu5_img_a1 = document.getElementById('left_menu5_img_a1');
 
-left_menu4_img_a1.addEventListener('click', function () {
+left_menu5_img_a1.addEventListener('click', function () {
     middle_img_none();
     middle_img5[0].style.display = "block";
 });
@@ -350,9 +357,9 @@ left_menu4_img_a1.addEventListener('click', function () {
 
 /* ↓↓第二個選擇↓↓ */
 
-let left_menu4_img_a2 = document.getElementById('left_menu4_img_a2');
+let left_menu5_img_a2 = document.getElementById('left_menu5_img_a2');
 
-left_menu4_img_a2.addEventListener('click', function () {
+left_menu5_img_a2.addEventListener('click', function () {
     middle_img_none();
     middle_img6[0].style.display = "block";
 });
@@ -361,14 +368,50 @@ left_menu4_img_a2.addEventListener('click', function () {
 
 /* ↓↓第三個選擇↓↓ */
 
-let left_menu4_img_a3 = document.getElementById('left_menu4_img_a3');
+let left_menu5_img_a3 = document.getElementById('left_menu5_img_a3');
 
-left_menu4_img_a3.addEventListener('click', function () {
+left_menu5_img_a3.addEventListener('click', function () {
     middle_img_none();
     middle_img7[0].style.display = "block";
 });
 
 /* ↑↑第三個選擇↑↑ */
+
+
+/* ↓↓第四個選擇↓↓ */
+
+let left_menu5_img_a4 = document.getElementById('left_menu5_img_a4');
+
+left_menu5_img_a4.addEventListener('click', function () {
+    middle_img_none();
+    middle_img8[0].style.display = "block";
+});
+
+/* ↑↑第四個選擇↑↑ */
+
+
+/* ↓↓第五個選擇↓↓ */
+
+let left_menu5_img_a5 = document.getElementById('left_menu5_img_a5');
+
+left_menu5_img_a5.addEventListener('click', function () {
+    middle_img_none();
+    middle_img9[0].style.display = "block";
+});
+
+/* ↑↑第五個選擇↑↑ */
+
+
+/* ↓↓第六個選擇↓↓ */
+
+let left_menu5_img_a6 = document.getElementById('left_menu5_img_a6');
+
+left_menu5_img_a6.addEventListener('click', function () {
+    middle_img_none();
+    middle_img10[0].style.display = "block";
+});
+
+/* ↑↑第五個選擇↑↑ */
 
 
 
