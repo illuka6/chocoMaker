@@ -9,7 +9,9 @@
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
+    <!-- 引用footer -->
+    <script type="text/babel" src="./Footer.jsx"></script>
+    <link rel="stylesheet" href="./css/Footer.css">
 
     <title>Q&A</title>
 </head>
@@ -71,7 +73,7 @@
                         ]
 
                         React.useEffect(() => {
-                            toggleDropdown('question', 'ans','vector');
+                            toggleDropdown('question', 'ans', 'vector');
                         }, []); // 确保 toggleDropdown 在组件渲染后调用
 
 
@@ -90,32 +92,22 @@
 
                 </script>
             </div>
-           
-             
+
+
         </section>
     </main>
-    <footer>
-        <div class="wrap">
-            <a class="logo" href="#"><img src="./images/footer_logo.svg" alt=""></a>
-            <div class="bottom_nav">
-                <ul class="menu">
-                    <li><a href="./index.html" id="home">首頁</a></li>
-                    <li><a href="#" id="news">最新消息</a></li>
-                    <li><a href="./shop.html" id="shop">商品一覽</a></li>
-                    <li><a href="#" id="about">關於我們</a></li>
-                    <li><a href="#" id="Q&A">Q&A</a></li>
-                    <li><a href="#" id="shopping_car">購物車</a></li>
-                    <li><a href="#" id="member">會員專區</a></li>
-                </ul>
-            </div>
-            <div class="icon">
-                <a class="fb" href="#"></a>
-                <a class="ig" href="#"></a>
-                <a class="x" href="#"></a>
-            </div>
-        </div>
-        <div class="copyRight">© Mélange. All Rights Reserved.</div>
-    </footer>
+    <!-- footer -->
+    <div id="footer"></div>
+    <script type="text/babel">
+        function App() {
+            return (
+                <Footer />
+            )
+        }
+        ReactDOM
+            .createRoot(document.getElementById('footer'))
+            .render(<App />);
+    </script>
 
     <script src="./js/Q&A.js"></script>
 </body>
