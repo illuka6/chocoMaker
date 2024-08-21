@@ -120,9 +120,13 @@ section {
     font-weight: bold;
     border-bottom: var(--block_brown) solid 3px ;
     padding:18px 10px 0 0 ;
-    
-
 }
+.question:hover{
+    color: var(--block_brown);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
 .question a { display: flex;
     align-items: center;
     
@@ -142,7 +146,17 @@ section {
     font-size: 0.9rem;
     color: #6B3B20;
     font-weight: bold;
-    padding: 15px;
+    
+
+    max-height: 0; /* 初始状态 */
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out; /* 展开和收起的过渡效果 */
+}
+.ans.expanded {
+    max-height: 500px; /* 设置为一个比内容实际高度大的值 */
+}
+.ans p{
+padding: 10px;
 }
 
 
