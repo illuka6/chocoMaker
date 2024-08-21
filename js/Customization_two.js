@@ -1,0 +1,459 @@
+
+// let select_field1__second_page = document.getElementById('select_field1__second_page');
+// let select_field2__second_page = document.getElementById('select_field2__second_page');
+// let select_field3__second_page = document.getElementById('select_field3__second_page');
+
+
+// function all_Left_menu() {
+//     select_field1__second_page.style.display = "none";
+//     select_field2__second_page.style.display = "none";
+//     select_field3__second_page.style.display = "none";
+// };
+
+// /* ↓↓側邊小按鈕↓↓ */
+// let select_field1_btn = document.getElementById('select_field1_btn')
+// let left_menu_rselect_field2__second_page_btnight2 = document.getElementById('select_field2__second_page_btn')
+// let select_field3__second_page_btn = document.getElementById('select_field3__second_page_btn')
+
+
+// function all_left_menu_right() {
+//     select_field1_btn.style.display = 'none';
+//     left_menu_rselect_field2__second_page_btnight2.style.display = 'none';
+//     select_field3__second_page_btn.style.display = 'none';
+// }
+// /* ↑↑側邊小按鈕↑↑ */
+
+
+// function background() {
+//     left_sidebar_img.style.backgroundImage = "url(' ')";
+//     left_sidebar_img.style.backgroundImage = "url(' ')";
+//     left_sidebar_img.style.backgroundImage = "url(' ')";
+// }
+
+// /* ↑↑左邊側邊欄位(共用區塊顯示器)↑↑ */
+
+/* ↓↓標籤列↓↓ */
+let customized = document.getElementById('customized');
+customized.addEventListener('mouseover', function () {
+    customized.style.color = '#FFFFFF';
+    customized.textContent = '客製化';
+});
+
+customized.addEventListener('mouseout', function () {
+    customized.style.color = '#3F1A09';
+    customized.textContent = 'customized';
+});
+
+/* ↑↑標籤列↑↑ */
+
+
+
+/* 客製化第二頁 */
+/* ↓↓左邊側邊欄位↓↓ */
+
+let left_sidebar_img_1 = document.getElementById('left_sidebar_img_1');
+let left_sidebar_img_2 = document.getElementById('left_sidebar_img_2');
+let left_sidebar_img_3 = document.getElementById('left_sidebar_img_3');
+/* ↑↑左邊側邊欄位↑↑*/
+
+/* ↓↓左邊側邊欄位衍伸區塊↓↓ */
+let select_field1__second_page = document.getElementById("select_field1__second_page");
+let select_field2__second_page = document.getElementById("select_field2__second_page");
+let select_field3__second_page = document.getElementById("select_field3__second_page");
+
+function select_field() {
+    select_field1__second_page.style.display = 'none';
+    select_field2__second_page.style.display = 'none';
+    select_field3__second_page.style.display = 'none';
+}
+/* ↑↑左邊側邊欄位衍伸區塊↑↑ */
+
+/* ↓↓左邊側邊欄位衍伸小按鈕區塊↓↓ */
+let select_field1_btn = document.getElementById('select_field1_btn');
+let select_field2__second_page_btn = document.getElementById('select_field2__second_page_btn');
+let select_field3__second_page_btn = document.getElementById('select_field3__second_page_btn');
+
+function select_field_btn() {
+    select_field1_btn.style.display = 'none';
+    select_field2__second_page_btn.style.display = 'none';
+    select_field3__second_page_btn.style.display = 'none';
+}
+/* ↑↑左邊側邊欄位衍伸小按鈕區塊↑↑ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// /* ↓↓左邊側邊欄位(口味區塊顯示器)↓↓ */
+// let left_sidebar_img = document.getElementsByClassName('left_sidebar_img')[0];
+// select_field1__second_page = document.getElementsByClassName('select_field1__second_page');
+// select_field1_btn = document.getElementById('select_field1_btn')
+// // console.log(left_menu[0]);
+
+// left_sidebar_img.addEventListener('click', function () {
+//     all_Left_menu();
+//     all_left_menu_right();
+//     background();
+//     select_field1__second_page = document.getElementsByClassName('select_field1__second_page');
+//     [0].style.display = "block";
+//     select_field1_btn.style.display = 'block';
+//     left_sidebar_img.style.backgroundImage = "url(../images/Custom_block/background.svg)";
+//     left_sidebar_img.style.borderRadius = '20px 0 0 20px';
+// });
+
+// left_menu_right1.addEventListener('click', function () {
+//     left_menu[0].style.display = "none";
+//     left_menu_right1.style.display = 'none';
+//     left_sidebar_btn1.style.backgroundImage = "url('')";
+// });
+
+// /* ↑↑左邊側邊欄位(口味區塊顯示器)↑↑ */
+
+// /* ↓↓左邊側邊欄位(配料區塊顯示器)↓↓ */
+// let left_sidebar_btn2 = document.getElementById('left_sidebar_btn2');
+// left_menu2 = document.getElementsByClassName('left_menu2');
+// left_menu_right2 = document.getElementById('left_menu_right2')
+
+// left_sidebar_btn2.addEventListener('click', function () {
+//     all_Left_menu();
+//     all_left_menu_right();
+//     background();
+//     left_menu2[0].style.display = "block";
+//     left_menu_right2.style.display = 'block';
+//     left_sidebar_btn2.style.backgroundImage = "url(../images/Custom_block/background.svg)";
+//     left_sidebar_btn2.style.borderRadius = '20px 0 0 20px';
+// });
+
+// left_menu_right2.addEventListener('click', function () {
+//     left_menu2[0].style.display = "none";
+//     left_menu_right2.style.display = 'none';
+//     left_sidebar_btn2.style.backgroundImage = "url('')";
+// });
+
+// /* ↑↑左邊側邊欄位(配料區塊顯示器)↑↑ */
+
+// /* ↓↓左邊側邊欄位(文字區塊顯示器)↓↓ */
+// let left_sidebar_btn3 = document.getElementById('left_sidebar_btn3');
+// left_menu3 = document.getElementsByClassName('left_menu3');
+// left_menu_right3 = document.getElementById('left_menu_right3')
+
+// left_sidebar_btn3.addEventListener('click', function () {
+//     all_Left_menu();
+//     all_left_menu_right();
+//     background();
+//     left_menu3[0].style.display = "block";
+//     left_menu_right3.style.display = 'block';
+//     left_sidebar_btn3.style.backgroundImage = "url(../images/Custom_block/background.svg)";
+//     left_sidebar_btn3.style.borderRadius = '20px 0 0 20px';
+// });
+
+// left_menu_right3.addEventListener('click', function () {
+//     left_menu3[0].style.display = "none";
+//     left_menu_right3.style.display = 'none';
+//     left_sidebar_btn3.style.backgroundImage = "url('')";
+// });
+
+// /* ↑↑左邊側邊欄位(文字區塊顯示器)↑↑ */
+
+// /* ↓↓左邊側邊欄位(裝飾區塊顯示器)↓↓ */
+// let left_sidebar_btn4 = document.getElementById('left_sidebar_btn4');
+// left_menu4 = document.getElementsByClassName('left_menu4');
+// left_menu_right4 = document.getElementById('left_menu_right4')
+
+// left_sidebar_btn4.addEventListener('click', function () {
+//     all_Left_menu();
+//     all_left_menu_right();
+//     background();
+//     left_menu4[0].style.display = "block";
+//     left_menu_right4.style.display = 'block';
+//     left_sidebar_btn4.style.backgroundImage = "url(../images/Custom_block/background.svg)";
+//     left_sidebar_btn4.style.borderRadius = '20px 0 0 20px';
+// });
+
+// left_menu_right4.addEventListener('click', function () {
+//     left_menu4[0].style.display = "none";
+//     left_menu_right4.style.display = 'none';
+//     left_sidebar_btn4.style.backgroundImage = "url('')";
+// });
+
+// /* ↑↑左邊側邊欄位(文字區塊顯示器)↑↑ */
+
+// /* ↓↓左邊側邊欄位(模板區塊顯示器)↓↓ */
+// let left_sidebar_btn5 = document.getElementById('left_sidebar_btn5');
+// left_menu5 = document.getElementsByClassName('left_menu5');
+// left_menu_right5 = document.getElementById('left_menu_right5')
+
+// left_sidebar_btn5.addEventListener('click', function () {
+//     all_Left_menu();
+//     all_left_menu_right();
+//     background();
+//     left_menu5[0].style.display = "block";
+//     left_menu_right5.style.display = 'block';
+//     left_sidebar_btn5.style.backgroundImage = "url(../images/Custom_block/background.svg)";
+//     left_sidebar_btn5.style.borderRadius = '20px 0 0 20px';
+// });
+
+// left_menu_right5.addEventListener('click', function () {
+//     left_menu5[0].style.display = "none";
+//     left_menu_right5.style.display = 'none';
+//     left_sidebar_btn5.style.backgroundImage = "url('')";
+// });
+
+
+
+// /* ↑↑左邊側邊欄位(文字區塊顯示器)↑↑ */
+
+
+// /* --------------------------------------------------------- */
+
+
+
+// /* ↓↓口味選擇共用區塊↓↓ */
+
+
+// /* ↓↓圖片顯示區塊↓↓ */
+// let middle_img1 = document.getElementsByClassName('middle_img1');
+// let middle_img2 = document.getElementsByClassName('middle_img2');
+// let middle_img3 = document.getElementsByClassName('middle_img3');
+// let middle_img4 = document.getElementsByClassName('middle_img4');
+// let middle_img5 = document.getElementsByClassName('middle_img5');
+// let middle_img6 = document.getElementsByClassName('middle_img6');
+// let middle_img7 = document.getElementsByClassName('middle_img7');
+
+// function middle_img_none() {
+//     middle_img1[0].style.display = 'none';
+//     middle_img2[0].style.display = 'none';
+//     middle_img3[0].style.display = 'none';
+//     middle_img4[0].style.display = 'none';
+//     middle_img5[0].style.display = 'none';
+//     middle_img6[0].style.display = 'none';
+//     middle_img7[0].style.display = 'none';
+// };
+
+
+// let milk_chocolate = document.getElementById('milk_chocolate');
+// let dark_chocolate = document.getElementById('dark_chocolate');
+// let white_chocolate = document.getElementById('white_chocolate');
+// let strawberry_chocolate = document.getElementById('strawberry_chocolate');
+// let matcha_chocolate = document.getElementById('matcha_chocolate');
+// let caramel_chocolate = document.getElementById('caramel_chocolate');
+// function allImg() {
+//     milk_chocolate.src = './images/Custom_block/left_menu/first_floor/Frame 1.svg';
+//     dark_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 2.svg';
+//     white_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 3.svg';
+//     strawberry_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 4.svg';
+//     matcha_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 5.svg';
+//     caramel_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 6.svg';
+// };
+
+// /* ↑↑圖片顯示區塊↑↑ */
+
+// /* -------------------------------------------------- */
+
+// /* ↓↓牛奶巧克力選擇區塊↓↓ */
+// let left_menu_img1 = document.getElementsByClassName('left_menu_img1');
+// // let left_menu_img1 = document.getElementsByClassName('left_menu_img1');
+// // console.log(left_menu_img1);
+// let flag = true;
+// left_menu_img1[0].addEventListener('click', function () {
+//     middle_img_none();
+//     middle_img1[0].style.display = "block";
+//     allImg();
+//     if (flag) {
+//         milk_chocolate.src = './images/Custom_block/left_menu/first_floor/Frame 1_hover.svg';
+//     } else {
+//         milk_chocolate.src = './images/Custom_block/left_menu/first_floor/Frame 1.svg';
+//     }
+// });
+// /* ↑↑牛奶巧克力選擇區塊↑↑ */
+
+
+// /* ↓↓黑巧克力選擇區塊↓↓ */
+// let left_menu_img2 = document.getElementsByClassName('left_menu_img2');
+// // let left_menu_img1 = document.getElementsByClassName('left_menu_img1');
+// // console.log(left_menu_img1);
+// flag = true;
+// left_menu_img2[0].addEventListener('click', function () {
+//     middle_img_none();
+//     // middle_img1[0].style.display = "block";
+//     allImg();
+//     if (flag) {
+//         dark_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 2_hover.svg';
+//     } else {
+//         dark_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 2.svg';
+//     }
+// });
+
+// /* ↑↑黑巧克力選擇區塊↑↑ */
+
+// /* ↓↓白巧克力選擇區塊↓↓ */
+// let left_menu_img3 = document.getElementsByClassName('left_menu_img3');
+// // let left_menu_img1 = document.getElementsByClassName('left_menu_img1');
+// // console.log(left_menu_img1);
+// flag = true;
+// left_menu_img3[0].addEventListener('click', function () {
+//     middle_img_none();
+//     // middle_img1[0].style.display = "block";
+//     allImg();
+//     if (flag) {
+//         white_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 3_hover.svg';
+//     } else {
+//         white_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 3.svg';
+//     }
+// });
+// /* ↑↑白巧克力選擇區塊↑↑ */
+
+
+// /* ↓↓草莓巧克力選擇區塊↓↓ */
+// let left_menu_img4 = document.getElementsByClassName('left_menu_img4');
+// // let left_menu_img1 = document.getElementsByClassName('left_menu_img1');
+// // console.log(left_menu_img1);
+
+// flag = true;
+// left_menu_img4[0].addEventListener('click', function () {
+//     middle_img_none();
+//     middle_img2[0].style.display = "block";
+//     allImg();
+//     if (flag) {
+//         strawberry_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 4_hover.svg';
+//     } else {
+//         strawberry_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 4.svg'
+//     }
+// });
+// /* ↑↑草莓巧克力選擇區塊↑↑ */
+
+
+
+
+
+// /* ↓↓抹茶巧克力選擇區塊↓↓ */
+// let left_menu_img5 = document.getElementsByClassName('left_menu_img5');
+// // let left_menu_img1 = document.getElementsByClassName('left_menu_img1');
+// // console.log(left_menu_img1);
+
+// flag = true;
+// left_menu_img5[0].addEventListener('click', function () {
+//     middle_img_none();
+//     middle_img3[0].style.display = "block";
+//     allImg();
+//     if (flag) {
+//         matcha_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 5_hover.svg';
+//     } else {
+//         matcha_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 5.svg'
+//     }
+// });
+// /* ↑↑抹茶巧克力選擇區塊↑↑ */
+
+
+// /* ↓↓焦糖巧克力選擇區塊↓↓ */
+// let left_menu_img6 = document.getElementsByClassName('left_menu_img6');
+// // let left_menu_img1 = document.getElementsByClassName('left_menu_img1');
+// // console.log(left_menu_img1);
+
+// flag = true;
+// left_menu_img6[0].addEventListener('click', function () {
+//     middle_img_none();
+//     middle_img4[0].style.display = "block";
+//     allImg();
+//     if (flag) {
+//         caramel_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 6_hover.svg';
+//     } else {
+//         caramel_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 6.svg'
+//     }
+// });
+// /* ↑↑抹茶巧克力選擇區塊↑↑ */
+
+
+// /* ↑↑口味選擇共用區塊↑↑ */
+
+
+// /* ↓↓模板選擇區塊↓↓ */
+
+// /* ↓↓第一個選擇↓↓ */
+
+// let left_menu4_img_a1 = document.getElementById('left_menu4_img_a1');
+
+// left_menu4_img_a1.addEventListener('click', function () {
+//     middle_img_none();
+//     middle_img5[0].style.display = "block";
+// });
+
+// /* ↑↑第一個選擇↑↑ */
+
+// /* ↓↓第二個選擇↓↓ */
+
+// let left_menu4_img_a2 = document.getElementById('left_menu4_img_a2');
+
+// left_menu4_img_a2.addEventListener('click', function () {
+//     middle_img_none();
+//     middle_img6[0].style.display = "block";
+// });
+
+// /* ↑↑第二個選擇↑↑ */
+
+// /* ↓↓第三個選擇↓↓ */
+
+// let left_menu4_img_a3 = document.getElementById('left_menu4_img_a3');
+
+// left_menu4_img_a3.addEventListener('click', function () {
+//     middle_img_none();
+//     middle_img7[0].style.display = "block";
+// });
+
+// /* ↑↑第三個選擇↑↑ */
+
+
+
+
+// /* 右下角顯示方塊 */
+
+
+
+
+// /* 中間小顯示區塊 */
+// // let middle_box = document.getElementsByClassName('middle_box');
+// // middle_box[0].addEventListener('resize', () => {
+// //     middle_box.style.margin = '0px 500px 0px 0px';
+// // });
+// // left_menu = document.getElementsByClassName{'letf_menu'};
+
+// /* 客製化第一頁的左邊選擇欄位 */
+// let menu_below = document.getElementById('menu_below');
+// let left_sidebar = document.getElementById('left_sidebar');
+// let oldWidth = window.innerWidth;
+// window.addEventListener('resize', () => {
+//     // let newWidth = window.innerWidth;
+//     // let allWidth = oldWidth - newWidth;
+//     // menu_below.style.left = window_width * 0.1 + 'px';
+//     // left_menu[0].style.right = allWidth + 'px';
+//     // allWidth = newWidth;
+//     // let left_sidebar_left = left_sidebar[0].getBoundingClientRect().left;
+//     // left_menu[0].style.left = left_sidebar_left + 'px';
+//     left_menu[0].style.left = (left_sidebar.offsetWidth) + "px";
+//     left_menu2[0].style.left = (left_sidebar.offsetWidth) + "px";
+//     left_menu3[0].style.left = (left_sidebar.offsetWidth) + "px";
+//     left_menu4[0].style.left = (left_sidebar.offsetWidth) + "px";
+//     left_menu5[0].style.left = (left_sidebar.offsetWidth) + "px";
+// });
+
+
+
+// /* 客製化第一頁的中間小框框顯示區 */
+// // let all = document.getElementById('all');
+// // let middle = document.getElementsByClassName('middle')[0];
+// // let middle_box = document.getElementsByClassName('middle_box')[0];
+// // window.addEventListener('resize', () => {
+// //     middle_box.style.right = (middle.offsetWidth) + 'px';
+// // });
+
+
+
