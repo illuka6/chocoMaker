@@ -43,7 +43,7 @@ h6 {
 }
 
 /* 重置列表 */
-ul,
+ul,li,
 ol {
     list-style: none;
 }
@@ -84,29 +84,68 @@ section {
     align-content: center;
     height: 100%;
     min-height: 100vh;
-    /* width: 100%; */
+    width: 100%;
     /* RWD語法 */
     /* 用vh 不要用vw不好控制 */
+    background-image: url(../index_images/bg-w.png);
+    padding: 200px 50px;
+}
+
+.qType {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    /* border:#E1CBAA 3px solid; */
+    
+}
+.qType li{
+    font-size: 1rem;
+    color: var(--text);
+    font-weight: 900;
+    border:#E1CBAA 3px solid;
+    border-bottom: 0;
+    padding: 10px 3%;
+    margin: 0 3px;
+    border-radius: 15px 15px 0 0 ;
+}
+.qType .q1_btn {
+    margin-left: 0 ;
+}
+
+.qType li:hover{
     background-color: #E1CBAA;
 }
 
 
-/* .QAbox{
-    height: 100vh; 
-    display: flex;
-    background-color: #ffa61f;    
-} */
+
+.qabox {
+    position: relative;
+color: aqua;
+padding: 20px;
+
+}
+
+#root {
+    /* position: absolute;
+    top:-50%;
+    left:-50%; */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+   
+    
+    border:#E1CBAA 3px solid;
+    border-radius: 0 15px 15px 15px ;
+    padding:50px;
+}
 
 .per_qna_block{
 
     max-width: 900px;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    background-color: rgb(250, 233, 252);
-    
-    padding:0px 50px;
-    
+    /* background-color: rgb(250, 233, 252); */
 }
 
 .question{    
@@ -145,7 +184,7 @@ section {
 .vector {
     width: 30px;
     height: 20px;
-    margin-bottom:10p ;
+    margin-bottom:10px ;
     background-image: url(../images/Q&A_images/down_vector.svg);
     transition:  0.4s ease-in-out; 
     background-position: center;
@@ -177,98 +216,4 @@ section {
 padding: 10px;
 }
 
-
-/* 以下footer */
-footer {
-    display: none;
-    width: 100%;
-    background-image: url(../images/foot--bg.svg);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-
-}
-
-footer .wrap {
-    width: 90vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-footer .bottom_nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
-    padding: 20px;
-}
-
-footer .logo {
-    width: 120px;
-}
-
-footer .bottom_nav .menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 0.8rem;
-}
-
-footer .bottom_nav .menu li {
-    padding: 1.2vw;
-}
-
-footer .icon {
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 120px;
-    ;
-
-}
-
- footer .icon a {
-    width: 30px;
-    height: 30px;
-
-
-}
-
-footer .icon .fb {
-    background-image: url(../images/footer_icon_fb.svg);
-    background-position: center;
-    /* 置中背景圖片 */
-    background-size: cover;
-    /* 背景圖片填滿整個元素 */
-    background-repeat: no-repeat;/
-}
-
-.icon .ig {
-    background-image: url(../images/footer_icon_ig.svg);
-    background-position: center;
-    /* 置中背景圖片 */
-    background-size: cover;
-    /* 背景圖片填滿整個元素 */
-    background-repeat: no-repeat;/
-}
-
-.icon .x {
-    background-image: url(../images/footer_icon_x.svg);
-    background-position: center;
-    /* 置中背景圖片 */
-    background-size: cover;
-    /* 背景圖片填滿整個元素 */
-    background-repeat: no-repeat;/
-}
-
-.copyRight {
-    color: white;
-    font-family: "Noto Serif TC", "Noto Serif TC", serif;
-    padding: 20px 0;
-}
 

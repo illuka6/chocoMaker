@@ -20,13 +20,20 @@
     <header></header>
     <main>
         <section className="QnA">
-            <div className="QAbox">
+            <div className="file">
+            <ul class="qType">
+                <li class="q1_btn"><a>常見問題</a></li>
+                <li class="q2_btn"><a>客製問題</a></li>
+                <li class="q3_btn"><a>廠商合作</a></li>
+            </ul>
+            <div className="qabox">
+            
                 <div id="root"></div>
                 <script type="text/babel">
 
                     function QnA(props) {
                         return (
-
+                            
                             <div className="per_qna_block">
                                 <div className="question" >
                                     <a>
@@ -39,6 +46,7 @@
                                 </div>
                                 <div className="ans"><p>{props.ans}</p></div>
                             </div>
+                           
 
 
                         )
@@ -46,7 +54,7 @@
 
 
                     const App = () => {
-                        const qnas = [
+                        const qnas_type1 = [
                             {
                                 id: 1,
                                 question: '可以為特殊活動（如婚禮或企業活動）製作特別設計的巧克力嗎？',
@@ -69,7 +77,20 @@
                                 question: '可以為特殊活動（如婚禮或企業活動）製作特別設計的巧克力嗎？',
                                 ans: '是的，我們可以為各種特殊活動提供特別設計的巧克力。無論是婚禮、生日派對還是其他慶祝場合，我們都能根據您的需求創作獨一無二的巧克力產品。同時我們 提供多種設計選項，包括在巧克力上印製文字、裝飾，並可以選擇多種形狀和口味。此外，我們還提供個性化的包裝服務，確保您的巧克力禮品既美觀又具紀念意義。無論您的活動規模大小，我們都能為您量身定制，提供高品質的巧克力產品來增添活動的亮點。',
 
-                            }
+                            }]
+                            
+                            const qnas_type2 = [
+                            {
+                                id: 1,
+                                question: '客製化巧克力的價格如何計算？',
+                                ans: '是的，我們可以為各種特殊活動提供特別設計的巧克力。無論是婚禮、生日派對還是其他慶祝場合，我們都能根據您的需求創作獨一無二的巧克力產品。同時我們 提供多種設計選項，包括在巧克力上印製文字、裝飾，並可以選擇多種形狀和口味。此外，我們還提供個性化的包裝服務，確保您的巧克力禮品既美觀又具紀念意義。無論您的活動規模大小，我們都能為您量身定制，提供高品質的巧克力產品來增添活動的亮點。',
+                            },
+                            {
+                                id: 2,
+                                question: '客製化巧克力的價格如何計算？',
+                                ans: '是的，我們可以為各種特殊活動提供特別設計的巧克力。無論是婚禮、生日派對還是其他慶祝場合，我們都能根據您的需求創作獨一無二的巧克力產品。同時我們 提供多種設計選項，包括在巧克力上印製文字、裝飾，並可以選擇多種形狀和口味。此外，我們還提供個性化的包裝服務，確保您的巧克力禮品既美觀又具紀念意義。無論您的活動規模大小，我們都能為您量身定制，提供高品質的巧克力產品來增添活動的亮點。',
+
+                            },
                         ]
 
                         React.useEffect(() => {
@@ -79,7 +100,7 @@
 
                         return (
                             <>
-                                {qnas.map((item) => {
+                                {qnas_type1.map((item) => {
                                     return (
                                         <QnA key={item.id} question={item.question} ans={item.ans} />
                                     )
@@ -91,23 +112,24 @@
                     ReactDOM.createRoot(document.getElementById('root')).render(<App />);
 
                 </script>
+            
             </div>
 
-
         </section>
+        </div>
     </main>
-    <!-- footer -->
-    <div id="footer"></div>
-    <script type="text/babel">
-        function App() {
-            return (
-                <Footer />
-            )
-        }
-        ReactDOM
-            .createRoot(document.getElementById('footer'))
-            .render(<App />);
-    </script>
+   <!-- footer -->
+   <div id="footer"></div>
+   <script type="text/babel">
+       function App() {
+           return (
+               <Footer />
+           )
+       }
+       ReactDOM
+       .createRoot(document.getElementById('footer'))
+       .render(<App />);
+   </script>
 
     <script src="./js/Q&A.js"></script>
 </body>
