@@ -231,7 +231,7 @@ body {
 
 }
 
-.left_menu img{
+.left_menu img {
     /* background-color: #444; */
 }
 
@@ -1029,6 +1029,10 @@ body {
     border: 0px solid #444;
 }
 
+.left_sidebar_img {
+    padding: 10px 0 10px 10px;
+}
+
 .left_sidebar_img img {
     width: 48px;
     height: 48px;
@@ -1061,7 +1065,8 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    margin-left: 70px;
+    left: 58px;
+    /* margin-left: 70px; */
     z-index: 1;
 }
 
@@ -1121,7 +1126,8 @@ body {
     position: absolute;
     left: 0;
     top: -1px;
-    margin-left: 70px;
+    left: 58px;
+    /* margin-left: 70px; */
     z-index: 1;
 }
 
@@ -1174,10 +1180,11 @@ body {
     flex-direction: column;
     width: 341px;
     height: 508px;
-    margin-left: 70px;
+    left: 58px;
+    /* margin-left: 70px; */
     border-radius: 20px 0 20px 20px;
     position: absolute;
-    left: 0;
+    /* left: 0; */
     top: 0;
     background-image: url(../images/Custom_block/background.svg);
     display: none;
@@ -1347,7 +1354,8 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    margin-left: 50px;
+    left: 58px;
+    /* margin-left: 50px; */
     display: none;
     z-index: 1;
 }
@@ -1420,7 +1428,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    margin-left: 50px;
+    left: 58px;
+    /* margin-left: 50px; */
     display: none;
     z-index: 1;
 }
@@ -1474,8 +1483,9 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    margin-left: 50px;
-    /* display: none; */
+    left: 58px;
+    /* margin-left: 50px; */
+    display: none;
     z-index: 1;
 }
 
@@ -1556,6 +1566,12 @@ body {
 
 /* ↓↓第四頁↓↓ */
 
+/* 左邊側邊攔選擇區塊 */
+#left_sidebar_img_1 a,
+#left_sidebar_img_2 a,
+#left_sidebar_img_3 a {
+    margin-right: 10px;
+}
 
 /* ↓↓左邊側邊選擇欄位↓↓ */
 
@@ -1573,7 +1589,8 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    margin-left: 50px;
+    left: 68px;
+    /* margin-left: 50px; */
     display: none;
     z-index: 1;
 }
@@ -1630,8 +1647,9 @@ body {
     border-radius: 20px 0 20px 20px;
     position: absolute;
     top: 0;
-    left: 0;
-    margin-left: 50px;
+    /* left: 0; */
+    left: 68px;
+    /* margin-left: 50px; */
     display: none;
     z-index: 1;
 }
@@ -1682,9 +1700,10 @@ body {
     background-image: url(../images/Custom_block/background.svg);
     border-radius: 20px 0 20px 20px;
     position: absolute;
-    left: 0;
+    /* left: 0; */
     top: 0;
-    margin-left: 50px;
+    left: 68px;
+    /* margin-left: 50px; */
     z-index: 1;
     display: none;
 }

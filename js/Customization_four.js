@@ -16,7 +16,7 @@ customized.addEventListener('mouseout', function () {
 
 
 
-/* 客製化第二頁 */
+/* 客製化第四頁 */
 /* ↓↓左邊側邊欄位↓↓ */
 let left_sidebar_img_1 = document.getElementById('left_sidebar_img_1');
 let left_sidebar_img_2 = document.getElementById('left_sidebar_img_2');
@@ -30,26 +30,26 @@ function background() {
 /* ↑↑左邊側邊欄位↑↑*/
 
 /* ↓↓左邊側邊欄位衍伸區塊↓↓ */
-let select_field1__second_page = document.getElementById("select_field1__second_page");
-let select_field2__second_page = document.getElementById("select_field2__second_page");
-let select_field3__second_page = document.getElementById("select_field3__second_page");
+let left_sidebar_four_page_div1 = document.getElementById("left_sidebar_four_page_div1");
+let left_sidebar_four_page_div2 = document.getElementById("left_sidebar_four_page_div2");
+let left_sidebar_four_page_div3_div1 = document.getElementById("left_sidebar_four_page_div3_div1");
 
 function select_field() {
-    select_field1__second_page.style.display = 'none';
-    select_field2__second_page.style.display = 'none';
-    select_field3__second_page.style.display = 'none';
+    left_sidebar_four_page_div1.style.display = 'none';
+    left_sidebar_four_page_div2.style.display = 'none';
+    left_sidebar_four_page_div3_div1.style.display = 'none';
 }
 /* ↑↑左邊側邊欄位衍伸區塊↑↑ */
 
 /* ↓↓左邊側邊欄位衍伸小按鈕區塊↓↓ */
-let select_field1_btn = document.getElementById('select_field1_btn');
-let select_field2__second_page_btn = document.getElementById('select_field2__second_page_btn');
-let select_field3__second_page_btn = document.getElementById('select_field3__second_page_btn');
+let left_sidebar_four_page_div1_box = document.getElementById('left_sidebar_four_page_div1_box');
+let left_sidebar_four_page_div2_box = document.getElementById('left_sidebar_four_page_div2_box');
+let left_sidebar_four_page_div3_box = document.getElementById('left_sidebar_four_page_div3_box');
 
 function select_field_btn() {
-    select_field1_btn.style.display = 'none';
-    select_field2__second_page_btn.style.display = 'none';
-    select_field3__second_page_btn.style.display = 'none';
+    left_sidebar_four_page_div1_box.style.display = 'none';
+    left_sidebar_four_page_div2_box.style.display = 'none';
+    left_sidebar_four_page_div3_box.style.display = 'none';
 }
 /* ↑↑左邊側邊欄位衍伸小按鈕區塊↑↑ */
 
@@ -60,15 +60,15 @@ left_sidebar_img_1.addEventListener('click', function () {
     select_field();
     select_field_btn();
     background();
-    select_field1__second_page.style.display = "block";
-    select_field1_btn.style.display = 'block';
+    left_sidebar_four_page_div1.style.display = "block";
+    left_sidebar_four_page_div1_box.style.display = 'block';
     left_sidebar_img_1.style.backgroundImage = "url(../images/Custom_block/background.svg)";
     left_sidebar_img_1.style.borderRadius = '20px 0 0 20px';
 });
 
-select_field1_btn.addEventListener('click', function () {
-    select_field1__second_page.style.display = "none";
-    select_field1_btn.style.display = 'none';
+left_sidebar_four_page_div1_box.addEventListener('click', function () {
+    left_sidebar_four_page_div1_box.style.display = "none";
+    left_sidebar_four_page_div1.style.display = 'none';
     left_sidebar_img_1.style.backgroundImage = "url('')";
 });
 
@@ -77,15 +77,15 @@ left_sidebar_img_2.addEventListener('click', function () {
     select_field();
     select_field_btn();
     background();
-    select_field2__second_page.style.display = "block";
-    select_field2__second_page_btn.style.display = 'block';
+    left_sidebar_four_page_div2.style.display = "block";
+    left_sidebar_four_page_div2_box.style.display = 'block';
     left_sidebar_img_2.style.backgroundImage = "url(../images/Custom_block/background.svg)";
     left_sidebar_img_2.style.borderRadius = '20px 0 0 20px';
 });
 
-select_field2__second_page_btn.addEventListener('click', function () {
-    select_field2__second_page_btn.style.display = "none";
-    select_field2__second_page.style.display = 'none';
+left_sidebar_four_page_div2_box.addEventListener('click', function () {
+    left_sidebar_four_page_div2.style.display = "none";
+    left_sidebar_four_page_div2_box.style.display = 'none';
     left_sidebar_img_2.style.backgroundImage = "url('')";
 });
 
@@ -94,15 +94,15 @@ left_sidebar_img_3.addEventListener('click', function () {
     select_field();
     select_field_btn();
     background();
-    select_field3__second_page.style.display = "block";
-    select_field3__second_page_btn.style.display = 'block';
+    left_sidebar_four_page_div3_div1.style.display = "block";
+    left_sidebar_four_page_div3_box.style.display = 'block';
     left_sidebar_img_3.style.backgroundImage = "url(../images/Custom_block/background.svg)";
     left_sidebar_img_3.style.borderRadius = '20px 0 0 20px';
 });
 
-select_field3__second_page_btn.addEventListener('click', function () {
-    select_field3__second_page_btn.style.display = "none";
-    select_field3__second_page.style.display = 'none';
+left_sidebar_four_page_div3_box.addEventListener('click', function () {
+    left_sidebar_four_page_div3_div1.style.display = "none";
+    left_sidebar_four_page_div3_box.style.display = 'none';
     left_sidebar_img_3.style.backgroundImage = "url('')";
 });
 
@@ -110,9 +110,9 @@ select_field3__second_page_btn.addEventListener('click', function () {
 /* 客製化第二頁的左邊選擇欄位縮放功能 */
 let left_sidebar_second_page = document.getElementById('left_sidebar_second_page');
 window.addEventListener('resize', () => {
-    select_field1__second_page.style.left = (left_sidebar_second_page.offsetWidth) + "px";
-    select_field2__second_page.style.left = (left_sidebar_second_page.offsetWidth) + "px";
-    select_field3__second_page.style.left = (left_sidebar_second_page.offsetWidth) + "px";
+    left_sidebar_four_page_div1.style.left = (left_sidebar_second_page.offsetWidth) + "px";
+    left_sidebar_four_page_div2.style.left = (left_sidebar_second_page.offsetWidth) + "px";
+    left_sidebar_four_page_div3_div1.style.left = (left_sidebar_second_page.offsetWidth) + "px";
 });
 
 
