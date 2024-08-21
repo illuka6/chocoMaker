@@ -1,5 +1,23 @@
 /* ↓↓裝飾品區域↓↓ */
 
+/* 在目標區域的div執行放下動作 */
+let middle_div1_box_div1 = document.getElementById('middle_div1_box_div1');
+let middle_div1_box_div2 = document.getElementById('middle_div1_box_div2');
+let middle_div1_box_div3 = document.getElementById('middle_div1_box_div3');
+let middle_div1_box_div4 = document.getElementById('middle_div1_box_div4');
+let middle_div1_box_div5 = document.getElementById('middle_div1_box_div5');
+let middle_div1_box_div6 = document.getElementById('middle_div1_box_div6');
+let middle_div1_box_div7 = document.getElementById('middle_div1_box_div7');
+let middle_div1_box_div8 = document.getElementById('middle_div1_box_div8');
+let middle_div1_box_div9 = document.getElementById('middle_div1_box_div9');
+let middle_div1_box_div10 = document.getElementById('middle_div1_box_div10');
+let middle_div1_box_div11 = document.getElementById('middle_div1_box_div11');
+let middle_div1_box_div12 = document.getElementById('middle_div1_box_div12');
+let middle_div1_box_div13 = document.getElementById('middle_div1_box_div13');
+let middle_div1_box_div14 = document.getElementById('middle_div1_box_div14');
+let middle_div1_box_div15 = document.getElementById('middle_div1_box_div15');
+
+
 /* 拖曳功能區塊 */
 
 /* 拖曳開始 */
@@ -16,6 +34,8 @@ let left_menu4_img7 = document.getElementById('left_menu4_img7');
 let left_menu4_img8 = document.getElementById('left_menu4_img8');
 let left_menu4_img9 = document.getElementById('left_menu4_img9');
 // }
+
+
 /* 圖片整合 */
 let imgs = [
     left_menu4_img1,
@@ -61,13 +81,26 @@ let imgs = [
 // });
 
 for (let i = 0; i < imgs.length; i++) {
-    imgs[i].addEventListener('drag', (e) => {
-        middle_div1_box_div1.style.border = '2px solid red';
-        middle_div1_box_div2.style.border = '2px solid red';
-        middle_div1_box_div3.style.border = '2px solid red';
-        middle_div1_box_div4.style.border = '2px solid red';
-        middle_div1_box_div5.style.border = '2px solid red';
-        middle_div1_box_div6.style.border = '2px solid red';
+    imgs[i].addEventListener('dragstart', (e) => {
+        middle_div1_box_div1.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
+        middle_div1_box_div2.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
+        middle_div1_box_div3.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
+        middle_div1_box_div4.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
+        middle_div1_box_div5.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
+        middle_div1_box_div6.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
+        middle_div1_box_div7.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
+        middle_div1_box_div8.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
+        middle_div1_box_div9.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
+        middle_div1_box_div10.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
+        middle_div1_box_div11.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
+        middle_div1_box_div12.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
+        middle_div1_box_div13.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
+        middle_div1_box_div14.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
+        middle_div1_box_div15.style.border = '2px dotted rgba(255, 255, 255, 0.5)';
+        // imgs[i].style.border='2px solid #444';
+        // imgs[i].style.backgroundColor = '#444';
+        // imgs[i].style.borderRadius = '12px    ';
+
     }
     )
 };
@@ -95,6 +128,16 @@ for (let i = 0; i < imgs.length; i++) {
         middle_div1_box_div4.style.border = 'none';
         middle_div1_box_div5.style.border = 'none';
         middle_div1_box_div6.style.border = 'none';
+        middle_div1_box_div7.style.border = 'none';
+        middle_div1_box_div8.style.border = 'none';
+        middle_div1_box_div9.style.border = 'none';
+        middle_div1_box_div10.style.border = 'none';
+        middle_div1_box_div11.style.border = 'none';
+        middle_div1_box_div12.style.border = 'none';
+        middle_div1_box_div13.style.border = 'none';
+        middle_div1_box_div14.style.border = 'none';
+        middle_div1_box_div15.style.border = 'none';
+        // imgs[i].style.backgroundColor = 'none';
     }
     )
 };
@@ -120,13 +163,6 @@ for (let i = 0; i < imgs.length; i++) {
 
 
 
-/* 在目標區域的div執行放下動作 */
-let middle_div1_box_div1 = document.getElementById('middle_div1_box_div1');
-let middle_div1_box_div2 = document.getElementById('middle_div1_box_div2');
-let middle_div1_box_div3 = document.getElementById('middle_div1_box_div3');
-let middle_div1_box_div4 = document.getElementById('middle_div1_box_div4');
-let middle_div1_box_div5 = document.getElementById('middle_div1_box_div5');
-let middle_div1_box_div6 = document.getElementById('middle_div1_box_div6');
 
 
 // left_menu4_img1.addEventListener('mousedown', (e) => {
@@ -170,6 +206,7 @@ for (let i = 0; i < imgs.length; i++) {
             let imgsClone = imgs[i].cloneNode(true);
             // imgsClone.style.position = 'absolute';
             // imgsClone.style.zIndex = i + 1;
+
             middle_div1_box_div1.appendChild(imgsClone);
             middle_div1_box_div1.style.border = '0px solid #999'
         } else {
@@ -278,6 +315,195 @@ for (let i = 0; i < imgs.length; i++) {
             let imgsClone = imgs[i].cloneNode(true);
             middle_div1_box_div6.appendChild(imgsClone);
             middle_div1_box_div6.style.border = '0px solid #999'
+        } else {
+            console.log('不在盒子內2');
+            console.log('不在範圍內2');
+        }
+    });
+};
+
+// 放開花時   (盒子七)
+for (let i = 0; i < imgs.length; i++) {
+    imgs[i].addEventListener('dragend', (e) => {
+        console.log('拖曳中');
+        console.log(imgs[i]);
+        if (e.clientX >= middle_box7.left && e.clientX <= middle_box7.right &&
+            e.clientY >= middle_box7.top && e.clientY <= middle_box7.bottom) {
+            console.log('在盒子內2');
+            console.log('在範圍內2');
+            // let img = document.getElementById('left_menu4_img1');
+            // img.src = './images/Custom_block/Ellipse 5.svg';
+            let imgsClone = imgs[i].cloneNode(true);
+            middle_div1_box_div7.appendChild(imgsClone);
+            middle_div1_box_div7.style.border = '0px solid #999'
+        } else {
+            console.log('不在盒子內2');
+            console.log('不在範圍內2');
+        }
+    });
+};
+
+// 放開花時   (盒子八)
+for (let i = 0; i < imgs.length; i++) {
+    imgs[i].addEventListener('dragend', (e) => {
+        console.log('拖曳中');
+        console.log(imgs[i]);
+        if (e.clientX >= middle_box8.left && e.clientX <= middle_box8.right &&
+            e.clientY >= middle_box8.top && e.clientY <= middle_box8.bottom) {
+            console.log('在盒子內2');
+            console.log('在範圍內2');
+            // let img = document.getElementById('left_menu4_img1');
+            // img.src = './images/Custom_block/Ellipse 5.svg';
+            let imgsClone = imgs[i].cloneNode(true);
+            middle_div1_box_div8.appendChild(imgsClone);
+            middle_div1_box_div8.style.border = '0px solid #999'
+        } else {
+            console.log('不在盒子內2');
+            console.log('不在範圍內2');
+        }
+    });
+};
+
+// 放開花時   (盒子九)
+for (let i = 0; i < imgs.length; i++) {
+    imgs[i].addEventListener('dragend', (e) => {
+        console.log('拖曳中');
+        console.log(imgs[i]);
+        if (e.clientX >= middle_box9.left && e.clientX <= middle_box9.right &&
+            e.clientY >= middle_box9.top && e.clientY <= middle_box9.bottom) {
+            console.log('在盒子內2');
+            console.log('在範圍內2');
+            // let img = document.getElementById('left_menu4_img1');
+            // img.src = './images/Custom_block/Ellipse 5.svg';
+            let imgsClone = imgs[i].cloneNode(true);
+            middle_div1_box_div9.appendChild(imgsClone);
+            middle_div1_box_div9.style.border = '0px solid #999'
+        } else {
+            console.log('不在盒子內2');
+            console.log('不在範圍內2');
+        }
+    });
+};
+
+// 放開花時   (盒子十)
+for (let i = 0; i < imgs.length; i++) {
+    imgs[i].addEventListener('dragend', (e) => {
+        console.log('拖曳中');
+        console.log(imgs[i]);
+        if (e.clientX >= middle_box10.left && e.clientX <= middle_box10.right &&
+            e.clientY >= middle_box10.top && e.clientY <= middle_box10.bottom) {
+            console.log('在盒子內2');
+            console.log('在範圍內2');
+            // let img = document.getElementById('left_menu4_img1');
+            // img.src = './images/Custom_block/Ellipse 5.svg';
+            let imgsClone = imgs[i].cloneNode(true);
+            middle_div1_box_div10.appendChild(imgsClone);
+            middle_div1_box_div10.style.border = '0px solid #999'
+        } else {
+            console.log('不在盒子內2');
+            console.log('不在範圍內2');
+        }
+    });
+};
+
+// 放開花時   (盒子十一)
+for (let i = 0; i < imgs.length; i++) {
+    imgs[i].addEventListener('dragend', (e) => {
+        console.log('拖曳中');
+        console.log(imgs[i]);
+        if (e.clientX >= middle_box11.left && e.clientX <= middle_box11.right &&
+            e.clientY >= middle_box11.top && e.clientY <= middle_box11.bottom) {
+            console.log('在盒子內2');
+            console.log('在範圍內2');
+            // let img = document.getElementById('left_menu4_img1');
+            // img.src = './images/Custom_block/Ellipse 5.svg';
+            let imgsClone = imgs[i].cloneNode(true);
+            middle_div1_box_div11.appendChild(imgsClone);
+            middle_div1_box_div11.style.border = '0px solid #999'
+        } else {
+            console.log('不在盒子內2');
+            console.log('不在範圍內2');
+        }
+    });
+};
+
+// 放開花時   (盒子十二)
+for (let i = 0; i < imgs.length; i++) {
+    imgs[i].addEventListener('dragend', (e) => {
+        console.log('拖曳中');
+        console.log(imgs[i]);
+        if (e.clientX >= middle_box12.left && e.clientX <= middle_box12.right &&
+            e.clientY >= middle_box12.top && e.clientY <= middle_box12.bottom) {
+            console.log('在盒子內2');
+            console.log('在範圍內2');
+            // let img = document.getElementById('left_menu4_img1');
+            // img.src = './images/Custom_block/Ellipse 5.svg';
+            let imgsClone = imgs[i].cloneNode(true);
+            middle_div1_box_div12.appendChild(imgsClone);
+            middle_div1_box_div12.style.border = '0px solid #999'
+        } else {
+            console.log('不在盒子內2');
+            console.log('不在範圍內2');
+        }
+    });
+};
+
+// 放開花時   (盒子十三)
+for (let i = 0; i < imgs.length; i++) {
+    imgs[i].addEventListener('dragend', (e) => {
+        console.log('拖曳中');
+        console.log(imgs[i]);
+        if (e.clientX >= middle_box13.left && e.clientX <= middle_box13.right &&
+            e.clientY >= middle_box13.top && e.clientY <= middle_box13.bottom) {
+            console.log('在盒子內2');
+            console.log('在範圍內2');
+            // let img = document.getElementById('left_menu4_img1');
+            // img.src = './images/Custom_block/Ellipse 5.svg';
+            let imgsClone = imgs[i].cloneNode(true);
+            middle_div1_box_div13.appendChild(imgsClone);
+            middle_div1_box_div13.style.border = '0px solid #999'
+        } else {
+            console.log('不在盒子內2');
+            console.log('不在範圍內2');
+        }
+    });
+};
+
+// 放開花時   (盒子十四)
+for (let i = 0; i < imgs.length; i++) {
+    imgs[i].addEventListener('dragend', (e) => {
+        console.log('拖曳中');
+        console.log(imgs[i]);
+        if (e.clientX >= middle_box14.left && e.clientX <= middle_box14.right &&
+            e.clientY >= middle_box14.top && e.clientY <= middle_box14.bottom) {
+            console.log('在盒子內2');
+            console.log('在範圍內2');
+            // let img = document.getElementById('left_menu4_img1');
+            // img.src = './images/Custom_block/Ellipse 5.svg';
+            let imgsClone = imgs[i].cloneNode(true);
+            middle_div1_box_div14.appendChild(imgsClone);
+            middle_div1_box_div14.style.border = '0px solid #999'
+        } else {
+            console.log('不在盒子內2');
+            console.log('不在範圍內2');
+        }
+    });
+};
+
+// 放開花時   (盒子十五)
+for (let i = 0; i < imgs.length; i++) {
+    imgs[i].addEventListener('dragend', (e) => {
+        console.log('拖曳中');
+        console.log(imgs[i]);
+        if (e.clientX >= middle_box15.left && e.clientX <= middle_box15.right &&
+            e.clientY >= middle_box15.top && e.clientY <= middle_box15.bottom) {
+            console.log('在盒子內2');
+            console.log('在範圍內2');
+            // let img = document.getElementById('left_menu4_img1');
+            // img.src = './images/Custom_block/Ellipse 5.svg';
+            let imgsClone = imgs[i].cloneNode(true);
+            middle_div1_box_div15.appendChild(imgsClone);
+            middle_div1_box_div15.style.border = '0px solid #999'
         } else {
             console.log('不在盒子內2');
             console.log('不在範圍內2');
@@ -664,3 +890,57 @@ let xStart6 = middle_box1.left;  // 左邊界的 X 座標
 let yStart6 = middle_box1.top;   // 上邊界的 Y 座標
 let xEnd6 = middle_box1.right;   // 右邊界的 X 座標
 let yEnd6 = middle_box1.bottom;  // 下邊界的 Y 座標
+/* 取得第七個盒子的XY範圍 */
+let middle_box7 = middle_div1_box_div7.getBoundingClientRect();
+let xStart7 = middle_box1.left;  // 左邊界的 X 座標
+let yStart7 = middle_box1.top;   // 上邊界的 Y 座標
+let xEnd7 = middle_box1.right;   // 右邊界的 X 座標
+let yEnd7 = middle_box1.bottom;  // 下邊界的 Y 座標
+/* 取得第八個盒子的XY範圍 */
+let middle_box8 = middle_div1_box_div8.getBoundingClientRect();
+let xStart8 = middle_box1.left;  // 左邊界的 X 座標
+let yStart8 = middle_box1.top;   // 上邊界的 Y 座標
+let xEnd8 = middle_box1.right;   // 右邊界的 X 座標
+let yEnd8 = middle_box1.bottom;  // 下邊界的 Y 座標
+/* 取得第九個盒子的XY範圍 */
+let middle_box9 = middle_div1_box_div9.getBoundingClientRect();
+let xStart9 = middle_box1.left;  // 左邊界的 X 座標
+let yStart9 = middle_box1.top;   // 上邊界的 Y 座標
+let xEnd9 = middle_box1.right;   // 右邊界的 X 座標
+let yEnd9 = middle_box1.bottom;  // 下邊界的 Y 座標
+/* 取得第十個盒子的XY範圍 */
+let middle_box10 = middle_div1_box_div10.getBoundingClientRect();
+let xStart10 = middle_box1.left;  // 左邊界的 X 座標
+let yStart10 = middle_box1.top;   // 上邊界的 Y 座標
+let xEnd10 = middle_box1.right;   // 右邊界的 X 座標
+let yEnd10 = middle_box1.bottom;  // 下邊界的 Y 座標
+/* 取得第十一個盒子的XY範圍 */
+let middle_box11 = middle_div1_box_div11.getBoundingClientRect();
+let xStart11 = middle_box1.left;  // 左邊界的 X 座標
+let yStart11 = middle_box1.top;   // 上邊界的 Y 座標
+let xEnd11 = middle_box1.right;   // 右邊界的 X 座標
+let yEnd11 = middle_box1.bottom;  // 下邊界的 Y 座標
+/* 取得第十二個盒子的XY範圍 */
+let middle_box12 = middle_div1_box_div12.getBoundingClientRect();
+let xStart12 = middle_box1.left;  // 左邊界的 X 座標
+let yStart12 = middle_box1.top;   // 上邊界的 Y 座標
+let xEnd12 = middle_box1.right;   // 右邊界的 X 座標
+let yEnd12 = middle_box1.bottom;  // 下邊界的 Y 座標
+/* 取得第十三個盒子的XY範圍 */
+let middle_box13 = middle_div1_box_div13.getBoundingClientRect();
+let xStart13 = middle_box1.left;  // 左邊界的 X 座標
+let yStart13 = middle_box1.top;   // 上邊界的 Y 座標
+let xEnd13 = middle_box1.right;   // 右邊界的 X 座標
+let yEnd13 = middle_box1.bottom;  // 下邊界的 Y 座標
+/* 取得第十四個盒子的XY範圍 */
+let middle_box14 = middle_div1_box_div14.getBoundingClientRect();
+let xStart14 = middle_box1.left;  // 左邊界的 X 座標
+let yStart14 = middle_box1.top;   // 上邊界的 Y 座標
+let xEnd14 = middle_box1.right;   // 右邊界的 X 座標
+let yEnd14 = middle_box1.bottom;  // 下邊界的 Y 座標
+/* 取得第十五個盒子的XY範圍 */
+let middle_box15 = middle_div1_box_div15.getBoundingClientRect();
+let xStart15 = middle_box1.left;  // 左邊界的 X 座標
+let yStart15 = middle_box1.top;   // 上邊界的 Y 座標
+let xEnd15 = middle_box1.right;   // 右邊界的 X 座標
+let yEnd15 = middle_box1.bottom;  // 下邊界的 Y 座標
