@@ -27,9 +27,15 @@
 
                             <div className="per_qna_block">
                                 <div className="question" >
-                                    <a ><div className="ballwrap"><div className="pinkball"></div></div>{props.question}<div class="down_vector"></div></a>
+                                    <a>
+                                        <div className="q_part">
+                                            <div className="ballwrap"><div className="pinkball"></div></div>
+                                            <p>{props.question}</p>
+                                        </div>
+                                        <div class="vector"></div>
+                                    </a>
                                 </div>
-                                <div className="ans" >{props.ans}</div>
+                                <div className="ans"><p>{props.ans}</p></div>
                             </div>
 
 
@@ -55,11 +61,17 @@
                                 question: '可以為特殊活動（如婚禮或企業活動）製作特別設計的巧克力嗎？',
                                 ans: '是的，我們可以為各種特殊活動提供特別設計的巧克力。無論是婚禮、生日派對還是其他慶祝場合，我們都能根據您的需求創作獨一無二的巧克力產品。同時我們 提供多種設計選項，包括在巧克力上印製文字、裝飾，並可以選擇多種形狀和口味。此外，我們還提供個性化的包裝服務，確保您的巧克力禮品既美觀又具紀念意義。無論您的活動規模大小，我們都能為您量身定制，提供高品質的巧克力產品來增添活動的亮點。',
 
+                            },
+                            {
+                                id: 4,
+                                question: '可以為特殊活動（如婚禮或企業活動）製作特別設計的巧克力嗎？',
+                                ans: '是的，我們可以為各種特殊活動提供特別設計的巧克力。無論是婚禮、生日派對還是其他慶祝場合，我們都能根據您的需求創作獨一無二的巧克力產品。同時我們 提供多種設計選項，包括在巧克力上印製文字、裝飾，並可以選擇多種形狀和口味。此外，我們還提供個性化的包裝服務，確保您的巧克力禮品既美觀又具紀念意義。無論您的活動規模大小，我們都能為您量身定制，提供高品質的巧克力產品來增添活動的亮點。',
+
                             }
                         ]
 
                         React.useEffect(() => {
-                            toggleDropdown('question', 'ans');
+                            toggleDropdown('question', 'ans','vector');
                         }, []); // 确保 toggleDropdown 在组件渲染后调用
 
 
