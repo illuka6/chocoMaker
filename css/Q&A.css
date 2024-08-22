@@ -98,7 +98,7 @@ section {
     /* border:#E1CBAA 3px solid; */
     
 }
-.qType li{
+.qType .btn{
     font-size: 1rem;
     color: var(--text);
     font-weight: 900;
@@ -107,14 +107,18 @@ section {
     padding: 10px 3%;
     margin: 0 3px;
     border-radius: 15px 15px 0 0 ;
+    cursor: pointer;
 }
 .qType .q1_btn {
     margin-left: 0 ;
+  
 }
 
-.qType li:hover{
-    background-color: #E1CBAA;
+.btn.active{
+    background-color: var(--block_brown);
 }
+
+
 
 
 

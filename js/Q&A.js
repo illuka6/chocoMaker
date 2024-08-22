@@ -47,6 +47,18 @@ function toggleDropdown(btnClass, listClass,vectorClass) {
                 } */
             }
         )};
-
-    
 }
+
+document.addEventListener('DOMContentLoaded',()=>{
+    const buttons = document.querySelectorAll('.btn');
+    // 当用 forEach 遍历 buttons 时，实际上是在对 NodeList 中的每一个 DOM 元素执行指定的回调函数。
+    // 这个回调函数的参数就是当前处理的 DOM 元素。在这种情况下，我们用 button 作为这个参数的名字
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            // 移除所有按钮的active类
+            buttons.forEach(btn => btn.classList.remove('active'));
+            // 给当前点击的按钮添加active类
+            button.classList.add('active');
+        });
+    });
+})
