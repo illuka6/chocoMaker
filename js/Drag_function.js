@@ -1350,8 +1350,8 @@ for (let i = 0; i < ingredients.length; i++) {
         console.log('拖曳中');
         console.log(ingredients[i]);
         for (let j = 0; j < allBox.length; j++) {
-            if (e.clientX >= allBox[j].left && e.clientX <= allBox[j].right &&
-                e.clientY >= allBox[j].top && e.clientY <= allBox[j].bottom) {
+            if ((e.clientX >= allBox[j].left) && (e.clientX <= allBox[j].right) &&
+                (e.clientY >= allBox[j].top) && (e.clientY <= allBox[j].bottom)) {
                 console.log('在盒子內2');
                 console.log('在範圍內2');
                 if (allBox[j].childElementCount < 2) {
