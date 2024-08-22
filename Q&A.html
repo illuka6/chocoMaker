@@ -22,9 +22,9 @@
         <section className="QnA">
             <div className="file">
             <ul class="qType">
-                <li class="q1_btn"><a>常見問題</a></li>
-                <li class="q2_btn"><a>客製問題</a></li>
-                <li class="q3_btn"><a>廠商合作</a></li>
+                <li class="q1_btn btn active"><a>常見問題</a></li>
+                <li class="q2_btn btn"><a>客製問題</a></li>
+                <li class="q3_btn btn"><a>廠商合作</a></li>
             </ul>
             <div className="qabox">
             
@@ -93,10 +93,17 @@
                             },
                         ]
 
+
+                        
+
+
+                        // let qnas_type = qnas_type1;
+
                         React.useEffect(() => {
                             toggleDropdown('question', 'ans', 'vector');
                         }, []); // 确保 toggleDropdown 在组件渲染后调用
-
+                        
+                        
 
                         return (
                             <>
