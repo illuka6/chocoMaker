@@ -304,6 +304,15 @@ body {
     padding: 0 40px;
 }
 
+#pistachio_img,
+#almond_img_img,
+#dried_strawberries_img,
+#dried_orange_img,
+#dried_kiwi_fruit_img,
+#dry_petals_img {
+    width: 62px;
+    height: 62px;
+}
 
 /* 第三層 */
 .left_menu3 {

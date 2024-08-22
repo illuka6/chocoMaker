@@ -18,6 +18,26 @@ let middle_div1_box_div14 = document.getElementById('middle_div1_box_div14');
 let middle_div1_box_div15 = document.getElementById('middle_div1_box_div15');
 
 
+
+let middle_div1_box_allDiv = [
+    middle_div1_box_div1,
+    middle_div1_box_div2,
+    middle_div1_box_div3,
+    middle_div1_box_div4,
+    middle_div1_box_div5,
+    middle_div1_box_div6,
+    middle_div1_box_div7,
+    middle_div1_box_div8,
+    middle_div1_box_div9,
+    middle_div1_box_div10,
+    middle_div1_box_div11,
+    middle_div1_box_div12,
+    middle_div1_box_div13,
+    middle_div1_box_div14,
+    middle_div1_box_div15,
+]
+
+
 /* 拖曳功能區塊 */
 
 /* 拖曳開始 */
@@ -766,7 +786,34 @@ for (let i = 0; i < ingredients.length; i++) {
     )
 };
 
+/* 滑鼠點擊後切換圖片 */
+for (let i = 0; i < ingredients.length; i++) {
+    ingredients[i].addEventListener('mouseover', (e) => {
+        pistachio_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 1-1.svg';
+        almond_img_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse_2-2.svg';
+        dried_strawberries_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 3-3.svg';
+        dried_orange_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 4-4.svg';
+        dried_kiwi_fruit_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 5-5.svg';
+        dry_petals_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 6-6.svg';
+    }
+    )
+};
 
+
+for (let i = 0; i < ingredients.length; i++) {
+    ingredients[i].addEventListener('mouseout', (e) => {
+        pistachio_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 1.svg';
+        almond_img_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse_2.svg';
+        dried_strawberries_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 3.svg';
+        dried_orange_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 4.svg';
+        dried_kiwi_fruit_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 5.svg';
+        dry_petals_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 6.svg';
+    }
+    )
+};
+
+
+/*
 
 // 放開花時   (盒子一)
 for (let i = 0; i < ingredients.length; i++) {
@@ -1151,7 +1198,7 @@ for (let i = 0; i < ingredients.length; i++) {
         }
     });
 };
-
+*/
 /* ↑↑配料區區塊↑↑ */
 
 middle_div1_box_div1.addEventListener('drop', (e) => {
@@ -1175,6 +1222,8 @@ window.addEventListener('mousemove', (e) => {
 //     console.log(e);
 //     middle_div1_box_div1.innerHTML = `X:${e.offsetX},Y: ${e.offsetY}`
 // });
+
+
 
 
 
@@ -1274,3 +1323,51 @@ let xStart15 = middle_box1.left;  // 左邊界的 X 座標
 let yStart15 = middle_box1.top;   // 上邊界的 Y 座標
 let xEnd15 = middle_box1.right;   // 右邊界的 X 座標
 let yEnd15 = middle_box1.bottom;  // 下邊界的 Y 座標
+
+
+
+let allBox = [
+    middle_box1,
+    middle_box2,
+    middle_box3,
+    middle_box4,
+    middle_box5,
+    middle_box6,
+    middle_box7,
+    middle_box8,
+    middle_box9,
+    middle_box10,
+    middle_box11,
+    middle_box12,
+    middle_box13,
+    middle_box14,
+    middle_box15]
+
+
+// 放開花時   (盒子整合器)
+for (let i = 0; i < ingredients.length; i++) {
+    ingredients[i].addEventListener('dragend', (e) => {
+        console.log('拖曳中');
+        console.log(ingredients[i]);
+        for (let j = 0; j < allBox.length; j++) {
+            if (e.clientX >= allBox[j].left && e.clientX <= allBox[j].right &&
+                e.clientY >= allBox[j].top && e.clientY <= allBox[j].bottom) {
+                console.log('在盒子內2');
+                console.log('在範圍內2');
+                if (allBox[j].childElementCount < 2) {
+                    let imgsClone = ingredients[i].cloneNode(true);
+                    allBox[j].appendChild(imgsClone);
+                    allBox[j].style.border = '0px solid #999'
+                } else {
+                    console.log('目標區域已達上限');
+                    console.log(allBox)
+                    console.log(middle_div1_box_allDiv)
+                }
+            } else {
+                console.log('不在盒子內2');
+                console.log('不在範圍內2');
+            }
+        }
+    });
+};
+
