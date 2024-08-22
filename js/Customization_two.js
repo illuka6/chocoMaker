@@ -129,6 +129,32 @@ let white_chocolatea = document.getElementById('white_chocolatea');
 let strawberry_chocolate = document.getElementById('strawberry_chocolate');
 
 
+
+
+let milk_chocolate_box = document.getElementById('milk_chocolate_box');
+let dark_chocolate_box = document.getElementById('dark_chocolate_box');
+let white_chocolatea_box = document.getElementById('white_chocolatea_box');
+let strawberry_chocolate_box = document.getElementById('strawberry_chocolate_box');
+
+
+let chocolate_color = [
+    milk_chocolate_box,
+    dark_chocolate_box,
+    white_chocolatea_box,
+    strawberry_chocolate_box
+]
+
+let chocolate_src_click = [
+    milk_chocolate.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 4-1.svg',
+    dark_chocolate.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 5-1.svg',
+    white_chocolatea.src = '../images/Custom_block/small_chocolate/left_sidebar/Frame 6-1.svg',
+    strawberry_chocolate.src = '../images/Custom_block/small_chocolate/left_sidebar/Frame 7-1.svg'
+]
+
+
+
+// console.log(chocolate_color)
+
 function allImg() {
     milk_chocolate.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 4.svg';
     dark_chocolate.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 5.svg';
@@ -136,62 +162,112 @@ function allImg() {
     strawberry_chocolate.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 7.svg';
 };
 
-console.log(dark_chocolate);
 
+
+milk_chocolate.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 4.svg';
+dark_chocolate.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 5.svg';
+white_chocolatea.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 6.svg';
+strawberry_chocolate.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 7.svg';
+
+let chocolate_src = [
+    milk_chocolate.src,
+    dark_chocolate.src,
+    white_chocolatea.src,
+    strawberry_chocolate.src
+]
+
+
+
+// console.log(chocolate_src);
 /* ↑↑圖片顯示區塊↑↑ */
 
 /* -------------------------------------------------- */
 
+
 /* ↓↓牛奶巧克力選擇區塊↓↓ */
-let milk_chocolate_box = document.getElementById('milk_chocolate_box');
-let flag = true;
-milk_chocolate_box.addEventListener('click', function () {
-    allImg();
-    if (flag) {
-        milk_chocolate.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 4-1.svg';
-    } else {
-        milk_chocolate.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 4.svg';
-        console.log(milk_chocolate)
-    }
-});
+// let milk_chocolate_box = document.getElementById('milk_chocolate_box');
+// let flag = true;
+for (let i = 0; i < chocolate_color.length; i++) {
+    chocolate_color[i].addEventListener('click', function () {
+        allImg();
+        for (let j = 0; j < chocolate_src.length; j++) {
+            chocolate_src_click[i]='';
+            chocolate_src[j] = chocolate_src_click[i];
+            console.log('換圖');
+        }
+    });
+};
+/* ↑↑牛奶巧克力選擇區塊↑↑ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ↓↓牛奶巧克力選擇區塊↓↓ */
+// let milk_chocolate_box = document.getElementById('milk_chocolate_box');
+// let flag = true;
+// milk_chocolate_box.addEventListener('click', function () {
+//     allImg();
+//     if (flag) {
+//         milk_chocolate.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 4-1.svg';
+//     } else {
+//         milk_chocolate.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 4.svg';
+//         console.log(milk_chocolate)
+//     }
+// });
 /* ↑↑牛奶巧克力選擇區塊↑↑ */
 
 
 /* ↓↓黑巧克力選擇區塊↓↓ */
-let dark_chocolate_box = document.getElementById('dark_chocolate_box');
-dark_chocolate_box.addEventListener('click', function () {
-    allImg();
-    if (flag) {
-        dark_chocolate.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 5-1.svg';
-    } else {
-        dark_chocolate.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 5.svg';
-        console.log(milk_chocolate)
-    }
-});
+// let dark_chocolate_box = document.getElementById('dark_chocolate_box');
+// dark_chocolate_box.addEventListener('click', function () {
+//     allImg();
+//     if (flag) {
+//         dark_chocolate.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 5-1.svg';
+//     } else {
+//         dark_chocolate.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 5.svg';
+//         console.log(milk_chocolate)
+//     }
+// });
 /* ↑↑黑巧克力選擇區塊↑↑ */
 
 /* ↓↓白巧克力選擇區塊↓↓ */
-let white_chocolatea_box = document.getElementById('white_chocolatea_box');
-white_chocolatea_box.addEventListener('click', function () {
-    allImg();
-    if (flag) {
-        white_chocolatea.src = '../images/Custom_block/small_chocolate/left_sidebar/Frame 6-1.svg';
-    } else {
-        white_chocolatea.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 6.svg';
-        console.log(milk_chocolate)
-    }
-});
+// let white_chocolatea_box = document.getElementById('white_chocolatea_box');
+// white_chocolatea_box.addEventListener('click', function () {
+//     allImg();
+//     if (flag) {
+//         white_chocolatea.src = '../images/Custom_block/small_chocolate/left_sidebar/Frame 6-1.svg';
+//     } else {
+//         white_chocolatea.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 6.svg';
+//         console.log(milk_chocolate)
+//     }
+// });
 /* ↑↑白巧克力選擇區塊↑↑ */
 
 /* ↓↓草莓巧克力選擇區塊↓↓ */
-let strawberry_chocolate_box = document.getElementById('strawberry_chocolate_box');
-strawberry_chocolate_box.addEventListener('click', function () {
-    allImg();
-    if (flag) {
-        strawberry_chocolate.src = '../images/Custom_block/small_chocolate/left_sidebar/Frame 7-1.svg';
-    } else {
-        strawberry_chocolate.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 7.svg';
-        console.log(milk_chocolate)
-    }
-});
+// let strawberry_chocolate_box = document.getElementById('strawberry_chocolate_box');
+// strawberry_chocolate_box.addEventListener('click', function () {
+//     allImg();
+//     if (flag) {
+//         strawberry_chocolate.src = '../images/Custom_block/small_chocolate/left_sidebar/Frame 7-1.svg';
+//     } else {
+//         strawberry_chocolate.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 7.svg';
+//         console.log(milk_chocolate)
+//     }
+// });
 /* ↑↑草莓巧克力選擇區塊↑↑ */
