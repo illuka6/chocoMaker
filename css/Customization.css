@@ -1312,12 +1312,38 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
 }
 
 #center_display_second_page_make_img img {
     width: 440px;
     height: 382px;
 }
+
+#center_display_second_page_box {
+    border: 0px solid #444;
+    position: absolute;
+    left: 165px;
+}
+
+#center_display_second_page_box img{
+    width: 104px;
+    height: 103px;
+}
+
+#center_display_second_page_box_div1,
+#center_display_second_page_box_div2,
+#center_display_second_page_box_div3 {
+    border: 0px solid #444;
+    width: 104px;
+    height: 103px;
+}
+
+#center_display_second_page_box_div2 {
+    margin-top: 18px;
+    margin-bottom: 13px;
+}
+
 
 
 .center_display_second_page_box {

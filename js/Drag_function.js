@@ -210,7 +210,7 @@ left_menu4_img1.addEventListener('drag', (e) => {
     // console.log(middle_div1_box_div1);
 });
 
-
+/*
 
 // 放開花時   (盒子一)
 for (let i = 0; i < imgs.length; i++) {
@@ -589,6 +589,38 @@ for (let i = 0; i < imgs.length; i++) {
         }
     });
 };
+
+*/
+// 放開裝飾品時   (盒子整合器)
+for (let i = 0; i < imgs.length; i++) {
+    imgs[i].addEventListener('dragend', (e) => {
+        console.log('拖曳中');
+        console.log(imgs[i]);
+        for (let j = 0; j < allBox.length; j++) {
+            if ((e.clientX >= allBox[j].left) && (e.clientX <= allBox[j].right) &&
+                (e.clientY >= allBox[j].top) && (e.clientY <= allBox[j].bottom)) {
+                console.log('在盒子內2');
+                console.log('在範圍內2');
+                if (middle_div1_box_allDiv[j].childElementCount < 2) {
+                    let imgsClone = imgs[i].cloneNode(true);
+                    middle_div1_box_allDiv[j].appendChild(imgsClone);
+                    // allBox[j].style.border = '0px solid #999'
+                } else {
+                    console.log('目標區域已達上限');
+                    console.log(allBox)
+                    console.log(middle_div1_box_allDiv)
+                }
+            } else {
+                console.log('不在盒子內2');
+                console.log('不在範圍內2');
+            }
+        }
+    });
+};
+
+
+
+
 
 /* 
 // 放開花時   (盒子一)
@@ -1344,20 +1376,20 @@ let allBox = [
     middle_box15]
 
 
-// 放開花時   (盒子整合器)
+// 放開配料時   (盒子整合器)
 for (let i = 0; i < ingredients.length; i++) {
     ingredients[i].addEventListener('dragend', (e) => {
         console.log('拖曳中');
         console.log(ingredients[i]);
         for (let j = 0; j < allBox.length; j++) {
-            if (e.clientX >= allBox[j].left && e.clientX <= allBox[j].right &&
-                e.clientY >= allBox[j].top && e.clientY <= allBox[j].bottom) {
+            if ((e.clientX >= allBox[j].left) && (e.clientX <= allBox[j].right) &&
+                (e.clientY >= allBox[j].top) && (e.clientY <= allBox[j].bottom)) {
                 console.log('在盒子內2');
                 console.log('在範圍內2');
-                if (allBox[j].childElementCount < 2) {
+                if (middle_div1_box_allDiv[j].childElementCount < 2) {
                     let imgsClone = ingredients[i].cloneNode(true);
-                    allBox[j].appendChild(imgsClone);
-                    allBox[j].style.border = '0px solid #999'
+                    middle_div1_box_allDiv[j].appendChild(imgsClone);
+                    // allBox[j].style.border = '0px solid #999'
                 } else {
                     console.log('目標區域已達上限');
                     console.log(allBox)
