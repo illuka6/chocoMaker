@@ -592,31 +592,34 @@ for (let i = 0; i < imgs.length; i++) {
 
 */
 // 放開裝飾品時   (盒子整合器)
-for (let i = 0; i < imgs.length; i++) {
-    imgs[i].addEventListener('dragend', (e) => {
-        console.log('拖曳中');
-        console.log(imgs[i]);
-        for (let j = 0; j < allBox.length; j++) {
-            if ((e.clientX >= allBox[j].left) && (e.clientX <= allBox[j].right) &&
-                (e.clientY >= allBox[j].top) && (e.clientY <= allBox[j].bottom)) {
-                console.log('在盒子內2');
-                console.log('在範圍內2');
-                if (middle_div1_box_allDiv[j].childElementCount < 2) {
-                    let imgsClone = imgs[i].cloneNode(true);
-                    middle_div1_box_allDiv[j].appendChild(imgsClone);
-                    // allBox[j].style.border = '0px solid #999'
-                } else {
-                    console.log('目標區域已達上限');
-                    console.log(allBox)
-                    console.log(middle_div1_box_allDiv)
-                }
-            } else {
-                console.log('不在盒子內2');
-                console.log('不在範圍內2');
-            }
-        }
-    });
-};
+// for (let i = 0; i < imgs.length; i++) {
+//     imgs[i].addEventListener('dragend', (e) => {
+//         console.log('拖曳中');
+//         console.log(imgs[i]);
+//         for (let j = 0; j < allBox.length; j++) {
+//             if ((e.clientX >= allBox[j].left) && (e.clientX <= allBox[j].right) &&
+//                 (e.clientY >= allBox[j].top) && (e.clientY <= allBox[j].bottom)) {
+//                 console.log('在盒子內2');
+//                 console.log('在範圍內2');
+//                 if (middle_div1_box_allDiv[j].childElementCount < 2) {
+//                     let imgsClone = imgs[i].cloneNode(true);
+//                     middle_div1_box_allDiv[j].appendChild(imgsClone);
+//                     // allBox[j].style.border = '0px solid #999'
+//                     imgsClone.addEventListener('click', () => {
+//                         imgsClone.style.border = "2px solid #444"
+//                     })
+//                 } else {
+//                     console.log('目標區域已達上限');
+//                     console.log(allBox)
+//                     console.log(middle_div1_box_allDiv)
+//                 }
+//             } else {
+//                 console.log('不在盒子內2');
+//                 console.log('不在範圍內2');
+//             }
+//         }
+//     });
+// };
 
 
 
@@ -1377,19 +1380,252 @@ let allBox = [
 
 
 // 放開配料時   (盒子整合器)
-for (let i = 0; i < ingredients.length; i++) {
-    ingredients[i].addEventListener('dragend', (e) => {
+// for (let i = 0; i < ingredients.length; i++) {
+//     ingredients[i].addEventListener('dragend', (e) => {
+//         console.log('拖曳中');
+//         console.log(ingredients[i]);
+//         for (let j = 0; j < allBox.length; j++) {
+//             if ((e.clientX >= allBox[j].left) && (e.clientX <= allBox[j].right) &&
+//                 (e.clientY >= allBox[j].top) && (e.clientY <= allBox[j].bottom)) {
+//                 console.log('在盒子內2');
+//                 console.log('在範圍內2');
+//                 if (middle_div1_box_allDiv[j].childElementCount < 2) {
+//                     let imgsClone = ingredients[i].cloneNode(true);
+//                     middle_div1_box_allDiv[j].appendChild(imgsClone);
+//                     // allBox[j].style.border = '0px solid #999'
+//                     imgsClone.addEventListener('click', () => {
+//                         imgsClone.style.border = "2px solid #444"
+//                     })
+//                 } else {
+//                     console.log('目標區域已達上限');
+//                     console.log(allBox)
+//                     console.log(middle_div1_box_allDiv)
+//                 }
+//             } else {
+//                 console.log('不在盒子內2');
+//                 console.log('不在範圍內2');
+//             }
+//         }
+//     });
+// };
+
+/* 文字模板區塊 */
+let left_menu3_div3_div_img1 = document.getElementById('left_menu3_div3_div_img1');
+let left_menu3_div3_div_img2 = document.getElementById('left_menu3_div3_div_img2');
+let left_menu3_div3_div_img3 = document.getElementById('left_menu3_div3_div_img3');
+let left_menu3_div3_div_img4 = document.getElementById('left_menu3_div3_div_img4');
+let left_menu3_div3_div_img5 = document.getElementById('left_menu3_div3_div_img5');
+let left_menu3_div3_div_img6 = document.getElementById('left_menu3_div3_div_img6');
+let left_menu3_div3_div_img7 = document.getElementById('left_menu3_div3_div_img7');
+let left_menu3_div3_div_img8 = document.getElementById('left_menu3_div3_div_img8');
+let left_menu3_div3_div_img9 = document.getElementById('left_menu3_div3_div_img9');
+
+let left_menu3_div3_allDivImg = [
+    left_menu3_div3_div_img1,
+    left_menu3_div3_div_img2,
+    left_menu3_div3_div_img3,
+    left_menu3_div3_div_img4,
+    left_menu3_div3_div_img5,
+    left_menu3_div3_div_img6,
+    left_menu3_div3_div_img7,
+    left_menu3_div3_div_img8,
+    left_menu3_div3_div_img9,
+]
+
+
+
+for (let i = 0; i < left_menu3_div3_allDivImg.length; i++) {
+    left_menu3_div3_allDivImg[i].addEventListener('drag', (e) => {
+        middle_div1_box_div1.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div2.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div3.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div4.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div5.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div6.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div7.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div8.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div9.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div10.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div11.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div12.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div13.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div14.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+        middle_div1_box_div15.style.border = '2px dotted rgba(255, 255, 255, 0.1)';
+    }
+    )
+};
+
+
+for (let i = 0; i < left_menu3_div3_allDivImg.length; i++) {
+    left_menu3_div3_allDivImg[i].addEventListener('dragend', (e) => {
+        middle_div1_box_div1.style.border = 'none';
+        middle_div1_box_div2.style.border = 'none';
+        middle_div1_box_div3.style.border = 'none';
+        middle_div1_box_div4.style.border = 'none';
+        middle_div1_box_div5.style.border = 'none';
+        middle_div1_box_div6.style.border = 'none';
+        middle_div1_box_div7.style.border = 'none';
+        middle_div1_box_div8.style.border = 'none';
+        middle_div1_box_div9.style.border = 'none';
+        middle_div1_box_div10.style.border = 'none';
+        middle_div1_box_div11.style.border = 'none';
+        middle_div1_box_div12.style.border = 'none';
+        middle_div1_box_div13.style.border = 'none';
+        middle_div1_box_div14.style.border = 'none';
+        middle_div1_box_div15.style.border = 'none';
+    }
+    )
+};
+
+
+
+
+
+// let menu_below_li_left1 = document.getElementById('menu_below_li_left1');
+// let menu_below_li_right1 = document.getElementById('menu_below_li_right1');
+// 放開文字模板時   (盒子整合器)
+// for (let i = 0; i < left_menu3_div3_allDivImg.length; i++) {
+//     left_menu3_div3_allDivImg[i].addEventListener('dragend', (e) => {
+//         console.log('拖曳中');
+//         console.log(left_menu3_div3_allDivImg[i]);
+//         for (let j = 0; j < allBox.length; j++) {
+//             if ((e.clientX >= allBox[j].left) && (e.clientX <= allBox[j].right) &&
+//                 (e.clientY >= allBox[j].top) && (e.clientY <= allBox[j].bottom)) {
+//                 console.log('在盒子內2');
+//                 console.log('在範圍內2');
+//                 if (middle_div1_box_allDiv[j].childElementCount < 2) {
+//                     let imgsClone = left_menu3_div3_allDivImg[i].cloneNode(true);
+//                     middle_div1_box_allDiv[j].appendChild(imgsClone);
+//                     // allBox[j].style.border = '0px solid #999'
+//                     imgsClone.addEventListener('click', () => {
+//                         imgsClone.style.border = "2px solid #444"
+//                     })
+//                     console.log('按了旋轉');
+//                     if (menu_below_li_left1.addEventListener('click', () => {
+//                         imgsClone.style.transform = 'rotate(45deg)';
+//                     }));
+//                     if (menu_below_li_right1.addEventListener('click', () => {
+//                         imgsClone.style.transform = 'rotate(180deg)';
+//                     }));
+//                 } else {
+//                     console.log('目標區域已達上限');
+//                     console.log(allBox)
+//                     console.log(middle_div1_box_allDiv)
+//                 }
+//             } else {
+//                 console.log('不在盒子內2');
+//                 console.log('不在範圍內2');
+//             }
+//         }
+//     });
+// };
+
+
+
+// let middle_div1_box2 = document.querySelectorAll('#middle_div1_box div img');
+// console.log(middle_div1_box2);
+// console.log(imgsClone);
+// middle_div1_box2.forEach((img) => {
+//     console.log(img)
+//     img.addEventListener('click', () => {
+//         console.log('你點了' + img);
+//     });
+// });
+
+
+
+/* 第一頁客製化拖曳圖片整合器 */
+
+
+let allBtnevent = [
+    left_menu4_img1,
+    left_menu4_img2,
+    left_menu4_img3,
+    left_menu4_img4,
+    left_menu4_img5,
+    left_menu4_img6,
+    left_menu4_img7,
+    left_menu4_img8,
+    left_menu4_img9,
+    pistachio_img,
+    almond_img_img,
+    dried_strawberries_img,
+    dried_orange_img,
+    dried_kiwi_fruit_img,
+    dry_petals_img,
+    left_menu3_div3_div_img1,
+    left_menu3_div3_div_img2,
+    left_menu3_div3_div_img3,
+    left_menu3_div3_div_img4,
+    left_menu3_div3_div_img5,
+    left_menu3_div3_div_img6,
+    left_menu3_div3_div_img7,
+    left_menu3_div3_div_img8,
+    left_menu3_div3_div_img9,
+]
+
+
+let Select_function = document.getElementById('Select_function');
+let menu_below_li_left1 = document.getElementById('menu_below_li_left1');
+let menu_below_li_left2 = document.getElementById('menu_below_li_left2')
+let menu_below_li_right1 = document.getElementById('menu_below_li_right1');
+let garbage_can = document.getElementById('garbage_can');
+let angle = 0;//這個是轉角度
+let flip = 0;//這個是翻轉
+let Lock_picture = null;
+// 放開文字模板時   (盒子整合器)
+for (let i = 0; i < allBtnevent.length; i++) {
+    allBtnevent[i].addEventListener('dragend', (e) => {
         console.log('拖曳中');
-        console.log(ingredients[i]);
+        console.log(allBtnevent[i]);
         for (let j = 0; j < allBox.length; j++) {
             if ((e.clientX >= allBox[j].left) && (e.clientX <= allBox[j].right) &&
                 (e.clientY >= allBox[j].top) && (e.clientY <= allBox[j].bottom)) {
                 console.log('在盒子內2');
                 console.log('在範圍內2');
                 if (middle_div1_box_allDiv[j].childElementCount < 2) {
-                    let imgsClone = ingredients[i].cloneNode(true);
+                    let imgsClone = allBtnevent[i].cloneNode(true);
                     middle_div1_box_allDiv[j].appendChild(imgsClone);
                     // allBox[j].style.border = '0px solid #999'
+                    if (imgsClone.addEventListener('click', () => {
+                        Lock_picture = imgsClone;
+                        Lock_picture.style.border = "2px solid #444"
+                        console.log(Lock_picture);
+                    }));
+                    if (Select_function.addEventListener('click', () => {
+                        Lock_picture = imgsClone;
+                        Lock_picture.style.border = "0px solid #444"
+                        console.log("xxx");
+                    }));
+                    if (menu_below_li_left2.addEventListener('click', () => {
+                        if (Lock_picture) {
+                            Lock_picture.style.width = '30px';
+                            Lock_picture.style.height = '30px';
+                            console.log('你按了縮放');
+                        }
+                    }));
+                    if (menu_below_li_left1.addEventListener('click', () => {
+                        if (Lock_picture) {
+                            angle = angle + 45;
+                            Lock_picture.style.transform = `rotate(${angle}deg)`;
+                            console.log(angle);
+                            console.log('你按了旋轉');
+                        }
+                    }));
+                    if (menu_below_li_right1.addEventListener('click', () => {
+                        if (Lock_picture) {
+                            flip = flip + 180;
+                            Lock_picture.style.transform = `rotate(${flip}deg)`;
+                            console.log('你按了翻轉');
+                        }
+                    }));
+                    if (garbage_can.addEventListener('click', () => {
+                        if (Lock_picture) {
+                            Lock_picture.remove();
+                            // middle_div1_box_allDiv.parentNode.removechild(Lock_picture);
+                            console.log('你按了刪除');
+                        }
+                    }));
                 } else {
                     console.log('目標區域已達上限');
                     console.log(allBox)
@@ -1402,4 +1638,3 @@ for (let i = 0; i < ingredients.length; i++) {
         }
     });
 };
-
