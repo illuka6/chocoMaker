@@ -668,7 +668,7 @@ body {
     top: 90px;
     left: 180px;
     width: 150px;
-    height: auto;
+    height: 350px;
     /* height: 100%; */
     /* height: 350px; */
     /* width: 100%; */
@@ -677,6 +677,8 @@ body {
     flex-wrap: wrap;
     /* justify-content: center; */
     margin: 0;
+    /* visibility:hidden; */
+    /* visibility:visible; */
 }
 
 #middle_div1_box_div1,
@@ -696,7 +698,7 @@ body {
 #middle_div1_box_div15 {
     width: 50px;
     height: 70px;
-    border: 0px dotted yellow;
+    border: 2px dotted yellow;
     /* border-style: dotted; */
     /* border-style: dotted;
     border-color: rgba(255, 0, 0, 0.5); */

@@ -191,8 +191,8 @@ for (let i = 0; i < chocolate_color.length; i++) {
     chocolate_color[i].addEventListener('click', function () {
         allImg();
         for (let j = 0; j < chocolate_src.length; j++) {
-            chocolate_src_click[i]='';
-            chocolate_src[j] = chocolate_src_click[i];
+            // chocolate_src_click[i]='';
+            // chocolate_src[j] = chocolate_src_click[i];
             console.log('換圖');
         }
     });
