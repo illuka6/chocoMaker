@@ -122,12 +122,7 @@ section {
 
 
 
-.qabox {
-    position: relative;
-color: aqua;
-padding: 20px;
 
-}
 
 .QAwrap {
     /* position: absolute;
@@ -211,9 +206,10 @@ padding: 20px;
 
     max-height: 0; /* 初始状态 */
     overflow: hidden;
-    transition:  0.5s ease-in-out; /* 展开和收起的过渡效果 */
+    transition:   0.3s ease-in-out, height 0.3s ease; /* 展开和收起的过渡效果 */
 }
 .ans.expanded {
+    
     max-height: 500px; /* 设置为一个比内容实际高度大的值 */
 }
 .ans p{
