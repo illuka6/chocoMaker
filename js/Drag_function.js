@@ -1565,10 +1565,14 @@ let allBtnevent = [
 ]
 
 
-
+let Select_function = document.getElementById('Select_function');
 let menu_below_li_left1 = document.getElementById('menu_below_li_left1');
 let menu_below_li_left2 = document.getElementById('menu_below_li_left2')
 let menu_below_li_right1 = document.getElementById('menu_below_li_right1');
+let garbage_can = document.getElementById('garbage_can');
+let angle = 0;//這個是轉角度
+let flip = 0;//這個是翻轉
+let Lock_picture = null;
 // 放開文字模板時   (盒子整合器)
 for (let i = 0; i < allBtnevent.length; i++) {
     allBtnevent[i].addEventListener('dragend', (e) => {
@@ -1584,19 +1588,43 @@ for (let i = 0; i < allBtnevent.length; i++) {
                     middle_div1_box_allDiv[j].appendChild(imgsClone);
                     // allBox[j].style.border = '0px solid #999'
                     if (imgsClone.addEventListener('click', () => {
-                        imgsClone.style.border = "2px solid #444"
+                        Lock_picture = imgsClone;
+                        Lock_picture.style.border = "2px solid #444"
+                        console.log(Lock_picture);
                     }));
-                        if (menu_below_li_left2.addEventListener('click', () => {
-                            imgsClone.style.width = '30px';
-                            imgsClone.style.height = '30px';
+                    if (Select_function.addEventListener('click', () => {
+                        Lock_picture = imgsClone;
+                        Lock_picture.style.border = "0px solid #444"
+                        console.log("xxx");
+                    }));
+                    if (menu_below_li_left2.addEventListener('click', () => {
+                        if (Lock_picture) {
+                            Lock_picture.style.width = '30px';
+                            Lock_picture.style.height = '30px';
                             console.log('你按了縮放');
-                        }));
+                        }
+                    }));
                     if (menu_below_li_left1.addEventListener('click', () => {
-                        imgsClone.style.transform = `rotate(45deg)`;
-                        console.log('你按了旋轉')
+                        if (Lock_picture) {
+                            angle = angle + 45;
+                            Lock_picture.style.transform = `rotate(${angle}deg)`;
+                            console.log(angle);
+                            console.log('你按了旋轉');
+                        }
                     }));
                     if (menu_below_li_right1.addEventListener('click', () => {
-                        imgsClone.style.transform = 'rotate(180deg)';
+                        if (Lock_picture) {
+                            flip = flip + 180;
+                            Lock_picture.style.transform = `rotate(${flip}deg)`;
+                            console.log('你按了翻轉');
+                        }
+                    }));
+                    if (garbage_can.addEventListener('click', () => {
+                        if (Lock_picture) {
+                            Lock_picture.remove();
+                            // middle_div1_box_allDiv.parentNode.removechild(Lock_picture);
+                            console.log('你按了刪除');
+                        }
                     }));
                 } else {
                     console.log('目標區域已達上限');

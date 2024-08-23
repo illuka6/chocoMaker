@@ -357,6 +357,7 @@ let left_menu5_img_a1 = document.getElementById('left_menu5_img_a1');
 
 left_menu5_img_a1.addEventListener('click', function () {
     middle_img_none();
+    middle_img5[0].style.display = "block";
     // middle_div1_box.style.display = 'block;'
     middle_div1_box.style.display = 'none';
 });
