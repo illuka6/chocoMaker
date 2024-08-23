@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/shop.css">
+    <link rel="stylesheet" href="./css/shop2.css">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <title>SHOP 商品頁</title>
 </head>
 
@@ -14,147 +17,128 @@
         <section id="banner">
             <div class="img_container"></div>
         </section>
-        <section id="items_content">
-            <div id="filter" class="filter">
-                <div class="filter_list">
-                    <ul class="drop-down-menu">
-                        <li><a href="#">限定</a>
-                            <ul>
-                                <li><a href="#">情人節</a>
-                                </li>
-                                <li><a href="#">生日</a>
-                                </li>
-                                <li><a href="#">畢業</a>
-                                </li>
-                                <li><a href="#">其它節慶</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="#">數量</a>
-                        </li>
-                        <li><a href="#">價位</a>
-                        </li>
+        <div class="items_list"> 
+
+            <div id="root"></div>
+            
+            <section id="items_content">
+                <div id="filter" class="filter">
+                    <div class="filter_list">
+                        <ul class="drop-down-menu">
+                            <li><a href="#">限定</a>
+                                <ul>
+                                    <li><a>情人節</a>
+                                    </li>
+                                    <li><a>生日</a>
+                                    </li>
+                                    <li><a>畢業</a>
+                                    </li>
+                                    <li><a>其它節慶</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a>數量</a>
+                            </li>
+                            <li><a>價位</a>
+                            </li>
+                    </div>
                 </div>
-            </div>
+                <script type="text/babel">
 
-            <div class="items_list">
-                <div class="items_list">
+                    function Item(props) {
+                        return (
+                            <div className="item_wrap">
+                                <a className="item" href="#">
+                                    <div className="item_pic"> <img src={props.pic} /></div>
+                                    <div className="item_name">{props.name}</div>
+                                    <div className="item_price">{props.price}</div>
+                                    <div className="item_text">{props.text}</div>
+                                </a>
+                            </div>)
+                    }
 
-                   
-                    <div class="item_wrap">
-                        <a class="item" href="#">
-                            <div class="item_pic"> <img src="./images/shop_images/item2.jpg" alt=""></div>
-                            <div class="item_name">2025新年賀禮巧克力禮盒12入</div>
-                            <div class="item_price">NT 2,600</div>
-                            <div class="item_text">每顆巧克力皆由大師手工製作，結合頂級原料，讓您體驗無可比擬的奢華口感。</div>
-                        </a>
-                    </div> 
-                    <div class="item_wrap">
-                        <a class="item" href="#">
-                            <div class="item_pic"> <img src="./images/shop_images/item1.jpg" alt=""></div>
-                            <div class="item_name">黃金典雅禮盒12入</div>
-                            <div class="item_price">NT 2,000</div>
-                            <div class="item_text">這款黃金典雅禮盒內含精選巧克力，包裝豪華，適合送禮自用皆宜，展現品味與高貴。</div>
-                        </a>
-                    </div>
-                    <div class="item_wrap">
-                        <a class="item" href="#">
-                            <div class="item_pic"> <img src="./images/shop_images/item3.jpg" alt=""></div>
-                            <div class="item_name">璀璨星河禮盒12入</div>
-                            <div class="item_price">NT 2,800</div>
-                            <div class="item_text">璀璨星河禮盒帶來星光般的美麗，內含精緻巧克力，每一口都充滿浪漫與驚喜。</div>
-                        </a>
-                    </div>
-                    <div class="item_wrap">
-                        <a class="item" href="#">
-                            <img class="new_tag" src="./images/shop_images/item_new.svg"></img>
-                            <div class="item_pic"> <img src="./images/shop_images/item4.jpg" alt=""></div>
-                            <div class="item_name">璀璨七夕-情人節禮盒</div>
-                            <div class="item_price">NT 3,000</div>
-                            <div class="item_text">專為情人節設計的璀璨禮盒，展現愛意，巧克力的每一口都彷彿融化在心中。</div>
-                        </a>
-                    </div>
-                    <div class="item_wrap">
-                        <a class="item" href="#">
-                            <img class="new_tag" src="./images/shop_images/item_new.svg"></img>
-                            <div class="item_pic"> <img src="./images/shop_images/item5-1.jpg" alt=""></div>
-                            <div class="item_name">熱戀之吻-情人節禮盒</div>
-                            <div class="item_price">NT 3,000</div>
-                            <div class="item_text">熱戀之吻巧克力禮盒，特別為情人節打造，甜美的巧克力表達最深情的告白。</div>
-                        </a>
-                    </div>
-                    <div class="item_wrap">
-                        <a class="item" href="#">
-                            <div class="item_pic"> <img src="./images/shop_images/item6.jpg" alt=""></div>
-                            <div class="item_name">90%黑金巧克力禮盒</div>
-                            <div class="item_price">NT 2,500</div>
-                            <div class="item_text">90%高濃度黑巧克力，帶來深邃的苦甜風味，滿足對巧克力的高標準需求。</div>
-                        </a>
-                    </div>
-                    <div class="item_wrap">
-                        <a class="item" href="#">
-                            <div class="item_pic"> <img src="./images/shop_images/item7.jpg" alt=""></div>
-                            <div class="item_name">生日快樂-巧克力禮盒</div>
-                            <div class="item_price">NT 2,800</div>
-                            <div class="item_text">為生日精心準備的巧克力禮盒，充滿甜蜜和祝福，讓每一口都帶來快樂與驚喜。</div>
-                        </a>
-                    </div>
-                    <div class="item_wrap">
-                        <a class="item" href="#">
-                            <div class="item_pic"> <img src="./images/shop_images/item8.jpg" alt=""></div>
-                            <div class="item_name">摩卡經典禮盒12入</div>
-                            <div class="item_price">NT 3,000</div>
-                            <div class="item_text">摩卡風味巧克力禮盒，結合濃郁咖啡香與細膩巧克力，帶來獨特的品味體驗。</div>
-                        </a>
-                    </div>
-                    <div class="item_wrap">
+                    const App = () => {
+                        const items = [
+                            {
+                                id: "0",
+                                pic: "./images/shop_images/item1.jpg",
+                                name: "2025新年賀禮巧克力禮盒12入",
+                                price: 'NT 2,600',
+                                text: "每顆巧克力皆由大師手工製作，結合頂級原料，讓您體驗無可比擬的奢華口感。"
+
+                            }, {
+                                id: '1',
+                                pic: "./images/shop_images/item2.jpg",
+                                name: "2025新年賀禮巧克力禮盒12入",
+                                price: 'NT 2,600',
+                                text: "每顆巧克力皆由大師手工製作，結合頂級原料，讓您體驗無可比擬的奢華口感。"
+
+                            }, {
+                                id: '2',
+                                pic: "./images/shop_images/item3.jpg",
+                                name: "2025新年賀禮巧克力禮盒12入",
+                                price: 'NT 2,600',
+                                text: "每顆巧克力皆由大師手工製作，結合頂級原料，讓您體驗無可比擬的奢華口感。"
+
+
+                            }]
+                        return (<>
+
+                            {items.map((item) => {
+                                return (
+                                    <Item key={item.id} pic={item.pic} name={item.name} prive={item.price} text={item.text} />
+                                )
+                            })
+                            }
+
+
+                        </>)
+
+                    };
+                    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+                </script>
+
+
+                <!-- <div class="item_wrap">
                         <a class="item" href="#">
                             <div class="item_pic"> <img src="./images/shop_images/item9.jpg" alt=""></div>
                             <div class="item_name">麋鹿聖誕-巧克力禮盒</div>
                             <div class="item_price">NT 3,000</div>
                             <div class="item_text">聖誕節限定巧克力禮盒，精緻設計與美味巧克力，增添節日的歡樂與喜悅。</div>
                         </a>
-                    </div>
+                    </div> -->
 
-                </div>
+        </div>
+        </div>
+
+
+        <div class="change_page">
+            <div id="pages_num">
+                <a href="./shop.html">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
             </div>
-
-
-            <div class="change_page">
-                <div id="pages_num">
-                    <a href="./shop.html">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                </div>
-                <div class="next_pages">
-                    <a href="#" class="next_page_text"><img src="./images/footer_btn_nextpage.svg" alt=""></a>
-                </div>
+            <div class="next_pages">
+                <a href="#" class="next_page_text"><img src="./images/footer_btn_nextpage.svg" alt=""></a>
             </div>
+        </div>
         </section>
 
     </main>
-    <footer>
-        <div class="wrap">
-            <a class="logo" href="#"><img src="./images/footer_logo.svg" alt=""></a>
-            <div class="bottom_nav">
-                <ul class="menu">
-                    <li><a href="./index.html" id="home">首頁</a></li>
-                    <li><a href="#" id="news">最新消息</a></li>
-                    <li><a href="./shop.html" id="shop">商品一覽</a></li>
-                    <li><a href="#" id="about">關於我們</a></li>
-                    <li><a href="#" id="Q&A">Q&A</a></li>
-                    <li><a href="#" id="shopping_car">購物車</a></li>
-                    <li><a href="#" id="member">會員專區</a></li>
-                </ul>
-            </div>
-            <div class="icon">
-                <a class="fb" href="#"></a>
-                <a class="ig" href="#"></a>
-                <a class="x" href="#"></a>
-            </div>
-        </div>
-        <div class="copyRight">© Mélange. All Rights Reserved.</div>
-    </footer>
+    <div id="footer"></div>
+    <!-- 引用footer -->
+    <script type="text/babel" src="./Footer.jsx"></script>
+    <link rel="stylesheet" href="./css/Footer.css">
+    <script type="text/babel">
+        function App() {
+            return (
+                <Footer />
+            )
+        }
+        ReactDOM
+            .createRoot(document.getElementById('footer'))
+            .render(<App />);
+    </script>
 </body>
 
 </html>
