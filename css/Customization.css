@@ -82,11 +82,88 @@ body {
 }
 
 /* ↓↓標籤列↓↓ */
+
+#menu {
+    display: flex;
+    justify-content: center;
+}
+
 #menu_id {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 29px;
+    /* display: none; */
+}
+
+
+#menu_id_search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 29px;
+    display: none;
+}
+
+#menu_id_search_divBox {
+    border: 0px solid #444;
+    border-radius: 99px;
+    width: 416px;
+    height: 42px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFF9F1;
+}
+
+#menu_id_search_divBox div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* width: 100%; */
+}
+
+#menu_id_search_divBox_divbox {
+    display: flex;
+    width: 71px;
+    height: 34px;
+}
+
+#menu_id_search_divBox_a1 {
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+}
+
+#menu_id_search_divBox_a1 img {
+    width: 34px;
+    height: 34px;
+}
+
+#menu_id_search_divBox_a1 p {
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 29px;
+    color: #6B3B20;
+}
+
+#menu_id_search_divBox_a2 {
+    /* margin-left: 50px; */
+    margin-right: 10px;
+}
+
+#menu_id_search_li2 {
+    margin-left: 16px;
+    margin-right: 20px;
+    width: 24px;
+    height: 24px;
+}
+
+#menu_id_search_li3 {
+    width: 24px;
+    height: 24px;
 }
 
 #menu_id_menu {
@@ -123,6 +200,10 @@ body {
 #customized:hover {
     background-color: #3F1A09;
 }
+
+
+
+
 
 #menu_id_icon {
     display: flex;
@@ -921,8 +1002,8 @@ body {
 }
 
 .menu_below_li img {
-    width: 50px;
-    height: 50px;
+    width: 52px;
+    height: 52px;
     display: flex;
     justify-content: flex-start;
 
@@ -1323,12 +1404,12 @@ body {
 }
 
 #center_display_second_page_box {
-    border: 0px solid #444;
+    border: 2px solid #444;
     position: absolute;
-    left: 165px;
+    left: -50px;
 }
 
-#center_display_second_page_box img{
+#center_display_second_page_box img {
     width: 104px;
     height: 103px;
 }
@@ -1381,11 +1462,41 @@ body {
     height: 174px;
 }
 
-#center_display_second_page_card1 {
+#center_display_second_page_card1,
+#center_display_second_page_card2,
+#center_display_second_page_card3,
+#center_display_second_page_card4,
+#center_display_second_page_card5,
+#center_display_second_page_card6,
+#center_display_second_page_card7,
+#center_display_second_page_card8,
+#center_display_second_page_card9 {
     width: 287px;
     height: 321px;
+    display: none;
 }
 
+
+#center_display_second_page_p{
+    border: 2px solid #444;
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    top: 190px;
+}
+
+
+#center_display_second_page_img1,
+#center_display_second_page_img2,
+#center_display_second_page_img3,
+#center_display_second_page_img4,
+#center_display_second_page_img5,
+#center_display_second_page_img6,
+#center_display_second_page_img7{
+width: 440px;
+height: 382px;
+display: none;
+}
 
 
 /* ↓↓右邊側邊欄位區塊↓↓ */
@@ -1408,6 +1519,11 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     margin-top: 30px;
+}
+
+#right_sidebar_second_page img {
+    width: 80px;
+    height: 80px;
 }
 
 /* ↑↑右邊側邊欄位區塊↑↑ */
@@ -1599,6 +1715,7 @@ body {
 
 #left_sidebar_three_page_div3_hr {
     padding: 0 40px;
+    margin-bottom: 33px;
 }
 
 #left_sidebar_three_page_div3_div_2 {
@@ -1621,7 +1738,7 @@ body {
     width: 102px;
     height: 99px;
     /* margin-top: 20px; */
-    margin-bottom: 20px;
+    margin-bottom: 53px;
 }
 
 
