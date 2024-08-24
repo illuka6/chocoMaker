@@ -8,7 +8,9 @@
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <title>SHOP 商品頁</title>
+    <!-- 引用ShopFilter元件 -->
+    <script type="text/babel" src="./ShopFilter.jsx"></script>
+    <title>SHOP 商品頁2</title>
 </head>
 
 <body>
@@ -17,72 +19,148 @@
         <section id="banner">
             <div class="img_container"></div>
         </section>
-        <div class="items_list"> 
 
-            <div id="root"></div>
-            
-            <section id="items_content">
-                <div id="filter" class="filter">
-                    <div class="filter_list">
-                        <ul class="drop-down-menu">
-                            <li><a href="#">限定</a>
-                                <ul>
-                                    <li><a>情人節</a>
+
+
+        <div id="root"></div>
+
+
+
+        <script type="text/babel">
+
+            function Item(props) {
+                return (
+                    <div className="item_wrap">
+                        <a className="item" href="#">
+                            <div className="item_pic"> <img src={props.pic} /></div>
+                            <div className="item_name">{props.name}</div>
+                            <div className="item_price">{props.price}</div>
+                            <div className="item_text">{props.text}</div>
+                        </a>
+                    </div>)
+            }
+
+            const App = () => {
+
+
+                const items = [
+                    {
+                        id: "1",
+                        pic: "./images/shop_images/item1.jpg",
+                        name: "2025新年賀禮巧克力禮盒12入",
+                        price: 'NT 2,600',
+                        text: "每顆巧克力皆由大師手工製作，結合頂級原料，讓您體驗無可比擬的奢華口感。"
+
+                    }, {
+                        id: '2',
+                        pic: "./images/shop_images/item2.jpg",
+                        name: "2025新年賀禮巧克力禮盒12入",
+                        price: 'NT 200',
+                        text: "每顆巧克力皆由大師手工製作，結合頂級原料，讓您體驗無可比擬的奢華口感。"
+
+                    }, {
+                        id: '3',
+                        pic: "./images/shop_images/item3.jpg",
+                        name: "2025新年賀禮巧克力禮盒12入",
+                        price: 'NT 1,600',
+                        text: "每顆巧克力皆由大師手工製作，結合頂級原料，讓您體驗無可比擬的奢華口感。"
+
+
+                    }, {
+                        id: '4',
+                        pic: "./images/shop_images/item4.jpg",
+                        name: "2025新年賀禮巧克力禮盒12入",
+                        price: 'NT 2,600',
+                        text: "每顆巧克力皆由大師手工製作，結合頂級原料，讓您體驗無可比擬的奢華口感。"
+                        
+                    }]
+
+                    // 使用狀態來管理篩選條件
+            const [filteredItems, setFilteredItems] = React.useState(items);
+            const [selectedPriceRange, setSelectedPriceRange] = React.useState(null);
+
+            // 處理價格篩選
+            const handlePriceFilter = (range) => {
+                setSelectedPriceRange(range);
+                const filtered = items.filter(item => {
+                    switch (range) {
+                        case 'below500':
+                            return parseInt(item.price) < 500;
+                        case 'below1000':
+                            return parseInt(item.price) < 1000;
+                        case 'below2000':
+                            return parseInt(item.price) < 2000;
+                        case 'above2000':
+                            return parseInt(item.price) > 2000;
+                        default:
+                            return true;
+                    }
+                });
+                setFilteredItems(filtered);
+            };
+
+
+
+                return (<>
+                    <section id="items_content">
+
+                        <div id="filter" class="filter">
+                            <div class="filter_list">
+                                <ul class="drop-down-menu">
+                                    <li id="festivalBtn"><img class="BtnPic" src="./images/shop_images/filter_btn1_down.svg"
+                                        alt="" />
+                                        <ul id="festivalList">
+                                            <li><a href="#">情人節</a>
+                                            </li>
+                                            <li><a href="#">生日</a>
+                                            </li>
+                                            <li><a href="#">畢業</a>
+                                            </li>
+                                            <li><a href="#">其它節慶</a>
+                                            </li>
+                                        </ul>
                                     </li>
-                                    <li><a>生日</a>
+                                    <li id="countsBtn"><img class="BtnPic" src="./images/shop_images/filter_btn2_down.svg" alt="" />
+                                        <ul id="countsList">
+                                            <li><a href="#">4入</a>
+                                            </li>
+                                            <li><a href="#">6入</a>
+                                            </li>
+                                            <li><a href="#">12入</a>
+                                            </li>
+                                            <li><a href="#">24入</a>
+                                            </li>
+                                        </ul>
                                     </li>
-                                    <li><a>畢業</a>
-                                    </li>
-                                    <li><a>其它節慶</a>
+                                    <li id="priceBtn"><img class="BtnPic" src="./images/shop_images/filter_btn3_down.svg" alt="" />
+                                        <ul id="priceList">
+                                            <li><a href="#">500元以下</a>
+                                            </li>
+                                            <li><a href="#">1000元以下</a>
+                                            </li>
+                                            <li><a href="#">2000元以下</a>
+                                            </li>
+                                            <li><a href="#">2000元以上</a>
+                                            </li>
+                                        </ul>
                                     </li>
                                 </ul>
-                            </li>
-                            <li><a>數量</a>
-                            </li>
-                            <li><a>價位</a>
-                            </li>
-                    </div>
-                </div>
-                <script type="text/babel">
-
-                    function Item(props) {
-                        return (
-                            <div className="item_wrap">
-                                <a className="item" href="#">
-                                    <div className="item_pic"> <img src={props.pic} /></div>
-                                    <div className="item_name">{props.name}</div>
-                                    <div className="item_price">{props.price}</div>
-                                    <div className="item_text">{props.text}</div>
-                                </a>
-                            </div>)
-                    }
-
-                    const App = () => {
-                        const items = [
-                            {
-                                id: "0",
-                                pic: "./images/shop_images/item1.jpg",
-                                name: "2025新年賀禮巧克力禮盒12入",
-                                price: 'NT 2,600',
-                                text: "每顆巧克力皆由大師手工製作，結合頂級原料，讓您體驗無可比擬的奢華口感。"
-
-                            }, {
-                                id: '1',
-                                pic: "./images/shop_images/item2.jpg",
-                                name: "2025新年賀禮巧克力禮盒12入",
-                                price: 'NT 2,600',
-                                text: "每顆巧克力皆由大師手工製作，結合頂級原料，讓您體驗無可比擬的奢華口感。"
-
-                            }, {
-                                id: '2',
-                                pic: "./images/shop_images/item3.jpg",
-                                name: "2025新年賀禮巧克力禮盒12入",
-                                price: 'NT 2,600',
-                                text: "每顆巧克力皆由大師手工製作，結合頂級原料，讓您體驗無可比擬的奢華口感。"
+                            </div>
+                            <div class="permutation">
+                                <div class="permutation_btn" id="permutationBtn">
+                                    <a><img src="./images/shop_images/permutation.svg" alt="" /></a>
+                                    <ul id="permutationList">
+                                        <li><a href="">熱門</a></li>
+                                        <li><a href="">推薦</a></li>
+                                        <li><a href="">價格由低到高</a></li>
+                                        <li><a href="">價格由高到低</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
 
-                            }]
-                        return (<>
+                        <div class="items_list">
 
                             {items.map((item) => {
                                 return (
@@ -91,15 +169,26 @@
                             })
                             }
 
+                        </div>
+                        <div class="change_page">
+                            <div id="pages_num">
+                                <a href="./shop.html">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                            </div>
+                            <div class="next_pages">
+                                <a href="#" class="next_page_text"><img src="./images/footer_btn_nextpage.svg" alt="" /></a>
+                            </div>
+                        </div>
+                    </section>
+                    <Footer />
+                    
+                </>)};
+            ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+        </script>
 
-                        </>)
 
-                    };
-                    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
-                </script>
-
-
-                <!-- <div class="item_wrap">
+        <!-- <div class="item_wrap">
                         <a class="item" href="#">
                             <div class="item_pic"> <img src="./images/shop_images/item9.jpg" alt=""></div>
                             <div class="item_name">麋鹿聖誕-巧克力禮盒</div>
@@ -109,26 +198,17 @@
                     </div> -->
 
         </div>
-        </div>
 
 
-        <div class="change_page">
-            <div id="pages_num">
-                <a href="./shop.html">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-            </div>
-            <div class="next_pages">
-                <a href="#" class="next_page_text"><img src="./images/footer_btn_nextpage.svg" alt=""></a>
-            </div>
-        </div>
-        </section>
+
+
 
     </main>
-    <div id="footer"></div>
-    <!-- 引用footer -->
+    <!-- 引用Footer元件 -->
     <script type="text/babel" src="./Footer.jsx"></script>
     <link rel="stylesheet" href="./css/Footer.css">
+    <!-- <div id="footer"></div>
+    
     <script type="text/babel">
         function App() {
             return (
@@ -138,7 +218,9 @@
         ReactDOM
             .createRoot(document.getElementById('footer'))
             .render(<App />);
-    </script>
+    </script> -->
+    <!-- js -->
+    <script src="./js/shop.js"></script>
 </body>
 
 </html>
