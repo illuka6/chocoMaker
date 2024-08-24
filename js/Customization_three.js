@@ -179,3 +179,91 @@ three_page_div1_1_a8.addEventListener('click', () => {
     boxImg();
     center_second_page_img7.style.display = 'block';
 });
+
+
+
+let Zone_three_white = document.getElementById('Zone_three_white');
+let Zone_three_almonds = document.getElementById('Zone_three_almonds');
+let Zone_three_blue = document.getElementById('Zone_three_blue');
+let District_three_pink = document.getElementById('District_three_pink');
+let Zone_three_brown = document.getElementById('Zone_three_brown');
+let Zone_three_green = document.getElementById('Zone_three_green');
+
+let Zone_three_white_img = document.getElementById('Zone_three_white_img');
+let Zone_three_almonds_img = document.getElementById('Zone_three_almonds_img');
+let Zone_three_blue_img = document.getElementById('Zone_three_blue_img');
+let District_three_pink_img = document.getElementById('District_three_pink_img');
+let Zone_three_brown_img = document.getElementById('Zone_three_brown_img');
+let Zone_three_green_img = document.getElementById('Zone_three_green_img');
+
+function color_Filling() {
+    Zone_three_white_img.src = './images/Custom_block/box/left_sidebar/Frame 9.svg';
+    Zone_three_almonds_img.src = './images/Custom_block/box/left_sidebar/Frame 10.svg';
+    Zone_three_blue_img.src = './images/Custom_block/box/left_sidebar/Frame 11.svg';
+    District_three_pink_img.src = './images/Custom_block/box/left_sidebar/Frame 12.svg';
+    Zone_three_brown_img.src = './images/Custom_block/box/left_sidebar/Frame 13.svg';
+    Zone_three_green_img.src = './images/Custom_block/box/left_sidebar/Frame 14.svg';
+};
+
+let box_color = true;
+Zone_three_white.addEventListener('click', () => {
+    color_Filling();
+    if (box_color) {
+        Zone_three_white_img.src = './images/Custom_block/box/left_sidebar/Frame 9-click.svg';
+    } else {
+        Zone_three_white_img.src = './images/Custom_block/box/left_sidebar/Frame 9.svg';
+    }
+});
+
+
+Zone_three_almonds.addEventListener('click', () => {
+    color_Filling();
+    if (box_color) {
+        Zone_three_almonds_img.src = './images/Custom_block/box/left_sidebar/Frame 10-click.svg';
+    } else {
+        Zone_three_almonds_img.src = './images/Custom_block/box/left_sidebar/Frame 10.svg';
+    }
+});
+
+
+Zone_three_blue.addEventListener('click', () => {
+    color_Filling();
+    if (box_color) {
+        Zone_three_blue_img.src = './images/Custom_block/box/left_sidebar/Frame 11-click.svg';
+    } else {
+        Zone_three_blue_img.src = './images/Custom_block/box/left_sidebar/Frame 11.svg';
+    }
+});
+
+
+
+
+District_three_pink.addEventListener('click', () => {
+    color_Filling();
+    if (box_color) {
+        District_three_pink_img.src = './images/Custom_block/box/left_sidebar/Frame 12-click.svg';
+    } else {
+        District_three_pink_img.src = './images/Custom_block/box/left_sidebar/Frame 12.svg';
+    }
+});
+
+
+Zone_three_brown.addEventListener('click', () => {
+    color_Filling();
+    if (box_color) {
+        Zone_three_brown_img.src = './images/Custom_block/box/left_sidebar/Frame 13-click.svg';
+    } else {
+        Zone_three_brown_img.src = './images/Custom_block/box/left_sidebar/Frame 13.svg';
+    }
+});
+
+
+Zone_three_green.addEventListener('click', () => {
+    color_Filling();
+    if (box_color) {
+        Zone_three_green_img.src = './images/Custom_block/box/left_sidebar/Frame 14-click.svg';
+    } else {
+        Zone_three_green_img.src = './images/Custom_block/box/left_sidebar/Frame 14.svg';
+    }
+});
+

@@ -229,3 +229,92 @@ four_page_div3_input.addEventListener('input', () => {
     // center_display_second_page_divp=textInput;
     center_display_second_page_divp.textContent = textInput;
 });
+
+
+
+
+let Zone_four_white = document.getElementById('Zone_four_white');
+let Zone_four_Almonds = document.getElementById('Zone_four_Almonds');
+let Zone_four_Blue = document.getElementById('Zone_four_Blue');
+let Zone_four_pink = document.getElementById('Zone_four_pink');
+let Zone_four_brown = document.getElementById('Zone_four_brown');
+let Zone_four_Green = document.getElementById('Zone_four_Green');
+
+let Zone_four_white_img = document.getElementById('Zone_four_white_img');
+let Zone_four_Almonds_img = document.getElementById('Zone_four_Almonds_img');
+let Zone_four_Blue_img = document.getElementById('Zone_four_Blue_img');
+let Zone_four_pink_img = document.getElementById('Zone_four_pink_img');
+let Zone_four_brown_img = document.getElementById('Zone_four_brown_img');
+let Zone_four_Green_img = document.getElementById('Zone_four_Green_img');
+
+function card_Filling() {
+    Zone_four_white_img.src = './images/Custom_block/box/left_sidebar/Frame 9.svg';
+    Zone_four_Almonds_img.src = './images/Custom_block/box/left_sidebar/Frame 10.svg';
+    Zone_four_Blue_img.src = './images/Custom_block/box/left_sidebar/Frame 11.svg';
+    Zone_four_pink_img.src = './images/Custom_block/box/left_sidebar/Frame 12.svg';
+    Zone_four_brown_img.src = './images/Custom_block/box/left_sidebar/Frame 13.svg';
+    Zone_four_Green_img.src = './images/Custom_block/box/left_sidebar/Frame 14.svg';
+};
+
+let card_color = true;
+Zone_four_white.addEventListener('click', () => {
+    card_Filling();
+    if (card_color) {
+        Zone_four_white_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 2_click.svg';
+    } else {
+        Zone_four_white_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 2.svg';
+    }
+});
+
+
+Zone_four_Almonds.addEventListener('click', () => {
+    card_Filling();
+    if (card_color) {
+        Zone_four_Almonds_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 3_click.svg';
+    } else {
+        Zone_four_Almonds_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 3.svg';
+    }
+});
+
+
+Zone_four_Blue.addEventListener('click', () => {
+    card_Filling();
+    if (card_color) {
+        Zone_four_Blue_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 4_click.svg';
+    } else {
+        Zone_four_Blue_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 4.svg';
+    }
+});
+
+
+
+
+Zone_four_pink.addEventListener('click', () => {
+    card_Filling();
+    if (card_color) {
+        Zone_four_pink_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 5_click.svg';
+    } else {
+        Zone_four_pink_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 5.svg';
+    }
+});
+
+
+Zone_four_brown.addEventListener('click', () => {
+    card_Filling();
+    if (card_color) {
+        Zone_four_brown_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 6_click.svg';
+    } else {
+        Zone_four_brown_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 6.svg';
+    }
+});
+
+
+Zone_four_Green.addEventListener('click', () => {
+    card_Filling();
+    if (card_color) {
+        Zone_four_Green_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 7_click.svg';
+    } else {
+        Zone_four_Green_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 7.svg';
+    }
+});
+

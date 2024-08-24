@@ -53,7 +53,7 @@ customized.addEventListener('mouseout', function () {
 let menu_id = document.getElementById('menu_id');
 let menu_id_search = document.getElementById('menu_id_search');
 let menu_id_icon_search = document.getElementById('menu_id_icon_search');
-let menu_id_search_divBox_a2=document.getElementById('menu_id_search_divBox_a2');
+let menu_id_search_divBox_a2 = document.getElementById('menu_id_search_divBox_a2');
 menu_id_icon_search.addEventListener('click', () => {
     menu_id.style.display = 'none';
     menu_id_search.style.display = 'flex';
@@ -309,7 +309,7 @@ left_menu_img4[0].addEventListener('click', function () {
     middle_div1_box.style.display = '';
     allImg();
     if (flag) {
-        src = './images/Custom_block/left_menu/first_floor/Ellipse 4_hover.svg';
+        strawberry_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 4_hover.svg';
     } else {
         strawberry_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 4.svg'
     }
