@@ -104,6 +104,7 @@ section {
     background-image: url(../index_images/bg-w.png);
 }
 
+
 .filter {
     position: absolute;
     top: 0;
@@ -218,18 +219,13 @@ border-bottom:var(--block_brown) solid 2px
     position: relative;
 }
 
-.permutation_btn ul li {
 
 
-    /* 只有第一層是靠左對齊*/
-    /* text-align: left; */
-
-}
 
 
 
 .items_list {
-    padding: 100px 5vw 50px;
+    padding: 150px 5vw 50px;
     width: 100%;
     max-width: 1440px;
     /* ;list通常最大寬度是絕對搭配相對單位,設定絕對單位] */
@@ -240,6 +236,9 @@ border-bottom:var(--block_brown) solid 2px
 }
 
 .item_wrap {
+    flex: 1 1 calc(33.333% - 20px);
+    /* 每行顯示 3 個項目，並考慮間隙 */
+    box-sizing: border-box;
     padding: 40px;
 }
 
@@ -339,5 +338,8 @@ border-bottom:var(--block_brown) solid 2px
 .next_page_text {
     padding: 20px;
 }
+
+
+
 
 
