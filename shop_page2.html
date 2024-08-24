@@ -34,7 +34,7 @@
                         <a className="item" href="#">
                             <div className="item_pic"> <img src={props.pic} /></div>
                             <div className="item_name">{props.name}</div>
-                            <div className="item_price">{props.price}</div>
+                            <div className="item_price">NT {props.price}</div>
                             <div className="item_text">{props.text}</div>
                         </a>
                     </div>)
@@ -48,21 +48,21 @@
                         id: "1",
                         pic: "./images/shop_images/item1.jpg",
                         name: "2025新年賀禮巧克力禮盒12入",
-                        price: 'NT 2,600',
+                        price: '2,600',
                         text: "每顆巧克力皆由大師手工製作，結合頂級原料，讓您體驗無可比擬的奢華口感。"
 
                     }, {
                         id: '2',
                         pic: "./images/shop_images/item2.jpg",
                         name: "2025新年賀禮巧克力禮盒12入",
-                        price: 'NT 200',
+                        price: '200',
                         text: "每顆巧克力皆由大師手工製作，結合頂級原料，讓您體驗無可比擬的奢華口感。"
 
                     }, {
                         id: '3',
                         pic: "./images/shop_images/item3.jpg",
                         name: "2025新年賀禮巧克力禮盒12入",
-                        price: 'NT 1,600',
+                        price: '1,600',
                         text: "每顆巧克力皆由大師手工製作，結合頂級原料，讓您體驗無可比擬的奢華口感。"
 
 
@@ -70,101 +70,82 @@
                         id: '4',
                         pic: "./images/shop_images/item4.jpg",
                         name: "2025新年賀禮巧克力禮盒12入",
-                        price: 'NT 2,600',
+                        price: '2,600',
                         text: "每顆巧克力皆由大師手工製作，結合頂級原料，讓您體驗無可比擬的奢華口感。"
-                        
+
                     }]
 
-                    // 使用狀態來管理篩選條件
-            const [filteredItems, setFilteredItems] = React.useState(items);
-            const [selectedPriceRange, setSelectedPriceRange] = React.useState(null);
+                // 創建狀態來管理篩選條件
+                const [filteredItems, setFilteredItems] = React.useState(items);
+                const [selectedPriceRange, setSelectedPriceRange] = React.useState(null);
 
-            // 處理價格篩選
-            const handlePriceFilter = (range) => {
-                setSelectedPriceRange(range);
-                const filtered = items.filter(item => {
-                    switch (range) {
-                        case 'below500':
-                            return parseInt(item.price) < 500;
-                        case 'below1000':
-                            return parseInt(item.price) < 1000;
-                        case 'below2000':
-                            return parseInt(item.price) < 2000;
-                        case 'above2000':
-                            return parseInt(item.price) > 2000;
+                // 創建狀態來控制每個下拉菜單的顯示狀態
+                const [showFestivalDropdown, setShowFestivalDropdown] = React.useState(false);
+                const [showCountsDropdown, setShowCountsDropdown] = React.useState(false);
+                const [showPriceDropdown, setShowPriceDropdown] = React.useState(false);
+                const [showPermutationDropdown, setShowPermutationDropdown] = React.useState(false);
+
+                const handlePriceFilter = (range) => {
+                    setSelectedPriceRange(range);
+                    const filtered = items.filter(item => {
+                        const price = parseInt(item.price.replace(',', '').trim());
+                        switch (range) {
+                            case 'below500':
+                                return price < 500;
+                            case 'below1000':
+                                return price < 1000;
+                            case 'below2000':
+                                return price < 2000;
+                            case 'above2000':
+                                return price > 2000;
+                            default:
+                                return true;
+                        }
+                    });
+                    setFilteredItems(filtered);
+                };
+
+                // 函數：切換下拉菜單的顯示狀態
+                //    const toggleDropdown = (dropdownSetter) => {
+                //       dropdownSetter(prevState => !prevState); 
+                // };
+                const toggleDropdown = (dropdown) => {
+                    switch (dropdown) {
+                        case 'price':
+                            setShowPriceDropdown(prevState => !prevState);
+                            break;
+                        case 'counts':
+                            setShowCountsDropdown(prevState => !prevState);
+                            break;
+                        case 'festival':
+                            setShowFestivalDropdown(prevState => !prevState);
+                            break;
+                        case 'permutation':
+                            setShowPermutationDropdown(prevState => !prevState);
+                            break;
                         default:
-                            return true;
+                            break;
                     }
-                });
-                setFilteredItems(filtered);
-            };
+                };
+
 
 
 
                 return (<>
                     <section id="items_content">
-
-                        <div id="filter" class="filter">
-                            <div class="filter_list">
-                                <ul class="drop-down-menu">
-                                    <li id="festivalBtn"><img class="BtnPic" src="./images/shop_images/filter_btn1_down.svg"
-                                        alt="" />
-                                        <ul id="festivalList">
-                                            <li><a href="#">情人節</a>
-                                            </li>
-                                            <li><a href="#">生日</a>
-                                            </li>
-                                            <li><a href="#">畢業</a>
-                                            </li>
-                                            <li><a href="#">其它節慶</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li id="countsBtn"><img class="BtnPic" src="./images/shop_images/filter_btn2_down.svg" alt="" />
-                                        <ul id="countsList">
-                                            <li><a href="#">4入</a>
-                                            </li>
-                                            <li><a href="#">6入</a>
-                                            </li>
-                                            <li><a href="#">12入</a>
-                                            </li>
-                                            <li><a href="#">24入</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li id="priceBtn"><img class="BtnPic" src="./images/shop_images/filter_btn3_down.svg" alt="" />
-                                        <ul id="priceList">
-                                            <li><a href="#">500元以下</a>
-                                            </li>
-                                            <li><a href="#">1000元以下</a>
-                                            </li>
-                                            <li><a href="#">2000元以下</a>
-                                            </li>
-                                            <li><a href="#">2000元以上</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="permutation">
-                                <div class="permutation_btn" id="permutationBtn">
-                                    <a><img src="./images/shop_images/permutation.svg" alt="" /></a>
-                                    <ul id="permutationList">
-                                        <li><a href="">熱門</a></li>
-                                        <li><a href="">推薦</a></li>
-                                        <li><a href="">價格由低到高</a></li>
-                                        <li><a href="">價格由高到低</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
+                        <ShopFilter
+                            handlePriceFilter={handlePriceFilter}
+                            toggleDropdown={toggleDropdown}
+                            showPriceDropdown={showPriceDropdown}
+                            showCountsDropdown={showCountsDropdown}
+                            showFestivalDropdown={showFestivalDropdown}
+                        />
 
                         <div class="items_list">
-
-                            {items.map((item) => {
+                            {/*items => filteredItems*/}
+                            {filteredItems.map((item) => {
                                 return (
-                                    <Item key={item.id} pic={item.pic} name={item.name} prive={item.price} text={item.text} />
+                                    <Item key={item.id} pic={item.pic} name={item.name} price={item.price} text={item.text} />
                                 )
                             })
                             }
@@ -182,8 +163,9 @@
                         </div>
                     </section>
                     <Footer />
-                    
-                </>)};
+
+                </>)
+            };
             ReactDOM.createRoot(document.getElementById('root')).render(<App />);
         </script>
 

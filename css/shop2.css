@@ -141,7 +141,7 @@ max-width:100px ;
 }
 
 #festivalList,#countsList,#priceList,#permutationList {
-    display: none; /* 或者使用 inline 或 block 等初始状态 */
+  
 }
 
 ul.drop-down-menu ul {
