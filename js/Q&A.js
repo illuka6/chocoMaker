@@ -69,7 +69,8 @@ function toggleDropdown(btnClass, listClass, vectorClass) {
         for (let i = 0; i < lists.length; i++) {        
             lists[i].classList.remove('expanded');
             vec[i].classList.remove('expanded_vec');
-        }        
+        }
+        
     }
 
 
@@ -86,7 +87,7 @@ function toggleDropdown(btnClass, listClass, vectorClass) {
             let isExpanded = list.classList.contains('expanded');
 
             // 先关闭所有下拉菜单
-            // closeAllDropdowns();
+            closeAllDropdowns();
 
             // 如果当前菜单之前没有展开，才展开它
             if (!isExpanded) {
