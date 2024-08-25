@@ -111,14 +111,14 @@
                                     question: '我是廠商？',
                                     ans: '是的，我們可以為各種特殊活動提供特別設計的巧克力。無論是婚禮、生日派對還是其他慶祝場合，我們都能根據您的需求創作獨一無二的巧克力產品。同時我們 提供多種設計選項，包括在巧克力上印製文字、裝飾，並可以選擇多種形狀和口味。此外，我們還提供個性化的包裝服務，確保您的巧克力禮品既美觀又具紀念意義。無論您的活動規模大小，我們都能為您量身定制，提供高品質的巧克力產品來增添活動的亮點。',
 
-                                }, 
+                                },
                                 {
                                     id: 3,
                                     question: '我是廠商？',
                                     ans: '是的，我們可以為各種特殊活動提供特別設計的巧克力。無論是婚禮、生日派對還是其他慶祝場合，我們都能根據您的需求創作獨一無二的巧克力產品。同時我們 提供多種設計選項，包括在巧克力上印製文字、裝飾，並可以選擇多種形狀和口味。此外，我們還提供個性化的包裝服務，確保您的巧克力禮品既美觀又具紀念意義。無論您的活動規模大小，我們都能為您量身定制，提供高品質的巧克力產品來增添活動的亮點。',
 
-                                
-                                }, 
+
+                                },
                                 {
                                     id: 4,
                                     question: '我是廠商？',
@@ -148,11 +148,51 @@
                             };
 
 
+                            function toggleDropdown(btnClass, listClass, vectorClass) {
+                                let btns = document.getElementsByClassName(btnClass);
+                                let lists = document.getElementsByClassName(listClass);
+                                let vec = document.getElementsByClassName(vectorClass);
+
+                                function closeAllDropdowns() {
+                                    for (let i = 0; i < lists.length; i++) {
+                                        lists[i].classList.remove('expanded');
+                                        vec[i].classList.remove('expanded_vec');
+                                    }
+                                }
+
+
+                                for (let i = 0; i < btns.length; i++) {
+                                    btns[i].addEventListener('click', function (event) {
+                                        // 阻止事件冒泡
+                                        event.stopPropagation();
+
+                                        let list = lists[i];
+                                        let vector = vec[i];
+                                        // lists[i].style.transition = 'none';
+
+                                        // 判断当前下拉菜单是否已经展开
+                                        let isExpanded = list.classList.contains('expanded');
+
+                                        // 先关闭所有下拉菜单
+                                        // closeAllDropdowns();
+
+                                        // 如果当前菜单之前没有展开，才展开它
+                                        if (!isExpanded) {
+                                            list.classList.add('expanded');
+                                            vector.classList.add('expanded_vec');
+                                        }
+                                    });
+                                }
+
+                                // 点击页面其他地方时，关闭所有下拉菜单
+                                document.addEventListener('click', function () {
+                                    closeAllDropdowns();
+                                });
+                            }
 
                             React.useEffect(() => {
                                 toggleDropdown('question', 'ans', 'vector');
                             }, []); // 确保 toggleDropdown 在组件渲染后调用
-
 
 
                             return (<>
@@ -166,7 +206,6 @@
                                     })
                                     }
                                 </div>
-
                             </>)
                         };
                         ReactDOM.createRoot(document.getElementById('root')).render(<App />);
@@ -191,7 +230,7 @@
             .render(<App />);
     </script>
 
-    <script src="./js/Q&A.js"></script>
+    <!-- <script src="./js/Q&A.js"></script> -->
 </body>
 
 </html>

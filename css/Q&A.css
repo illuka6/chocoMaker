@@ -195,8 +195,7 @@ section {
 .vector.expanded_vec {
     width: 30px;
     height: 20px;
-    background-image: url(../images/Q&A_images/up_vector.svg);
-    
+    background-image: url(../images/Q&A_images/up_vector.svg);    
 }
 
 .ans{
@@ -208,8 +207,7 @@ section {
     overflow: hidden;
     transition:   0.3s ease-in-out, height 0.3s ease; /* 展开和收起的过渡效果 */
 }
-.ans.expanded {
-    
+.ans.expanded {    
     max-height: 500px; /* 设置为一个比内容实际高度大的值 */
 }
 .ans p{
