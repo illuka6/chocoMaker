@@ -399,3 +399,7 @@ for (let i = 0; i < imgs.length; i++) {
 //     });
 // };
 
+
+
+// let all_Divbox=window.localStorage.getItem('all_Divbox');
+// console.log(all_Divbox.value);
