@@ -172,7 +172,7 @@ ul.drop-down-menu>li {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    font-size: 1rem;
+    font-size: .8rem;
     width: 100%;
     padding: 3vw;
 
@@ -188,6 +188,7 @@ ul.drop-down-menu>li li{
     width: 8vw;
     min-width: 85px;
     padding: 10px ;
+    
 }
 ul.drop-down-menu>li li>a{
 border-bottom:var(--block_brown) solid 2px
@@ -234,6 +235,7 @@ border-bottom:var(--block_brown) solid 2px
     max-width: 1400px;
     height: 100%; 
     display: grid;
+    /* 函数minmax()接收两个参数：第一个参数表示最小轨道尺寸，第二个参数表示最大轨道尺寸。长度值可以是auto，表示轨道尺寸可以根据内容大小进行伸长或收缩。 */
     grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); /* 自动调整列数 */
     gap: 10px; /* 项目之间的间隔 */
     padding: 80px ; /* 容器的内边距 */
