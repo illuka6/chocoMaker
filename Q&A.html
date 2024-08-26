@@ -12,9 +12,24 @@
     <!-- 引用footer -->
     <script type="text/babel" src="./Footer.jsx"></script>
     <link rel="stylesheet" href="./css/Footer.css">
+    <!-- 引用menu -->
+     <script type="text/babel" src="./Menu.jsx"></script>
+    <link rel="stylesheet" href="./css/Menu.css">
 
     <title>Q&A</title>
 </head>
+<!-- menu -->
+<div id="menu"></div>
+<script type="text/babel">
+    function App() {
+        return (
+            <Menu />
+        )
+    }
+    ReactDOM
+        .createRoot(document.getElementById('menu'))
+        .render(<App />);
+</script>
 
 <body>
     <header></header>

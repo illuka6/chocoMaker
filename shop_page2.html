@@ -11,9 +11,23 @@
     <!-- 引用ShopFilter元件 -->
     <script type="text/babel" src="./ShopFilter.jsx"></script>
     <title>SHOP 商品頁2</title>
+    <!-- 引用menu -->
+    <script type="text/babel" src="./Menu.jsx"></script>
+    <link rel="stylesheet" href="./css/Menu.css">
 </head>
 
 <body>
+    <div id="menu"></div>
+<script type="text/babel">
+    function App() {
+        return (
+            <Menu />
+        )
+    }
+    ReactDOM
+        .createRoot(document.getElementById('menu'))
+        .render(<App />);
+</script>
     <header></header>
     <main>
         <section id="banner">

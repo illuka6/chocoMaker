@@ -1,0 +1,140 @@
+/* ↓↓標籤列↓↓ */
+
+#menu {
+    display: flex;
+    justify-content: center;
+    /* position: absolute; */
+    
+}
+
+#menu_id {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 29px;
+    /* display: none; */
+}
+
+
+#menu_id_search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 29px;
+    display: none;
+}
+
+#menu_id_search_divBox {
+    border: 0px solid #444;
+    border-radius: 99px;
+    width: 416px;
+    height: 42px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFF9F1;
+}
+
+#menu_id_search_divBox div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* width: 100%; */
+}
+
+#menu_id_search_divBox_divbox {
+    display: flex;
+    width: 71px;
+    height: 34px;
+}
+
+#menu_id_search_divBox_a1 {
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+}
+
+#menu_id_search_divBox_a1 img {
+    width: 34px;
+    height: 34px;
+}
+
+#menu_id_search_divBox_a1 p {
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 29px;
+    color: #6B3B20;
+}
+
+#menu_id_search_divBox_a2 {
+    /* margin-left: 50px; */
+    margin-right: 10px;
+}
+
+#menu_id_search_li2 {
+    margin-left: 16px;
+    margin-right: 20px;
+    width: 24px;
+    height: 24px;
+}
+
+#menu_id_search_li3 {
+    width: 24px;
+    height: 24px;
+}
+
+#menu_id_menu {
+    display: flex;
+    align-items: center;
+}
+
+
+#menu_id a {
+    margin-right: 32px;
+    color: #6B3B20;
+    font-size: 20px;
+}
+
+#menu_id li a:hover {
+    color: #F1BFC1;
+}
+
+#menu_id_menu_icon {
+    margin-right: 4px;
+}
+
+#customized {
+    border: 1px solid #6B3B20;
+    border-radius: 20px;
+    width: 124px;
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+#customized:hover {
+    background-color: #3F1A09;
+}
+
+
+
+
+
+#menu_id_icon {
+    display: flex;
+    align-items: center;
+}
+
+#menu_id_icon a {
+    margin: 0;
+}
+
+#menu_id_icon_show {
+    margin: 0 20px;
+}
+
+/* ↑↑標籤列↑↑ */
