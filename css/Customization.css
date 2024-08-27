@@ -2281,7 +2281,7 @@ body {
 #product_details_page_tab_div1_left {
     display: flex;
     flex-direction: column;
-    margin-left: 100px;
+    margin-left: 270px;
 }
 
 #product_details_page_tab_div1_left a {
@@ -2299,7 +2299,7 @@ body {
 #product_details_page_tab_div1_middle img {
     /* width: 562px;
     height: 759px; */
-    width: 90%;
+    width: 100%;
     height: auto;
 }
 
@@ -2378,7 +2378,8 @@ body {
     width: 322px;
     height: 65px;
     margin-top: 51px;
-    margin-left: 80px
+    margin-left: 80px;
+    cursor: pointer;
 }
 
 #product_details_page_tab_div1_give_gifts {
@@ -2386,6 +2387,7 @@ body {
     height: 65px;
     margin-top: 17px;
     margin-left: 80px;
+    cursor: pointer;
 }
 
 /* ↓↓第二層↓↓ */
@@ -2495,10 +2497,11 @@ body {
     display: flex;
     justify-content: flex-start;
     margin-top: 212px;
-    margin-left: 137px;
+    margin-left: 107px;
+    margin-bottom: 50px;
 }
 
-#product_details_page_tab_div5 p {
+#product_details_page_tab_div5_p {
     font-size: 44px;
 }
 
@@ -2604,7 +2607,7 @@ body {
 #product_details_page_tab_div6_div_cash_p5 {
     font-size: 18px;
     margin-bottom: 5px;
-    margin-left: 25px;
+    margin-left: 10px;
     display: flex;
 }
 
@@ -2617,13 +2620,13 @@ body {
 
 
 #product_details_page_tab_div6_div_cash_outin_p1,
-#product_detDails_page_tab_div6_div_cash_outin_p2,
+#product_details_page_tab_div6_div_cash_outin_p2,
 #product_details_page_tab_div6_div_cash_outin_p3,
 #product_details_page_tab_div6_div_cash_outin_p4,
 #product_details_page_tab_div6_div_cash_outin_p5 {
     display: flex;
     margin-bottom: 5px;
-    margin-left: 25px;
+    margin-left: 10px;
 }
 
 /* 第六層 */
@@ -2651,6 +2654,7 @@ body {
 #product_details_page_tab_div9 {
     display: flex;
     margin: 0 189px;
+    margin-bottom: 187px;
 }
 
 #product_details_page_tab_div9_img1,
@@ -2659,6 +2663,7 @@ body {
     display: flex;
     width: 50%;
     height: auto;
+
 }
 
 #product_details_page_tab_div9_img2 {
