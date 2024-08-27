@@ -11,9 +11,23 @@
     <!-- 引用ShopFilter元件 -->
     <script type="text/babel" src="./ShopFilter.jsx"></script>
     <title>SHOP 商品頁2</title>
+    <!-- 引用menu -->
+    <script type="text/babel" src="./Menu.jsx"></script>
+    <link rel="stylesheet" href="./css/Menu.css">
 </head>
 
 <body>
+    <div id="menu"></div>
+<script type="text/babel">
+    function App() {
+        return (
+            <Menu />
+        )
+    }
+    ReactDOM
+        .createRoot(document.getElementById('menu'))
+        .render(<App />);
+</script>
     <header></header>
     <main>
         <section id="banner">
@@ -45,61 +59,175 @@
 
                 const items = [
                     {
-                        id: "1",
-                        counts:'12',
-                        pic: "./images/shop_images/item1.jpg",
-                        name: "2025新年賀禮巧克力禮盒12入",
-                        price: '2,600',
-                        text: "每顆巧克力皆由大師手工製作，結合頂級原料，讓您體驗無可比擬的奢華口感。"
-
-                    }, {
+                        id: '1',
+                        counts: '12',
+                        pic: './images/shop_images/item1.jpg',
+                        name: '黃金典雅禮盒12入',
+                        price: '1,800',
+                        text: '這款黃金典雅禮盒內含精選巧克力，包裝豪華，適合送禮自用皆宜，展現品味與高貴。'
+                    },
+                    {
                         id: '2',
-                        counts:'12',
-                        pic: "./images/shop_images/item2.jpg",
-                        name: "2025新年賀禮巧克力禮盒12入",
-                        price: '200',
-                        text: "每顆巧克力皆由大師手工製作，結合頂級原料，讓您體驗無可比擬的奢華口感。"
-
-                    }, {
-                        id: '3',
-                        counts:'8',
-                        pic: "./images/shop_images/item3.jpg",
-                        name: "2025新年賀禮巧克力禮盒8入",
-                        price: '1,600',
-                        text: "每顆巧克力皆由大師手工製作，結合頂級原料，讓您體驗無可比擬的奢華口感。"
-
-
-                    }, {
-                        id: '4',
-                        counts:'12',
-                        pic: "./images/shop_images/item4.jpg",
-                        name: "2025新年賀禮巧克力禮盒12入",
+                        counts: '12',
+                        pic: './images/shop_images/item2.jpg',
+                        name: '手工奢華巧克力禮盒12入',
                         price: '2,600',
-                        text: "每顆巧克力皆由大師手工製作，結合頂級原料，讓您體驗無可比擬的奢華口感。"
+                        text: '每顆巧克力皆由大師手工製作，結合頂級原料，讓您體驗無可比擬的奢華口感。'
+                    },
+                    {
+                        id: '3',
+                        counts: '24',
+                        pic: './images/shop_images/item3.jpg',
+                        name: '璀璨星河禮盒24入',
+                        price: '2,800',
+                        text: '璀璨星河禮盒帶來星光般的美麗，內含精緻巧克力，每一口都充滿浪漫與驚喜。'
+                    },
+                    {
+                        id: '4',
+                        counts: '12',
+                        pic: './images/shop_images/item4.jpg',
+                        name: '璀璨七夕-情人節禮盒',
+                        price: '3,000',
+                        text: '專為情人節設計的璀璨禮盒，展現愛意，巧克力的每一口都彷彿融化在心中。',
+                        fes: 'valentines'
+                    },
+                    {
+                        id: '5',
+                        counts: '12',
+                        pic: './images/shop_images/item5-1.jpg',
+                        name: '熱戀之吻-情人節禮盒',
+                        price: '3,000',
+                        text: '熱戀之吻巧克力禮盒，特別為情人節打造，甜美的巧克力表達最深情的告白。',
+                        fes: 'valentines'
+                    },
+                    {
+                        id: '6',
+                        counts: '12',
+                        pic: './images/shop_images/item6.jpg',
+                        name: '90%黑金巧克力禮盒',
+                        price: '2,500',
+                        text: '90%高濃度黑巧克力，帶來深邃的苦甜風味，滿足對巧克力的高標準需求。'
+                    },
+                    {
+                        id: '7',
+                        counts: '12',
+                        pic: './images/shop_images/item7.jpg',
+                        name: '生日快樂-巧克力禮盒',
+                        price: '1,800',
+                        text: '為生日精心準備的巧克力禮盒，充滿甜蜜和祝福，讓每一口都帶來快樂與驚喜。',
+                        fes: 'birthday'
+                    },
+                    {
+                        id: '8',
+                        counts: '12',
+                        pic: './images/shop_images/item8.jpg',
+                        name: '摩卡經典禮盒12入',
+                        price: '1,000',
+                        text: '摩卡風味巧克力禮盒，結合濃郁咖啡香與細膩巧克力，帶來獨特的品味體驗。'
+                    },
+                    {
+                        id: '9',
+                        counts: '12',
+                        pic: './images/shop_images/item9.jpg',
+                        name: '麋鹿聖誕-巧克力禮盒',
+                        price: '3,000',
+                        text: '聖誕節限定巧克力禮盒，精緻設計與美味巧克力，增添節日的歡樂與喜悅。',
+                        fes: 'otherDays'
+                    }, {
+                        id: '10',
+                        counts: '4',
+                        pic: './images/shop_images/item10.jpg',
+                        name: '黃金典雅禮盒4入',
+                        price: '480',
+                        text: '這款黃金典雅禮盒內含精選巧克力，包裝豪華，適合送禮自用皆宜，展現品味與高貴。'
+                    },
+                    {
+                        id: '11',
+                        counts: '4',
+                        pic: './images/shop_images/item11.jpg',
+                        name: '手工奢華巧克力禮盒4入',
+                        price: '300',
+                        text: '每顆巧克力皆由大師手工製作，結合頂級原料，讓您體驗無可比擬的奢華口感。'
+                    },
+                    {
+                        id: '12',
+                        counts: '4',
+                        pic: './images/shop_images/item12.jpg',
+                        name: '璀璨星河禮盒4入',
+                        price: '380',
+                        text: '璀璨星河禮盒帶來星光般的美麗，內含精緻巧克力，每一口都充滿浪漫與驚喜。'
+                    },
+                    {
+                        id: '13',
+                        counts: '6',
+                        pic: './images/shop_images/item13.jpg',
+                        name: '璀璨七夕-情人節禮盒',
+                        price: '800',
+                        text: '專為情人節設計的璀璨禮盒，展現愛意，巧克力的每一口都彷彿融化在心中。',
+                        fes: 'valentines'
+                    },
+                    {
+                        id: '14',
+                        counts: '6',
+                        pic: './images/shop_images/item14.jpg',
+                        name: '熱戀之吻-情人節禮盒',
+                        price: '980',
+                        text: '熱戀之吻巧克力禮盒，特別為情人節打造，甜美的巧克力表達最深情的告白。',
+                        fes: 'valentines'
+                    },
+                    {
+                        id: '15',
+                        counts: '6',
+                        pic: './images/shop_images/item15.jpg',
+                        name: '生日快樂-慶生禮盒',
+                        price: '980',
+                        text: '生日巧克力禮盒，特別為慶祝生日打造，甜美的巧克力表達最真誠的祝福。',
+                        fes: 'birthday'
+                    }
+                ];
 
-                    }]
 
                 // 創建狀態來管理篩選條件
                 const [filteredItems, setFilteredItems] = React.useState(items);
                 const [selectedPriceRange, setSelectedPriceRange] = React.useState(null);
+                const [selecteCountsRange, setSelectedCountsRange] = React.useState(null);
+                const [selecteFestivalRange, setSelectedFestivalRange] = React.useState(null);
 
                 // 創建狀態來控制每個下拉菜單的顯示狀態
                 const [showFestivalDropdown, setShowFestivalDropdown] = React.useState(false);
                 const [showCountsDropdown, setShowCountsDropdown] = React.useState(false);
                 const [showPriceDropdown, setShowPriceDropdown] = React.useState(false);
                 const [showPermutationDropdown, setShowPermutationDropdown] = React.useState(false);
-
+                const handleFestivalFilter = (range) => {
+                    setSelectedFestivalRange(range);
+                    const filtered = items.filter(item => {
+                        const fes = item.fes;
+                        switch (range) {
+                            case 'valentines':
+                                return fes === 'valentines' ;
+                            case 'birthday':
+                                return fes === 'birthday';
+                            case 'graduation':
+                                return fes === 'graduation';
+                            case 'otherDay':
+                                return  fes === 'otherDay';
+                            default:
+                                return true;
+                        }
+                    });
+                    setFilteredItems(filtered);
+                };
                 const handlePriceFilter = (range) => {
                     setSelectedPriceRange(range);
                     const filtered = items.filter(item => {
                         const price = parseInt(item.price.replace(',', '').trim());
                         switch (range) {
                             case 'below500':
-                                return price < 500;
+                                return price < 501;
                             case 'below1000':
-                                return price < 1000;
+                                return price < 1001;
                             case 'below2000':
-                                return price < 2000;
+                                return price < 2001;
                             case 'above2000':
                                 return price > 2000;
                             default:
@@ -108,6 +236,28 @@
                     });
                     setFilteredItems(filtered);
                 };
+                const handleCountsFilter = (range) => {
+                    console.log('Selected counts range:', range); // 確認選擇的篩選條件
+                    setSelectedCountsRange(range);
+                    const filtered = items.filter(item => {
+                        const counts = parseInt(item.counts.replace(',', '').trim());
+                        console.log('Item counts:', counts); // 確認每個 item 的 counts
+                        switch (range) {
+                            case 'are4':
+                                return counts === 4;
+                            case 'are6':
+                                return counts === 6;
+                            case 'are12':
+                                return counts === 12;
+                            case 'are24':
+                                return counts === 24;
+                            default:
+                                return true;
+                        }
+                    });
+                    setFilteredItems(filtered);
+                };
+                console.log(typeof handleCountsFilter);
 
                 // 函數：切換下拉菜單的顯示狀態
                 //    const toggleDropdown = (dropdownSetter) => {
@@ -138,11 +288,15 @@
                 return (<>
                     <section id="items_content">
                         <ShopFilter
+                        
+                            handleFestivalFilter={handleFestivalFilter}
+                            handleCountsFilter={handleCountsFilter}
                             handlePriceFilter={handlePriceFilter}
                             toggleDropdown={toggleDropdown}
                             showPriceDropdown={showPriceDropdown}
                             showCountsDropdown={showCountsDropdown}
                             showFestivalDropdown={showFestivalDropdown}
+                            showPermutationDropdown={showPermutationDropdown}
                         />
 
                         <div class="items_list">

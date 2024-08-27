@@ -66,8 +66,7 @@ function toggleDropdown(btnClass, listClass, vectorClass) {
     let vec = document.getElementsByClassName(vectorClass);
 
     function closeAllDropdowns() {
-        for (let i = 0; i < lists.length; i++) {
-        
+        for (let i = 0; i < lists.length; i++) {        
             lists[i].classList.remove('expanded');
             vec[i].classList.remove('expanded_vec');
         }
