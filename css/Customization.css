@@ -1693,17 +1693,21 @@ body {
 #center_display_second_page_card8,
 #center_display_second_page_card9 {
     /* width: 287px; */
-    width: 50%;
+    width: 40%;
     /* height: 321px; */
     /* height: 60%; */
     display: none;
-    margin-bottom: 10%;
+    /* margin-bottom: 10%; */
 }
 
 #center_display_second_page_card1 {
     display: flex;
 }
 
+#center_display_second_page_card3,
+#center_display_second_page_card6 {
+    width: 30%;
+}
 
 
 
