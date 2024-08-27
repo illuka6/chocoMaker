@@ -203,6 +203,8 @@ let middle_img7 = document.getElementsByClassName('middle_img7');
 let middle_img8 = document.getElementsByClassName('middle_img8');
 let middle_img9 = document.getElementsByClassName('middle_img9');
 let middle_img10 = document.getElementsByClassName('middle_img10');
+let middle_img11 = document.getElementsByClassName('middle_img11');
+let middle_img12 = document.getElementsByClassName('middle_img12');
 
 
 function middle_img_none() {
@@ -216,7 +218,42 @@ function middle_img_none() {
     middle_img8[0].style.display = 'none';
     middle_img9[0].style.display = 'none';
     middle_img10[0].style.display = 'none';
+    middle_img11[0].style.display = 'none';
+    middle_img12[0].style.display = 'none';
 };
+
+
+/* ↓↓右下角顯示區塊↓↓ */
+let middle_box_img1 = document.getElementById('middle_box_img1');
+let middle_box_img2 = document.getElementById('middle_box_img2');
+let middle_box_img3 = document.getElementById('middle_box_img3');
+let middle_box_img4 = document.getElementById('middle_box_img4');
+let middle_box_img5 = document.getElementById('middle_box_img5');
+let middle_box_img6 = document.getElementById('middle_box_img6');
+let middle_box_img7 = document.getElementById('middle_box_img7');
+let middle_box_img8 = document.getElementById('middle_box_img8');
+let middle_box_img9 = document.getElementById('middle_box_img9');
+let middle_box_img10 = document.getElementById('middle_box_img10');
+let middle_box_img11 = document.getElementById('middle_box_img11');
+let middle_box_img12 = document.getElementById('middle_box_img12');
+
+
+function middle_box_allimg() {
+    middle_box_img1.style.display = 'none';
+    middle_box_img2.style.display = 'none';
+    middle_box_img3.style.display = 'none';
+    middle_box_img4.style.display = 'none';
+    middle_box_img5.style.display = 'none';
+    middle_box_img6.style.display = 'none';
+    middle_box_img7.style.display = 'none';
+    middle_box_img8.style.display = 'none';
+    middle_box_img9.style.display = 'none';
+    middle_box_img10.style.display = 'none';
+    middle_box_img11.style.display = 'none';
+    middle_box_img12.style.display = 'none';
+};
+
+/* ↑↑右下角顯示區塊↑↑ */
 
 
 let milk_chocolate = document.getElementById('milk_chocolate');
@@ -252,6 +289,8 @@ left_menu_img1[0].addEventListener('click', function () {
     middle_img_none();
     middle_img1[0].style.display = "block";
     allImg();
+    middle_box_allimg();
+    middle_box_img1.style.display = 'block';
     if (flag) {
         milk_chocolate.src = './images/Custom_block/left_menu/first_floor/Frame 1_hover.svg';
     } else {
@@ -261,6 +300,7 @@ left_menu_img1[0].addEventListener('click', function () {
 /* ↑↑牛奶巧克力選擇區塊↑↑ */
 
 
+
 /* ↓↓黑巧克力選擇區塊↓↓ */
 let left_menu_img2 = document.getElementsByClassName('left_menu_img2');
 // let left_menu_img1 = document.getElementsByClassName('left_menu_img1');
@@ -268,8 +308,10 @@ let left_menu_img2 = document.getElementsByClassName('left_menu_img2');
 flag = true;
 left_menu_img2[0].addEventListener('click', function () {
     middle_img_none();
-    middle_div1_box.style.display = '';
+    middle_img11[0].style.display = 'block';
     allImg();
+    middle_box_allimg();
+    middle_box_img5.style.display = 'block';
     if (flag) {
         dark_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 2_hover.svg';
     } else {
@@ -286,8 +328,10 @@ let left_menu_img3 = document.getElementsByClassName('left_menu_img3');
 flag = true;
 left_menu_img3[0].addEventListener('click', function () {
     middle_img_none();
-    middle_div1_box.style.display = '';
+    middle_img12[0].style.display = 'block';
     allImg();
+    middle_box_allimg();
+    middle_box_img6.style.display = 'block';
     if (flag) {
         white_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 3_hover.svg';
     } else {
@@ -308,6 +352,8 @@ left_menu_img4[0].addEventListener('click', function () {
     middle_img2[0].style.display = "block";
     middle_div1_box.style.display = '';
     allImg();
+    middle_box_allimg();
+    middle_box_img2.style.display = 'block';
     if (flag) {
         strawberry_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 4_hover.svg';
     } else {
@@ -331,6 +377,8 @@ left_menu_img5[0].addEventListener('click', function () {
     middle_img3[0].style.display = "block";
     middle_div1_box.style.display = '';
     allImg();
+    middle_box_allimg();
+    middle_box_img3.style.display = 'block';
     if (flag) {
         matcha_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 5_hover.svg';
     } else {
@@ -351,6 +399,8 @@ left_menu_img6[0].addEventListener('click', function () {
     middle_img4[0].style.display = "block";
     middle_div1_box.style.display = '';
     allImg();
+    middle_box_allimg();
+    middle_box_img4.style.display = 'block';
     if (flag) {
         caramel_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 6_hover.svg';
     } else {
@@ -373,6 +423,8 @@ left_menu5_img_a1.addEventListener('click', function () {
     middle_img5[0].style.display = "block";
     // middle_div1_box.style.display = 'block;'
     middle_div1_box.style.display = 'none';
+    middle_box_allimg();
+    middle_box_img7.style.display = 'block';
 });
 
 /* ↑↑第一個選擇↑↑ */
@@ -385,6 +437,8 @@ left_menu5_img_a2.addEventListener('click', function () {
     middle_img_none();
     middle_img6[0].style.display = "block";
     middle_div1_box.style.display = 'none';
+    middle_box_allimg();
+    middle_box_img8.style.display = 'block';
 });
 
 /* ↑↑第二個選擇↑↑ */
@@ -397,6 +451,8 @@ left_menu5_img_a3.addEventListener('click', function () {
     middle_img_none();
     middle_img7[0].style.display = "block";
     middle_div1_box.style.display = 'none';
+    middle_box_allimg();
+    middle_box_img9.style.display = 'block';
 });
 
 /* ↑↑第三個選擇↑↑ */
@@ -410,6 +466,8 @@ left_menu5_img_a4.addEventListener('click', function () {
     middle_img_none();
     middle_img8[0].style.display = "block";
     middle_div1_box.style.display = 'none';
+    middle_box_allimg();
+    middle_box_img10.style.display = 'block';
 });
 
 /* ↑↑第四個選擇↑↑ */
@@ -423,6 +481,8 @@ left_menu5_img_a5.addEventListener('click', function () {
     middle_img_none();
     middle_img9[0].style.display = "block";
     middle_div1_box.style.display = 'none';
+    middle_box_allimg();
+    middle_box_img11.style.display = 'block';
 });
 
 /* ↑↑第五個選擇↑↑ */
@@ -436,9 +496,11 @@ left_menu5_img_a6.addEventListener('click', function () {
     middle_img_none();
     middle_img10[0].style.display = "block";
     middle_div1_box.style.display = 'none';
+    middle_box_allimg();
+    middle_box_img12.style.display = 'block';
 });
 
-/* ↑↑第五個選擇↑↑ */
+/* ↑↑第六個選擇↑↑ */
 
 /* ↓↓文字選擇區塊↓↓ */
 /* 顏色區塊設定 */

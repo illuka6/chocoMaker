@@ -13,7 +13,24 @@ let center_display_second_page_box_allDiv = [
     center_display_second_page_box_div3,
 ]
 
+/* 在目標區域的小盒子執行複製顯示動作 */
+let second_page_smallbox_div1 = document.getElementById('second_page_smallbox_div1');
+let second_page_smallbox_div2 = document.getElementById('second_page_smallbox_div2');
+let second_page_smallbox_div3 = document.getElementById('second_page_smallbox_div3');
 
+
+
+let second_page_smallbox = [
+    second_page_smallbox_div1,
+    second_page_smallbox_div2,
+    second_page_smallbox_div3,
+]
+
+function smallbox_allDiv() {
+    center_display_second_page_box_div1.style.border = '0px solid #777'
+    center_display_second_page_box_div2.style.border = '0px solid #777'
+    center_display_second_page_box_div3.style.border = '0px solid #777'
+};
 /* 拖曳功能區塊 */
 
 /* 拖曳開始 */
@@ -82,6 +99,7 @@ for (let i = 0; i < imgs.length; i++) {
     }
     )
 };
+
 
 
 
@@ -244,9 +262,16 @@ let All_boxes_second_page = [
     center_display_second_page_box1,
     center_display_second_page_box2,
     center_display_second_page_box3
-]
+];
 
 
+
+let angle = 0;//這個是轉角度
+let angle2 = 0;//這個是轉角度
+let flip = 0;//這個是翻轉
+let flip2 = 0;//這個是翻轉
+let Lock_picture = null;
+let Lock_picture2 = null;
 
 // 放開模板時   (盒子整合器)
 for (let i = 0; i < imgs.length; i++) {
@@ -261,7 +286,67 @@ for (let i = 0; i < imgs.length; i++) {
                 if (center_display_second_page_box_allDiv[j].childElementCount < 2) {
                     let imgsClone = imgs[i].cloneNode(true);
                     center_display_second_page_box_allDiv[j].appendChild(imgsClone);
-                    // allBox[j].style.border = '0px solid #999'
+                    let imgsClone2 = imgs[i].cloneNode(true);
+                    second_page_smallbox[j].appendChild(imgsClone2);
+                    if (imgsClone.addEventListener('click', () => {
+                        Lock_picture = imgsClone;
+                        Lock_picture2 = imgsClone2;
+                        Lock_picture.style.border = "2px solid #444"
+                        Lock_picture2.style.border = "2px solid #444"
+                        console.log(Lock_picture);
+                    }));
+                    if (Select_function.addEventListener('click', () => {
+                        Lock_picture = imgsClone;
+                        Lock_picture2 = imgsClone2;
+                        Lock_picture.style.border = "0px solid #444"
+                        Lock_picture2.style.border = "0px solid #444"
+                        console.log("xxx");
+                    }));
+                    if (menu_below_li_left2.addEventListener('click', () => {
+                        if (Lock_picture) {
+                            Lock_picture.style.width = '80px';
+                            Lock_picture.style.height = '80px';
+                            console.log('你按了縮放');
+                        }
+                        if (Lock_picture2) {
+                            Lock_picture2.style.width = '20px';
+                            Lock_picture2.style.height = '20px';
+                        }
+                    }));
+                    if (menu_below_li_left1.addEventListener('click', () => {
+                        if (Lock_picture) {
+                            Lock_picture = imgsClone;
+                            angle = angle + 45;
+                            Lock_picture.style.transform = `rotate(${angle}deg)`;
+                            console.log(angle);
+                            console.log('你按了旋轉');
+                        }
+                        if (Lock_picture2) {
+                            Lock_picture2 = imgsClone2;
+                            angle2 = angle2 + 45;
+                            Lock_picture2.style.transform = `rotate(${angle2}deg)`;
+                        }
+                    }));
+                    if (menu_below_li_right1.addEventListener('click', () => {
+                        if (Lock_picture) {
+                            flip = flip + 180;
+                            Lock_picture.style.transform = `rotate(${flip}deg)`;
+                            console.log('你按了翻轉');
+                        }
+                        if (Lock_picture2) {
+                            flip2 = flip2 + 180;
+                            Lock_picture2.style.transform = `rotate(${flip2}deg)`;
+                        }
+                    }));
+                    if (garbage_can.addEventListener('click', () => {
+                        if (Lock_picture) {
+                            Lock_picture.remove();
+                            console.log('你按了刪除');
+                        }
+                        if (Lock_picture2) {
+                            Lock_picture2.remove();
+                        }
+                    }));
                 } else {
                     console.log('目標區域已達上限');
                     console.log(allBox)
@@ -276,7 +361,131 @@ for (let i = 0; i < imgs.length; i++) {
 };
 
 
+let Basic_small_chocolate1 = document.getElementById('Basic_small_chocolate1');
+let Basic_small_chocolate2 = document.getElementById('Basic_small_chocolate2');
+let Basic_small_chocolate3 = document.getElementById('Basic_small_chocolate3');
 
+let Basic_chocolate = [
+    Basic_small_chocolate1,
+    Basic_small_chocolate2,
+    Basic_small_chocolate3]
+
+let Basic_small_chocolate4 = document.getElementById('Basic_small_chocolate4');
+let Basic_small_chocolate5 = document.getElementById('Basic_small_chocolate5');
+let Basic_small_chocolate6 = document.getElementById('Basic_small_chocolate6');
+
+let Basic_chocolate2 = [
+    Basic_small_chocolate4,
+    Basic_small_chocolate5,
+    Basic_small_chocolate6]
+
+// let second_page_box1 = document.getElementById('center_display_second_page_box1');
+// let second_page_box2 = document.getElementById('Basic_small_chocolate2');
+// let second_page_box3 = document.getElementById('Basic_small_chocolate3');
+
+// let Basic_chocolate = [
+//     Basic_small_chocolate1,
+//     Basic_small_chocolate2,
+//     Basic_small_chocolate3]
+
+
+
+for (let i = 0; i < center_display_second_page_box_allDiv.length; i++) {
+    if (center_display_second_page_box_allDiv[i].addEventListener('click', () => {
+        smallbox_allDiv();
+        center_display_second_page_box_allDiv[i].style.border = '2px solid #444';
+        if (garbage_can.addEventListener('click', () => {
+            Basic_chocolate[i].remove();
+            // second_page_smallbox[i].remove();
+            Basic_chocolate2[i].remove();
+            smallbox_allDiv();
+        }));
+    }));
+};
+
+
+
+
+
+// menu_below_li_right3.addEventListener('click', () => {
+//     Basic_small_chocolate1.remove();
+//     Basic_small_chocolate2.remove();
+//     Basic_small_chocolate3.remove();
+// });
+
+// for (let i = 0; i < imgs.length; i++) {
+//     imgs[i].addEventListener('dragend', (e) => {
+//         console.log('拖曳中');
+//         console.log(imgs[i]);
+//         for (let j = 0; j < All_boxes_second_page.length; j++) {
+//             if ((e.clientX >= All_boxes_second_page[j].left) && (e.clientX <= All_boxes_second_page[j].right) &&
+//                 (e.clientY >= All_boxes_second_page[j].top) && (e.clientY <= All_boxes_second_page[j].bottom)) {
+//                 console.log('在盒子內2');
+//                 console.log('在範圍內2');
+//                 if (center_display_second_page_box_allDiv[j].childElementCount < 2) {
+//                     let imgsClone = allBtnevent[i].cloneNode(true);
+//                     center_display_second_page_box_allDiv[j].appendChild(imgsClone);
+//                     // number = number + 1;
+//                     // let key = 'a' + number;
+//                     // window.localStorage.setItem(key, middle_div1_box_allDiv[j]);
+//                     // allBox[j].style.border = '0px solid #999'
+//                     if (imgsClone.addEventListener('click', () => {
+//                         Lock_picture = imgsClone;
+//                         Lock_picture.style.border = "2px solid #444"
+//                         console.log(Lock_picture);
+//                     }));
+//                     if (Select_function.addEventListener('click', () => {
+//                         Lock_picture = imgsClone;
+//                         Lock_picture.style.border = "0px solid #444"
+//                         console.log("xxx");
+//                     }));
+//                     if (menu_below_li_left2.addEventListener('click', () => {
+//                         if (Lock_picture) {
+//                             Lock_picture.style.width = '30px';
+//                             Lock_picture.style.height = '30px';
+//                             console.log('你按了縮放');
+//                         }
+//                     }));
+//                     if (menu_below_li_left1.addEventListener('click', () => {
+//                         if (Lock_picture) {
+//                             angle = angle + 45;
+//                             Lock_picture.style.transform = `rotate(${angle}deg)`;
+//                             console.log(angle);
+//                             console.log('你按了旋轉');
+//                         }
+//                     }));
+//                     if (menu_below_li_right1.addEventListener('click', () => {
+//                         if (Lock_picture) {
+//                             flip = flip + 180;
+//                             Lock_picture.style.transform = `rotate(${flip}deg)`;
+//                             console.log('你按了翻轉');
+//                         }
+//                     }));
+//                     if (garbage_can.addEventListener('click', () => {
+//                         if (Lock_picture) {
+//                             Lock_picture.remove();
+//                             console.log('你按了刪除');
+//                         }
+//                     })); /* console.log(key); */
+//                     if (menu_below_li_right1.addEventListener('click', () => {
+//                         if (Lock_picture) {
+//                             flip = flip + 180;
+//                             Lock_picture.style.transform = `rotate(${flip}deg)`;
+//                             console.log('你按了翻轉');
+//                         }
+//                     }));
+//                 } else {
+//                     console.log('目標區域已達上限');
+//                     console.log(allBox)
+//                     console.log(middle_div1_box_allDiv)
+//                 }
+//             } else {
+//                 console.log('不在盒子內2');
+//                 console.log('不在範圍內2');
+//             }
+//         }
+//     });
+// };
 
 
 // /* 取得第四個盒子的XY範圍 */
@@ -401,5 +610,6 @@ for (let i = 0; i < imgs.length; i++) {
 
 
 
-// let all_Divbox=window.localStorage.getItem('all_Divbox');
-// console.log(all_Divbox.value);
+// let all_Divbox = window.localStorage.getItem('middle_div1_box_allDiv');
+// let all_Divbox_Reorganize = JSON.parse(all_Divbox);
+// console.log(all_Divbox_Reorganize);

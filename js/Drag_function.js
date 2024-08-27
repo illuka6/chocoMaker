@@ -18,7 +18,6 @@ let middle_div1_box_div14 = document.getElementById('middle_div1_box_div14');
 let middle_div1_box_div15 = document.getElementById('middle_div1_box_div15');
 
 
-
 let middle_div1_box_allDiv = [
     middle_div1_box_div1,
     middle_div1_box_div2,
@@ -36,6 +35,47 @@ let middle_div1_box_allDiv = [
     middle_div1_box_div14,
     middle_div1_box_div15,
 ]
+
+
+
+/* 在目標區域的小盒子執行複製顯示動作 */
+let middle_small_box1 = document.getElementById('middle_small_box1');
+let middle_small_box2 = document.getElementById('middle_small_box2');
+let middle_small_box3 = document.getElementById('middle_small_box3');
+let middle_small_box4 = document.getElementById('middle_small_box4');
+let middle_small_box5 = document.getElementById('middle_small_box5');
+let middle_small_box6 = document.getElementById('middle_small_box6');
+let middle_small_box7 = document.getElementById('middle_small_box7');
+let middle_small_box8 = document.getElementById('middle_small_box8');
+let middle_small_box9 = document.getElementById('middle_small_box9');
+let middle_small_box10 = document.getElementById('middle_small_box10');
+let middle_small_box11 = document.getElementById('middle_small_box11');
+let middle_small_box12 = document.getElementById('middle_small_box12');
+let middle_small_box13 = document.getElementById('middle_small_box13');
+let middle_small_box14 = document.getElementById('middle_small_box14');
+let middle_small_box15 = document.getElementById('middle_small_box15');
+
+
+let middle_small_allDiv = [
+    middle_small_box1,
+    middle_small_box2,
+    middle_small_box3,
+    middle_small_box4,
+    middle_small_box5,
+    middle_small_box6,
+    middle_small_box7,
+    middle_small_box8,
+    middle_small_box9,
+    middle_small_box10,
+    middle_small_box11,
+    middle_small_box12,
+    middle_small_box13,
+    middle_small_box14,
+    middle_small_box15,
+]
+
+
+
 
 
 /* 拖曳功能區塊 */
@@ -1574,8 +1614,11 @@ let menu_below_li_right2 = document.getElementById('menu_below_li_right2');
 let menu_below_li_right3 = document.getElementById('menu_below_li_right3');
 let middle_box_divbox = document.getElementById('middle_box_divbox');
 let angle = 0;//這個是轉角度
+let angle2 = 0;//這個是轉角度
 let flip = 0;//這個是翻轉
+let flip2 = 0;//這個是翻轉
 let Lock_picture = null;
+let Lock_picture2 = null;
 // let number = 0;
 /* 把拖曳物件輸入到Local storage測試區塊 */
 // window.localStorage.setItem('a1','3');
@@ -1592,18 +1635,24 @@ for (let i = 0; i < allBtnevent.length; i++) {
                 if (middle_div1_box_allDiv[j].childElementCount < 2) {
                     let imgsClone = allBtnevent[i].cloneNode(true);
                     middle_div1_box_allDiv[j].appendChild(imgsClone);
+                    let imgsClone2 = allBtnevent[i].cloneNode(true);
+                    middle_small_allDiv[j].appendChild(imgsClone2);
                     // number = number + 1;
                     // let key = 'a' + number;
                     // window.localStorage.setItem(key, middle_div1_box_allDiv[j]);
                     // allBox[j].style.border = '0px solid #999'
                     if (imgsClone.addEventListener('click', () => {
                         Lock_picture = imgsClone;
+                        Lock_picture2 = imgsClone2;
                         Lock_picture.style.border = "2px solid #444"
+                        Lock_picture2.style.border = "2px solid #444"
                         console.log(Lock_picture);
                     }));
                     if (Select_function.addEventListener('click', () => {
                         Lock_picture = imgsClone;
+                        Lock_picture2 = imgsClone2;
                         Lock_picture.style.border = "0px solid #444"
+                        Lock_picture2.style.border = "0px solid #444"
                         console.log("xxx");
                     }));
                     if (menu_below_li_left2.addEventListener('click', () => {
@@ -1612,11 +1661,22 @@ for (let i = 0; i < allBtnevent.length; i++) {
                             Lock_picture.style.height = '30px';
                             console.log('你按了縮放');
                         }
+                        if (Lock_picture2) {
+                            Lock_picture2.style.width = '15px';
+                            Lock_picture2.style.height = '15px';
+                            console.log('有成功嗎?');
+                        }
                     }));
                     if (menu_below_li_left1.addEventListener('click', () => {
                         if (Lock_picture) {
+                            angle2 = angle2 + 45;
+                            Lock_picture.style.transform = `rotate(${angle2}deg)`;
+                            console.log(angle2);
+                            console.log('你按了旋轉');
+                        }
+                        if (Lock_picture2) {
                             angle = angle + 45;
-                            Lock_picture.style.transform = `rotate(${angle}deg)`;
+                            Lock_picture2.style.transform = `rotate(${angle}deg)`;
                             console.log(angle);
                             console.log('你按了旋轉');
                         }
@@ -1627,13 +1687,30 @@ for (let i = 0; i < allBtnevent.length; i++) {
                             Lock_picture.style.transform = `rotate(${flip}deg)`;
                             console.log('你按了翻轉');
                         }
+                        if (Lock_picture2) {
+                            flip2 = flip2 + 180;
+                            Lock_picture2.style.transform = `rotate(${flip2}deg)`;
+                            console.log('你按了翻轉');
+                        }
                     }));
                     if (garbage_can.addEventListener('click', () => {
                         if (Lock_picture) {
                             Lock_picture.remove();
                             console.log('你按了刪除');
                         }
-                    })); /* console.log(key); */
+                        if (Lock_picture2) {
+                            Lock_picture2.remove();
+                            console.log('你按了刪除');
+                        }
+                    }));
+                    if (menu_below_li_right3.addEventListener('click', () => {
+                        console.log('0000');
+                        location.reload();
+                    }));
+                    if (menu_below_li_right2.addEventListener('click', (e) => {
+                        console.log('有成功嗎?');
+                   console.log(e);
+                    }));
                 } else {
                     console.log('目標區域已達上限');
                     console.log(allBox)
@@ -1644,18 +1721,27 @@ for (let i = 0; i < allBtnevent.length; i++) {
                 console.log('不在範圍內2');
             }
         }
-        // let a1 = window.localStorage.getItem('a1');
-        // let a2 = window.localStorage.getItem('a2');
-        // console.log(a1);
-        // console.log(a2);
-        // middle_box_divbox.appendChild(a1);
-    });
+    }
+    );
+
 };
 
 
-window.localStorage.setItem('all_Divbox',middle_div1_box_allDiv);
-let all_Divbox=window.localStorage.getItem('all_Divbox');
-console.log(all_Divbox);
+
+
+
+
+// console.log(middle_div1_box_div15);
+
+// let middle_div1_box_div15Scr = document.getElementById('middle_div1_box_div15').scr;
+
+// let Prompt_field_img5 = document.getElementById('Prompt_field_img5');
+// Prompt_field_img5.addEventListener('click', () => {
+//     // let middle_div1_box_div15111 = JSON.stringify(middle_div1_box_div15);
+//     // window.localStorage.setItem('middle_div1_box_allDiv', all_Divbox);
+//     let middle_div1_box_div15111 = JSON.stringify(middle_div1_box_div15Scr);
+//     console.log(middle_div1_box_div15111);
+// });
 
 // /* 下方功能按鈕切換器 */
 // let Select_function_img = document.getElementById('Select_function_img');

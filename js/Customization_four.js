@@ -223,7 +223,7 @@ left_sidebar_four_page_div1_div_a9.addEventListener('click', () => {
 
 let four_page_div3_input = document.getElementById('left_sidebar_four_page_div3_input');
 let center_display_second_page_divp = document.getElementById('center_display_second_page_divp');
-four_page_div3_input.addEventListener('input', () => {
+four_page_div3_input.addEventListener('keyup', () => {
     console.log('有改文字');
     let textInput = four_page_div3_input.value;
     // center_display_second_page_divp=textInput;

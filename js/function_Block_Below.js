@@ -42,7 +42,7 @@ menu_below_li_left2.addEventListener('click', () => {
 menu_below_li_left1.addEventListener('click', () => {
     Function_button_img();
     if (Restore_button) {
-        menu_below_bug_img.src = './images/Custom_block/menu_below/Frame 3.svg';
+        menu_below_bug_img.src = './images/Custom_block/menu_below/Frame 3-click.svg';
     } else {
         menu_below_bug_img.src = './images/Custom_block/menu_below/Frame 3.svg';
     }
