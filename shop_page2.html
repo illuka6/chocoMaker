@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/shop2.css">
+    
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -14,20 +14,24 @@
     <!-- 引用menu -->
     <script type="text/babel" src="./Menu.jsx"></script>
     <link rel="stylesheet" href="./css/Menu.css">
+    <link rel="stylesheet" href="./css/shop2.css">
 </head>
 
 <body>
     <div id="menu"></div>
-<script type="text/babel">
-    function App() {
-        return (
-            <Menu />
-        )
-    }
-    ReactDOM
-        .createRoot(document.getElementById('menu'))
-        .render(<App />);
-</script>
+    <script type="text/babel">
+        function App() {
+            React.useEffect(() => {
+                menuJS();
+            }, []); // 确保 toggleDropdown 在组件渲染后调用
+            return (
+                <Menu />
+            )
+        }
+        ReactDOM
+            .createRoot(document.getElementById('menu'))
+            .render(<App />);
+    </script>
     <header></header>
     <main>
         <section id="banner">
@@ -204,13 +208,13 @@
                         const fes = item.fes;
                         switch (range) {
                             case 'valentines':
-                                return fes === 'valentines' ;
+                                return fes === 'valentines';
                             case 'birthday':
                                 return fes === 'birthday';
                             case 'graduation':
                                 return fes === 'graduation';
                             case 'otherDay':
-                                return  fes === 'otherDay';
+                                return fes === 'otherDay';
                             default:
                                 return true;
                         }
@@ -288,7 +292,7 @@
                 return (<>
                     <section id="items_content">
                         <ShopFilter
-                        
+
                             handleFestivalFilter={handleFestivalFilter}
                             handleCountsFilter={handleCountsFilter}
                             handlePriceFilter={handlePriceFilter}
@@ -361,6 +365,7 @@
     </script> -->
     <!-- js -->
     <script src="./js/shop.js"></script>
+    <script src="./js/Menu.js"></script>
 </body>
 
 </html>

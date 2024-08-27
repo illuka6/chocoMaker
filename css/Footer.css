@@ -24,7 +24,8 @@
 
 
 /* 重置列表 */
-footer ul,ol,li {
+/* footer ul,ol,li { */
+footer ul, footer ol, footer li{
     list-style: none;
 }
 
