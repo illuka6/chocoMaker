@@ -200,24 +200,6 @@ for (let i = 0; i < chocolate_color.length; i++) {
 /* ↑↑牛奶巧克力選擇區塊↑↑ */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ↓↓牛奶巧克力選擇區塊↓↓ */
 // let milk_chocolate_box = document.getElementById('milk_chocolate_box');
 let flag = true;
@@ -274,5 +256,109 @@ strawberry_chocolate_box.addEventListener('click', function () {
 
 
 
+/* ---------------------------------------------------- */
+let original_flavor_img = document.getElementById('original_flavor_img');
+let nut_img = document.getElementById('nut_img');
+let cranberry_img = document.getElementById('cranberry_img');
+let tangerine_img = document.getElementById('tangerine_img');
+let comprehensive_img = document.getElementById('comprehensive_img');
+let berries_img = document.getElementById('berries_img');
+let citrus_filling_img = document.getElementById('citrus_filling_img');
+let lemon_img = document.getElementById('lemon_img');
 
 
+
+
+let original_flavor_a = document.getElementById('original_flavor_a');
+let nut_a = document.getElementById('nut_a');
+let cranberry_a = document.getElementById('cranberry_a');
+let tangerine_a = document.getElementById('tangerine_a');
+let comprehensive_a = document.getElementById('comprehensive_a');
+let berries_a = document.getElementById('berries_a');
+let citrus_filling_a = document.getElementById('citrus_filling_a');
+let lemon_a = document.getElementById('lemon_a');
+
+function Filling_switch() {
+    original_flavor_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 8.svg';
+    nut_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 9.svg';
+    cranberry_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 10.svg';
+    tangerine_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 11.svg';
+    comprehensive_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 12.svg';
+    berries_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 13.svg';
+    citrus_filling_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 14.svg';
+    lemon_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 15.svg';
+};
+
+
+
+original_flavor_a.addEventListener('click',()=>{
+    Filling_switch();
+    if(flag){
+        original_flavor_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 8_click.svg';
+    } else {
+        original_flavor_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 8.svg'
+    }
+});
+
+nut_a.addEventListener('click',()=>{
+    Filling_switch();
+    if(flag){
+        nut_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 9_click.svg';
+    } else {
+        nut_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 9.svg'
+    }
+});
+
+cranberry_a.addEventListener('click',()=>{
+    Filling_switch();
+    if(flag){
+        cranberry_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 10_click.svg';
+    } else {
+        cranberry_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 10.svg'
+    }
+});
+
+tangerine_a.addEventListener('click',()=>{
+    Filling_switch();
+    if(flag){
+        tangerine_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 11_click.svg';
+    } else {
+        tangerine_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 11.svg'
+    }
+});
+
+comprehensive_a.addEventListener('click',()=>{
+    Filling_switch();
+    if(flag){
+        comprehensive_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 12_click.svg';
+    } else {
+        comprehensive_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 12.svg'
+    }
+});
+
+berries_a.addEventListener('click',()=>{
+    Filling_switch();
+    if(flag){
+        berries_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 13_click.svg';
+    } else {
+        berries_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 13.svg'
+    }
+});
+
+citrus_filling_a.addEventListener('click',()=>{
+    Filling_switch();
+    if(flag){
+        citrus_filling_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 14_click.svg';
+    } else {
+        citrus_filling_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 14.svg'
+    }
+});
+
+lemon_a.addEventListener('click',()=>{
+    Filling_switch();
+    if(flag){
+        lemon_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 15_click.svg';
+    } else {
+        lemon_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 15.svg'
+    }
+});

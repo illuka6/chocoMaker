@@ -480,13 +480,13 @@ body {
 #left_menu3_div3_div a {
     margin-right: 20px;
     margin-bottom: 27px;
-    margin-top: 12px;
+    /* margin-top: 12px; */
 }
 
 
 #left_menu3_div3_div img {
-    width: 62px;
-    height: 62px;
+    width: 80px;
+    height: 70px;
 }
 
 #left_menu3_hr {
@@ -1697,7 +1697,7 @@ body {
     /* height: 321px; */
     /* height: 60%; */
     display: none;
- margin-bottom: 10%;
+    margin-bottom: 10%;
 }
 
 #center_display_second_page_card1 {

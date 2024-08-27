@@ -272,7 +272,7 @@ let flip = 0;//這個是翻轉
 let flip2 = 0;//這個是翻轉
 let Lock_picture = null;
 let Lock_picture2 = null;
-
+let smalllchocolate_ast_to_do = '';//最後做的事情
 // 放開模板時   (盒子整合器)
 for (let i = 0; i < imgs.length; i++) {
     imgs[i].addEventListener('dragend', (e) => {
@@ -283,11 +283,22 @@ for (let i = 0; i < imgs.length; i++) {
                 (e.clientY >= All_boxes_second_page[j].top) && (e.clientY <= All_boxes_second_page[j].bottom)) {
                 console.log('在盒子內2');
                 console.log('在範圍內2');
-                if (center_display_second_page_box_allDiv[j].childElementCount < 2) {
+                if (center_display_second_page_box_allDiv[j].childElementCount < 1) {
                     let imgsClone = imgs[i].cloneNode(true);
                     center_display_second_page_box_allDiv[j].appendChild(imgsClone);
                     let imgsClone2 = imgs[i].cloneNode(true);
                     second_page_smallbox[j].appendChild(imgsClone2);
+                    for (let k = 0; k < All_boxes_second_page.length; k++) {
+                        imgsClone.addEventListener('dragend', (e) => {
+                            if ((e.clientX >= All_boxes_second_page[k].left) && (e.clientX <= All_boxes_second_page[k].right) &&
+                                (e.clientY >= All_boxes_second_page[k].top) && (e.clientY <= All_boxes_second_page[k].bottom)) {
+                                center_display_second_page_box_allDiv[k].appendChild(imgsClone);
+                                console.log('66545')
+                            } else {
+                                console.log('XXXX')
+                            }
+                        })
+                    };
                     if (imgsClone.addEventListener('click', () => {
                         Lock_picture = imgsClone;
                         Lock_picture2 = imgsClone2;
@@ -307,6 +318,7 @@ for (let i = 0; i < imgs.length; i++) {
                             Lock_picture.style.width = '80px';
                             Lock_picture.style.height = '80px';
                             console.log('你按了縮放');
+                            smalllchocolate_ast_to_do = '1';
                         }
                         if (Lock_picture2) {
                             Lock_picture2.style.width = '20px';
@@ -320,6 +332,7 @@ for (let i = 0; i < imgs.length; i++) {
                             Lock_picture.style.transform = `rotate(${angle}deg)`;
                             console.log(angle);
                             console.log('你按了旋轉');
+                            smalllchocolate_ast_to_do = '2';
                         }
                         if (Lock_picture2) {
                             Lock_picture2 = imgsClone2;
@@ -332,6 +345,7 @@ for (let i = 0; i < imgs.length; i++) {
                             flip = flip + 180;
                             Lock_picture.style.transform = `rotate(${flip}deg)`;
                             console.log('你按了翻轉');
+                            smalllchocolate_ast_to_do = '3';
                         }
                         if (Lock_picture2) {
                             flip2 = flip2 + 180;
@@ -346,6 +360,35 @@ for (let i = 0; i < imgs.length; i++) {
                         if (Lock_picture2) {
                             Lock_picture2.remove();
                         }
+                    }));
+                    if (menu_below_li_right3.addEventListener('click', () => {
+                        console.log('0000');
+                        location.reload();
+                    }));
+                    if (menu_below_li_right2.addEventListener('click', (e) => {
+                        console.log('有成功嗎?');
+                        console.log(smalllchocolate_ast_to_do);
+                        if (smalllchocolate_ast_to_do === '1') {
+                            Lock_picture.style.width = '120px';
+                            Lock_picture.style.height = '120px';
+                            Lock_picture2.style.width = '40px';
+                            Lock_picture2.style.height = '40px';
+                        };
+                        if (menu_below_li_right2.addEventListener('click', (e) => {
+                            if (smalllchocolate_ast_to_do === '2') {
+                                angle = angle - 45;
+                                Lock_picture.style.transform = `rotate(${angle}deg)`;
+                                angle2 = angle2 - 45;
+                                Lock_picture2.style.transform = `rotate(${angle2}deg)`;
+                            };
+                        }
+                        ));
+                        if (smalllchocolate_ast_to_do === '3') {
+                            flip = flip - 180;
+                            Lock_picture.style.transform = `rotate(${flip}deg)`;
+                            flip2 = flip2 - 180;
+                            Lock_picture2.style.transform = `rotate(${flip2}deg)`;
+                        };
                     }));
                 } else {
                     console.log('目標區域已達上限');
@@ -393,12 +436,48 @@ let Basic_chocolate2 = [
 for (let i = 0; i < center_display_second_page_box_allDiv.length; i++) {
     if (center_display_second_page_box_allDiv[i].addEventListener('click', () => {
         smallbox_allDiv();
-        center_display_second_page_box_allDiv[i].style.border = '2px solid #444';
+        center_display_second_page_box_allDiv[i].style.border = '0px solid #444';
         if (garbage_can.addEventListener('click', () => {
             Basic_chocolate[i].remove();
             // second_page_smallbox[i].remove();
             Basic_chocolate2[i].remove();
             smallbox_allDiv();
+        }));
+        if (menu_below_li_left2.addEventListener('click', () => {
+            if (Basic_chocolate) {
+                Basic_chocolate[i].style.width = '80px';
+                Basic_chocolate[i].style.height = '80px';
+            }
+            if (Basic_chocolate2) {
+                Basic_chocolate2[i].style.width = '20px';
+                Basic_chocolate2[i].style.height = '20px';
+            }
+        }));
+        if (menu_below_li_left1.addEventListener('click', () => {
+            if (Basic_chocolate) {
+                // Basic_chocolate = imgsClone2;
+                angle = angle + 45;
+                Basic_chocolate[i].style.transform = `rotate(${angle}deg)`;
+                console.log(angle);
+                console.log('你按了旋轉');
+            }
+            if (Lock_picture2) {
+                // Basic_chocolate2 = imgsClone2;
+                angle2 = angle2 + 45;
+                Basic_chocolate2[i].style.transform = `rotate(${angle2}deg)`;
+            }
+        }));
+        if (menu_below_li_right1.addEventListener('click', () => {
+            if (Basic_chocolate[i]) {
+                flip = flip + 180;
+                Basic_chocolate[i].style.transform = `rotate(${flip}deg)`;
+                console.log('你按了翻轉');
+                smalllchocolate_ast_to_do = '3';
+            }
+            if (Basic_chocolate2[i]) {
+                flip2 = flip2 + 180;
+                Basic_chocolate2[i].style.transform = `rotate(${flip2}deg)`;
+            }
         }));
     }));
 };
