@@ -23,6 +23,11 @@
     margin-top: 29px;
     display: none;
 }
+#menu_id_search li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 #menu_id_search_divBox {
     border: 0px solid #444;
@@ -34,6 +39,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: #FFF9F1;
+  
 }
 
 #menu_id_search_divBox div {
@@ -78,6 +84,8 @@
     margin-right: 20px;
     width: 24px;
     height: 24px;
+    align-items: center;
+    justify-content: center;
 }
 
 #menu_id_search_li3 {
