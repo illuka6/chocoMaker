@@ -241,14 +241,14 @@ for (let i = 0; i < imgs.length; i++) {
 // });
 
 // 拖曳花時
-left_menu4_img1.addEventListener('drag', (e) => {
-    console.log('拖曳中');
-    // e.preventDefault();
-    // let img = document.getElementById('left_menu4_img1');
-    // img.src = './images/Custom_block/Ellipse 5.svg';
-    // console.log(img);
-    // console.log(middle_div1_box_div1);
-});
+// left_menu4_img1.addEventListener('drag', (e) => {
+//     console.log('拖曳中');
+//     // e.preventDefault();
+//     // let img = document.getElementById('left_menu4_img1');
+//     // img.src = './images/Custom_block/Ellipse 5.svg';
+//     // console.log(img);
+//     // console.log(middle_div1_box_div1);
+// });
 
 /*
 
@@ -1619,14 +1619,20 @@ let flip = 0;//這個是翻轉
 let flip2 = 0;//這個是翻轉
 let Lock_picture = null;
 let Lock_picture2 = null;
+let Delete_parent_box = null;
+let Delete_box = null;
+let Delete_parent_box2 = null;
+let Delete_box2 = null;
+// let last1 = '';//裝圖片的盒子
+let last_to_do = '';//最後做的事情
 // let number = 0;
 /* 把拖曳物件輸入到Local storage測試區塊 */
 // window.localStorage.setItem('a1','3');
 // 放開文字模板時   (盒子整合器)
 for (let i = 0; i < allBtnevent.length; i++) {
     allBtnevent[i].addEventListener('dragend', (e) => {
-        console.log('拖曳中');
-        console.log(allBtnevent[i]);
+        // console.log('拖曳中');
+        // console.log(allBtnevent[i]);
         for (let j = 0; j < allBox.length; j++) {
             if ((e.clientX >= allBox[j].left) && (e.clientX <= allBox[j].right) &&
                 (e.clientY >= allBox[j].top) && (e.clientY <= allBox[j].bottom)) {
@@ -1637,16 +1643,27 @@ for (let i = 0; i < allBtnevent.length; i++) {
                     middle_div1_box_allDiv[j].appendChild(imgsClone);
                     let imgsClone2 = allBtnevent[i].cloneNode(true);
                     middle_small_allDiv[j].appendChild(imgsClone2);
-                    // number = number + 1;
-                    // let key = 'a' + number;
-                    // window.localStorage.setItem(key, middle_div1_box_allDiv[j]);
-                    // allBox[j].style.border = '0px solid #999'
+                    imgsClone.addEventListener('dragend', (e) => {
+                        for (let k = 0; k < allBox.length; k++) {
+                            if ((e.clientX >= allBox[k].left) && (e.clientX <= allBox[k].right) &&
+                                (e.clientY >= allBox[k].top) && (e.clientY <= allBox[k].bottom)) {
+                                if (middle_div1_box_allDiv[k].childElementCount < 2) {
+                                    middle_div1_box_allDiv[k].appendChild(imgsClone);
+                                    middle_small_allDiv[k].appendChild(imgsClone2);
+                                    console.log('1545343')
+                                }
+                            } else {
+                                console.log('xxxxx')
+                            }
+                        }
+                    });
                     if (imgsClone.addEventListener('click', () => {
                         Lock_picture = imgsClone;
                         Lock_picture2 = imgsClone2;
                         Lock_picture.style.border = "2px solid #444"
                         Lock_picture2.style.border = "2px solid #444"
                         console.log(Lock_picture);
+                        // last_to_do = 'Rotate_Image';
                     }));
                     if (Select_function.addEventListener('click', () => {
                         Lock_picture = imgsClone;
@@ -1660,6 +1677,7 @@ for (let i = 0; i < allBtnevent.length; i++) {
                             Lock_picture.style.width = '30px';
                             Lock_picture.style.height = '30px';
                             console.log('你按了縮放');
+                            last_to_do = '1';
                         }
                         if (Lock_picture2) {
                             Lock_picture2.style.width = '15px';
@@ -1669,15 +1687,16 @@ for (let i = 0; i < allBtnevent.length; i++) {
                     }));
                     if (menu_below_li_left1.addEventListener('click', () => {
                         if (Lock_picture) {
-                            angle2 = angle2 + 45;
-                            Lock_picture.style.transform = `rotate(${angle2}deg)`;
-                            console.log(angle2);
+                            angle = angle + 45;
+                            Lock_picture.style.transform = `rotate(${angle}deg)`;
+                            console.log(angle);
                             console.log('你按了旋轉');
+                            last_to_do = '2';
                         }
                         if (Lock_picture2) {
-                            angle = angle + 45;
-                            Lock_picture2.style.transform = `rotate(${angle}deg)`;
-                            console.log(angle);
+                            angle2 = angle2 + 45;
+                            Lock_picture2.style.transform = `rotate(${angle2}deg)`;
+                            console.log(angle2);
                             console.log('你按了旋轉');
                         }
                     }));
@@ -1686,6 +1705,7 @@ for (let i = 0; i < allBtnevent.length; i++) {
                             flip = flip + 180;
                             Lock_picture.style.transform = `rotate(${flip}deg)`;
                             console.log('你按了翻轉');
+                            last_to_do = '3';
                         }
                         if (Lock_picture2) {
                             flip2 = flip2 + 180;
@@ -1695,10 +1715,18 @@ for (let i = 0; i < allBtnevent.length; i++) {
                     }));
                     if (garbage_can.addEventListener('click', () => {
                         if (Lock_picture) {
+                            Delete_box = Lock_picture;
+                            Delete_parent_box = Lock_picture.parentNode;
                             Lock_picture.remove();
                             console.log('你按了刪除');
+                            // last_to_do = '4';
+                            // console.log(Lock_picture);
+                            // console.log(Delete_box);
+                            // console.log(Delete_parent_box);
                         }
                         if (Lock_picture2) {
+                            Delete_box2 = Lock_picture2;
+                            Delete_parent_box2 = Lock_picture2.parentNode;
                             Lock_picture2.remove();
                             console.log('你按了刪除');
                         }
@@ -1709,7 +1737,37 @@ for (let i = 0; i < allBtnevent.length; i++) {
                     }));
                     if (menu_below_li_right2.addEventListener('click', (e) => {
                         console.log('有成功嗎?');
-                   console.log(e);
+                        console.log(last_to_do);
+                        if (last_to_do === '1') {
+                            Lock_picture.style.width = '60px';
+                            Lock_picture.style.height = '60px';
+                            Lock_picture2.style.width = '30px';
+                            Lock_picture2.style.height = '30px';
+                        };
+                        if (last_to_do === '2') {
+                            angle = angle - 45;
+                            Lock_picture.style.transform = `rotate(${angle}deg)`;
+                            angle2 = angle2 - 45;
+                            Lock_picture2.style.transform = `rotate(${angle2}deg)`;
+                        };
+                        if (last_to_do === '3') {
+                            flip = flip - 180;
+                            Lock_picture.style.transform = `rotate(${flip}deg)`;
+                            flip2 = flip2 - 180;
+                            Lock_picture2.style.transform = `rotate(${flip2}deg)`;
+                        };
+                        // if (last_to_do === '4') {
+                        //     console.log(Delete_parent_box);
+                        //     console.log(Delete_box);
+                        //     Delete_parent_box.appendChild(Delete_box);
+                        //     Delete_box = null;
+                        //     Delete_parent_box = null;
+                        //     console.log(Delete_parent_box);
+                        //     console.log(Delete_box);
+                        // Delete_box=null;
+                        // Delete_parent_box=null;
+                        // Delete_parent_box2.appendChild(Delete_box2);
+                        // };
                     }));
                 } else {
                     console.log('目標區域已達上限');

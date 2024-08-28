@@ -318,3 +318,47 @@ Zone_four_Green.addEventListener('click', () => {
     }
 });
 
+let left_sidebar_four_page_div3_div4_diva1 = document.getElementById('left_sidebar_four_page_div3_div4_diva1');
+let left_sidebar_four_page_div3_div4_diva2 = document.getElementById('left_sidebar_four_page_div3_div4_diva2');
+let left_sidebar_four_page_div3_div4_diva3 = document.getElementById('left_sidebar_four_page_div3_div4_diva3');
+
+
+let left_sidebar_four_page_div3_div4_div_img1 = document.getElementById('left_sidebar_four_page_div3_div4_div_img1');
+let left_sidebar_four_page_div3_div4_div_img2 = document.getElementById('left_sidebar_four_page_div3_div4_div_img2');
+let left_sidebar_four_page_div3_div4_div_img3 = document.getElementById('left_sidebar_four_page_div3_div4_div_img3');
+
+function text_color() {
+    left_sidebar_four_page_div3_div4_div_img1.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 12.svg';
+    left_sidebar_four_page_div3_div4_div_img2.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 13.svg';
+    left_sidebar_four_page_div3_div4_div_img3.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 104.svg';
+};
+
+let flag = true;
+left_sidebar_four_page_div3_div4_diva1.addEventListener('click', () => {
+    text_color();
+    if (flag) {
+        left_sidebar_four_page_div3_div4_div_img1.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 12_click.svg';
+    } else {
+        left_sidebar_four_page_div3_div4_div_img1.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 12.svg';
+    }
+});
+
+
+left_sidebar_four_page_div3_div4_diva2.addEventListener('click', () => {
+    text_color();
+    if (flag) {
+        left_sidebar_four_page_div3_div4_div_img2.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 13_click.svg';
+    } else {
+        left_sidebar_four_page_div3_div4_div_img2.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 13.svg';
+    }
+});
+
+
+left_sidebar_four_page_div3_div4_diva3.addEventListener('click', () => {
+    text_color();
+    if (flag) {
+        left_sidebar_four_page_div3_div4_div_img3.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 104_click.svg';
+    } else {
+        left_sidebar_four_page_div3_div4_div_img3.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 104.svg';
+    }
+});
