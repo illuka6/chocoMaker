@@ -1,18 +1,18 @@
 
 
-/* ↓↓標籤列↓↓ */
-let customized = document.getElementById('customized');
-customized.addEventListener('mouseover', function () {
-    customized.style.color = '#FFFFFF';
-    customized.textContent = '客製化';
-});
+// /* ↓↓標籤列↓↓ */
+// let customized = document.getElementById('customized');
+// customized.addEventListener('mouseover', function () {
+//     customized.style.color = '#FFFFFF';
+//     customized.textContent = '客製化';
+// });
 
-customized.addEventListener('mouseout', function () {
-    customized.style.color = '#3F1A09';
-    customized.textContent = 'customized';
-});
+// customized.addEventListener('mouseout', function () {
+//     customized.style.color = '#3F1A09';
+//     customized.textContent = 'customized';
+// });
 
-/* ↑↑標籤列↑↑ */
+// /* ↑↑標籤列↑↑ */
 
 
 
@@ -362,3 +362,9 @@ lemon_a.addEventListener('click',()=>{
         lemon_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 15.svg'
     }
 });
+
+
+let slab_chocolate = localStorage.getItem('slab_chocolate');
+if (slab_chocolate) {
+  document.getElementById('center_display_second_page_box_slab_img').src = slab_chocolate;
+}

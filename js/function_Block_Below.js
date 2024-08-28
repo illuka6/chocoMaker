@@ -21,7 +21,7 @@ function Function_button_img() {
 
 /* 第一個按鈕 */
 let Restore_button = true;
-Select_function.addEventListener('click', () => {
+Select_function_img.addEventListener('click', () => {
     Function_button_img();
     if (Restore_button) {
         Select_function_img.src = './images/Custom_block/menu_below/Frame 1-click.svg';
@@ -30,7 +30,7 @@ Select_function.addEventListener('click', () => {
     }
 });
 
-menu_below_li_left2.addEventListener('click', () => {
+menu_below_li_left2_img.addEventListener('click', () => {
     Function_button_img();
     if (Restore_button) {
         menu_below_li_left2_img.src = './images/Custom_block/menu_below/Frame 2-click.svg';
@@ -39,7 +39,7 @@ menu_below_li_left2.addEventListener('click', () => {
     }
 });
 
-menu_below_li_left1.addEventListener('click', () => {
+menu_below_bug.addEventListener('click', () => {
     Function_button_img();
     if (Restore_button) {
         menu_below_bug_img.src = './images/Custom_block/menu_below/Frame 3-click.svg';
@@ -48,7 +48,7 @@ menu_below_li_left1.addEventListener('click', () => {
     }
 });
 
-garbage_can.addEventListener('click', () => {
+garbage_can_img.addEventListener('click', () => {
     Function_button_img();
     if (Restore_button) {
         garbage_can_img.src = './images/Custom_block/menu_below/Frame 4-click.svg';
@@ -57,7 +57,7 @@ garbage_can.addEventListener('click', () => {
     }
 });
 
-menu_below_li_right1.addEventListener('click', () => {
+menu_below_li_right1_img.addEventListener('click', () => {
     Function_button_img();
     if (Restore_button) {
         menu_below_li_right1_img.src = './images/Custom_block/menu_below/Frame 5-click.svg';
@@ -66,7 +66,7 @@ menu_below_li_right1.addEventListener('click', () => {
     }
 });
 
-menu_below_li_right2.addEventListener('click', () => {
+menu_below_li_right2_img.addEventListener('click', () => {
     Function_button_img();
     if (Restore_button) {
         menu_below_li_right2_img.src = './images/Custom_block/menu_below/Frame 6-click.svg';
@@ -75,7 +75,7 @@ menu_below_li_right2.addEventListener('click', () => {
     }
 });
 
-menu_below_li_right3.addEventListener('click', () => {
+menu_below_li_right3_img.addEventListener('click', () => {
     Function_button_img();
     if (Restore_button) {
         menu_below_li_right3_img.src = './images/Custom_block/menu_below/Frame 7-click.svg';

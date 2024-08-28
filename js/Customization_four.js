@@ -1,18 +1,18 @@
 
 
-/* ↓↓標籤列↓↓ */
-let customized = document.getElementById('customized');
-customized.addEventListener('mouseover', function () {
-    customized.style.color = '#FFFFFF';
-    customized.textContent = '客製化';
-});
+// /* ↓↓標籤列↓↓ */
+// let customized = document.getElementById('customized');
+// customized.addEventListener('mouseover', function () {
+//     customized.style.color = '#FFFFFF';
+//     customized.textContent = '客製化';
+// });
 
-customized.addEventListener('mouseout', function () {
-    customized.style.color = '#3F1A09';
-    customized.textContent = 'customized';
-});
+// customized.addEventListener('mouseout', function () {
+//     customized.style.color = '#3F1A09';
+//     customized.textContent = 'customized';
+// });
 
-/* ↑↑標籤列↑↑ */
+// /* ↑↑標籤列↑↑ */
 
 
 
@@ -362,3 +362,10 @@ left_sidebar_four_page_div3_div4_diva3.addEventListener('click', () => {
         left_sidebar_four_page_div3_div4_div_img3.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 104.svg';
     }
 });
+
+
+
+let selectedImage = localStorage.getItem('selectedImage');
+if (selectedImage) {
+  document.getElementById('center_display_second_page_box_Change').src = selectedImage;
+}

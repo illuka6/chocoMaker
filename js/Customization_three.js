@@ -1,18 +1,18 @@
 
 
-/* ↓↓標籤列↓↓ */
-let customized = document.getElementById('customized');
-customized.addEventListener('mouseover', function () {
-    customized.style.color = '#FFFFFF';
-    customized.textContent = '客製化';
-});
+// /* ↓↓標籤列↓↓ */
+// let customized = document.getElementById('customized');
+// customized.addEventListener('mouseover', function () {
+//     customized.style.color = '#FFFFFF';
+//     customized.textContent = '客製化';
+// });
 
-customized.addEventListener('mouseout', function () {
-    customized.style.color = '#3F1A09';
-    customized.textContent = 'customized';
-});
+// customized.addEventListener('mouseout', function () {
+//     customized.style.color = '#3F1A09';
+//     customized.textContent = 'customized';
+// });
 
-/* ↑↑標籤列↑↑ */
+// /* ↑↑標籤列↑↑ */
 
 
 
@@ -398,3 +398,12 @@ bow_tie4.addEventListener('click', () => {
     }
 });
 
+
+
+
+/* 圖片儲存到loco上面 */
+let Prompt_field_img5 = document.getElementById('Prompt_field_img5');
+Prompt_field_img5.addEventListener('click', () => {
+    console.log("click");
+    localStorage.setItem('selectedImage', center_second_page_img6.src);
+});

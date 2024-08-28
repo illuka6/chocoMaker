@@ -6,11 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/Customization.css">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" src="./Menu.jsx"></script>
+    <script src="./js/Menu.js"></script>
 </head>
 
 <body>
+    <div id="menu"></div>
+    <script type="text/babel">
+        function App() {
+            React.useEffect(() => {
+                menuJS();
+            }, []); // 确保 toggleDropdown 在组件渲染后调用
+            return (
+                <Menu />
+            )
+        }
+        ReactDOM
+            .createRoot(document.getElementById('menu'))
+            .render(<App />);
+    </script>
     <main id="main">
-        <div id="menu">
+    <main id="main">
+        <!-- <div id="menu">
             <ul id="menu_id">
                 <li><a href="#">HOME</a></li>
                 <li><a href="#">SHOP</a></li>
@@ -23,19 +43,19 @@
                             alt=""></a></li>
                 <li><a href="#"><img src="./images/Custom_block/menu/Vector.svg" alt=""></a></li>
             </ul>
-        </div>
+        </div> -->
         <div id="all">
             <div id="left_sidebar_second_page">
                 <ul>
-                    <li class="left_sidebar_img" id="left_sidebar_img_1"><a href="#"><img
+                    <li class="left_sidebar_img" id="left_sidebar_img_1"><a href="javascript:void(0)"><img
                                 src="./images/Custom_block/small_chocolate/left_sidebar/Frame 1-1.svg" alt="">
                             <p>口味</p>
                         </a></li>
-                    <li class="left_sidebar_img" id="left_sidebar_img_2"><a href="#"><img
+                    <li class="left_sidebar_img" id="left_sidebar_img_2"><a href="javascript:void(0)"><img
                                 src="./images/Custom_block/small_chocolate/left_sidebar/Frame 2-2.svg" alt="">
                             <p>內餡</p>
                         </a></li>
-                    <li class="left_sidebar_img" id="left_sidebar_img_3"><a href="#"><img
+                    <li class="left_sidebar_img" id="left_sidebar_img_3"><a href="javascript:void(0)"><img
                                 src="./images/Custom_block/small_chocolate/left_sidebar/Frame 3-3.svg" alt="">
                             <p>模板</p>
                         </a></li>
@@ -43,31 +63,32 @@
                 <div id="select_field1__second_page">
                     <p>口味</p>
                     <div id="select_field1__second_page_div">
-                        <a href="#" id="milk_chocolate_box"><img
+                        <a href="javascript:void(0)" id="milk_chocolate_box"><img
                                 src="./images/Custom_block/small_chocolate/left_sidebar/Frame 4.svg" alt=""
                                 class="select_field1__second_page_img" id="milk_chocolate"></a>
                         <!-- <img src="./images/Custom_block/small_chocolate/left_sidebar/Frame 6-1.svg" alt=""> -->
-                        <a href="#" id="dark_chocolate_box"><img
+                        <a href="javascript:void(0)" id="dark_chocolate_box"><img
                                 src="./images/Custom_block/small_chocolate/left_sidebar/Frame 5.svg" alt=""
                                 class="select_field1__second_page_img" id="dark_chocolate"></a>
-                        <a href="#" id="white_chocolatea_box"><img
+                        <a href="javascript:void(0)" id="white_chocolatea_box"><img
                                 src="./images/Custom_block/small_chocolate/left_sidebar/Frame 6.svg" alt=""
                                 class="select_field1__second_page_img" id="white_chocolatea">
-                            <a href="#" id="strawberry_chocolate_box"><img
+                            <a href="javascript:void(0)" id="strawberry_chocolate_box"><img
                                     src="./images/Custom_block/small_chocolate/left_sidebar/Frame 7.svg" alt=""
                                     class="select_field1__second_page_img" id="strawberry_chocolate"></a>
                     </div>
                     <div id="select_field1_btn">
-                        <a href="#"><img src="./images/Custom_block/small_chocolate/Frame btn.svg" alt=""></a>
+                        <a href="javascript:void(0)"><img src="./images/Custom_block/small_chocolate/Frame btn.svg"
+                                alt=""></a>
                     </div>
                 </div>
                 <div id="select_field2__second_page">
                     <p id="select_field2__second_page_p1">內餡</p>
                     <div id="select_field2__second_page_div1">
-                        <a href="#" id="original_flavor_a">
+                        <a href="javascript:void(0)" id="original_flavor_a">
                             <img src="./images/Custom_block/small_chocolate/left_sidebar/Frame 8.svg" alt=""
                                 class="select_field2_img" id="original_flavor_img"></a>
-                        <a href="#" id="nut_a">
+                        <a href="javascript:void(0)" id="nut_a">
                             <img src="./images/Custom_block/small_chocolate/left_sidebar/Frame 9.svg" alt=""
                                 class="select_field2_img" id="nut_img"></a>
                     </div>
@@ -77,13 +98,13 @@
                     <div>
                         <p id="select_field2__second_page_p2">果乾</p>
                         <div id="select_field2__second_page_div2">
-                            <a href="#" id="cranberry_a">
+                            <a href="javascript:void(0)" id="cranberry_a">
                                 <img src="./images/Custom_block/small_chocolate/left_sidebar/Frame 10.svg" alt=""
                                     class="select_field2__second_page_img" id="cranberry_img"></a>
-                            <a href="#" id="tangerine_a">
+                            <a href="javascript:void(0)" id="tangerine_a">
                                 <img src="./images/Custom_block/small_chocolate/left_sidebar/Frame 11.svg" alt=""
                                     class="select_field2__second_page_img" id="tangerine_img"></a>
-                            <a href="#" id="comprehensive_a">
+                            <a href="javascript:void(0)" id="comprehensive_a">
                                 <img src="./images/Custom_block/small_chocolate/left_sidebar/Frame 12.svg" alt=""
                                     class="select_field2__second_page_img" id="comprehensive_img"></a>
                         </div>
@@ -94,51 +115,65 @@
                     <div>
                         <p id="select_field2__second_page_p3">果醬</p>
                         <div id="select_field2__second_page_div3">
-                            <a href="#" id="berries_a">
+                            <a href="javascript:void(0)" id="berries_a">
                                 <img src="./images/Custom_block/small_chocolate/left_sidebar/Frame 13.svg" alt=""
                                     class="select_field2__second_page_img" id="berries_img"></a>
-                            <a href="#" id="citrus_filling_a">
+                            <a href="javascript:void(0)" id="citrus_filling_a">
                                 <img src="./images/Custom_block/small_chocolate/left_sidebar/Frame 14.svg" alt=""
                                     class="select_field2__second_page_img" id="citrus_filling_img"></a>
-                            <a href="#" id="lemon_a">
+                            <a href="javascript:void(0)" id="lemon_a">
                                 <img src="./images/Custom_block/small_chocolate/left_sidebar/Frame 15.svg" alt=""
                                     class="select_field2__second_page_img" id="lemon_img"></a>
                         </div>
                     </div>
                     <div id="select_field2__second_page_btn">
-                        <a href="#"><img src="./images/Custom_block/small_chocolate/Frame btn.svg" alt=""></a>
+                        <a href="javascript:void(0)"><img src="./images/Custom_block/small_chocolate/Frame btn.svg"
+                                alt=""></a>
                     </div>
                 </div>
                 <div id="select_field3__second_page">
                     <p>模板</p>
                     <div id="select_field3__second_page_div">
-                        <a href=""><img src="./images/Custom_block/small_chocolate/left_sidebar/Frame 16.svg" alt=""
+                        <a href="javascript:void(0)"><img
+                                src="./images/Custom_block/small_chocolate/left_sidebar/Frame 16.svg" alt=""
                                 class="select_field3__second_page_img" id="select_field3__second_page_img1"></a>
-                        <a href=""><img src="./images/Custom_block/small_chocolate/left_sidebar/Frame 17.svg" alt=""
+                        <a href="javascript:void(0)"><img
+                                src="./images/Custom_block/small_chocolate/left_sidebar/Frame 17.svg" alt=""
                                 class="select_field3__second_page_img" id="select_field3__second_page_img2"></a>
-                        <a href=""><img src="./images/Custom_block/small_chocolate/left_sidebar/Frame 18.svg" alt=""
+                        <a href="javascript:void(0)"><img
+                                src="./images/Custom_block/small_chocolate/left_sidebar/Frame 18.svg" alt=""
                                 class="select_field3__second_page_img" id="select_field3__second_page_img3"></a>
-                        <a href=""><img src="./images/Custom_block/small_chocolate/left_sidebar/Frame 19.svg" alt=""
+                        <a href="javascript:void(0)"><img
+                                src="./images/Custom_block/small_chocolate/left_sidebar/Frame 19.svg" alt=""
                                 class="select_field3__second_page_img" id="select_field3__second_page_img4"></a>
-                        <a href=""><img src="./images/Custom_block/small_chocolate/left_sidebar/Frame 20.svg" alt=""
+                        <a href="javascript:void(0)"><img
+                                src="./images/Custom_block/small_chocolate/left_sidebar/Frame 20.svg" alt=""
                                 class="select_field3__second_page_img" id="select_field3__second_page_img5"></a>
-                        <a href=""><img src="./images/Custom_block/small_chocolate/left_sidebar/Frame 21.svg" alt=""
+                        <a href="javascript:void(0)"><img
+                                src="./images/Custom_block/small_chocolate/left_sidebar/Frame 21.svg" alt=""
                                 class="select_field3__second_page_img" id="select_field3__second_page_img6"></a>
-                        <a href=""><img src="./images/Custom_block/small_chocolate/left_sidebar/Frame 22.svg" alt=""
+                        <a href="javascript:void(0)"><img
+                                src="./images/Custom_block/small_chocolate/left_sidebar/Frame 22.svg" alt=""
                                 class="select_field3__second_page_img" id="select_field3__second_page_img7"></a>
-                        <a href=""><img src="./images/Custom_block/small_chocolate/left_sidebar/Frame 23.svg" alt=""
+                        <a href="javascript:void(0)"><img
+                                src="./images/Custom_block/small_chocolate/left_sidebar/Frame 23.svg" alt=""
                                 class="select_field3__second_page_img" id="select_field3__second_page_img8"></a>
-                        <a href=""><img src="./images/Custom_block/small_chocolate/left_sidebar/Frame 24.svg" alt=""
+                        <a href="javascript:void(0)"><img
+                                src="./images/Custom_block/small_chocolate/left_sidebar/Frame 24.svg" alt=""
                                 class="select_field3__second_page_img" id="select_field3__second_page_img9"></a>
-                        <a href=""><img src="./images/Custom_block/small_chocolate/left_sidebar/Frame 25.svg" alt=""
+                        <a href="javascript:void(0)"><img
+                                src="./images/Custom_block/small_chocolate/left_sidebar/Frame 25.svg" alt=""
                                 class="select_field3__second_page_img" id="select_field3__second_page_img10"></a>
-                        <a href=""><img src="./images/Custom_block/small_chocolate/left_sidebar/Frame 26.svg" alt=""
+                        <a href="javascript:void(0)"><img
+                                src="./images/Custom_block/small_chocolate/left_sidebar/Frame 26.svg" alt=""
                                 class="select_field3__second_page_img" id="select_field3__second_page_img11"></a>
-                        <a href=""><img src="./images/Custom_block/small_chocolate/left_sidebar/Frame 27.svg" alt=""
+                        <a href="javascript:void(0)"><img
+                                src="./images/Custom_block/small_chocolate/left_sidebar/Frame 27.svg" alt=""
                                 class="select_field3__second_page_img" id="select_field3__second_page_img12"></a>
                     </div>
                     <div id="select_field3__second_page_btn">
-                        <a href="#"><img src="./images/Custom_block/small_chocolate/Frame btn.svg" alt=""></a>
+                        <a href="javascript:void(0)"><img src="./images/Custom_block/small_chocolate/Frame btn.svg"
+                                alt=""></a>
                     </div>
                 </div>
 
@@ -164,6 +199,9 @@
                 <div class="center_display_second_page_box">
                     <img id="center_display_second_page_box1"
                         src="./images/Custom_block/middle/downloadedImage-Photoroom 5.svg" alt="">
+                    <div id="center_display_second_page_box_slab">
+                        <img src="./images/Custom_block/small_chocolate/left_sidebar/Rectangle 99.svg" alt="" id="center_display_second_page_box_slab_img">
+                    </div>
                     <div id="second_page_smallbox">
                         <div id="second_page_smallbox_div1"><img
                                 src="./images/Custom_block/small_chocolate/Basic_small_chocolate.svg" alt=""
@@ -180,9 +218,11 @@
             <div id="right_sidebar_second_page">
                 <div>
                     <ul>
-                        <li><a href=""><img src="./images/Custom_block/small_chocolate/left_sidebar/Frame 28.svg" alt=""
+                        <li><a href="javascript:void(0)"><img
+                                    src="./images/Custom_block/small_chocolate/left_sidebar/Frame 28.svg" alt=""
                                     class="right_sidebar_img"></a></li>
-                        <li><a href=""><img src="./images/Custom_block/small_chocolate/left_sidebar/Frame 29.svg" alt=""
+                        <li><a href="javascript:void(0)"><img
+                                    src="./images/Custom_block/small_chocolate/left_sidebar/Frame 29.svg" alt=""
                                     class="right_sidebar_img"></a></li>
                     </ul>
                 </div>
@@ -191,32 +231,33 @@
         <div id="menu_below">
             <div>
                 <ul>
-                    <li class="menu_below_li" id="Select_function"><a href="#"><img
+                    <li class="menu_below_li" id="Select_function"><a href="javascript:void(0)"><img
                                 src="./images/Custom_block/menu_below/Frame 1.svg" alt="" id="Select_function_img">
                             <!-- <p>選取</p> -->
                         </a></li>
-                    <li class="menu_below_li" id="menu_below_li_left2"><a href="#"><img
+                    <li class="menu_below_li" id="menu_below_li_left2"><a href="javascript:void(0)"><img
                                 src="./images/Custom_block/menu_below/Frame 2.svg" alt="" id="menu_below_li_left2_img">
                             <!-- <p>縮放</p> -->
                         </a></li>
-                    <li class="menu_below_li" id="menu_below_li_left1"><a href="#" id="menu_below_bug"><img
-                                src="./images/Custom_block/menu_below/Frame 3.svg" alt="" id="menu_below_bug_img">
+                    <li class="menu_below_li" id="menu_below_li_left1"><a href="javascript:void(0)"
+                            id="menu_below_bug"><img src="./images/Custom_block/menu_below/Frame 3.svg" alt=""
+                                id="menu_below_bug_img">
                             <!-- <p>旋轉</p> -->
                         </a></li>
-                    <li class="menu_below_li" id="garbage_can"><a href="#"><img
+                    <li class="menu_below_li" id="garbage_can"><a href="javascript:void(0)"><img
                                 src="./images/Custom_block/menu_below/Frame 4.svg" alt="" id="garbage_can_img">
                             <!-- <p>刪除</p> -->
                         </a>
                     </li>
-                    <li class="menu_below_li" id="menu_below_li_right1"><a href="#"><img
+                    <li class="menu_below_li" id="menu_below_li_right1"><a href="javascript:void(0)"><img
                                 src="./images/Custom_block/menu_below/Frame 5.svg" alt="" id="menu_below_li_right1_img">
                             <!-- <p>翻轉</p> -->
                         </a></li>
-                    <li class="menu_below_li" id="menu_below_li_right2"><a href="#"><img
+                    <li class="menu_below_li" id="menu_below_li_right2"><a href="javascript:void(0)"><img
                                 src="./images/Custom_block/menu_below/Frame 6.svg" alt="" id="menu_below_li_right2_img">
                             <!-- <p>上一步</p> -->
                         </a></li>
-                    <li class="menu_below_li" id="menu_below_li_right3"><a href="#">
+                    <li class="menu_below_li" id="menu_below_li_right3"><a href="javascript:void(0)">
                             <img src="./images/Custom_block/menu_below/Frame 7.svg" alt=""
                                 id="menu_below_li_right3_img">
                             <!-- <p>重製</p> -->

@@ -6,14 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/Customization.css">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" src="./Menu.jsx"></script>
+    <script src="./js/Menu.js"></script>
 </head>
 
 <body>
+
+    <div id="menu"></div>
+    <script type="text/babel">
+        function App() {
+            React.useEffect(() => {
+                menuJS();
+            }, []); // 确保 toggleDropdown 在组件渲染后调用
+            return (
+                <Menu />
+            )
+        }
+        ReactDOM
+            .createRoot(document.getElementById('menu'))
+            .render(<App />);
+    </script>
     <main id="main">
-        <div id="menu">
+        <!-- <div id="menu">
             <ul id="menu_id">
                 <div id="menu_id_menu">
-                    <li id="menu_id_li"><a href="#">HOME</a></li>
+                    <li id="menu_id_li"><a href="./index.html">HOME</a></li>
                     <li id="menu_id_li"><a href="#">SHOP</a></li>
                     <li id="menu_id_li"><a href="#">ABOUT</a></li>
                     <li id="menu_id_li"><a href="#">NEWS</a></li>
@@ -35,12 +55,10 @@
             <ul id="menu_id_search">
                 <li>
                     <div id="menu_id_search_divBox">
-                        <!-- <div id="menu_id_search_divBox_divbox"> -->
                         <a href="#" id="menu_id_search_divBox_a1"><img src="./images/Custom_block/menu/search.svg"
                                 alt="">
                             <p>搜尋</p>
                         </a>
-                        <!-- </div> -->
                         <a href="#" id="menu_id_search_divBox_a2"><img src="./images/Custom_block/menu/Xicon.svg"
                                 alt=""></a>
                     </div>
@@ -50,29 +68,30 @@
                             src="./images/Custom_block/menu/shopping-cart-basket-1--shopping-basket.svg" alt=""></a>
                 </li>
             </ul>
-        </div>
+        </div> -->
+
 
         </div>
         <div id="all">
             <div id="left_sidebar">
                 <ul id="left_sidebar_ul">
-                    <li><a href="#" id="left_sidebar_btn1" class="left_sidebar_btn_sidebarAll"><img
+                    <li><a href="javascript:void(0)" id="left_sidebar_btn1" class="left_sidebar_btn_sidebarAll"><img
                                 src="./images/Custom_block/left_sidebar/chocolate -1-1.svg" alt="">
                             <p class="left_sidebar_p">口味</p>
                         </a></li>
-                    <li><a href="#" id="left_sidebar_btn2" class="left_sidebar_btn_sidebarAll"><img
+                    <li><a href="javascript:void(0)" id="left_sidebar_btn2" class="left_sidebar_btn_sidebarAll"><img
                                 src="./images/Custom_block/left_sidebar/chocolate -1-2.svg" alt="">
                             <p class="left_sidebar_p">配料</p>
                         </a></li>
-                    <li><a href="#" id="left_sidebar_btn3" class="left_sidebar_btn_sidebarAll"><img
+                    <li><a href="javascript:void(0)" id="left_sidebar_btn3" class="left_sidebar_btn_sidebarAll"><img
                                 src="./images/Custom_block/left_sidebar/chocolate -1-3.svg" alt="">
                             <p class="left_sidebar_p">文字</p>
                         </a></li>
-                    <li><a href="#" id="left_sidebar_btn4" class="left_sidebar_btn_sidebarAll"><img
+                    <li><a href="javascript:void(0)" id="left_sidebar_btn4" class="left_sidebar_btn_sidebarAll"><img
                                 src="./images/Custom_block/left_sidebar/chocolate -1-4.svg" alt="">
                             <p class="left_sidebar_p">裝飾</p>
                         </a></li>
-                    <li><a href="#" id="left_sidebar_btn5" class="left_sidebar_btn_sidebarAll"><img
+                    <li><a href="javascript:void(0)" id="left_sidebar_btn5" class="left_sidebar_btn_sidebarAll"><img
                                 src="./images/Custom_block/left_sidebar/chocolate -1-5.svg" alt="">
                             <p class="left_sidebar_p">模板</p>
                         </a></li>
@@ -82,7 +101,7 @@
                         <p id="menu_p">口味</p>
                         <ul>
                             <li>
-                                <a href="#" class="left_menu_img1">
+                                <a href="javascript:void(0)" class="left_menu_img1">
                                     <img id="milk_chocolate"
                                         src="./images/Custom_block/left_menu/first_floor/Frame 1.svg" alt="">
                                     <!-- <p>牛奶巧克力</p> -->
@@ -90,7 +109,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="left_menu_img2">
+                                <a href="javascript:void(0)" class="left_menu_img2">
                                     <img id="dark_chocolate"
                                         src="./images/Custom_block/left_menu/first_floor/Ellipse 2.svg" alt="">
                                     <!-- <p>黑巧克力</p> -->
@@ -98,7 +117,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="left_menu_img3">
+                                <a href="javascript:void(0)" class="left_menu_img3">
                                     <img id="white_chocolate"
                                         src="./images/Custom_block/left_menu/first_floor/Ellipse 3.svg" alt="">
                                     <!-- <p>白巧克力</p> -->
@@ -106,7 +125,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="left_menu_img4">
+                                <a href="javascript:void(0)" class="left_menu_img4">
                                     <img id="strawberry_chocolate"
                                         src="./images/Custom_block/left_menu/first_floor/Ellipse 4.svg" alt="">
                                     <!-- <p>草莓巧克力</p> -->
@@ -114,7 +133,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="left_menu_img5">
+                                <a href="javascript:void(0)" class="left_menu_img5">
                                     <img id="matcha_chocolate"
                                         src="./images/Custom_block/left_menu/first_floor/Ellipse 5.svg" alt="">
                                     <!-- <p>抹茶巧克力</p> -->
@@ -122,7 +141,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="left_menu_img6">
+                                <a href="javascript:void(0)" class="left_menu_img6">
                                     <img id="caramel_chocolate"
                                         src="./images/Custom_block/left_menu/first_floor/Ellipse 6.svg" alt="">
                                     <!-- <p>焦糖巧克力</p> -->
@@ -130,8 +149,9 @@
                                 </a>
                             </li>
                         </ul>
-                        <div id="left_menu_right1"><a href=""><img src="./images/Custom_block/left_menu/Frame right.svg"
-                                    alt="" class="left_menu_right1_img"></a>
+                        <div id="left_menu_right1"><a href="javascript:void(0)"><img
+                                    src="./images/Custom_block/left_menu/Frame right.svg" alt=""
+                                    class="left_menu_right1_img"></a>
                         </div>
                     </div>
                 </div>
@@ -204,8 +224,9 @@
                                 </li>
                             </ul>
                         </div> -->
-                        <div id="left_menu_right2"><a href=""><img src="./images/Custom_block/left_menu/Frame right.svg"
-                                    alt="" class="left_menu_right1_img"></a>
+                        <div id="left_menu_right2"><a href="javascript:void(0)"><img
+                                    src="./images/Custom_block/left_menu/Frame right.svg" alt=""
+                                    class="left_menu_right1_img"></a>
                         </div>
                     </div>
                 </div>
@@ -217,7 +238,7 @@
                     <p class="left_menu3_p2">文字口味(巧克力)</p>
                     <ul>
                         <li>
-                            <a href="#" id="left_menu3_p2_a1">
+                            <a href="javascript:void(0)" id="left_menu3_p2_a1">
                                 <img src="./images/Custom_block/left_menu/third_floor/Ellipse 1.svg" alt=""
                                     id="left_menu3_p2_a1_img1">
                                 <!-- <p>黑巧</p> -->
@@ -225,7 +246,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" id="left_menu3_p2_a2">
+                            <a href="javascript:void(0)" id="left_menu3_p2_a2">
                                 <img src="./images/Custom_block/left_menu/third_floor/Ellipse 2.svg" alt=""
                                     id="left_menu3_p2_a1_img2">
                                 <!-- <p>白巧</p> -->
@@ -233,7 +254,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" id="left_menu3_p2_a3">
+                            <a href="javascript:void(0)" id="left_menu3_p2_a3">
                                 <img src="./images/Custom_block/left_menu/third_floor/Ellipse 3.svg" alt=""
                                     id="left_menu3_p2_a1_img3">
                                 <!-- <p>牛奶</p> -->
@@ -241,7 +262,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" id="left_menu3_p2_a4">
+                            <a href="javascript:void(0)" id="left_menu3_p2_a4">
                                 <img src="./images/Custom_block/left_menu/third_floor/Ellipse 4.svg" alt=""
                                     id="left_menu3_p2_a1_img4">
                                 <!-- <p>草莓</p> -->
@@ -255,28 +276,37 @@
                     <div id="left_menu3_div3_div">
                         <p>模板</p>
                         <div>
-                            <a href="#"><img src="./images/Custom_block/left_menu/third_floor/Ellipse 16.svg" alt=""
+                            <a href="javascript:void(0)"><img
+                                    src="./images/Custom_block/left_menu/third_floor/Ellipse 16.svg" alt=""
                                     id="left_menu3_div3_div_img1"></a>
-                            <a href="#"><img src="./images/Custom_block/left_menu/third_floor/Ellipse 17.svg" alt=""
+                            <a href="javascript:void(0)"><img
+                                    src="./images/Custom_block/left_menu/third_floor/Ellipse 17.svg" alt=""
                                     id="left_menu3_div3_div_img2"></a>
-                            <a href="#"><img src="./images/Custom_block/left_menu/third_floor/Ellipse 18.svg" alt=""
+                            <a href="javascript:void(0)"><img
+                                    src="./images/Custom_block/left_menu/third_floor/Ellipse 18.svg" alt=""
                                     id="left_menu3_div3_div_img3"></a>
-                            <a href="#"><img src="./images/Custom_block/left_menu/third_floor/Ellipse 19.svg" alt=""
+                            <a href="javascript:void(0)"><img
+                                    src="./images/Custom_block/left_menu/third_floor/Ellipse 19.svg" alt=""
                                     id="left_menu3_div3_div_img4"></a>
-                            <a href="#"><img src="./images/Custom_block/left_menu/third_floor/Ellipse 20.svg" alt=""
+                            <a href="javascript:void(0)"><img
+                                    src="./images/Custom_block/left_menu/third_floor/Ellipse 20.svg" alt=""
                                     id="left_menu3_div3_div_img5"></a>
-                            <a href="#"><img src="./images/Custom_block/left_menu/third_floor/Ellipse 21.svg" alt=""
+                            <a href="javascript:void(0)"><img
+                                    src="./images/Custom_block/left_menu/third_floor/Ellipse 21.svg" alt=""
                                     id="left_menu3_div3_div_img6"></a>
-                            <a href="#"><img src="./images/Custom_block/left_menu/third_floor/Ellipse 22.svg" alt=""
+                            <a href="javascript:void(0)"><img
+                                    src="./images/Custom_block/left_menu/third_floor/Ellipse 22.svg" alt=""
                                     id="left_menu3_div3_div_img7"></a>
-                            <a href="#"><img src="./images/Custom_block/left_menu/third_floor/Ellipse 23.svg" alt=""
+                            <a href="javascript:void(0)"><img
+                                    src="./images/Custom_block/left_menu/third_floor/Ellipse 23.svg" alt=""
                                     id="left_menu3_div3_div_img8"></a>
-                            <a href="#"><img src="./images/Custom_block/left_menu/third_floor/Ellipse 24.svg" alt=""
+                            <a href="javascript:void(0)"><img
+                                    src="./images/Custom_block/left_menu/third_floor/Ellipse 24.svg" alt=""
                                     id="left_menu3_div3_div_img9"></a>
                         </div>
                     </div>
                 </div>
-                <div id="left_menu_right3"><a href="">
+                <div id="left_menu_right3"><a href="javascript:void(0)">
                         <img src="./images/Custom_block/left_menu/Frame right.svg" alt=""
                             class="left_menu_right1_img"></a>
                 </div>
@@ -296,47 +326,58 @@
                     </div>
                     <p class="left_menu4_in_hr_p">熱門</p>
                     <div class="left_menu4_img">
-                        <a href="#"><img src="./images/Custom_block/left_menu/third_floor/Ellipse 5.svg" alt=""
-                                draggable="true" id="left_menu4_img1" class="left_menu4_img_all"></a>
-                        <a href="#"><img src="./images/Custom_block/left_menu/third_floor/Ellipse 6.svg" alt=""
-                                draggable="true" id="left_menu4_img2" class="left_menu4_img_all"></a>
-                        <a href="#"><img src="./images/Custom_block/left_menu/third_floor/Ellipse 7.svg" alt=""
-                                draggable="true" id="left_menu4_img3" class="left_menu4_img_all"></a>
-                        <a href="#"><img src="./images/Custom_block/left_menu/third_floor/Ellipse 8.svg" alt=""
-                                draggable="true" id="left_menu4_img4" class="left_menu4_img_all"></a>
-                        <a href="#"><img src="./images/Custom_block/left_menu/third_floor/Ellipse 9.svg" alt=""
-                                draggable="true" id="left_menu4_img5" class="left_menu4_img_all"></a>
-                        <a href="#"><img src="./images/Custom_block/left_menu/third_floor/Ellipse 10.svg" alt=""
-                                draggable="true" id="left_menu4_img6" class="left_menu4_img_all"></a>
-                        <a href="#"><img src="./images/Custom_block/left_menu/third_floor/Ellipse 11.svg" alt=""
-                                draggable="true" id="left_menu4_img7" class="left_menu4_img_all"></a>
-                        <a href="#"><img src="./images/Custom_block/left_menu/third_floor/Ellipse 12.svg" alt=""
-                                draggable="true" id="left_menu4_img8" class="left_menu4_img_all"></a>
-                        <a href="#"><img src="./images/Custom_block/left_menu/third_floor/Ellipse 13.svg" alt=""
-                                draggable="true" id="left_menu4_img9" class="left_menu4_img_all"></a>
+                        <a href="javascript:void(0)"><img
+                                src="./images/Custom_block/left_menu/third_floor/Ellipse 5.svg" alt="" draggable="true"
+                                id="left_menu4_img1" class="left_menu4_img_all"></a>
+                        <a href="javascript:void(0)"><img
+                                src="./images/Custom_block/left_menu/third_floor/Ellipse 6.svg" alt="" draggable="true"
+                                id="left_menu4_img2" class="left_menu4_img_all"></a>
+                        <a href="javascript:void(0)"><img
+                                src="./images/Custom_block/left_menu/third_floor/Ellipse 7.svg" alt="" draggable="true"
+                                id="left_menu4_img3" class="left_menu4_img_all"></a>
+                        <a href="javascript:void(0)"><img
+                                src="./images/Custom_block/left_menu/third_floor/Ellipse 8.svg" alt="" draggable="true"
+                                id="left_menu4_img4" class="left_menu4_img_all"></a>
+                        <a href="javascript:void(0)"><img
+                                src="./images/Custom_block/left_menu/third_floor/Ellipse 9.svg" alt="" draggable="true"
+                                id="left_menu4_img5" class="left_menu4_img_all"></a>
+                        <a href="javascript:void(0)"><img
+                                src="./images/Custom_block/left_menu/third_floor/Ellipse 10.svg" alt="" draggable="true"
+                                id="left_menu4_img6" class="left_menu4_img_all"></a>
+                        <a href="javascript:void(0)"><img
+                                src="./images/Custom_block/left_menu/third_floor/Ellipse 11.svg" alt="" draggable="true"
+                                id="left_menu4_img7" class="left_menu4_img_all"></a>
+                        <a href="javascript:void(0)"><img
+                                src="./images/Custom_block/left_menu/third_floor/Ellipse 12.svg" alt="" draggable="true"
+                                id="left_menu4_img8" class="left_menu4_img_all"></a>
+                        <a href="javascript:void(0)"><img
+                                src="./images/Custom_block/left_menu/third_floor/Ellipse 13.svg" alt="" draggable="true"
+                                id="left_menu4_img9" class="left_menu4_img_all"></a>
                     </div>
                 </div>
-                <div id="left_menu_right4"><a href=""><img src="./images/Custom_block/left_menu/Frame right.svg" alt=""
+                <div id="left_menu_right4"><a href="javascript:void(0)"><img
+                            src="./images/Custom_block/left_menu/Frame right.svg" alt=""
                             class="left_menu_right1_img"></a>
                 </div>
                 <div class="left_menu5">
                     <p class="left_menu5_p">模板</p>
                     <div class="left_menu5_img">
-                        <a href="#" id="left_menu5_img_a1"><img
+                        <a href="javascript:void(0)" id="left_menu5_img_a1"><img
                                 src="./images/Custom_block/left_menu/fourth_floor/Ellipse 1.svg" alt=""></a>
-                        <a href="#" id="left_menu5_img_a2"><img
+                        <a href="javascript:void(0)" id="left_menu5_img_a2"><img
                                 src="./images/Custom_block/left_menu/fourth_floor/Ellipse 2.svg" alt=""></a>
-                        <a href="#" id="left_menu5_img_a3"><img
+                        <a href="javascript:void(0)" id="left_menu5_img_a3"><img
                                 src="./images/Custom_block/left_menu/fourth_floor/Ellipse 3.svg" alt=""></a>
-                        <a href="#" id="left_menu5_img_a4"><img
+                        <a href="javascript:void(0)" id="left_menu5_img_a4"><img
                                 src="./images/Custom_block/left_menu/fourth_floor/Ellipse 4.svg" alt=""></a>
-                        <a href="#" id="left_menu5_img_a5"><img
+                        <a href="javascript:void(0)" id="left_menu5_img_a5"><img
                                 src="./images/Custom_block/left_menu/fourth_floor/Ellipse 5.svg" alt=""></a>
-                        <a href="#" id="left_menu5_img_a6"><img
+                        <a href="javascript:void(0)" id="left_menu5_img_a6"><img
                                 src="./images/Custom_block/left_menu/fourth_floor/Ellipse 6.svg" alt=""></a>
                     </div>
-                    <div id="left_menu_right5"><a href=""><img src="./images/Custom_block/left_menu/Frame right.svg"
-                                alt="" class="left_menu_right1_img"></a></div>
+                    <div id="left_menu_right5"><a href="javascript:void(0)"><img
+                                src="./images/Custom_block/left_menu/Frame right.svg" alt=""
+                                class="left_menu_right1_img"></a></div>
                 </div>
                 <!-- <div id="left_menu_right"><a href=""><img src="./image/left menu/Frame right.svg" alt=""></a></div> -->
             </div>
@@ -414,12 +455,12 @@
             </div>
             <div class="right_sidebar">
                 <div class="right_sidebar_div">
-                    <a href="#">
+                    <a href="javascript:void(0)">
                         <img src="./images/Custom_block/right_sidebar/ph_share-thin-1.svg" alt="">
                         <p>分享</p>
                         </img>
                     </a>
-                    <a href="#">
+                    <a href="javascript:void(0)">
                         <img src="./images/Custom_block/right_sidebar/Vecto2.svg" alt="">
                         <p>儲存</p>
                         </img>
@@ -431,32 +472,33 @@
         <div id="menu_below">
             <div>
                 <ul>
-                    <li class="menu_below_li" id="Select_function"><a href="#"><img
+                    <li class="menu_below_li" id="Select_function"><a href="javascript:void(0)"><img
                                 src="./images/Custom_block/menu_below/Frame 1.svg" alt="" id="Select_function_img">
                             <!-- <p>選取</p> -->
                         </a></li>
-                    <li class="menu_below_li" id="menu_below_li_left2"><a href="#"><img
+                    <li class="menu_below_li" id="menu_below_li_left2"><a href="javascript:void(0)"><img
                                 src="./images/Custom_block/menu_below/Frame 2.svg" alt="" id="menu_below_li_left2_img">
                             <!-- <p>縮放</p> -->
                         </a></li>
-                    <li class="menu_below_li" id="menu_below_li_left1"><a href="#" id="menu_below_bug"><img
-                                src="./images/Custom_block/menu_below/Frame 3.svg" alt="" id="menu_below_bug_img">
+                    <li class="menu_below_li" id="menu_below_li_left1"><a href="javascript:void(0)"
+                            id="menu_below_bug"><img src="./images/Custom_block/menu_below/Frame 3.svg" alt=""
+                                id="menu_below_bug_img">
                             <!-- <p>旋轉</p> -->
                         </a></li>
-                    <li class="menu_below_li" id="garbage_can"><a href="#"><img
+                    <li class="menu_below_li" id="garbage_can"><a href="javascript:void(0)"><img
                                 src="./images/Custom_block/menu_below/Frame 4.svg" alt="" id="garbage_can_img">
                             <!-- <p>刪除</p> -->
                         </a>
                     </li>
-                    <li class="menu_below_li" id="menu_below_li_right1"><a href="#"><img
+                    <li class="menu_below_li" id="menu_below_li_right1"><a href="javascript:void(0)"><img
                                 src="./images/Custom_block/menu_below/Frame 5.svg" alt="" id="menu_below_li_right1_img">
                             <!-- <p>翻轉</p> -->
                         </a></li>
-                    <li class="menu_below_li" id="menu_below_li_right2"><a href="#"><img
+                    <li class="menu_below_li" id="menu_below_li_right2"><a href="javascript:void(0)"><img
                                 src="./images/Custom_block/menu_below/Frame 6.svg" alt="" id="menu_below_li_right2_img">
                             <!-- <p>上一步</p> -->
                         </a></li>
-                    <li class="menu_below_li" id="menu_below_li_right3"><a href="#">
+                    <li class="menu_below_li" id="menu_below_li_right3"><a href="javascript:void(0)">
                             <img src="./images/Custom_block/menu_below/Frame 7.svg" alt=""
                                 id="menu_below_li_right3_img">
                             <!-- <p>重製</p> -->
@@ -502,6 +544,7 @@
     <script src="./js/Customization.js"></script>
     <script src="./js/Drag_function.js"></script>
     <script src="./js/function_Block_Below.js"></script>
+
 </body>
 
 </html>

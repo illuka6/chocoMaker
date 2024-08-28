@@ -6,11 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/Customization.css">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" src="./Menu.jsx"></script>
+    <script src="./js/Menu.js"></script>
 </head>
+<div id="menu"></div>
+<script type="text/babel">
+    function App() {
+        React.useEffect(() => {
+            menuJS();
+        }, []); // 确保 toggleDropdown 在组件渲染后调用
+        return (
+            <Menu />
+        )
+    }
+    ReactDOM
+        .createRoot(document.getElementById('menu'))
+        .render(<App />);
+</script>
 
 <body id="product_details_page">
     <main id="main">
-        <div id="menu">
+        <!-- <div id="menu">
             <ul id="menu_id">
                 <div id="menu_id_menu">
                     <li id="menu_id_li"><a href="#">HOME</a></li>
@@ -35,12 +54,10 @@
             <ul id="menu_id_search">
                 <li>
                     <div id="menu_id_search_divBox">
-                        <!-- <div id="menu_id_search_divBox_divbox"> -->
                         <a href="#" id="menu_id_search_divBox_a1"><img src="./images/Custom_block/menu/search.svg"
                                 alt="">
                             <p>搜尋</p>
                         </a>
-                        <!-- </div> -->
                         <a href="#" id="menu_id_search_divBox_a2"><img src="./images/Custom_block/menu/Xicon.svg"
                                 alt=""></a>
                     </div>
@@ -50,16 +67,19 @@
                             src="./images/Custom_block/menu/shopping-cart-basket-1--shopping-basket.svg" alt=""></a>
                 </li>
             </ul>
-        </div>
+        </div> -->
         <div id="product_details_page_tab">
             <p>商店 > 商品詳細頁</p>
         </div>
         <div>
             <div id="product_details_page_tab_div1">
                 <div id="product_details_page_tab_div1_left">
-                    <a href="#"><img src="./images/Product-details-page/first_block/Frame 1.svg" alt=""></a>
-                    <a href="#"><img src="./images/Product-details-page/first_block/Frame 2.svg" alt=""></a>
-                    <a href="#"><img src="./images/Product-details-page/first_block/Frame 3.svg" alt=""></a>
+                    <a href="javascript:void(0)"><img src="./images/Product-details-page/first_block/Frame 1.svg"
+                            alt=""></a>
+                    <a href="javascript:void(0)"><img src="./images/Product-details-page/first_block/Frame 2.svg"
+                            alt=""></a>
+                    <a href="javascript:void(0)"><img src="./images/Product-details-page/first_block/Frame 3.svg"
+                            alt=""></a>
                 </div>
                 <div id="product_details_page_tab_div1_middle">
                     <img src="./images/Product-details-page/first_block/Frame 4.svg" alt="">
@@ -76,18 +96,18 @@
                     </div>
                     <div id="product_details_page_tab_div1_product_increase_or_decrease">
                         <div id="product_details_page_tab_div1_produc_minus_sign">
-                            <button>
-                                <a href="#">
+                            <button id="product_details_page_tab_div1_produc_minus_sign_reduce">
+                                <a href="javascript:void(0)">
                                     <img src="./images/Product-details-page/first_block/Frame 5.svg" alt="">
                                 </a>
                             </button>
                         </div>
                         <div>
-                            <p>1</p>
+                            <p id="product_details_page_tab_div1_produc_minus_sign_p">1</p>
                         </div>
                         <div id="product_details_page_tab_div1_produc_plus_sign">
-                            <button>
-                                <a href="#">
+                            <button id="product_details_page_tab_div1_produc_minus_sign_add">
+                                <a href="javascript:void(0)">
                                     <img src="./images/Product-details-page/first_block/Frame 6.svg" alt="">
                                 </a>
                             </button>
@@ -188,39 +208,56 @@
             </div>
             <div id="product_details_page_tab_div8">
                 <div id="product_details_page_tab_div9">
-                    <a href="#" id="product_details_page_tab_div9_img1"><img
+                    <a href="javascript:void(0)" id="product_details_page_tab_div9_img1"><img
                             src="./images/Product-details-page/first_block/Frame 11.svg" alt=""> </a>
-                    <a href="#" id="product_details_page_tab_div9_img2"><img
+                    <a href="javascript:void(0)" id="product_details_page_tab_div9_img2"><img
                             src="./images/Product-details-page/first_block/Frame 12.svg" alt=""></a>
-                    <a href="#" id="product_details_page_tab_div9_img3"><img
+                    <a href="javascript:void(0)" id="product_details_page_tab_div9_img3"><img
                             src="./images/Product-details-page/first_block/Frame 13.svg" alt=""></a>
                 </div>
             </div>
-            <footer>
+            <!-- <footer>
                 <div class="wrap">
-                    <a class="logo" href="#"><img src="./images/footer_logo.svg" alt=""></a>
+                    <a class="logo" href="javascript:void(0)"><img src="./images/footer_logo.svg" alt=""></a>
                     <div class="bottom_nav">
                         <ul class="menu">
                             <li><a href="./index.html" id="home">首頁</a></li>
-                            <li><a href="#" id="news">最新消息</a></li>
+                            <li><a href="javascript:void(0)" id="news">最新消息</a></li>
                             <li><a href="./shop.html" id="shop">商品一覽</a></li>
-                            <li><a href="#" id="about">關於我們</a></li>
-                            <li><a href="#" id="Q&A">Q&A</a></li>
-                            <li><a href="#" id="shopping_car">購物車</a></li>
-                            <li><a href="#" id="member">會員專區</a></li>
+                            <li><a href="javascript:void(0)" id="about">關於我們</a></li>
+                            <li><a href="javascript:void(0)" id="Q&A">Q&A</a></li>
+                            <li><a href="javascript:void(0)" id="shopping_car">購物車</a></li>
+                            <li><a href="javascript:void(0)" id="member">會員專區</a></li>
                         </ul>
                     </div>
                     <div class="icon">
-                        <a class="fb" href="#"></a>
-                        <a class="ig" href="#"></a>
-                        <a class="x" href="#"></a>
+                        <a class="fb" href="javascript:void(0)"></a>
+                        <a class="ig" href="javascript:void(0)"></a>
+                        <a class="x" href="javascript:void(0)"></a>
                     </div>
                 </div>
                 <div class="copyRight">© Mélange. All Rights Reserved.</div>
-            </footer>
+            </footer> -->
+            <!-- footer -->
+            <div id="footer"></div>
+            <script type="text/babel">
+                function App() {
+                    return (
+                        <Footer />
+                    )
+                }
+                ReactDOM
+                    .createRoot(document.getElementById('footer'))
+                    .render(<App />);
+            </script>
+
+
         </div>
     </main>
-    <script src="./js/Customization.js"></script>
+    <!-- <script src="./js/Customization.js"></script> -->
+    <script src="./js/Product_details_page.js"></script>
+    <!-- js -->
+    <script type="text/babel" src="./Footer.jsx"></script>
 </body>
 
 </html>
