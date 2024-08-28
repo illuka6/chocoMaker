@@ -183,9 +183,11 @@ ul.drop-down-menu>li li{
     width: 8vw;
     min-width: 85px;
     padding: 10px ;
+    
 }
 ul.drop-down-menu>li li>a{
-border-bottom:var(--block_brown) solid 2px
+border-bottom:var(--block_brown) solid 2px;
+color: var(--text);
 }
 /* 排序按鈕 */
 

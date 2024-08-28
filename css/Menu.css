@@ -3,8 +3,10 @@
 #menu {
     display: flex;
     justify-content: center;
-    /* position: absolute; */
-    
+    /* 固定位置 */
+    width: 100%;
+    position: absolute;
+
 }
 
 #menu_id {
@@ -23,7 +25,8 @@
     margin-top: 29px;
     display: none;
 }
-#menu_id_search li{
+
+#menu_id_search li {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,7 +42,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: #FFF9F1;
-  
+
 }
 
 #menu_id_search_divBox div {
