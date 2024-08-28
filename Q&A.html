@@ -9,9 +9,7 @@
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <!-- 引用footer -->
-    <script type="text/babel" src="./Footer.jsx"></script>
-    <link rel="stylesheet" href="./css/Footer.css">
+    
     <!-- 引用menu -->
     <script type="text/babel" src="./Menu.jsx"></script>
     <link rel="stylesheet" href="./css/Menu.css">
@@ -87,14 +85,9 @@
                                 ans: '當然可以。我們提供多種口味，包括黑巧克力、牛奶巧克力和白巧克力，還有各種口味的混合巧克力。',
                             },
                             {
-                                id: 4,
-                                question: '客製化巧克力的最小訂購量是多少？',
-                                ans: '我們的最小訂購量為50顆巧克力。大訂單可享有折扣優惠。',
-                            },
-                            {
                                 id: 5,
-                                question: '客製化的設計需要多久時間？',
-                                ans: '客製化設計通常需要5-7個工作日來完成，具體時間取決於設計的複雜程度和訂單數量。',
+                                question: '巧克力配送需要多久時間？',
+                                ans: '通常為3-5個工作日來完成，具體時間取決於物流狀況和訂單數量。',
                             },
                             {
                                 id: 6,
@@ -130,7 +123,7 @@
                                 {
                                     id: 2,
                                     question: '如何提供我的設計文件？',
-                                    ans: '您可以通過我們的網站上傳設計文件，或通過電子郵件將文件發送給我們。請確保文件為高解析度格式。',
+                                    ans: '您可以通過我們的網站直接送出設計文件，或通過電子郵件將文件發送給我們。請確保文件為高解析度格式。',
                                 },
                                 {
                                     id: 3,
@@ -255,6 +248,9 @@
     </main>
     <!-- footer -->
     <div id="footer"></div>
+    <!-- 引用footer -->
+    <script type="text/babel" src="./Footer.jsx"></script>
+    <link rel="stylesheet" href="./css/Footer.css">
     <script type="text/babel">
         function App() {
             return (
