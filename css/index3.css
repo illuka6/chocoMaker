@@ -76,13 +76,6 @@ a {
 
 /* 共用區 */
 
-#topbar {
-    width: 100%;
-    z-index: 999;
-    position: fixed;
-    align-items: center;
-}
-
 .icon-member {
     background-image: url(../index_images/member.svg);
     background-size: cover;
@@ -154,9 +147,7 @@ body {
     height: 100%;
 }
 
-header {
-    background-color: transparent;
-}
+
 
 section {
     display: flex;
@@ -375,7 +366,7 @@ section {
 #CLASSIC {
     /* height: 60vw; */
     /* width: 100%; */
-    height: 60vw;
+    height: 50vw;
     position: relative;
     background-image: url(../index_images/bg-w.png);
     background-size: cover;
@@ -495,8 +486,8 @@ section {
 #ABOUT {
     position: relative;
     width: 100%;
-    /* height: 100%; */
-    background-image: url(../index_images/bg-b.png);
+    height: 50vw;
+    background-image: url(../index_images/bg-w.png);
     background-size: cover;
     text-align: center;
     background-repeat: no-repeat;
@@ -516,7 +507,7 @@ section {
     width: 30vw;
     height: 40vw;
     z-index: 4;
-    margin-left: 11vw;
+    margin-left: 10.5vw;
 }
 #ABOUT .about_right{
     position: absolute;
@@ -527,7 +518,7 @@ section {
 }
 #ABOUT .title {
     width: 23.5vw;
-    margin-left:-19.5vw;
+    margin-left:-16vw;
     margin-top:-20vw ;
 
 }
@@ -563,7 +554,7 @@ section {
     display: flex;
     height: 50vw;
     width: 30vw;
-    margin-left: 10vw;
+    margin-left: 7vw;
     margin-top: -3vw;
 }
 
@@ -590,31 +581,39 @@ section {
     position: relative;
     width: 100%;
     /* height: 100%; */
-    background-image: url(../index_images/bg-quality.png);
+    background-image: url(../index_images/quality_bg.jpg);
     background-size: cover;
     text-align: center;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
+    padding: 3.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* #QULATY .section_quality {
-    padding: 5vh;
-    
-} */
-#QUALITY .bg_bottom {
-    position: absolute;
-    width: 100vh;
-    color: var(--block_brown);
-    height: 50vh;
-    top: 50%;
-    z-index: 1;
 
-}
 
-#QUALITY .quality_banner {
+#QUALITY .pic_box{
     width: 100%;
     height: 100%;
-    padding: 5vh;
+    background-image: url(../index_images/quality_justpic.png);
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    
+}
+
+
+#QUALITY .quality_title {
+    position: absolute;
+    font-family: "Lucida Bright";
+    font-size: 21.5vw;
+    text-align: center;
+    color: white;
+    overflow: hidden;
 }
 
 
@@ -986,4 +985,20 @@ section {
 #APPERANCE .text4 {
     padding-top: -3rem;
 }
+.bottom{
+    width: 100%;
+    background-image: url(../index_images/bg_bottom.jpg);
+    background-size: cover;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 590px;
+    
+}
 
+.bottom_content{
+    align-items: start;
+    justify-content: start;
+    
+    
+}
