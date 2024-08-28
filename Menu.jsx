@@ -3,11 +3,11 @@ function Menu() {
         <div id="menu">
             <ul id="menu_id">
                 <div id="menu_id_menu">
-                    <li id="menu_id_li"><a href="#">HOME</a></li>
-                    <li id="menu_id_li"><a href="#">SHOP</a></li>
+                    <li id="menu_id_li"><a href="./index.html">HOME</a></li>
+                    <li id="menu_id_li"><a href="./shop.html">SHOP</a></li>
                     <li id="menu_id_li"><a href="#">ABOUT</a></li>
                     <li id="menu_id_li"><a href="#">NEWS</a></li>
-                    <li id="menu_id_li"><a href="#">Q&A</a></li>
+                    <li id="menu_id_li"><a href="./QnA.html">Q&A</a></li>
                     <li id="menu_id_menu_icon"><a href="#" id="customized">
                         <p>customized</p>
                     </a></li>

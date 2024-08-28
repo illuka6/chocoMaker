@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/Q&A.css">
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- 引用menu -->
+    <script type="text/babel" src="./Menu.jsx"></script>
+    <link rel="stylesheet" href="./css/Menu.css">
+
+    <title>Q&A</title>
+</head>
+<!-- menu -->
+<div id="menu"></div>
+<script type="text/babel">
+    function App() {
+        return (
+            <Menu />
+        )
+    }
+    ReactDOM
+        .createRoot(document.getElementById('menu'))
+        .render(<App />);
+</script>
+
+<body>
+    <header></header>
+    <main>
+        <section className="QnA">
+            <div className="file">
+
+
+                <div className="qabox">
+
+                    <div id="root"></div>
+                    <script type="text/babel">
+
+                        function Btn_List({ onClick }) {
+                            return (
+                                <ul className="qType">
+                                    <li className="btn_type1 btn active" onClick={() => onClick('btn_type1')}><a>常見問題</a></li>
+                                    <li className="btn_type2 btn" onClick={() => onClick('btn_type2')}><a>客製問題</a></li>
+                                    <li className="btn_type3 btn" onClick={() => onClick('btn_type3')}><a>廠商合作</a></li>
+                                </ul>)
+                        };
+
+                        function QnA(props) {
+                            return (
+
+                                <div className="per_qna_block">
+                                    <div className="question" >
+                                        <a>
+                                            <div className="q_part">
+                                                <div className="ballwrap"><div className="pinkball"></div></div>
+                                                <p>{props.question}</p>
+                                            </div>
+                                            <div class="vector"></div>
+                                        </a>
+                                    </div>
+                                    <div className="ans"><p>{props.ans}</p></div>
+                                </div>
+                            )
+                        };
+
+                        const App = () => {
+                            const qnas_type1 = [{
+                                id: 1,
+                                question: '你們的巧克力使用什麼原料？',
+                                ans: '我們使用高品質的可可豆、純天然的糖和奶製品。我們的巧克力不添加人造色素或香料。',
+                            },
+                            {
+                                id: 2,
+                                question: '是否提供素食或無乳糖的巧克力？',
+                                ans: '是的，我們提供素食巧克力選擇，並且有無乳糖的選擇，請在訂購時告知我們您的需求。',
+                            },
+                            {
+                                id: 3,
+                                question: '我可以選擇不同的口味嗎？',
+                                ans: '當然可以。我們提供多種口味，包括黑巧克力、牛奶巧克力和白巧克力，還有各種口味的混合巧克力。',
+                            },
+                            {
+                                id: 5,
+                                question: '巧克力配送需要多久時間？',
+                                ans: '通常為3-5個工作日來完成，具體時間取決於物流狀況和訂單數量。',
+                            },
+                            {
+                                id: 6,
+                                question: '如何儲存我的巧克力？',
+                                ans: '我們建議將巧克力儲存在陰涼乾燥的地方，避免陽光直射和高溫。最佳儲存溫度為15-20°C。',
+                            },
+                            {
+                                id: 7,
+                                question: '如果我對收到的巧克力不滿意，可以退貨嗎？',
+                                ans: '我們對所有訂單都提供滿意保證。如果巧克力在送達過程中有損壞或錯誤，請聯繫我們的客服進行退貨或換貨。',
+                            },
+                            {
+                                id: 8,
+                                question: '你們是否提供國際配送？',
+                                ans: '是的，我們提供國際配送服務。運費和配送時間會根據目的地有所不同。',
+                            },
+                            {
+                                id: 9,
+                                question: '是否可以在巧克力上印刷文字或圖片？',
+                                ans: '是的，我們可以在巧克力上印刷自定義的文字或圖片。請提供您的設計文件，我們會根據您的要求進行製作。',
+                            },
+                            {
+                                id: 10,
+                                question: '如何查詢訂單狀態？',
+                                ans: '您可以通過我們的網站登錄帳戶查詢訂單狀態，或者聯繫我們的客服團隊，我們會提供最新的訂單信息。',
+                            }];
+                            const qnas_type2 = [
+                                {
+                                    id: 1,
+                                    question: '我可以自定義巧克力的形狀嗎？',
+                                    ans: '是的，我們可以根據您的需求製作各種形狀的巧克力。請提供您的設計或想法，我們會幫助實現。',
+                                },
+                                {
+                                    id: 2,
+                                    question: '如何提供我的設計文件？',
+                                    ans: '您可以通過我們的網站直接送出設計文件，或通過電子郵件將文件發送給我們。請確保文件為高解析度格式。',
+                                },
+                                {
+                                    id: 3,
+                                    question: '客製化設計的額外費用是多少？',
+                                    ans: '設計費用會根據複雜程度和訂單數量而有所不同。我們會在您確認設計後提供具體報價。',
+                                },
+                                {
+                                    id: 4,
+                                    question: '是否可以在巧克力上添加特殊的配料或裝飾？',
+                                    ans: '是的，我們可以在巧克力中添加各種配料，如堅果、乾果、糖果等，還可以用特殊裝飾來裝飾巧克力。',
+                                },
+                                {
+                                    id: 5,
+                                    question: '我能選擇巧克力的包裝樣式嗎？',
+                                    ans: '可以，我們提供多種包裝選擇，包括禮品盒、包裝袋等。您可以選擇最符合您需求的包裝樣式。',
+                                },
+                                {
+                                    id: 6,
+                                    question: '我可以訂製巧克力的味道組合嗎？',
+                                    ans: '是的，您可以選擇多種巧克力口味進行組合，根據您的喜好來搭配。',
+                                },
+                                {
+                                    id: 7,
+                                    question: '如何確認我的設計是否符合預期？',
+                                    ans: '在開始生產之前，我們會提供設計樣稿給您確認。您可以檢查樣稿並提供反饋，直到您滿意為止。',
+                                },
+                                {
+                                    id: 8,
+                                    question: '如果我想要大批量訂製，是否可以享有折扣？',
+                                    ans: '是的，大批量訂製可以享受折扣。我們會根據訂單數量和客製化要求提供相應的優惠。',
+                                },
+                                {
+                                    id: 9,
+                                    question: '我可以要求不含某些過敏原的巧克力嗎？',
+                                    ans: '可以，我們會根據您的需求提供不含特定過敏原的巧克力，請在訂購時告知我們。',
+                                },
+                                {
+                                    id: 10,
+                                    question: '客製化巧克力是否適合用於婚禮或其他活動？',
+                                    ans: '是的，我們的客製化巧克力非常適合用於婚禮、生日派對、公司活動等。我們可以根據活動主題設計巧克力。',
+                                }
+                            ];
+
+                            const qnas_type3 = [
+                                {
+                                    id: 1,
+                                    question: '如何成為你們的供應商或合作夥伴？',
+                                    ans: '請通過我們的網站提交合作申請或直接聯繫我們的業務發展部門。我們會根據您的提案進行審核並回覆您。',
+                                },
+                                {
+                                    id: 2,
+                                    question: '是否接受外部設計公司提供的設計服務？',
+                                    ans: '是的，我們歡迎設計公司提供設計服務。請聯繫我們，提供您的設計方案，我們會進行評估並討論合作細節。',
+                                },
+                                {
+                                    id: 3,
+                                    question: '我可以參與你們的產品開發過程嗎？',
+                                    ans: '當然可以。如果您有新穎的產品概念或改進建議，我們樂意與您合作，將您的想法融入到我們的產品中。',
+                                },
+                                {
+                                    id: 4,
+                                    question: '如何訂購大批量的原料或產品？',
+                                    ans: '請聯繫我們的業務部門，提供您的訂單需求，我們會提供報價和交貨時間，並協助完成訂購流程。',
+                                },
+                                {
+                                    id: 5,
+                                    question: '你們是否提供品牌聯名或合作活動的機會？',
+                                    ans: '是的，我們樂意探索品牌聯名和合作活動的機會。請提供您的合作計劃，我們會與您討論可能的合作模式。',
+                                }
+                            ];
+
+                            // 使用 useState 初始化状态为 qnas_type1
+                            const [qnas, setQnas] = React.useState(qnas_type1);
+
+
+                            /* 在 Btn_List 组件中使用 handleClick 函数，
+                               但是 handleClick 函数是在 App 组件中定义的。您需要通过 props 将 handleClick 传递给 Btn_List。 */
+                            // 处理按钮点击事件，更新状态
+                            const handleClick = (type) => {
+                                if (type === 'btn_type1') {
+                                    setQnas(qnas_type1);
+                                } else if (type === 'btn_type2') {
+                                    setQnas(qnas_type2);
+                                } else if (type === 'btn_type3') {
+                                    setQnas(qnas_type3);
+                                }
+                                // 更新按钮的样式
+                                document.querySelectorAll('.btn').forEach(btn => btn.classList.remove('active'));
+                                document.querySelector(`.${type}`).classList.add('active');
+                            };
+
+
+
+                            React.useEffect(() => {
+                                toggleDropdown('question', 'ans', 'vector');
+                            }, []); // 确保 toggleDropdown 在组件渲染后调用
+
+
+
+                            return (<>
+                                {/* 在 App 组件中传递 handleClick 作为 prop： */}
+                                <Btn_List onClick={handleClick} />
+                                <div className="QAwrap" >
+                                    {qnas.map((item) => {
+                                        return (
+                                            <QnA key={item.id} question={item.question} ans={item.ans} />
+                                        )
+                                    })
+                                    }
+                                </div>
+
+                            </>)
+                        };
+                        ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+
+                    </script>
+
+                </div>
+
+        </section>
+        </div>
+    </main>
+    <!-- footer -->
+    <div id="footer"></div>
+    <!-- 引用footer -->
+    <script type="text/babel" src="./Footer.jsx"></script>
+    <link rel="stylesheet" href="./css/Footer.css">
+    <script type="text/babel">
+        function App() {
+            return (
+                <Footer />
+            )
+        }
+        ReactDOM
+            .createRoot(document.getElementById('footer'))
+            .render(<App />);
+    </script>
+
+    <script src="./js/Q&A.js"></script>
+</body>
+
+</html>
