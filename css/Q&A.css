@@ -144,7 +144,7 @@ section {
 .per_qna_block{
 
     max-width: 900px;
-    /* background-color: rgb(250, 233, 252); */
+    width: 100%;
 }
 
 .question{    
@@ -202,15 +202,14 @@ section {
     font-size: 0.9rem;
     color: #6B3B20;
     font-weight: bold;
-
     max-height: 0; /* 初始状态 */
     overflow: hidden;
-    transition:   0.4s ease,  max-height 0.4s ease; /* 展开和收起的过渡效果 */
     opacity: 0;
 }
 .ans.expanded {    
     opacity: 1;
     max-height: 500px; /* 设置为一个比内容实际高度大的值 */
+    transition:    0.4s ease-in-out; /* 展开和收起的过渡效果 */
 }
 .ans p{
 padding: 10px;

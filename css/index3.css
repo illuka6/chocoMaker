@@ -173,6 +173,14 @@ section {
     /* 字間距離 */
     letter-spacing: .6vw;
     font-weight: bold;
+    font-size: .9vw;
+    color: var(--text);
+    align-items: self-start;
+    font-family: 'Noto+Sans+TC';
+    font-weight: 600;
+}
+.text1,.text2,.text3,.text4,.text5 {
+    padding: 10px;
 }
 .cn_title {
     letter-spacing: .2rem;
@@ -454,9 +462,7 @@ section {
     /* 设置文字竖排，从右到左 */
     text-align: start;
     /* 文字对齐 */
-    /* border: 1px solid black;   边框，方便查看效果 */
-    padding: 10px;
-    /* 内边距 */
+    
     
 }
 
@@ -504,65 +510,61 @@ section {
     width: 30vw;
     left: 0;
 }
+
 #ABOUT .main_pic {
     
     width: 30vw;
     height: 40vw;
     z-index: 4;
-    margin-left: 10vw;
+    margin-left: 11vw;
 }
 #ABOUT .about_right{
     position: absolute;
     right: 0;
+    margin-right: 13vw;
+    display: flex;
+    flex-direction: column-reverse;
 }
 #ABOUT .title {
-    
-    z-index: 5;
-    width: 500px;
-    right: 700px;
-    top: 40vh;
+    width: 23.5vw;
+    margin-left:-19.5vw;
+    margin-top:-20vw ;
 
 }
 
 #ABOUT .little_bg {
     
-    z-index: 2;
+    z-index: 1;
     background-color: rgb(248, 238, 238);
+    width: 42vw;
+    height: 21vw;
+    display: flex;
+    justify-content: center;
     
-    width: 50vw;
-    height: 400px;
-    top: 280px;
-    right: 280px;
+   
 
 }
 
 #ABOUT .circle_title {
     
-    z-index: 1;
-    top: 150px;
-    right: 150px;
-    width: 260px;
+    
+    width: 12vw;
     margin: 0 auto;
     /* 图片居中 */
+    margin-bottom: -6vw;
     display: block;
     /* 将图片作为块级元素 */
     animation: spin 10s linear infinite;
+    margin-left: 36vw;
 
 }
 
 #ABOUT .text_all {
-    z-index: 5;
-    
-    top: 30vh;
-    left: 50vw;
     display: flex;
-    width: 400px;
-    height: 100%;
-    color: var(--text);
-    font-size: 1rem;
-    align-items: flex-start;
-    font-style: 'Noto+Sans+TC';
-    font-weight: 400;
+    height: 50vw;
+    width: 30vw;
+    margin-left: 10vw;
+    margin-top: -3vw;
 }
 
 #ABOUT .text1,
@@ -573,13 +575,9 @@ section {
     writing-mode: vertical-rl;
     /* 设置文字竖排，从右到左 */
     text-align: start;
-    /* 文字对齐 */
-    /* border: 1px solid black;   边框，方便查看效果 */
-    padding: 10px;
-    /* 内边距 */
     height: 100%;
     /* 高度，可以根据需要调整 */
-    width: 50px;
+    
 }
 
 #ABOUT .text2,
@@ -989,6 +987,3 @@ section {
     padding-top: -3rem;
 }
 
-.bg_bottom {
-    
-}
