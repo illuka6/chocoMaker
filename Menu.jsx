@@ -8,7 +8,7 @@ function Menu() {
                     <li id="menu_id_li"><a href="#">ABOUT</a></li>
                     <li id="menu_id_li"><a href="#">NEWS</a></li>
                     <li id="menu_id_li"><a href="./QnA.html">Q&A</a></li>
-                    <li id="menu_id_menu_icon"><a href="#" id="customized">
+                    <li id="menu_id_menu_icon"><a href="./Customization.html" id="customized">
                         <p>customized</p>
                     </a></li>
                 </div>

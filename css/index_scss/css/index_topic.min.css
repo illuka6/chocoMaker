@@ -1,0 +1,27 @@
+/*# sourceMappingURL=index_topic.min.css.map */
+@for $i from 2 through 3 {
+    section#BANNER {
+      > div {
+        animation-delay: 0;
+  
+        &:nth-child(#{$i}) {
+           div {
+            animation-delay: #{$i} * 0.025s;
+          }
+        }
+      }
+    }
+  }
+  
+  .slide-up {
+    animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+  }
+  
+  @keyframes slide-up {
+    0% {
+      transform: translateY(100px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
