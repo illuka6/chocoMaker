@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/Customization.css">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" src="./Menu.jsx"></script>
+    <script src="./js/Menu.js"></script>
+</head>
+<div id="menu"></div>
+<script type="text/babel">
+    function App() {
+        React.useEffect(() => {
+            menuJS();
+        }, []); // 确保 toggleDropdown 在组件渲染后调用
+        return (
+            <Menu />
+        )
+    }
+    ReactDOM
+        .createRoot(document.getElementById('menu'))
+        .render(<App />);
+</script>
+
+<body id="product_details_page">
+    <main id="main">
+        <div id="Shopping_cart_block_display">
+            <img src="./images/shopping_cart_two/Frame 1.svg" alt="" id="Shopping_cart_block_display_img">
+        </div>
+        <div id="full_list">
+            <div id="full_list_box">
+                <div id="full_list_box_left">
+                    <div id="full_list_box_left_box1">
+                        <div id="full_list_box_left_box1_content">
+                            <div id="full_list_box_left_box1_content_p1">
+                                <p>訂購人資訊</p>
+                            </div>
+                            <div id="full_list_box_left_box1_content_p2">
+                                <div id="full_list_box_left_box1_content_class1">
+                                    <div>
+                                        <p>姓名</p>
+                                    </div>
+                                    <div>
+                                        <input type="text" placeholder="例:王大明"
+                                            id="full_list_box_left_box1_content_input">
+                                    </div>
+                                </div>
+                                <div id="full_list_box_left_box1_content_class2">
+                                    <div>
+                                        <p>姓名</p>
+                                    </div>
+                                    <div>
+                                        <input type="text" placeholder="例:0912345678"
+                                            id="full_list_box_left_box1_content_input1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="full_list_box_left_box1_content_p3">
+                                <div id="full_list_box_left_box1_content_class3">
+                                    <div>
+                                        <p>電子信箱</p>
+                                    </div>
+                                    <div id="">
+                                        <input type="text" placeholder="123@email"
+                                            id="full_list_box_left_box1_content_input2">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="full_list_box_left_box1_content_p4">
+                                <div id="full_list_box_left_box1_content_class3">
+                                    <div>
+                                        <p>地址</p>
+                                    </div>
+                                    <div id="">
+                                        <input type="text" placeholder="例:台北市大同區中正路56號1巷..."
+                                            id="full_list_box_left_box1_content_input3">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="full_list_box_left_box1_content_p5">
+                                <div id="full_list_box_left_box1_content_p5_box">
+                                    <p>已經有會員?</p>
+                                    <p class="full_list_box_left_box1_content_p5_box_p">會員登入 </p>
+                                    <p>或</p>
+                                    <p class="full_list_box_left_box1_content_p5_box_p">會員註冊</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="full_list_box_left_box2">
+                        <div id="full_list_box_left_box2_div">
+                            <div id="full_list_box_left_box2_div_recipient">
+                                <p>收件人資訊</p>
+                            </div>
+                            <div id="full_list_box_left_box2_input1">
+                                <input type="radio">
+                                <p>同訂購人資訊</p>
+                            </div>
+                            <div id="full_list_box_left_box2_input2">
+                                <input type="radio">
+                                <p>填寫新資訊</p>
+                            </div>
+                            <div id="full_list_box_left_box2_input3">
+                                <input type="radio">
+                                <p>線上送禮</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="full_list_box_left_box3">
+                        <div id="full_list_box_left_box3_div">
+                            <div id="full_list_box_left_box3_div_payment">
+                                <p>付款方式</p>
+                            </div>
+                            <div id="full_list_box_left_box3_div_box">
+                                <div id="full_list_box_left_box3_divcredit_card">
+                                    <input type="radio">
+                                    <p>線上支付</p>
+                                    <img src="./images/shopping_cart_two/credit_card.svg" alt="">
+                                </div>
+                                <div id="full_list_box_left_box3_divcredit_card_cash_on_delivery">
+                                    <input type="radio">
+                                    <p>到店取貨</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="full_list_box_left_box4">
+                        <div id="full_list_box_left_box4_div">
+                            <div id="full_list_box_left_box4_transport">
+                                <p>運送方式 (宅配)</p>
+                            </div>
+                            <div id="full_list_box_left_box4_box1">
+                                <div id="full_list_box_left_box4_calendar">
+                                    <img src="./images/shopping_cart_two/calendar.svg" alt="">
+                                </div>
+                                <div id="full_list_box_left_box4_box2">
+                                    <div id="full_list_box_left_box4_box_date">
+                                        <div>
+                                            <p>希望的配送日期</p>
+                                        </div>
+                                        <div>
+                                            <input type="text" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div id="full_list_box_left_box4_box_shipping_time">
+                                        <div>
+                                            <p>希望的配送時段</p>
+                                        </div>
+                                        <div id="full_list_box_left_box4_box_date_input">
+                                            <input type="radio">
+                                            <p>13點前</p>
+                                            <input type="radio">
+                                            <p>14~18點</p>
+                                            <input type="radio">
+                                            <p>不指定</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="full_list_box_right">
+                    <div id="full_list_box_right_box">
+                        <div id="full_list_box_right_order">
+                            <p>訂單</p>
+                        </div>
+                        <div id="full_list_box_right_order_box">
+                            <img src="./images/shopping_cart_two/Display_diagram.svg" alt="">
+                            <div id="full_list_box_right_order_box_p">
+                                <p>客製巧克力禮盒</p>
+                                <p>NT.2500</p>
+                                <p>板狀巧克力 *1</p>
+                                <p>小巧克力 *3</p>
+                                <p>禮盒 *1</p>
+                                <p>卡片 *1</p>
+                            </div>
+                            <div id="full_list_box_right_order_box_butbox">
+                                <div id="full_list_box_right_order_box_but1_div">
+                                    <button id="full_list_box_right_order_box_but1">
+                                        <img src="./images/Product-details-page/first_block/Frame 5.svg" alt="">
+                                    </button>
+                                    <p id="full_list_box_right_order_box_butbox_p1">1</p>
+                                    <button id="full_list_box_right_order_box_but2">
+                                        <img src="./images/Product-details-page/first_block/Frame 6.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="full_list_box_right_box2">
+                        <div id="full_list_box_right_box_details">
+                            <p>訂單詳細</p>
+                            <img src="./images/shopping_cart_two/up.svg" alt="">
+                        </div>
+                    </div>
+                    <div id="full_list_box_right_box3">
+                        <div id="full_list_box_right_box3_divbox">
+                            <div id="full_list_box_right_box3_divbox_p1">
+                                <p>板狀巧克力</p>
+                                <img src="./images/shopping_cart_two/down.svg" alt="">
+                            </div>
+                            <div id="full_list_box_right_box3_divbox_p2">
+                                <p>小巧克力</p>
+                                <img src="./images/shopping_cart_two/down.svg" alt="">
+                            </div>
+                            <div id="full_list_box_right_box3_divbox_p3">
+                                <p>禮盒</p>
+                                <img src="./images/shopping_cart_two/down.svg" alt="">
+                            </div>
+                            <div id="full_list_box_right_box3_divbox_p4">
+                                <p>卡片</p>
+                                <img src="./images/shopping_cart_two/down.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="full_list_box_right_order_box2">
+                        <div id="full_list_box_right_order_box">
+                            <img src="./images/shopping_cart_two/Display_diagram.svg" alt="">
+                            <div id="full_list_box_right_order_box_p">
+                                <p>客製巧克力禮盒</p>
+                                <p>NT.2500</p>
+                                <p>板狀巧克力 *1</p>
+                                <p>小巧克力 *3</p>
+                                <p>禮盒 *1</p>
+                                <p>卡片 *1</p>
+                            </div>
+                            <div id="full_list_box_right_order_box_butbox">
+                                <div id="full_list_box_right_order_box_but1_div">
+                                    <button id="full_list_box_right_order_box_but1">
+                                        <img src="./images/Product-details-page/first_block/Frame 5.svg" alt="">
+                                    </button>
+                                    <p id="full_list_box_right_order_box_butbox_p1">1</p>
+                                    <button id="full_list_box_right_order_box_but2">
+                                        <img src="./images/Product-details-page/first_block/Frame 6.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="full_list_box_right_order_box3">
+                        <div id="full_list_box_right_box2">
+                            <div id="full_list_box_right_box_details2">
+                                <p>訂單詳細</p>
+                                <img src="./images/shopping_cart_two/down.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="full_list_box_right_order_box4">
+                        <div>
+                            <img src="./images/shopping_cart_two/hr.svg" alt="">
+                        </div>
+                    </div>
+                    <div id="full_list_box_right_order_box5">
+                        <div id="full_list_box_right_order_box5_div">
+                            <div id="full_list_box_right_order_box5_div_total">
+                                <p>商品合計:</p>
+                                <p id="full_list_box_right_order_box5_div_cash">5,000</p>
+                                <p>元</p>
+                            </div>
+                            <div id="full_list_box_right_order_box5_div_freight">
+                                <p>運費:</p>
+                                <p id="full_list_box_right_order_box5_div_freightcash">200</p>
+                                <p>元</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="full_list_box_right_order_box5">
+                        <div>
+                            <img src="./images/shopping_cart_two/hr.svg" alt="">
+                        </div>
+                    </div>
+                    <div id="full_list_box_right_order_box6">
+                        <div id="full_list_box_right_order_box6_total">
+                            <p>總計:</p>
+                            <p id="full_list_box_right_order_box6_total_cash">NT 5,200</p>
+                            <p>元</p>
+                        </div>
+
+                    </div>
+                    <div id="full_list_box_bottom">
+                        <div>
+                            <img src="./images/shopping_cart_two/Checkout.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+    <!-- footer -->
+    <div id="footer"></div>
+    <script type="text/babel">
+        function App() {
+            return (
+                <Footer />
+            )
+        }
+        ReactDOM
+            .createRoot(document.getElementById('footer'))
+            .render(<App />);
+    </script>
+
+
+    </div>
+    </main>
+    <!-- <script src="./js/Customization.js"></script> -->
+    <!-- <script src="./js/Product_details_page.js"></script> -->
+    <!-- js -->
+    <script type="text/babel" src="./Footer.jsx"></script>
+    <script src="./js/shopping_cart.js"></script>
+</body>
+
+</html>
