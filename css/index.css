@@ -71,80 +71,63 @@ a {
     --text: #6B3B20;
     --primary_pink: #F1BFC1;
     --block_brown: #E1CBAA;
-    --block_brown-darker:#CCA568;
+    --block_brown-darker: #CCA568;
 }
 
-/* 共用區 */
+/* 標題動態 */
+/* 定義動畫 */
+@keyframes slide-up {
+    0% {
+        transform: translateY(400px);
+    }
 
-#topbar {
-    width: 100%;
-    z-index: 999;
-    position: fixed;
-    align-items: center;
+    100% {
+        transform: translateY(0);
+    }
 }
 
-.icon-member {
-    background-image: url(../index_images/member.svg);
-    background-size: cover;
+/* 對 div.heading 下的 div 元素應用動畫延遲 */
+div.choc>span:nth-child(1),div.olate>span:nth-child(1) {
+    animation-delay: 0.0s;
+    /* $i * 0.025s = 2 * 0.025s */
 }
 
-.icon-car {
-    background-image: url(../index_images/car.svg);
-    background-size: cover;
+div.choc>span:nth-child(2),div.olate>span:nth-child(2) {
+    animation-delay: 0.67s;
+    /* $i * 0.025s = 3 * 0.025s */
 }
 
-.icon-search {
-    background-image: url(../index_images/search.svg);
-    background-size: cover;
+/* 定義 slide-up 動畫 */
+.slide-up {
+    animation: slide-up 0.95s cubic-bezier(0.65, 0, 0.35, 1) both ;
 }
 
-
-
-
-.navigation {
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
+div.choc>span,div.olate>span{
+    display: block;
+    
+}
+div.choc,div.olate {
+    width: 43vw;
+    height: 500px;
+    overflow: hidden;
 }
 
-.navigation .menu {
-    display: flex;
-    /* padding: 20px 40px; */
-    align-items: center;
-    font-size: 1.0rem;
-    /* padding: 0 10px; */
-
+.title_white p:nth-child(2) {
+  animation-delay: 0.025s;
 }
 
-.navigation .menu a {
-    padding: 0 12px;
-    font-weight: 500;
-    color: var(--textdark);
+.title_white p:nth-child(3) {
+  animation-delay: 0.05s;
 }
 
-.navigation .icon {
-    align-items: center;
-    display: flex;
-
+.title_white p:nth-child(4) {
+  animation-delay: 0.075s;
 }
 
-.navigation .icon a {
-    /* display:block;時設定a的尺寸才有用 */
-    width: 25px;
-    height: 25px;
-
+.title_white p:nth-child(5) {
+  animation-delay: 0.1s;
 }
 
-.customized-btn {
-
-    padding: 5px 15px;
-    border: 1px solid black;
-    border-radius: 20px;
-    background-color: transparent;
-
-
-}
 
 /* 主要內容共用區*/
 html,
@@ -154,9 +137,7 @@ body {
     height: 100%;
 }
 
-header {
-    background-color: transparent;
-}
+
 
 section {
     display: flex;
@@ -170,11 +151,28 @@ section {
 }
 
 .text_all {
-    letter-spacing: .8rem;
+    /* 字間距離 */
+    letter-spacing: .6vw;
+    font-weight: bold;
+    font-size: .9vw;
+    color: var(--text);
+    align-items: self-start;
+    font-family: 'Noto+Sans+TC';
+    font-weight: 600;
 }
+
+.text1,
+.text2,
+.text3,
+.text4,
+.text5 {
+    padding: 10px;
+}
+
 .cn_title {
     letter-spacing: .2rem;
 }
+
 
 #BANNER {
     width: 100%;
@@ -187,38 +185,24 @@ section {
     overflow: hidden;
 }
 
-.choc {
+.choc,.olate {
     position: relative;
+    width: 100%;
 }
 
-.choc .title_white {
+.choc .title_white,.olate .title_white {
     position: absolute;
     right: 0.5rem;
-    top: -40vh;
+    top: -10vh;
+    display: flex;
 }
 
-.choc .title_br {
+.choc .title_br,.olate .title_br {
     position: absolute;
     right: 0.5rem;
-    top: -30vh;
-
 }
 
-.olate {
-    position: relative;
-}
 
-.olate .title_white {
-    position: absolute;
-    left: 0.5rem;
-    top: -40vh;
-}
-
-.olate .title_br {
-    position: absolute;
-    left: 0.5rem;
-    top: -30vh;
-}
 
 .banner-content {
     align-items: center;
@@ -361,196 +345,221 @@ section {
 
 
 #CLASSIC {
+    /* height: 60vw; */
+    /* width: 100%; */
+    height: 50vw;
     position: relative;
-    width: 100%;
-    /* height: 100%; */
     background-image: url(../index_images/bg-w.png);
     background-size: cover;
     text-align: center;
     background-repeat: no-repeat;
     background-position: center;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+
+
+}
+
+
+.classic_left {
+    position: absolute;
+    left: 0;
+
+
 }
 
 #CLASSIC .little_bg {
-    position: absolute;
+
     z-index: 2;
     background-color: var(--block_brown);
     opacity: 0.3;
     width: 60vw;
-    height: 400px;
-    top: 280px;
-    left: 280px;
+    height: 21vw;
+    margin-left: 18vw;
+    margin-top: -6vw;
 }
 
 #CLASSIC .circle_title {
-    position: absolute;
+
     z-index: 1;
-    top: 150px;
-    left: 150px;
-    width: 260px;
+    width: 16%;
     margin: 0 auto;
     /* 图片居中 */
     display: block;
     /* 将图片作为块级元素 */
     animation: spin 10s linear infinite;
+    margin-left: 12vw;
+    margin-top: -10vw;
+}
+
+#CLASSIC .class_right {
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    margin-right: 10vw;
 }
 
 #CLASSIC .class_btn {
-    position: absolute;
-    top: 60vh;
-    left: 30vw;
+
     width: 10vw;
     z-index: 5;
 }
 
-#CLASSIC .title {
-    width: 500px;
-    position: absolute;
-    z-index: 4;
-    right: 700px;
-    top: 680px;
-}
 
-#CLASSIC .main_pic {
-    position: absolute;
-    z-index: 3;
-    width: 30vw;
-    right: 150px;
-    top: 200px;
-}
 
 #CLASSIC .text_all {
     z-index: 5;
-    position: absolute;
-    top: 20vh;
-    left: 40vw;
     display: flex;
-    width: 400px;
-    height: 100%;
     color: var(--text);
-    font-size: 1rem;
-    align-items: flex-start;
+    font-size: .9vw;
+    align-items: self-start;
     font-style: 'Noto+Sans+TC';
-    font-weight: 400;
+    font-weight: bold;
+    /* margin-top: 20vh; */
+    margin-right: 5vw;
+    margin-top: -13vw;
+
 
 }
 
 #CLASSIC .text1,
-.text2,
-.text3,
-.text4 {
+#CLASSIC .text2,
+#CLASSIC .text3,
+#CLASSIC .text4 {
     writing-mode: vertical-rl;
     /* 设置文字竖排，从右到左 */
     text-align: start;
     /* 文字对齐 */
-    /* border: 1px solid black;   边框，方便查看效果 */
-    padding: 10px;
-    /* 内边距 */
-    height: 100%;
-    /* 高度，可以根据需要调整 */
-    width: 50px;
+
+
 }
 
 #CLASSIC .text2,
-.text3 {
+#CLASSIC .text3 {
     padding-top: 3rem;
 }
 
+#CLASSIC .title {
+    position: absolute;
+    width: 23.5vw;
+    margin-left: -22vw;
+    margin-top: -11.5vw;
+
+    z-index: 4;
+
+}
+
+#CLASSIC .main_wrap {
+    width: 30vw;
+}
+
+#CLASSIC .main_pic {
+
+    z-index: 3;
+    width: 30vw;
+    height: 40vw;
+
+}
 
 #ABOUT {
     position: relative;
     width: 100%;
-    /* height: 100%; */
+    height: 50vw;
     background-image: url(../index_images/bg-w.png);
     background-size: cover;
     text-align: center;
     background-repeat: no-repeat;
     background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#ABOUT .main_pic {
+#ABOUT .about_left {
     position: absolute;
-    z-index: 3;
     width: 30vw;
-    left: 150px;
-    top: 200px;
+    left: 0;
 }
 
 #ABOUT .main_pic {
-    position: absolute;
+
+    width: 30vw;
+    height: 40vw;
     z-index: 4;
+    margin-left: 10.5vw;
+}
+
+#ABOUT .about_right {
+    position: absolute;
+    right: 0;
+    margin-right: 13vw;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 #ABOUT .title {
-    position: absolute;
-    z-index: 5;
-    width: 500px;
-    right: 700px;
-    top: 40vh;
+    width: 23.5vw;
+    margin-left: -16vw;
+    margin-top: -20vw;
 
 }
 
 #ABOUT .little_bg {
-    position: absolute;
-    z-index: 2;
-    background-color: var(--primary_pink);
-    opacity: 0.3;
-    width: 50vw;
-    height: 400px;
-    top: 280px;
-    right: 280px;
+
+    z-index: 1;
+    background-color: rgb(248, 238, 238);
+    width: 42vw;
+    height: 21vw;
+    display: flex;
+    justify-content: center;
+
+
 
 }
 
 #ABOUT .circle_title {
-    position: absolute;
-    z-index: 1;
-    top: 150px;
-    right: 150px;
-    width: 260px;
+
+
+    width: 12vw;
     margin: 0 auto;
     /* 图片居中 */
+    margin-bottom: -6vw;
     display: block;
     /* 将图片作为块级元素 */
     animation: spin 10s linear infinite;
+    margin-left: 36vw;
 
 }
 
 #ABOUT .text_all {
-    z-index: 5;
-    position: absolute;
-    top: 30vh;
-    left: 50vw;
     display: flex;
-    width: 400px;
-    height: 100%;
-    color: var(--text);
-    font-size: 1rem;
-    align-items: flex-start;
-    font-style: 'Noto+Sans+TC';
-    font-weight: 400;
+    height: 50vw;
+    width: 30vw;
+    margin-left: 7vw;
+    margin-top: -3vw;
 }
 
 #ABOUT .text1,
-.text2,
-.text3,
-.text4,
-.text5 {
+#ABOUT .text2,
+#ABOUT .text3,
+#ABOUT .text4,
+#ABOUT .text5 {
     writing-mode: vertical-rl;
     /* 设置文字竖排，从右到左 */
     text-align: start;
-    /* 文字对齐 */
-    /* border: 1px solid black;   边框，方便查看效果 */
-    padding: 10px;
-    /* 内边距 */
     height: 100%;
     /* 高度，可以根据需要调整 */
-    width: 50px;
+
 }
 
 #ABOUT .text2,
-.text3,
-.text4 {
+#ABOUT .text3,
+#ABOUT .text4 {
     padding-top: 3rem;
 }
 
@@ -558,31 +567,41 @@ section {
     position: relative;
     width: 100%;
     /* height: 100%; */
-    background-image: url(../index_images/bg-quality.png);
+    background-image: url(../index_images/quality_bg.jpg);
     background-size: cover;
     text-align: center;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
+    padding: 3.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* #QULATY .section_quality {
-    padding: 5vh;
-    
-} */
-#QUALITY .bg_bottom {
-    position: absolute;
-    width: 100vh;
-    color: var(--block_brown);
-    height: 50vh;
-    top: 50%;
-    z-index: 1;
 
-}
 
-#QUALITY .quality_banner {
+#QUALITY .pic_box {
     width: 100%;
     height: 100%;
-    padding: 5vh;
+    background-image: url(../index_images/quality_justpic.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    overflow: hidden;
+
+}
+
+
+#QUALITY .quality_title {
+    font-family: "Lucida Bright";
+    font-size: 21.5vw;
+    text-align: center;
+    color: white;
 }
 
 
@@ -653,9 +672,9 @@ section {
 }
 
 #INGREDIENT .text1,
-.text2,
-.text3,
-.text4 {
+#INGREDIENT .text2,
+#INGREDIENT .text3,
+#INGREDIENT .text4 {
     writing-mode: vertical-rl;
     /* 设置文字竖排，从右到左 */
     text-align: start;
@@ -807,9 +826,9 @@ section {
 }
 
 #TASTE .text1,
-.text2,
-.text3,
-.text4 {
+#TASTE .text2,
+#TASTE .text3,
+#TASTE .text4 {
     writing-mode: vertical-rl;
     /* 设置文字竖排，从右到左 */
     text-align: start;
@@ -823,7 +842,7 @@ section {
 }
 
 #TASTE .text2,
-.text3 {
+#TASTE .text3 {
     padding-top: 3rem;
 }
 
@@ -839,7 +858,7 @@ section {
     background-size: cover;
     text-align: center;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
 }
 
 #APPERANCE .title {
@@ -909,7 +928,7 @@ section {
     margin: 10px auto;
     /* 居中拱门 */
     border: white solid 2px;
- 
+
 
 
 }
@@ -931,9 +950,10 @@ section {
 }
 
 #APPERANCE .text1,
-.text2,
-.text3,
-.text4,.text5 {
+#APPERANCE .text2,
+#APPERANCE .text3,
+#APPERANCE .text4,
+#APPERANCE .text5 {
     writing-mode: vertical-rl;
     /* 设置文字竖排，从右到左 */
     text-align: start;
@@ -953,4 +973,22 @@ section {
 
 #APPERANCE .text4 {
     padding-top: -3rem;
+}
+
+.bottom {
+    width: 100%;
+    background-image: url(../index_images/bg_bottom.jpg);
+    background-size: cover;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 590px;
+
+}
+
+.bottom_content {
+    align-items: start;
+    justify-content: start;
+
+
 }
