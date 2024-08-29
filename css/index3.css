@@ -599,21 +599,23 @@ section {
     height: 100%;
     background-image: url(../index_images/quality_justpic.png);
     background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    text-align: center;
     overflow: hidden;
     
 }
 
 
 #QUALITY .quality_title {
-    position: absolute;
     font-family: "Lucida Bright";
     font-size: 21.5vw;
     text-align: center;
     color: white;
-    overflow: hidden;
 }
 
 
