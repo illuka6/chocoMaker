@@ -257,6 +257,13 @@ let yStart3 = center_display_second_page_box3.top;   // 上邊界的 Y 座標
 let xEnd3 = center_display_second_page_box3.right;   // 右邊界的 X 座標
 let yEnd3 = center_display_second_page_box3.bottom;  // 下邊界的 Y 座標
 
+/* 刪除區塊的XY範圍 */
+let garbage_can_img = document.getElementById('garbage_can_img');
+let garbage_can_imga = garbage_can_img.getBoundingClientRect();
+let xgarbage_can_img = garbage_can_imga.left;  // 左邊界的 X 座標
+let ygarbage_can_img = garbage_can_imga.top;   // 上邊界的 Y 座標
+let x_garbage_can_img_End3 = garbage_can_imga.right;   // 右邊界的 X 座標
+let y_garbage_can_img_End3 = garbage_can_imga.bottom;  // 下邊界的 Y 座標
 
 let All_boxes_second_page = [
     center_display_second_page_box1,
@@ -361,6 +368,11 @@ for (let i = 0; i < imgs.length; i++) {
                             Lock_picture2.remove();
                         }
                     }));
+                    imgsClone.addEventListener('dragend', () => {
+                        console.log('嘗試成功嗎?')
+                        imgsClone.remove();
+                        imgsClone2.remove();
+                    });
                     if (menu_below_li_right3.addEventListener('click', () => {
                         console.log('0000');
                         location.reload();
@@ -436,7 +448,8 @@ let Basic_chocolate2 = [
 for (let i = 0; i < center_display_second_page_box_allDiv.length; i++) {
     if (center_display_second_page_box_allDiv[i].addEventListener('click', () => {
         smallbox_allDiv();
-        center_display_second_page_box_allDiv[i].style.border = '0px solid #444';
+        let small_chocolate_base = center_display_second_page_box_allDiv[i];
+        center_display_second_page_box_allDiv[i].style.border = '2px solid #444';
         if (garbage_can.addEventListener('click', () => {
             Basic_chocolate[i].remove();
             // second_page_smallbox[i].remove();
@@ -483,7 +496,29 @@ for (let i = 0; i < center_display_second_page_box_allDiv.length; i++) {
 };
 
 
+Basic_small_chocolate1.addEventListener('dragend', () => {
+    Basic_small_chocolate1.remove();
+    Basic_small_chocolate4.remove();
+});
 
+Basic_small_chocolate2.addEventListener('dragend', () => {
+    Basic_small_chocolate2.remove();
+    Basic_small_chocolate5.remove();
+});
+
+Basic_small_chocolate3.addEventListener('dragend', () => {
+    Basic_small_chocolate3.remove();
+    Basic_small_chocolate6.remove();
+});
+
+
+
+
+
+menu_below_li_right3.addEventListener('click', () => {
+    location.reload();
+    console.log('6554')
+});
 
 
 // menu_below_li_right3.addEventListener('click', () => {
@@ -692,3 +727,93 @@ for (let i = 0; i < center_display_second_page_box_allDiv.length; i++) {
 // let all_Divbox = window.localStorage.getItem('middle_div1_box_allDiv');
 // let all_Divbox_Reorganize = JSON.parse(all_Divbox);
 // console.log(all_Divbox_Reorganize);
+
+
+/* 下方功能按鈕切換器 */
+let Select_function_img = document.getElementById('Select_function_img');
+let menu_below_li_left2_img = document.getElementById('menu_below_li_left2_img');
+let menu_below_bug_img = document.getElementById('menu_below_bug_img');
+// let garbage_can_img = document.getElementById('garbage_can_img');
+let menu_below_li_right1_img = document.getElementById('menu_below_li_right1_img');
+let menu_below_li_right2_img = document.getElementById('menu_below_li_right2_img');
+let menu_below_li_right3_img = document.getElementById('menu_below_li_right3_img');
+
+
+
+function Function_button_img() {
+    Select_function_img.src = './images/Custom_block/menu_below/Frame 1.svg';
+    menu_below_li_left2_img.src = './images/Custom_block/menu_below/Frame 2.svg';
+    menu_below_bug_img.src = './images/Custom_block/menu_below/Frame 3.svg';
+    garbage_can_img.src = './images/Custom_block/menu_below/Frame 4.svg';
+    menu_below_li_right1_img.src = './images/Custom_block/menu_below/Frame 5.svg';
+    menu_below_li_right2_img.src = './images/Custom_block/menu_below/Frame 6.svg';
+    menu_below_li_right3_img.src = './images/Custom_block/menu_below/Frame 7.svg';
+};
+
+/* 第一個按鈕 */
+let Restore_button = true;
+Select_function_img.addEventListener('click', () => {
+    Function_button_img();
+    if (Restore_button) {
+        Select_function_img.src = './images/Custom_block/menu_below/Frame 1-click.svg';
+    } else {
+        Select_function_img.src = './images/Custom_block/menu_below/Frame 1.svg';
+    }
+});
+
+menu_below_li_left2_img.addEventListener('click', () => {
+    Function_button_img();
+    if (Restore_button) {
+        menu_below_li_left2_img.src = './images/Custom_block/menu_below/Frame 2-click.svg';
+    } else {
+        menu_below_li_left2_img.src = './images/Custom_block/menu_below/Frame 2.svg';
+    }
+});
+
+menu_below_bug.addEventListener('click', () => {
+    Function_button_img();
+    if (Restore_button) {
+        menu_below_bug_img.src = './images/Custom_block/menu_below/Frame 3-click.svg';
+    } else {
+        menu_below_bug_img.src = './images/Custom_block/menu_below/Frame 3.svg';
+    }
+});
+
+garbage_can_img.addEventListener('click', () => {
+    Function_button_img();
+    if (Restore_button) {
+        garbage_can_img.src = './images/Custom_block/menu_below/Frame 4-click.svg';
+    } else {
+        garbage_can_img.src = './images/Custom_block/menu_below/Frame 4.svg';
+    }
+});
+
+menu_below_li_right1_img.addEventListener('click', () => {
+    Function_button_img();
+    if (Restore_button) {
+        menu_below_li_right1_img.src = './images/Custom_block/menu_below/Frame 5-click.svg';
+    } else {
+        menu_below_li_right1_img.src = './images/Custom_block/menu_below/Frame 5.svg';
+    }
+});
+
+menu_below_li_right2_img.addEventListener('click', () => {
+    Function_button_img();
+    if (Restore_button) {
+        menu_below_li_right2_img.src = './images/Custom_block/menu_below/Frame 6-click.svg';
+    } else {
+        menu_below_li_right2_img.src = './images/Custom_block/menu_below/Frame 6.svg';
+    }
+});
+
+menu_below_li_right3_img.addEventListener('click', () => {
+    Function_button_img();
+    if (Restore_button) {
+        menu_below_li_right3_img.src = './images/Custom_block/menu_below/Frame 7-click.svg';
+    } else {
+        menu_below_li_right3_img.src = './images/Custom_block/menu_below/Frame 7.svg';
+    }
+});
+
+
+

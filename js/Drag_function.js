@@ -1731,6 +1731,11 @@ for (let i = 0; i < allBtnevent.length; i++) {
                             console.log('你按了刪除');
                         }
                     }));
+                    if (imgsClone.addEventListener('dragend', () => {
+                        // console.log('有成功嗎');
+                        imgsClone.remove();
+                        imgsClone2.remove();
+                    }));
                     if (menu_below_li_right3.addEventListener('click', () => {
                         console.log('0000');
                         location.reload();
@@ -1786,7 +1791,9 @@ for (let i = 0; i < allBtnevent.length; i++) {
 
 
 
-
+menu_below_li_right3.addEventListener('click', () => {
+    location.reload();
+});
 
 
 // console.log(middle_div1_box_div15);

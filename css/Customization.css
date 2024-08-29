@@ -3224,9 +3224,9 @@ footer .logo {
     margin-bottom: 2%;
 }
 
-#full_list_box_left_box2_input1 p,
-#full_list_box_left_box2_input2 p,
-#full_list_box_left_box2_input3 p {
+#full_list_box_left_box2_input1 label,
+#full_list_box_left_box2_input2 label,
+#full_list_box_left_box2_input3 label {
     margin-left: 5px;
 }
 
@@ -3254,7 +3254,7 @@ footer .logo {
     align-items: center;
 }
 
-#full_list_box_left_box3_divcredit_card p {
+#full_list_box_left_box3_divcredit_card label {
     margin-left: 5px;
     margin-right: 10px;
 }
@@ -3270,7 +3270,7 @@ footer .logo {
     margin-top: 5%;
 }
 
-#full_list_box_left_box3_divcredit_card_cash_on_delivery p {
+#full_list_box_left_box3_divcredit_card_cash_on_delivery label {
     margin-left: 5px;
 }
 
@@ -3292,6 +3292,13 @@ footer .logo {
 #full_list_box_left_box4_box1 {
     display: flex;
 }
+/* ↓↓行事曆↓↓ */
+
+
+
+/* ↑↑行事曆↑↑ */
+
+
 
 #full_list_box_left_box4_calendar img {
     width: 80%;
@@ -3306,7 +3313,7 @@ footer .logo {
     margin-top: 5%;
 }
 
-#full_list_box_left_box4_box_date_input p {
+#full_list_box_left_box4_box_date_input label {
     margin-right: 10px;
 }
 
@@ -3359,13 +3366,39 @@ footer .logo {
     width: 100%;
 }
 
-#full_list_box_right_order_box_butbox_p1 {
+
+#full_list_box_right_order_box_but12_div {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #E1CBAA;
+    width: 70%;
+}
+
+#full_list_box_right_order_box_but12 img {
+    width: 100%;
+}
+
+
+
+#full_list_box_right_order_box_but1_div_p3 {
     display: flex;
     align-items: center;
     margin: 0 10px;
 }
 
+#full_list_box_right_order_box_butbox_p3 {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+
 #full_list_box_right_order_box_but2 img {
+    width: 100%;
+}
+
+
+#full_list_box_right_order_box_but13 img {
     width: 100%;
 }
 

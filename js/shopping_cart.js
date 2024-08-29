@@ -49,3 +49,22 @@ product_tips_garbage_can.addEventListener('click', () => {
 product_tips_garbage_can2.addEventListener('click', () => {
     box1_box2.style.display = 'none';
 });
+
+
+
+/* 購物車第二頁 */
+
+let full_list_box_right_order_box_but1=document.getElementById('full_list_box_right_order_box_but1');
+let full_list_box_right_order_box_but2=document.getElementById('full_list_box_right_order_box_but2');
+let full_list_box_right_order_box_but1_div_p3=document.getElementById('full_list_box_right_order_box_but1_div_p3');
+
+if (full_list_box_right_order_box_but1_div_p3.textContent < 10) {
+    full_list_box_right_order_box_but1.addEventListener('click', () => {
+        quantity_add = quantity_add + 1;
+        full_list_box_right_order_box_but1_div_p3.textContent = quantity_add + 1;
+    });
+    full_list_box_right_order_box_but2.addEventListener('click', () => {
+        quantity_add = quantity_add - 1;
+        full_list_box_right_order_box_but1_div_p3.textContent = full_list_box_right_order_box_but1_div_p1.textContent - 1;
+    });
+};

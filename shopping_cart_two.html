@@ -98,16 +98,16 @@
                                 <p>收件人資訊</p>
                             </div>
                             <div id="full_list_box_left_box2_input1">
-                                <input type="radio">
-                                <p>同訂購人資訊</p>
+                                <input type="radio" name="recipient">
+                                <label>同訂購人資訊</label>
                             </div>
                             <div id="full_list_box_left_box2_input2">
-                                <input type="radio">
-                                <p>填寫新資訊</p>
+                                <input type="radio" name="recipient">
+                                <label>填寫新資訊</label>
                             </div>
                             <div id="full_list_box_left_box2_input3">
-                                <input type="radio">
-                                <p>線上送禮</p>
+                                <input type="radio" name="recipient">
+                                <label>線上送禮</label>
                             </div>
                         </div>
                     </div>
@@ -118,13 +118,13 @@
                             </div>
                             <div id="full_list_box_left_box3_div_box">
                                 <div id="full_list_box_left_box3_divcredit_card">
-                                    <input type="radio">
-                                    <p>線上支付</p>
+                                    <input type="radio" name="divcredit_card">
+                                    <label>線上支付</label>
                                     <img src="./images/shopping_cart_two/credit_card.svg" alt="">
                                 </div>
                                 <div id="full_list_box_left_box3_divcredit_card_cash_on_delivery">
-                                    <input type="radio">
-                                    <p>到店取貨</p>
+                                    <input type="radio" name="divcredit_card">
+                                    <label>到店取貨</label>
                                 </div>
                             </div>
                         </div>
@@ -137,6 +137,7 @@
                             <div id="full_list_box_left_box4_box1">
                                 <div id="full_list_box_left_box4_calendar">
                                     <img src="./images/shopping_cart_two/calendar.svg" alt="">
+                                
                                 </div>
                                 <div id="full_list_box_left_box4_box2">
                                     <div id="full_list_box_left_box4_box_date">
@@ -144,7 +145,7 @@
                                             <p>希望的配送日期</p>
                                         </div>
                                         <div>
-                                            <input type="text" placeholder="">
+                                            <input type="date" placeholder="">
                                         </div>
                                     </div>
                                     <div id="full_list_box_left_box4_box_shipping_time">
@@ -152,12 +153,12 @@
                                             <p>希望的配送時段</p>
                                         </div>
                                         <div id="full_list_box_left_box4_box_date_input">
-                                            <input type="radio">
-                                            <p>13點前</p>
-                                            <input type="radio">
-                                            <p>14~18點</p>
-                                            <input type="radio">
-                                            <p>不指定</p>
+                                            <input type="radio" name="shipping_time">
+                                            <label>13點前</label>
+                                            <input type="radio" name="shipping_time">
+                                            <label>14~18點</label>
+                                            <input type="radio" name="shipping_time">
+                                            <label>不指定</label>
                                         </div>
                                     </div>
                                 </div>
@@ -186,7 +187,7 @@
                                     <button id="full_list_box_right_order_box_but1">
                                         <img src="./images/Product-details-page/first_block/Frame 5.svg" alt="">
                                     </button>
-                                    <p id="full_list_box_right_order_box_butbox_p1">1</p>
+                                    <p id="full_list_box_right_order_box_but1_div_p3">1</p>
                                     <button id="full_list_box_right_order_box_but2">
                                         <img src="./images/Product-details-page/first_block/Frame 6.svg" alt="">
                                     </button>
@@ -233,11 +234,11 @@
                             </div>
                             <div id="full_list_box_right_order_box_butbox">
                                 <div id="full_list_box_right_order_box_but1_div">
-                                    <button id="full_list_box_right_order_box_but1">
+                                    <button id="full_list_box_right_order_box_but12">
                                         <img src="./images/Product-details-page/first_block/Frame 5.svg" alt="">
                                     </button>
-                                    <p id="full_list_box_right_order_box_butbox_p1">1</p>
-                                    <button id="full_list_box_right_order_box_but2">
+                                    <p id="full_list_box_right_order_box_butbox_p3">1</p>
+                                    <button id="full_list_box_right_order_box_but13">
                                         <img src="./images/Product-details-page/first_block/Frame 6.svg" alt="">
                                     </button>
                                 </div>
@@ -315,7 +316,7 @@
     <!-- <script src="./js/Product_details_page.js"></script> -->
     <!-- js -->
     <script type="text/babel" src="./Footer.jsx"></script>
-    <script src="./js/shopping_cart.js"></script>
+    <script src="./js/shopping_cart_two.js"></script>
 </body>
 
 </html>
