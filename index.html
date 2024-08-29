@@ -38,7 +38,12 @@
             </div>
             <div class="banner-content">
                 <div class="choc">
-                    <span class="title_white "><p class="slide-up">c</p><p class="slide-up">h</p><p class="slide-up">o</p><p class="slide-up">c</p></span>
+                    <span class="title_white ">
+                        <p class="slide-up">c</p>
+                        <p class="slide-up">h</p>
+                        <p class="slide-up">o</p>
+                        <p class="slide-up">c</p>
+                    </span>
                     <span class="title_br slide-up">choc</span>
                 </div>
 
@@ -118,19 +123,26 @@
             </div>
         </section>
         <section id="INGREDIENT">
-            <div class="section_ingredient">
-                <div class="cn_title">從原料精選的量身訂製</div>
-                <img class="title" src="./index_images/ingredient-title.svg" alt="">
-                <img class="pic" src="./index_images/ingredient--pic.png" alt="">
-                <div class="arch"></div>
-                <div class="box_br"></div>
-                <div class="text_all">
-                    <div class="text1">我們秉持著精益求精的態度，從全球各地</div>
-                    <div class="text2">精選最優質的可可豆，每一顆都經過</div>
-                    <div class="text3">嚴格篩選與手工處理，確保呈現給您的</div>
-                    <div class="text4">每一口都是純粹的享受。</div>
-                </div>
 
+            <div class="ingredient_l">
+                <div class="title_wrap">
+                    <img class="title" src="./index_images/ingredient-title.svg" alt="">
+                    <div class="cn_title">從原料精選的量身訂製</div>
+                </div>
+                <img class="pic" src="./index_images/ingredient--pic.png" alt="">
+            </div>
+            <div class="ingredient_r">
+
+                <div class="box_br">
+
+                    <div class="arch"></div>
+                    <div class="text_all">
+                        <div class="text1">我們秉持著精益求精的態度，從全球各地</div>
+                        <div class="text2">精選最優質的可可豆，每一顆都經過</div>
+                        <div class="text3">嚴格篩選與手工處理，確保呈現給您的</div>
+                        <div class="text4">每一口都是純粹的享受。</div>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="TASTE">
@@ -174,20 +186,20 @@
 
         </div>
         <!-- footer -->
-    <div id="footer"></div>
-    <!-- 引用footer -->
-    <script type="text/babel" src="./Footer.jsx"></script>
-    <link rel="stylesheet" href="./css/Footer.css">
-    <script type="text/babel">
-        function App() {
-            return (
-                <Footer />
-            )
-        }
-        ReactDOM
-            .createRoot(document.getElementById('footer'))
-            .render(<App />);
-    </script>
+        <div id="footer"></div>
+        <!-- 引用footer -->
+        <script type="text/babel" src="./Footer.jsx"></script>
+        <link rel="stylesheet" href="./css/Footer.css">
+        <script type="text/babel">
+            function App() {
+                return (
+                    <Footer />
+                )
+            }
+            ReactDOM
+                .createRoot(document.getElementById('footer'))
+                .render(<App />);
+        </script>
 
 
 

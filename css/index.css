@@ -72,6 +72,7 @@ a {
     --primary_pink: #F1BFC1;
     --block_brown: #E1CBAA;
     --block_brown-darker: #CCA568;
+    --block_brown-op0:rgb(232, 215, 192);
 }
 
 /* 標題動態 */
@@ -160,12 +161,12 @@ section {
     font-family: 'Noto+Sans+TC';
     font-weight: 600;
 }
-.text_all {
-    transition: transform 0.5s ease; /* 平滑過渡效果 */
+/* .text_all {
+    transition: transform 0.5s ease; 
 }
 .text_all:hover {
-    transform: translate(-10px, -10px); /* 移動位置 */
-}
+    transform: translate(-10px, -10px); 
+} */
 
 .text1,
 .text2,
@@ -292,8 +293,6 @@ section {
 }
 
 #CUSTOMIZED {
-
-
     width: 100%;
     /* height: 100%; */
     background-image: url(../index_images/bg-customized3.svg);
@@ -618,69 +617,61 @@ section {
 #INGREDIENT {
     position: relative;
     width: 100%;
-    /* height: 100%; */
+    height: 50vw;
     background-image: url(../index_images/bg-b.png);
     background-size: cover;
     text-align: center;
     background-repeat: no-repeat;
     background-position: center;
 }
+.ingredient_l {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    margin-left: 30vw;
+    
+    
+}
+#INGREDIENT .title_wrap{
+    display: flex;
+    
+}
+#INGREDIENT .title {
+    width: 22vw;
+    margin-right: -5vw;
+    
+}
 
 #INGREDIENT .cn_title {
-    position: absolute;
-    z-index: 6;
-    left: 80vh;
-    top: 35vh;
-    font-family: Noto Serif TC;
     color: var(--text);
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 2vw;
+    line-height: 4.5vw;
 }
-
-#INGREDIENT .title {
-    position: absolute;
-    z-index: 5;
-    width: 350px;
-    left: 50vh;
-    top: 20vh;
-}
-
-#INGREDIENT .pic {
-    position: absolute;
-    z-index: 4;
+#INGREDIENT .pic {   
     width: 30vw;
-    left: 50vh;
-
 }
 
-#INGREDIENT .box_br {
+.ingredient_r {
     position: absolute;
-    z-index: 2;
-    background-color: var(--block_brown-darker);
-    opacity: 0.3;
-    width: 330px;
-    height: 330px;
-    top: 240px;
-    right: 280px;
+    right: 0;
+    margin-right: 27vw;
 }
-
-
+#INGREDIENT .box_br {
+    background-color: var(--block_brown-op0);
+    width: 18vw;
+    height: 18vw;
+    margin-top: -18.6vw;
+    position: relative;
+}
 
 #INGREDIENT .text_all {
-    z-index: 5;
     position: absolute;
-    top: 30vh;
-    left: 70vw;
     display: flex;
-    width: 400px;
-    height: 100%;
-    color: var(--text);
-    font-size: 1rem;
-    align-items: flex-start;
-    font-style: 'Noto+Sans+TC';
-    font-weight: 400;
+    height: 40vw;
+    right:-5.8vw;
+    top:7vw;
 }
-
 #INGREDIENT .text1,
 #INGREDIENT .text2,
 #INGREDIENT .text3,
@@ -689,18 +680,11 @@ section {
     /* 设置文字竖排，从右到左 */
     text-align: start;
     /* 文字对齐 */
-    /* border: 1px solid black;   边框，方便查看效果 */
-    padding: 10px;
-    /* 内边距 */
-    height: 100%;
-    /* 高度，可以根据需要调整 */
-    width: 50px;
 }
 
 #INGREDIENT .text1 {
     padding-top: 1.5rem;
 }
-
 #INGREDIENT .text2,
 .text3 {
     padding-top: 3rem;
@@ -708,36 +692,28 @@ section {
 
 #INGREDIENT .arch {
     position: absolute;
-    z-index: 5;
-    width: 380px;
+    width: 21vw;
     /* 拱门的宽度 */
-    height: 500px;
+    height: 27vw;
     /* 拱门的高度，增加底部的拉长效果 */
-    right: 15vw;
-    top: 40vh;
-
-    text-align: center;
     background-repeat: no-repeat;
     /* 背景颜色 */
-    border-radius: 220px 220px 0 0;
+    border-radius: 15vw 15vw 0 0;
     /* 圆角设置成拱门的顶部弧形 */
-    overflow: hidden;
-    /* 隐藏溢出的部分 */
     margin: 10px auto;
     /* 居中拱门 */
     border: white solid 2px;
-    width: 300px;
-    height: 420px;
     transform: scaleY(-1);
-
-
+    right:-6vw;
+    top:5vw;
 }
 
 #TASTE {
     position: relative;
     width: 100%;
     /* height: 100%; */
-    background-image: url(../index_images/bg-b.png);
+    /* background-image: url(../index_images/bg-b.png); */
+    background-color: #CCA568;
     background-size: cover;
     text-align: center;
     background-repeat: no-repeat;
@@ -748,28 +724,23 @@ section {
     background-image: url(../index_images/taste.svg);
 } */
 #TASTE .title {
-    position: absolute;
-    z-index: 5;
-    width: 350px;
-    right: 20vw;
-    top: 45vh;
+    width: 24vw;
+    
 }
 
 #TASTE .pic {
-    position: absolute;
-    z-index: 5;
+   
     width: 30vw;
-    left: 60vh;
+    
 
 }
 
 #TASTE .box_br {
-    position: absolute;
-    z-index: 5;
-    background-color: var(--block_brown-darker);
+    
+    background-color: var(--block_brown-op0);
     opacity: 0.3;
-    width: 200px;
-    height: 200px;
+    width: 14vw;
+    height:  14vw;
     top: 300px;
     left: 40vh;
 }
@@ -891,7 +862,7 @@ section {
 #APPERANCE .box_br {
     position: absolute;
     z-index: 4;
-    background-color: var(--block_brown-darker);
+    background-color: var(--block_brown-op0);
     opacity: 0.3;
     width: 250px;
     height: 250px;
