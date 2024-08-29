@@ -23,7 +23,7 @@ function Menu() {
                 </div>
             </ul>
             <ul id="menu_id_search">
-                <li>
+                <li id='menu_id_search_li'>
                     <div id="menu_id_search_divBox">
 
                         <a href="#" id="menu_id_search_divBox_a1"><img src="./images/Custom_block/menu/search.svg"

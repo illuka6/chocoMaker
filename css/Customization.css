@@ -105,7 +105,7 @@ body {
     display: none;
 }
 
-#menu_id_search li{
+#menu_id_search_li{
 display: flex;
 justify-content: center;
 align-items: center;
