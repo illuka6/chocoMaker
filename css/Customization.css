@@ -3402,6 +3402,10 @@ footer .logo {
     width: 100%;
 }
 
+#full_list_box_right_box2{
+    cursor: pointer;
+}
+
 #full_list_box_right_box_details {
     display: flex;
     justify-content: flex-end;
@@ -3454,6 +3458,11 @@ footer .logo {
     margin-top: 10%;
 }
 
+#full_list_box_right_box3{
+    cursor: pointer;
+}
+
+
 #full_list_box_right_box_details2 {
     display: flex;
     justify-content: flex-end;
@@ -3467,7 +3476,7 @@ footer .logo {
 
 #full_list_box_right_order_box4 {
     margin: 0 8%;
-    margin-top: 70%;
+    margin-top: 38%;
 }
 
 #full_list_box_right_order_box5_div_total {
