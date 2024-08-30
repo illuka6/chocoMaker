@@ -367,5 +367,7 @@ left_sidebar_four_page_div3_div4_diva3.addEventListener('click', () => {
 
 let selectedImage = localStorage.getItem('selectedImage');
 if (selectedImage) {
-  document.getElementById('center_display_second_page_box_Change').src = selectedImage;
+    document.getElementById('center_display_second_page_box_Change').src = selectedImage;
 }
+
+

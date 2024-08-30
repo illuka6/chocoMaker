@@ -368,8 +368,11 @@ for (let i = 0; i < imgs.length; i++) {
                             Lock_picture2.remove();
                         }
                     }));
+                    imgsClone.addEventListener('drag', () => {
+                        center_display_second_page_box.style.border = '2px solid #444';
+                    });
                     imgsClone.addEventListener('dragend', () => {
-                        console.log('嘗試成功嗎?')
+                        center_display_second_page_box.style.border = '0px solid #444';
                         imgsClone.remove();
                         imgsClone2.remove();
                     });
@@ -495,18 +498,36 @@ for (let i = 0; i < center_display_second_page_box_allDiv.length; i++) {
     }));
 };
 
+let center_display_second_page_box = document.getElementById('center_display_second_page_box');
+Basic_small_chocolate1.addEventListener('drag', () => {
+    center_display_second_page_box.style.border = '2px solid #444';
+});
+
 
 Basic_small_chocolate1.addEventListener('dragend', () => {
+    center_display_second_page_box.style.border = '0px solid #444';
     Basic_small_chocolate1.remove();
     Basic_small_chocolate4.remove();
 });
 
+Basic_small_chocolate2.addEventListener('drag', () => {
+    center_display_second_page_box.style.border = '2px solid #444';
+});
+
 Basic_small_chocolate2.addEventListener('dragend', () => {
+    center_display_second_page_box.style.border = '0px solid #444';
+
     Basic_small_chocolate2.remove();
     Basic_small_chocolate5.remove();
 });
 
+
+Basic_small_chocolate3.addEventListener('drag', () => {
+    center_display_second_page_box.style.border = '2px solid #444';
+});
+
 Basic_small_chocolate3.addEventListener('dragend', () => {
+    center_display_second_page_box.style.border = '0px solid #444';
     Basic_small_chocolate3.remove();
     Basic_small_chocolate6.remove();
 });
@@ -517,7 +538,6 @@ Basic_small_chocolate3.addEventListener('dragend', () => {
 
 menu_below_li_right3.addEventListener('click', () => {
     location.reload();
-    console.log('6554')
 });
 
 
