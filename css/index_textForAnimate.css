@@ -79,7 +79,7 @@ a {
 /* 定義動畫 */
 @keyframes slide-up {
     0% {
-        transform: translateY(400px);
+        transform: translateY(450px);
     }
 
     100% {
@@ -89,18 +89,21 @@ a {
 
 /* 對 div.heading 下的 div 元素應用動畫延遲 */
 div.choc>span:nth-child(1),div.olate>span:nth-child(1) {
-    animation-delay: 0.0s;
+    animation-delay: 3s;
     /* $i * 0.025s = 2 * 0.025s */
 }
 
 div.choc>span:nth-child(2),div.olate>span:nth-child(2) {
-    animation-delay: 0.67s;
+    animation-delay: 4s;
     /* $i * 0.025s = 3 * 0.025s */
 }
 
 /* 定義 slide-up 動畫 */
 .slide-up {
     animation: slide-up 0.95s cubic-bezier(0.65, 0, 0.35, 1) both ;
+}
+.slide-up2 {
+    animation: slide-up 0.95s cubic-bezier(0.65, 0, 0.35, 1) both infinite;
 }
 
 div.choc>span,div.olate>span{
@@ -114,21 +117,37 @@ div.choc,div.olate {
 }
 
 .title_white p:nth-child(2) {
-  animation-delay: 0.025s;
+  animation-delay: 3.025s;
 }
 
 .title_white p:nth-child(3) {
-  animation-delay: 0.05s;
+  animation-delay: 3.05s;
 }
 
 .title_white p:nth-child(4) {
-  animation-delay: 0.075s;
+  animation-delay: 3.075s;
 }
 
 .title_white p:nth-child(5) {
-  animation-delay: 0.1s;
+  animation-delay: 3.1s;
 }
 
+.title_br p:nth-child(2) {
+    animation-delay: 4.025s;
+  }
+  
+  .title_br p:nth-child(3) {
+    animation-delay: 4.05s;
+  }
+  
+  .title_br p:nth-child(4) {
+    animation-delay: 4.075s;
+  }
+  
+  .title_br p:nth-child(5) {
+    animation-delay: 4.1s;
+  }
+  
 
 /* 主要內容共用區*/
 html,
@@ -207,6 +226,7 @@ section {
 .choc .title_br,.olate .title_br {
     position: absolute;
     right: 0.5rem;
+    display: flex;
 }
 
 
