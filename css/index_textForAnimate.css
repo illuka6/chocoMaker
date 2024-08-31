@@ -72,82 +72,178 @@ a {
     --primary_pink: #F1BFC1;
     --block_brown: #E1CBAA;
     --block_brown-darker: #CCA568;
-    --block_brown-op0:rgb(232, 215, 192);
+    --block_brown-op0: rgb(232, 215, 192);
 }
 
 /* 標題動態 */
 /* 定義動畫 */
 @keyframes slide-up {
     0% {
-        transform: translateY(450px);
+        transform: translateY(400px);
+        opacity: 1;
+    }
+
+    20% {
+        transform: translateY(0);
+        opacity: 1;
     }
 
     100% {
+        /*静止帧*/
         transform: translateY(0);
+        opacity: 1;
     }
 }
 
+/*@keyframes slide-up {
+    0% {
+        transform: translateY(400px);
+        opacity: 1;
+    }
+
+    20% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+
+    85% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    95% {
+        
+        transform: translateY(-400px);
+        opacity: 0;
+    }
+    100% {
+        
+        transform: translateY(400px);
+        opacity: 0;
+    }
+}*/
+
+
 /* 對 div.heading 下的 div 元素應用動畫延遲 */
-div.choc>span:nth-child(1),div.olate>span:nth-child(1) {
+/*div.chocolate>div:nth-child(1) {
     animation-delay: 3s;
-    /* $i * 0.025s = 2 * 0.025s */
 }
 
-div.choc>span:nth-child(2),div.olate>span:nth-child(2) {
+div.chocolate>div:nth-child(2) {
     animation-delay: 4s;
-    /* $i * 0.025s = 3 * 0.025s */
-}
+}*/
 
 /* 定義 slide-up 動畫 */
 .slide-up {
-    animation: slide-up 0.95s cubic-bezier(0.65, 0, 0.35, 1) both ;
+    animation: slide-up 3s cubic-bezier(.07,.82,.71,1)  ;
+    animation-fill-mode: backwards;
+    /* 确保延迟期间应用动画的起始状态 */
+
 }
 .slide-up2 {
-    animation: slide-up 0.95s cubic-bezier(0.65, 0, 0.35, 1) both infinite;
+    animation: slide-up 6s cubic-bezier(0.65, 0, 0.35, 1) infinite ;
+    animation-fill-mode: backwards;
+    
+
 }
 
-div.choc>span,div.olate>span{
+
+div.chocolate>span {
     display: block;
-    
+
 }
-div.choc,div.olate {
-    width: 43vw;
-    height: 500px;
+
+div.chocolate {
+    width: 100vw;
+    height: 30vw;
     overflow: hidden;
 }
 
-.title_white p:nth-child(2) {
-  animation-delay: 3.025s;
-}
-
-.title_white p:nth-child(3) {
-  animation-delay: 3.05s;
-}
-
-.title_white p:nth-child(4) {
-  animation-delay: 3.075s;
-}
-
-.title_white p:nth-child(5) {
-  animation-delay: 3.1s;
-}
-
-.title_br p:nth-child(2) {
-    animation-delay: 4.025s;
+.title_white p:nth-child(1) {
+    animation-fill-mode: backwards;
+    animation-delay: 3s;
+  }
+  .title_white p:nth-child(2) {
+    animation-fill-mode: backwards;
+    animation-delay: 3.05s;
+  }
+  .title_white p:nth-child(3) {
+    animation-fill-mode: backwards;
+    animation-delay: 3.1s;
+  }
+  .title_white p:nth-child(4) {
+    animation-fill-mode: backwards;
+    animation-delay: 3.15s;
+  }
+  .title_white p:nth-child(5) {
+    animation-fill-mode: backwards;
+    animation-delay: 3.2s;
+  }
+  .title_white p:nth-child(6) {
+    animation-fill-mode: backwards;
+    animation-delay: 3.25s;
+  }
+  .title_white p:nth-child(7) {
+    animation-fill-mode: backwards;
+    animation-delay: 3.3s;
+  }
+  .title_white p:nth-child(8) {
+    animation-fill-mode: backwards;
+    animation-delay: 3.35s;
+  }
+  .title_white p:nth-child(9) {
+    animation-fill-mode: backwards;
+    animation-delay: 3.4s;
+  }
+  .title_white p:nth-child(10) {
+    animation-fill-mode: backwards;
+    animation-delay: 3.45s;
   }
   
-  .title_br p:nth-child(3) {
-    animation-delay: 4.05s;
+
+  .title_br p:nth-child(1) {
+    animation-fill-mode: backwards;
+    animation-delay: 4s;
   }
-  
-  .title_br p:nth-child(4) {
+  .title_br p:nth-child(2) {
+    animation-fill-mode: backwards;
     animation-delay: 4.075s;
   }
-  
+  .title_br p:nth-child(3) {
+    animation-fill-mode: backwards;
+    animation-delay: 4.15s;
+  }
+  .title_br p:nth-child(4) {
+    animation-fill-mode: backwards;
+    animation-delay: 4.225s;
+  }
   .title_br p:nth-child(5) {
-    animation-delay: 4.1s;
+    animation-fill-mode: backwards;
+    animation-delay: 4.3s;
+  }
+  .title_br p:nth-child(6) {
+    animation-fill-mode: backwards;
+    animation-delay: 4.375s;
+  }
+  .title_br p:nth-child(7) {
+    animation-fill-mode: backwards;
+    animation-delay: 4.45s;
+  }
+  .title_br p:nth-child(8) {
+    animation-fill-mode: backwards;
+    animation-delay: 4.525s;
+  }
+  .title_br p:nth-child(9) {
+    animation-fill-mode: backwards;
+    animation-delay: 4.6s;
+  }
+  .title_br p:nth-child(10) {
+    animation-fill-mode: backwards;
+    animation-delay: 4.675s;
   }
   
+
 
 /* 主要內容共用區*/
 html,
@@ -180,6 +276,7 @@ section {
     font-family: 'Noto+Sans+TC';
     font-weight: 600;
 }
+
 /* .text_all {
     transition: transform 0.5s ease; 
 }
@@ -211,39 +308,51 @@ section {
     overflow: hidden;
 }
 
-.choc,.olate {
-    position: relative;
-    width: 100%;
-}
 
-.choc .title_white,.olate .title_white {
+.chocolate {
     position: absolute;
-    right: 0.5rem;
-    top: -10vh;
     display: flex;
+    flex-direction: column;
 }
 
-.choc .title_br,.olate .title_br {
-    position: absolute;
-    right: 0.5rem;
+
+.chocolate .title_br {
     display: flex;
 }
 
 
 
 .banner-content {
+    position: relative;
     align-items: center;
     display: flex;
     font-family: "Lucida Bright";
+    width: 100vw;
 
 }
 
 .banner-content .title_white {
+    display: flex;
     font-size: 18.2vw;
     text-align: center;
     color: white;
+    height: 8vw;
+}
 
+.title_white p:nth-child(4) {
+    margin-right: 22vw;
+}
 
+.title_white p:nth-child(5) {
+    margin-left: 10vw;
+}
+
+.title_br p:nth-child(4) {
+    margin-right: 22vw;
+}
+
+.title_br p:nth-child(5) {
+    margin-left: 10vw;
 }
 
 .banner-content .title_br {
@@ -255,8 +364,17 @@ section {
 
 }
 
+.banner-content .arch_wrap {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+}
 
 .banner-content .arch {
+
 
     z-index: 1;
     width: 380px;
@@ -278,7 +396,6 @@ section {
 }
 
 
-
 .banner-content .arch_wrap {
     position: relative;
 
@@ -288,27 +405,43 @@ section {
     position: absolute;
     z-index: 5;
     top: 70%;
-    left: 60%;
-    width: 65%;
+    left: 55%;
+    width: 200px;
     margin: 0 auto;
     /* 图片居中 */
     display: block;
     /* 将图片作为块级元素 */
-    animation: spin 10s linear infinite; 
+    animation: shrink-width 2s ease-out forwards ,spin 10s linear infinite ;
     /* 启动动画 */
     animation-delay: 0.67s;
+    opacity: 0;
+    
 
+}
+@keyframes shrink-width {
+    0% {
+        width: 80vw; /* 动画开始时的宽度 */
+        opacity: 0;
+    }
+    60% {
+        
+        opacity: 0;
+    }
+    100% {
+        width: 220px; /* 动画结束时的宽度 */
+        opacity: 1;
+    }
 }
 
 @keyframes spin {
     0% {
         transform: rotate(0deg);
-        
+
     }
 
     100% {
         transform: rotate(360deg);
-        
+
     }
 }
 
@@ -644,22 +777,25 @@ section {
     background-repeat: no-repeat;
     background-position: center;
 }
+
 .ingredient_l {
     position: absolute;
     z-index: 1;
     left: 0;
     margin-left: 30vw;
-    
-    
+
+
 }
-#INGREDIENT .title_wrap{
+
+#INGREDIENT .title_wrap {
     display: flex;
-    
+
 }
+
 #INGREDIENT .title {
     width: 22vw;
     margin-right: -5vw;
-    
+
 }
 
 #INGREDIENT .cn_title {
@@ -670,7 +806,8 @@ section {
     font-family: Noto Serif TC;
     height: 20vw;
 }
-#INGREDIENT .pic {   
+
+#INGREDIENT .pic {
     width: 30vw;
 }
 
@@ -679,6 +816,7 @@ section {
     right: 0;
     margin-right: 27vw;
 }
+
 #INGREDIENT .box_br {
     background-color: var(--block_brown-op0);
     width: 18vw;
@@ -691,9 +829,10 @@ section {
     position: absolute;
     display: flex;
     height: 40vw;
-    right:-5.8vw;
-    top:7vw;
+    right: -5.8vw;
+    top: 7vw;
 }
+
 #INGREDIENT .text1,
 #INGREDIENT .text2,
 #INGREDIENT .text3,
@@ -707,6 +846,7 @@ section {
 #INGREDIENT .text1 {
     padding-top: 1.5rem;
 }
+
 #INGREDIENT .text2,
 .text3 {
     padding-top: 3rem;
@@ -724,39 +864,39 @@ section {
     /* 居中拱门 */
     border: white solid 2px;
     transform: scaleY(-1);
-    right:-6vw;
-    top:5vw;
+    right: -6vw;
+    top: 5vw;
 }
 
 #TASTE {
     position: relative;
     width: 100%;
-    height: 60vw; 
-    background-image: url(../index_images/bg-b.png); 
+    height: 60vw;
+    background-image: url(../index_images/bg-b.png);
     background-size: cover;
     text-align: center;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.taste_l{
-position: absolute;
-left: 0;
-display: flex;
-flex-direction: row-reverse;
-width: 30vw;
-top:3vw;
+.taste_l {
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 30vw;
+    top: 3vw;
 }
 
 #TASTE .box_br {
     background-color: var(--block_brown-op0);
     width: 14vw;
-    height:  14vw;
+    height: 14vw;
     margin-left: -5vw;
 }
 
 #TASTE .cn_title {
-    
+
     font-family: Noto Serif TC;
     color: var(--text);
     font-weight: 600;
@@ -812,7 +952,7 @@ top:3vw;
     /* 文字对齐 */
     /* border: 1px solid black;   边框，方便查看效果 */
     height: 100%;
-   
+
 }
 
 #TASTE .text2,
@@ -824,10 +964,11 @@ top:3vw;
     padding-top: -3rem;
 }
 
-.taste_r{
+.taste_r {
     position: absolute;
     right: 30vw;
 }
+
 #TASTE .title {
     width: 24vw;
     margin-top: 10vw;
