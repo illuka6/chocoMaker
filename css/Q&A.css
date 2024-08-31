@@ -92,7 +92,7 @@ section {
 }
 
 .qType {
-    width: 100%;
+    width: 700px;/*從100%改成寫死 解決ios瀏覽器第一次渲染時出現的寬度錯誤*/
     display: flex;
     align-items: start;
     /* border:#E1CBAA 3px solid; */
