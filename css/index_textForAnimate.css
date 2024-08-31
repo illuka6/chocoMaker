@@ -423,7 +423,7 @@ section {
         width: 80vw; /* 动画开始时的宽度 */
         opacity: 0;
     }
-    60% {
+    40% {
         
         opacity: 0;
     }
@@ -460,17 +460,24 @@ section {
 
 
 .cust_item {
-    padding-top: 45vh;
+    margin-top: 45vh;
     /* left:50%; */
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 80vw;
+    
 
 }
 
-.cust_item .step {
 
+.cust_item .step {
     padding: 0 20px;
+    
+}
+.cust_item .step:hover{
+    
+    cursor: pointer;
 }
 
 .cust_item a {
@@ -478,8 +485,6 @@ section {
 }
 
 .btn_diy {
-
-
     background-color: var(--primary_pink);
     width: 200px;
     height: 20vh;
@@ -487,7 +492,23 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.5s ease;
+    margin-top: -2vw;
+}
 
+.btn_diy {
+    transition: transform 0.3s ease, opacity 0.3s ease; /* 过渡效果 */
+    transform: scale(1); /* 初始大小 */
+}
+
+/* 当 active 类添加时的样式 */
+.btn_diy.active {
+    transform: scale(1.08); /* 放大效果 */
+    background-color: #f0b5b7;
+}
+.btn_diy:hover{
+    transform: scale(1.08);
+    background-color: #f0b5b7;
 }
 
 .btn_diy .btn_content {
@@ -501,6 +522,7 @@ section {
     transform: translate(-50%, -50%);  */
     z-index: 1;
     text-align: center;
+    transition: transform 0.5s ease;
 
 }
 
@@ -509,7 +531,7 @@ section {
 #CLASSIC {
     /* height: 60vw; */
     /* width: 100%; */
-    height: 50vw;
+    height: 55vw;
     position: relative;
     background-image: url(../index_images/bg-w.png);
     background-size: cover;
@@ -631,7 +653,7 @@ section {
 #ABOUT {
     position: relative;
     width: 100%;
-    height: 50vw;
+    height: 55vw;
     background-image: url(../index_images/bg-w.png);
     background-size: cover;
     text-align: center;
