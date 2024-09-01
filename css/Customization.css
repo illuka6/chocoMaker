@@ -3099,6 +3099,8 @@ footer .logo {
     margin-bottom: 5%;
 }
 
+
+
 #Checkout_area_box_a2 {
     margin-bottom: 5%;
 }
@@ -3417,7 +3419,7 @@ footer .logo {
     border-radius: 10px;
     width: 30%;
     margin-left: 1%;
-    /* max-height: 1380px; */
+    /* max-height: 1500px; */
     height: auto;
 }
 
@@ -3712,6 +3714,12 @@ footer .logo {
 #full_list_box_right_order_box4 {
     margin: 0 8%;
     margin-top: 40%;
+}
+
+@media(min-width:1440px){
+   #full_list_box_right_order_box4{
+    margin-top: 0%;
+    }
 }
 
 #full_list_box_right_order_box5_div_total {
