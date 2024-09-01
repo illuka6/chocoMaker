@@ -42,7 +42,8 @@
                             </div>
                             <div id="full_list_box_left_box1_content_p2">
                                 <div id="full_list_box_left_box1_content_class1">
-                                    <div>
+                                    <div class="full_list_box_left_box1_content_text">
+                                        <p class="full_list_box_left_box1_content_text_special">*</p>
                                         <p>姓名</p>
                                     </div>
                                     <div>
@@ -51,7 +52,8 @@
                                     </div>
                                 </div>
                                 <div id="full_list_box_left_box1_content_class2">
-                                    <div>
+                                    <div class="full_list_box_left_box1_content_text">
+                                        <p class="full_list_box_left_box1_content_text_special">*</p>
                                         <p>姓名</p>
                                     </div>
                                     <div>
@@ -62,10 +64,11 @@
                             </div>
                             <div id="full_list_box_left_box1_content_p3">
                                 <div id="full_list_box_left_box1_content_class3">
-                                    <div>
+                                    <div class="full_list_box_left_box1_content_text">
+                                        <p class="full_list_box_left_box1_content_text_special">*</p>
                                         <p>電子信箱</p>
                                     </div>
-                                    <div id="">
+                                    <div>
                                         <input type="text" placeholder="123@email"
                                             id="full_list_box_left_box1_content_input2">
                                     </div>
@@ -73,10 +76,11 @@
                             </div>
                             <div id="full_list_box_left_box1_content_p4">
                                 <div id="full_list_box_left_box1_content_class3">
-                                    <div>
+                                    <div class="full_list_box_left_box1_content_text">
+                                        <p class="full_list_box_left_box1_content_text_special">*</p>
                                         <p>地址</p>
                                     </div>
-                                    <div id="">
+                                    <div>
                                         <input type="text" placeholder="例:台北市大同區中正路56號1巷..."
                                             id="full_list_box_left_box1_content_input3">
                                     </div>
@@ -98,16 +102,57 @@
                                 <p>收件人資訊</p>
                             </div>
                             <div id="full_list_box_left_box2_input1">
-                                <input type="radio" name="recipient">
-                                <label>同訂購人資訊</label>
+                                <input type="radio" name="recipient" id="orderer_information">
+                                <label for="orderer_information">同訂購人資訊</label>
                             </div>
                             <div id="full_list_box_left_box2_input2">
-                                <input type="radio" name="recipient">
-                                <label>填寫新資訊</label>
+                                <input type="radio" name="recipient" id="new_information">
+                                <label for="new_information">填寫新資訊</label>
+                            </div>
+                            <div id="Data_filling_block">
+                                <div id="Data_filling_block_box">
+                                    <div>
+                                        <div id="Data_filling_block_box1_text1">
+                                            <p id="Data_filling_block_box1_text1_text_special">*</p>
+                                            <p>姓名</p>
+                                        </div>
+                                        <input type="text" placeholder="例:王大明" id="Data_filling_block_box_input1">
+                                    </div>
+                                    <div>
+                                        <div id="Data_filling_block_box1_text2">
+                                            <p id="Data_filling_block_box1_text2_text_special">*</p>
+                                            <p>電子信箱</p>
+                                        </div>
+                                        <input type="text" placeholder="123@email" id="Data_filling_block_box_input2">
+                                    </div>
+                                </div>
+                                <div id="Data_filling_block_box2">
+                                    <div>
+                                        <div id="Data_filling_block_box2_text">
+                                            <p id="Data_filling_block_box2_text_special">*</p>
+                                            <p>聯絡電話</p>
+                                        </div>
+                                        <input type="text" placeholder="例:0912345678"
+                                            id="Data_filling_block_box_input3">
+                                    </div>
+                                </div>
+                                <div id="Data_filling_block_box3">
+                                    <div>
+                                        <div id="Data_filling_block_box3_text">
+                                            <p id="Data_filling_block_box3_text_special">*</p>
+                                            <p>地址</p>
+                                        </div>
+                                        <input type="text" placeholder="例:台北市大同區中正路56號1巷..."
+                                            id="Data_filling_block_box_input4">
+                                    </div>
+                                </div>
+
+
                             </div>
                             <div id="full_list_box_left_box2_input3">
-                                <input type="radio" name="recipient">
-                                <label>線上送禮</label>
+                                <input type="radio" name="recipient" id="gift_giving">
+                                <label for="gift_giving">線上送禮 <img src="./images/shopping_cart_two/hint.svg"
+                                        alt=""></label>
                             </div>
                         </div>
                     </div>
@@ -118,13 +163,13 @@
                             </div>
                             <div id="full_list_box_left_box3_div_box">
                                 <div id="full_list_box_left_box3_divcredit_card">
-                                    <input type="radio" name="divcredit_card">
-                                    <label>線上支付</label>
+                                    <input type="radio" name="divcredit_card" id="Online_payment">
+                                    <label for="Online_payment">線上支付</label>
                                     <img src="./images/shopping_cart_two/credit_card.svg" alt="">
                                 </div>
                                 <div id="full_list_box_left_box3_divcredit_card_cash_on_delivery">
-                                    <input type="radio" name="divcredit_card">
-                                    <label>到店取貨</label>
+                                    <input type="radio" name="divcredit_card" id="pick_up">
+                                    <label for="pick_up">到店取貨</label>
                                 </div>
                             </div>
                         </div>
@@ -154,12 +199,12 @@
                                             <p>希望的配送時段</p>
                                         </div>
                                         <div id="full_list_box_left_box4_box_date_input">
-                                            <input type="radio" name="shipping_time">
-                                            <label>13點前</label>
-                                            <input type="radio" name="shipping_time">
-                                            <label>14~18點</label>
-                                            <input type="radio" name="shipping_time">
-                                            <label>不指定</label>
+                                            <input type="radio" name="shipping_time" id="out_time1">
+                                            <label for="out_time1">13點前</label>
+                                            <input type="radio" name="shipping_time" id="out_time2">
+                                            <label for="out_time2">14~18點</label>
+                                            <input type="radio" name="shipping_time" id="out_time3">
+                                            <label for="out_time3">不指定</label>
                                         </div>
                                     </div>
                                 </div>
@@ -208,17 +253,127 @@
                                 <p>板狀巧克力</p>
                                 <img src="./images/shopping_cart_two/down.svg" alt="">
                             </div>
+                            <div id="full_list_box_right_box3_divbox_p1_box_details_">
+                                <div id="full_list_box_right_box3_divbox_p1_details">
+                                    <p>板狀巧克力</p>
+                                    <img src="./images/shopping_cart_two/up.svg" alt="">
+                                </div>
+                                <div id="full_list_box_right_box3_divbox_p1_details_Gallery">
+                                    <div id="full_list_box_right_box3_divbox_p1_details_Gallery_plate_like">
+                                        <img src="./images/shopping_cart_two/Decorative_figure1.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <div id="Gallery_plate_like1">
+                                            <img src="./images/shopping_cart_two/Decorative_figure2.svg" alt="">
+                                            <p>X</p>
+                                            <p>2</p>
+                                        </div>
+                                        <div id="Gallery_plate_like2">
+                                            <img src="./images/shopping_cart_two/Decorative_figure3.svg" alt="">
+                                            <p>X</p>
+                                            <p>1</p>
+                                        </div>
+                                        <div id="Gallery_plate_like3">
+                                            <img src="./images/shopping_cart_two/Decorative_figure4.svg" alt="">
+                                            <p>X</p>
+                                            <p>1</p>
+                                        </div>
+                                    </div>
+                                    <div id="plate_modification_area">
+                                        <div id="plate_modification_area_div">
+                                            <p>修改</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div id="full_list_box_right_box3_divbox_p2">
                                 <p>小巧克力</p>
                                 <img src="./images/shopping_cart_two/down.svg" alt="">
+                            </div>
+                            <div id="full_list_box_right_box3_divbox_p2_box_details_">
+                                <div id="full_list_box_right_box3_divbox_p1_details">
+                                    <p>小巧克力</p>
+                                    <img src="./images/shopping_cart_two/up.svg" alt="">
+                                </div>
+                                <div id="full_list_box_right_box3_divbox_p1_details_Gallery">
+                                    <div id="full_list_box_right_box3_divbox_p2_details_Gallery_plate_like">
+                                        <img src="./images/shopping_cart_two/Decorative_figure5.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <div id="Gallery_plate_like1">
+                                            <img src="./images/shopping_cart_two/Decorative_figure6.svg" alt="">
+                                            <p>X</p>
+                                            <p>1</p>
+                                        </div>
+                                        <div id="Gallery_plate_like2">
+                                            <img src="./images/shopping_cart_two/Decorative_figure6.svg" alt="">
+                                            <p>X</p>
+                                            <p>1</p>
+                                        </div>
+                                        <div id="Gallery_plate_like3">
+                                            <img src="./images/shopping_cart_two/Decorative_figure6.svg" alt="">
+                                            <p>X</p>
+                                            <p>1</p>
+                                        </div>
+                                    </div>
+                                    <div id="plate_modification_area2">
+                                        <div id="plate_modification_area_div">
+                                            <p>修改</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div id="full_list_box_right_box3_divbox_p3">
                                 <p>禮盒</p>
                                 <img src="./images/shopping_cart_two/down.svg" alt="">
                             </div>
+                            <div id="full_list_box_right_box3_divbox_p3_box_details_">
+                                <div id="full_list_box_right_box3_divbox_p1_details">
+                                    <p>禮盒</p>
+                                    <img src="./images/shopping_cart_two/up.svg" alt="">
+                                </div>
+                                <div id="full_list_box_right_box3_divbox_p1_details_Gallery">
+                                    <div id="full_list_box_right_box3_divbox_p2_details_Gallery_plate_like">
+                                        <img src="./images/shopping_cart_two/Decorative_figure7.svg" alt="">
+                                    </div>
+                                    <div id="full_list_box_right_box3_divbox_p1_details_Gallery_colordiv">
+                                        <div id="Gallery_plate_like1">
+                                            <img src="./images/shopping_cart_two/Decorative_figure8.svg" alt="">
+                                            <p>X</p>
+                                            <p>1</p>
+                                        </div>
+                                        <div id="Gallery_plate_like2">
+                                            <img src="./images/shopping_cart_two/Decorative_figure9.svg" alt="">
+                                            <p>X</p>
+                                            <p>1</p>
+                                        </div>
+                                    </div>
+                                    <div id="plate_modification_area2">
+                                        <div id="plate_modification_area_div">
+                                            <p>修改</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div id="full_list_box_right_box3_divbox_p4">
                                 <p>卡片</p>
                                 <img src="./images/shopping_cart_two/down.svg" alt="">
+                            </div>
+                            <div id="full_list_box_right_box3_divbox_p4_box_details_">
+                                <div id="full_list_box_right_box3_divbox_p1_details">
+                                    <p>卡片</p>
+                                    <img src="./images/shopping_cart_two/up.svg" alt="">
+                                </div>
+                                <div id="full_list_box_right_box3_divbox_p1_details_Gallery">
+                                    <div id="full_list_box_right_box3_divbox_p2_details_Gallery_plate_like">
+                                        <img src="./images/shopping_cart_two/Decorative_figure10.svg" alt="">
+                                    </div>
+                                    <div id="plate_modification_area3">
+                                        <div id="plate_modification_area_div">
+                                            <p>修改</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
