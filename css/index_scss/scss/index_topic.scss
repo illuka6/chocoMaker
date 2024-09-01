@@ -1,26 +1,34 @@
-@for $i from 2 through 3 {
-  div.heading {
-    > div {
-      animation-delay: 0;
+// 設置基礎動畫延遲時間和間隔
+$base-delay-white: 3s;
+$base-delay-br: 4s;
+$interval: 0.025s; // 原始間距
 
-      &:nth-child(#{$i}) {
-        > p {
-          animation-delay: #{$i} * 0.025s;
-        }
-      }
+// 自動生成 .title_white p 的動畫延遲
+.title_white {
+  @for $i from 1 through 10 {
+    p:nth-child(#{$i}) {
+      animation-fill-mode: backwards;
+      animation-delay: $base-delay-white + ($i - 1) * $interval * 3; // 加倍間隔
     }
   }
 }
 
-.slide-up {
-  animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) infinite; /* 設置為無限次重複 */
+// 自動生成 .title_br p 的動畫延遲
+.title_br {
+  @for $i from 1 through 10 {
+    p:nth-child(#{$i}) {
+      animation-fill-mode: backwards;
+      animation-delay: $base-delay-br + ($i - 1) * $interval * 3; // 加倍間隔
+    }
+  }
 }
 
-@keyframes slide-up {
-  0% {
-    transform: translateY(100px);
-  }
-  100% {
-    transform: translateY(0);
+// 自动生成 .title_br p 的动画延迟，以反转顺序
+.title_br {
+  @for $i from 1 through 10 {
+    p:nth-child(#{$i}) {
+      animation-fill-mode: backwards;
+      animation-delay: $base-delay-br + (10 - $i) * $interval*3; // 计算反转的延迟时间
+    }
   }
 }
