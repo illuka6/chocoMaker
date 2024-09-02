@@ -12,3 +12,22 @@ images.forEach(image => {
         btnDiy.classList.remove('active');
     });
 });
+
+// JQuery Smoove
+$('.smoove').smoove({
+    offset:'10%'
+});
+
+$('.smoove1').smoove({
+    offset:'25%'
+});
+$('.smoove2').smoove({
+    offset:'30%'
+});
+$('.smoove3').smoove({
+    offset:'40%'
+});
+
+$('.smoovecircle').smoove({
+    offset:'70%'
+});
