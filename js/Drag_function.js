@@ -1895,4 +1895,72 @@ menu_below_li_right3.addEventListener('click', () => {
 // });
 
 
+let Close_prompt = document.getElementsByClassName('Close_prompt');
+let Operation_tips = document.getElementById('Operation_tips');
+
+for (let i = 0; i < Close_prompt.length; i++) {
+    Close_prompt[i].addEventListener('click', () => {
+        Operation_tips.style.display = 'none';
+    });
+}
+
+
+let Operation_tips_box1_first_row3_img2 = document.getElementById('Operation_tips_box1_first_row3_img2');
+let Operation_tips_box1_div=document.getElementById('Operation_tips_box1_div');
+
+let Operation_tips_box2_first_row3_img3 = document.getElementById('Operation_tips_box2_first_row3_img3');
+let Operation_tips_box1_first_row3_img2_1 = document.getElementById('Operation_tips_box1_first_row3_img2_1');
+let Operation_tips_box2_div=document.getElementById('Operation_tips_box2_div');
+
+let Operation_tips_box3_first_row3_img3 = document.getElementById('Operation_tips_box3_first_row3_img3');
+let Operation_tips_box3_first_row3_img2_1 = document.getElementById('Operation_tips_box3_first_row3_img2_1');
+let Operation_tips_box3_div=document.getElementById('Operation_tips_box3_div');
+
+let Operation_tips_box4_first_row3_img3 = document.getElementById('Operation_tips_box4_first_row3_img3');
+let Operation_tips_box4_first_row3_img2_1 = document.getElementById('Operation_tips_box4_first_row3_img2_1');
+let Operation_tips_box4_div=document.getElementById('Operation_tips_box4_div');
+
+let Operation_tips_box1_first_row3_img3_1 = document.getElementById('Operation_tips_box1_first_row3_img3_1');
+let Operation_tips_box5_div=document.getElementById('Operation_tips_box5_div');
+
+Operation_tips_box1_first_row3_img2.addEventListener('click',()=>{
+    Operation_tips_box1_div.style.display='none';
+    Operation_tips_box2_div.style.display='block';
+});
+
+Operation_tips_box2_first_row3_img3.addEventListener('click',()=>{
+    Operation_tips_box1_div.style.display='block';
+    Operation_tips_box2_div.style.display='none';
+});
+
+Operation_tips_box1_first_row3_img2_1.addEventListener('click',()=>{
+    Operation_tips_box2_div.style.display='none';
+    Operation_tips_box3_div.style.display='block';
+});
+
+Operation_tips_box3_first_row3_img3.addEventListener('click',()=>{
+    Operation_tips_box2_div.style.display='block';
+    Operation_tips_box3_div.style.display='none';
+});
+
+Operation_tips_box3_first_row3_img2_1.addEventListener('click',()=>{
+    Operation_tips_box3_div.style.display='none';
+    Operation_tips_box4_div.style.display='block';
+});
+
+Operation_tips_box4_first_row3_img3.addEventListener('click',()=>{
+    Operation_tips_box3_div.style.display='block';
+    Operation_tips_box4_div.style.display='none';
+});
+
+Operation_tips_box4_first_row3_img2_1.addEventListener('click',()=>{
+    Operation_tips_box4_div.style.display='none';
+    Operation_tips_box5_div.style.display='block';
+});
+
+Operation_tips_box1_first_row3_img3_1.addEventListener('click',()=>{
+    Operation_tips_box4_div.style.display='block';
+    Operation_tips_box5_div.style.display='none';
+});
+
 
