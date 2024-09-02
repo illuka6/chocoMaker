@@ -15,19 +15,19 @@ images.forEach(image => {
 
 // JQuery Smoove
 $('.smoove').smoove({
-    offset:'20%'
+    offset:'10%'
 });
 
 $('.smoove1').smoove({
-    offset:'30%'
+    offset:'25%'
 });
 $('.smoove2').smoove({
-    offset:'40%'
+    offset:'30%'
 });
 $('.smoove3').smoove({
-    offset:'50%'
+    offset:'40%'
 });
 
 $('.smoovecircle').smoove({
-    offset:'75%'
+    offset:'70%'
 });
