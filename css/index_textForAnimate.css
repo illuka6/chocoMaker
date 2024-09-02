@@ -828,10 +828,12 @@ section {
     line-height: 4.5vw;
     font-family: Noto Serif TC;
     height: 20vw;
+    /* margin-top: 8vw; */
 }
 
 #INGREDIENT .pic {
-    width: 30vw;
+    width: 33vw;
+    margin-top: -2vw;
 }
 
 .ingredient_r {
@@ -895,12 +897,11 @@ section {
     position: relative;
     width: 100%;
     height: 60vw;
-    /* background-image: url(../index_images/bg-b.png); */
+    background-image: url(../index_images/bg-b.png);
     background-size: cover;
     text-align: center;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: #6B3B20;
 }
 
 .taste_l {
@@ -1016,31 +1017,31 @@ section {
     text-align: center;
     background-repeat: no-repeat;
     background-position: bottom center;
-    height: 200vh;
+    height: 100vw;
     
 }
 .section_apperance{
     position: absolute;
     top: 0;
-    height: 100vh;
+    height: 60vw;
     width: 100%;
-    background-color: #d9936a;
+    /* background-color: #d9936a; */
     
 }
 #APPERANCE .title {
     position: absolute;
     z-index: 6;
-    width: 350px;
-    left: 20vw;
-    top: 55vh;
+    left: 23vw;
+    top: 25vw;
+    width: 24vw;
 }
 
 #APPERANCE .pic {
     position: absolute;
     z-index: 5;
-    width: 40vw;
-    left: 30vw;
-    top: 65vh;
+    width: 44vw;
+    left: 27.3vw;
+    top: 30vw;
 
 }
 
@@ -1048,21 +1049,21 @@ section {
     position: absolute;
     z-index: 4;
     background-color: var(--block_brown-op0);
-    width: 250px;
-    height: 250px;
-    top: 40vh;
-    right: 20vw;
+    width: 13vw;
+    height: 13vw;
+    top: 22vw;
+    right: 24vw;
 }
 
 #APPERANCE .cn_title {
     position: absolute;
     z-index: 6;
-    right: 45vh;
-    top: 20vh;
+    left: 71vw;
+    top: 8vw;
     font-family: Noto Serif TC;
     color: var(--text);
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 2vw;
     writing-mode: vertical-rl;
     /* 设置文字竖排，从右到左 */
     text-align: start;
@@ -1076,17 +1077,17 @@ section {
 #APPERANCE .arch {
     position: absolute;
     z-index: 5;
-    width: 250px;
+    width: 15vw;
     /* 拱门的宽度 */
-    height: 370px;
+    height: 22vw;
     /* 拱门的高度，增加底部的拉长效果 */
-    right: 35vw;
-    top: 35vh;
+    right: 33vw;
+    top: 18vw;
 
     text-align: center;
     background-repeat: no-repeat;
     /* 背景颜色 */
-    border-radius: 220px 220px 0 0;
+    border-radius: 8vw 8vw 0 0;
     /* 圆角设置成拱门的顶部弧形 */
     overflow: hidden;
     /* 隐藏溢出的部分 */
@@ -1101,15 +1102,13 @@ section {
 #APPERANCE .text_all {
     z-index: 5;
     position: absolute;
-    top: 10vh;
-    right: 20vw;
+    top: 7vw;
+    left: 53vw;
     display: flex;
-    width: 400px;
+    width: 35vw;
     height: 100%;
     color: var(--text);
-    align-items: flex-start;
-    font-style: 'Noto+Sans+TC';
-    font-weight: 400;
+    align-items: start;
 
 }
 
@@ -1121,7 +1120,6 @@ section {
     writing-mode: vertical-rl;
     /* 设置文字竖排，从右到左 */
     text-align: start;
- 
     height: 100%;
 }
 
@@ -1133,14 +1131,15 @@ section {
 #APPERANCE .text4 {
     padding-top: -3rem;
 }
+#APPERANCE .text5 {
+    margin-top: -1rem;
+}
 .bottom_content{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 25vh;
-    
-    
+    margin-top: 75vw;
 }
 .bottom_content img{
     width: 15vw;
