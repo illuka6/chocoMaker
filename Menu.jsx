@@ -5,7 +5,7 @@ function Menu() {
                 <div id="menu_id_menu">
                     <li id="menu_id_li"><a href="./index.html">HOME</a></li>
                     <li id="menu_id_li"><a href="./shop.html">SHOP</a></li>
-                    <li id="menu_id_li"><a href="#">ABOUT</a></li>
+                    <li id="menu_id_li"><a href="./about.html">ABOUT</a></li>
                     <li id="menu_id_li"><a href="#">NEWS</a></li>
                     <li id="menu_id_li"><a href="./QnA.html">Q&A</a></li>
                     <li id="menu_id_menu_icon"><a href="./Customization.html" id="customized">
