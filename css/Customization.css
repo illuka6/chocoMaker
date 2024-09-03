@@ -232,6 +232,7 @@ body {
     height: 111%;
     /* background-color: rgba(192, 191, 191, 0.5); */
     background-color: rgba(192, 191, 191, 1);
+    /* background-color: #C0BFBF; */
 }
 
 #Operation_tips_box1 {
@@ -260,7 +261,9 @@ body {
 #Operation_tips_box1_first_row p {
     font-size: 20px;
     /* font-family: "Noto Sans Traditional Chinese"; */
-    /* font-family: 'Noto Sans TC'; */
+    font-family: 'Noto Sans TC';
+    font-weight: 900;
+    color: #3F1A09;
 }
 
 #Operation_tips_box1_first_row img {
@@ -276,6 +279,9 @@ body {
 
 #Operation_tips_box1_first_row2 p {
     font-size: 18px;
+    font-family: 'Inter';
+    font-weight: 900;
+    color: #3F1A09;
 }
 
 #Operation_tips_box1_first_row3 {
@@ -391,10 +397,18 @@ body {
     margin: 0 30px;
 }
 
+#Operation_tips_box1_first_row2-1 p{
+   font-size: 18px;
+   font-family: "Inter";
+   font-weight: 900;
+   color: #3F1A09;
+}
+
+
 #Operation_tips_box1_first_row5_2 {
     display: flex;
     justify-content: flex-start;
-align-items: center;
+    align-items: center;
     position: absolute;
     margin-top: 6%;
     width: 100%;
