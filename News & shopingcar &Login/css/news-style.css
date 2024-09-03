@@ -1,0 +1,245 @@
+@charset "UTF-8";
+
+/* 重置所有標籤的樣式 */
+/* 『*』代表所有標籤的意思 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* 不累加內距paddin與邊框 border*/
+}
+
+/* 重置字體 */
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+    color: #3F1A09;
+    font-weight: 600;
+    height: 100%;
+    /* background-color: rgb(116, 107, 95); */
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bolder;
+}
+
+/* 重置列表 */
+ul,
+ol {
+    list-style: none;
+}
+
+/* 重置圖片 */
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* 重置連接 */
+a {
+    text-decoration: none;
+    color: #3F1A09;
+}
+
+
+.background {
+    position: relative;
+    height: inherit;
+}
+
+.background::before {
+    content: "";
+    background-image: url("../imgs/paper.png");
+    background-size: cover;
+    opacity: 0.1;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.main {
+    height: auto;
+}
+
+.main .news_center {
+    display: flex;
+    justify-content: center;
+}
+
+.main .news_center .news_box {
+    display: flex;
+    width: 70vw;
+}
+
+.main .news_center .news_box .news {
+    width: inherit;
+    height: inherit;
+}
+
+.main .news_center .news_box .news .news_img {
+    width: 90%;
+}
+
+.main .news_center .news_box .news .news_img .opening {
+    font-family: "Noto Serif TC", serif;
+    padding: 50px 0px;
+    margin-left: 10px;
+}
+
+.main .news_center .news_box .news .news_img .opening h2 {
+    font-size: 2.25rem;
+    padding: 0;
+}
+
+.main .news_center .news_box .news .news_content {
+    width: 90%;
+    padding-top: 24px;
+}
+
+.main .news_center .news_box .box__list .content {
+    margin: 46px 0 46px 0;
+}
+
+.main .news_center .news_box .box__list .content img {
+    border-radius: 5px;
+}
+
+.main .news_center .news_box .box__list .content .date {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+.main .news_center .news_box .box__list .content .font {
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+
+.main .news_center .news_box .box__list .content:first-child {
+    margin-top: 0px;
+}
+
+.main .title {
+    margin: 5rem 7rem 5rem 5rem;
+    font-family: "Noto Serif TC", serif;
+}
+
+.main .title h1 {
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+    color: #CFB286;
+}
+
+.main .title h3 {
+    margin-left: 6.5rem;
+    font-size: 1.75rem;
+}
+
+.main .title .rectangle {
+    width: 12vw;
+    height: 7.5vh;
+    z-index: -1;
+    position: absolute;
+    top: 110px;
+    left: 100px;
+}
+
+
+/* Mobile Styles */
+@media only screen and (max-width: 435px) {
+    .title .rectangle {
+        margin-top: 130px;
+    }
+
+    .title h1 {
+        border-top: 136px;
+        font-size: 1.5rem;
+        letter-spacing: 4px;
+        color: #CFB286;
+    }
+
+    .title h3 {
+        margin-left: 6.5rem;
+        font-size: 1rem;
+    }
+
+    .title .rectangle {
+        position: absolute;
+        top: 12rem;
+        left: 100px;
+    }
+
+    .background::before {
+        background-size: cover;
+    }
+
+
+    .main .news_center {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main .news_center .news_box {
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main .news_center .news_box .news .news_img {
+        width: 90%;
+    }
+
+    .main .news_center .news_box .news .news_img .opening {
+        font-family: "Noto Serif TC", serif;
+        padding: 50px 0px;
+        margin-left: 10px;
+    }
+
+    .main .news_center .news_box .news .news_img .opening h2 {
+        font-size: 1.75rem;
+        padding: 0;
+    }
+
+    .main .news_center .news_box .news .news_content {
+        display: none;
+    }
+
+    .main .news_center .news_box .box__list .content {
+        margin: 46px 0 46px 0;
+    }
+
+    .main .news_center .news_box .box__list .content img {
+        border-radius: 5px;
+        width: 90%;
+    }
+
+    .main .news_center .news_box .box__list .content .date {
+        margin-top: 1rem;
+        font-size: 1rem;
+        font-weight: lighter;
+    }
+
+    .main .news_center .news_box .box__list .content .font {
+        font-size: 1.25rem;
+        font-weight: 900;
+    }
+
+    .main .news_center .news_box .box__list .content:first-child {
+        margin-top: 0px;
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    .news_center .news_box {
+        width: 80vw;
+    }
+}
