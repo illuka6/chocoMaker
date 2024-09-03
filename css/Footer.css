@@ -61,7 +61,6 @@ footer a {
 footer {
     width: 100%;
     background-image: url(../images/foot--bg.svg);
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -93,7 +92,7 @@ footer .logo {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 0.8rem;
+    font-size: 0.8rem;;
 }
 
 .bottom_nav .menu li {
@@ -148,4 +147,21 @@ footer .logo {
     color: white;
     font-family: "Noto Serif TC", "Noto Serif TC", serif;
     padding: 20px 0;
+}
+
+@media (max-width: 1024px) {
+    .bottom_nav .menu li {
+        padding: 0.8vw; 
+    }
+}
+@media (max-width: 890px) {
+    footer .wrap {
+        display:none ;
+    }
+    footer {
+        height: 80px;
+    }
+    .copyRight{
+        font-size: clamp(10px, 2vw, 0.8rem);
+    }
 }
