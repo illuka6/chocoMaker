@@ -1,0 +1,139 @@
+@charset "UTF-8";
+/*UTF-8 一定要在行數1 */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&Noto+Sans+TC+Noto+Serif+TC:wght@100..900&display=swap');
+
+/* @import只允許@charset在上面 註解行也會影響*/
+@font-face {
+    font-family: "Gary Downley Script";
+    src: url(../webfonts/GaryDownleyScript_PERSONAL_USE_ONLY.otf)
+}
+
+/*如果有套其他css框架 就不用reset免得出錯 */
+
+/* 重置所有標籤的樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* 不累加內距與邊框 */
+}
+
+/* 重置字體 */
+body {
+    font-family:
+        /*西文*/
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+        /*中文*/
+        "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+    /* 字體 英文先寫中文後 中文字體設定中英字體名都寫最保險 */
+    font-size: 100%;
+    line-height: 1.5;
+    /* background-color: #8f6b6d; */
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+/* 重置列表 */
+ul,li,
+ol {
+    list-style: none;
+}
+
+/* 重置圖片 */
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 重置連接 */
+a {
+    /* 預設inline改為block block才能支援尺寸設定*/
+    display: block;
+    /* 常設a為display:block  但若有文字超連結*/
+    text-decoration: none;
+    color: var(--deep);
+}
+
+/* 變數 */
+:root {
+    /* 字 */
+    --textdark: ##3F1A09;
+    --text: #6B3B20;
+    --primary_pink: #F1BFC1;
+    --block_brown: #E1CBAA;
+}
+
+.sec_about {
+    padding-top: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(../index_images/bg-w.png);
+    height: 100%;
+}
+.title {
+    width: 100%;
+    align-items: start;
+}
+.title>img{
+    width: 30vw;
+}
+.content{
+    width: 80%;
+}
+.sec_traffic{
+    background-image: url(../index_images/bg-w.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 12vw 0 12vw;
+    
+}
+.traffic_wrap{
+    width: 70%;
+    display: flex;
+    padding: 40px;
+    border-radius: 20px;
+    border:solid 3px var(--primary_pink)
+}
+.traffic_title{
+    color: var(--text);
+    font-size: 2.4vw;
+    font-weight: 600;
+    border-bottom: solid 2px var(--block_brown);
+    padding: 0 20px 20px;
+    margin-bottom: 20px;
+
+}
+.traffic_text{
+    color: var(--text);
+    font-size: 1.4vw;
+    font-weight: 600;
+}
+address {
+    display: block;
+    font-style:normal;
+  }
+
+.traffic_content{
+    flex:1;
+    margin-right: 2vw;
+}
+.map{
+    display: flex;
+    flex:1;
+    align-items: center;
+    justify-content: center;
+}

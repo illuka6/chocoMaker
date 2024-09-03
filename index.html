@@ -8,7 +8,7 @@
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/index_textForAnimate.css">
     <!-- 引用menu -->
     <script type="text/babel" src="./Menu.jsx"></script>
     <link rel="stylesheet" href="./css/Menu.css">
@@ -34,12 +34,32 @@
         <section id="BANNER">
 
             <div class="logo">
-                <img src="./index_images/logo.png" alt="">
+                <img src="./index_images/logo.svg" alt="">
             </div>
             <div class="banner-content">
-                <div class="choc">
-                    <span class="title_white ">choc</span>
-                    <span class="title_br slide-up">choc</span>
+                <div class="chocolate">
+                    <div class="title_white  slide-up">
+                        <p class="slide-up">c</p>
+                        <p class="slide-up">h</p>
+                        <p class="slide-up">o</p>
+                        <p class="slide-up">c</p>
+                        <p class="slide-up">o</p>
+                        <p class="slide-up">l</p>
+                        <p class="slide-up">a</p>
+                        <p class="slide-up">t</p>
+                        <p class="slide-up">e</p>
+                    </div>
+                    <div class="title_br slide-up">
+                        <p class="slide-up">c</p>
+                        <p class="slide-up">h</p>
+                        <p class="slide-up">o</p>
+                        <p class="slide-up">c</p>
+                        <p class="slide-up">o</p>
+                        <p class="slide-up">l</p>
+                        <p class="slide-up">a</p>
+                        <p class="slide-up">t</p>
+                        <p class="slide-up">e</p>
+                    </div>
                 </div>
 
                 <div class="arch_wrap">
@@ -47,21 +67,22 @@
                     <img class="circle_text" src="./index_images/banner--circle-text.svg" alt="">
                 </div>
 
-                <div class="olate">
-                    <span class="title_white slide-up">olate</span>
-                    <span class="title_br slide-up">olate</span>
-                </div>
+
+            </div>
             </div>
         </section>
         <section id="CUSTOMIZED">
 
-            <div class="cust_item">
-                <div class="step"><img src="./index_images/step1.png" alt=""></div>
-                <div class="step"><img src="./index_images/step2.png" alt=""></div>
-                <div class="step"><img src="./index_images/step3.png" alt=""></div>
-            </div>
+            <a href="./Customization.html" class="cust_item">
+                <div class="step smoove" data-move-x="200px" data-move-y="100px"><img src="./index_images/step1.png"
+                        alt=""></div>
+                <div class="step smoove" data-move-x="0px" data-move-y="100px"><img src="./index_images/step2.png"
+                        alt=""></div>
+                <div class="step smoove" data-move-x="-200px" data-move-y="100px"><img src="./index_images/step3.png"
+                        alt=""></div>
+            </a>
             <div class="btn_wrap">
-                <a class="btn_diy" href="./customized.html">
+                <a class="btn_diy" href="./Customization.html">
                     <div class="btn_content">開始設計</div>
                 </a>
             </div>
@@ -70,7 +91,7 @@
         <section id="CLASSIC">
 
             <div class="classic_left">
-                <img class="circle_title" src="./index_images/classic--circle-text.svg" alt="">
+                <img class="circle_title smoovecircle" src="./index_images/classic--circle-text.svg" alt="">
                 <div class="little_bg"></div>
 
 
@@ -78,14 +99,16 @@
             <div class="class_right">
                 <a href="./shop.html"><img class="class_btn" src="./index_images/classic_btn.svg" alt=""></a>
                 <div class="text_all">
-                    <div class="text1">我們秉持著精益求精的態度</div>
-                    <div class="text2">從全球各地精選最優質的可可豆</div>
-                    <div class="text3">每一顆都經過嚴格篩選與手工處理</div>
-                    <div class="text4">確保呈現給您的每一口都是純粹的享受</div>
+                    <div class="text1 smoove" data-move-y="10px">我們秉持著精益求精的態度</div>
+                    <div class="text2 smoove1" data-move-y="10px">從全球各地精選最優質的可可豆</div>
+                    <div class="text3 smoove2" data-move-y="10px">每一顆都經過嚴格篩選與手工處理</div>
+                    <div class="text4 smoove3" data-move-y="10px">確保呈現給您的每一口都是純粹的享受</div>
                 </div>
                 <div class="main_wrap">
-                    <img class="main_pic" src="./index_images/classic--pic.png" alt="">
-                    <img class="title" src="./index_images/classic_title.svg" alt="">
+                    <img class="main_pic smoove" data-move-x="100px" data-move-y="100px"
+                        src="./index_images/classic--pic.png" alt="">
+                    <img class="title smoove" data-move-x="100px" data-move-y="100px"
+                        src="./index_images/classic_title.svg" alt="">
                 </div>
 
             </div>
@@ -98,16 +121,17 @@
             <div class="about_right">
 
                 <div class="little_bg">
-                    <img class="title" src="./index_images/about--title.svg" alt="">
+                    <img class="title smoove" data-move-x="-200px" data-move-y="-200px"
+                        src="./index_images/about--title.svg" alt="">
                     <div class="text_all">
-                        <div class="text1">在Mélange</div>
-                        <div class="text2">巧克力都可以根據你的需求量身定制</div>
-                        <div class="text3">無論是刻上名字，還是融入特殊元素</div>
-                        <div class="text4">我們都能滿足你的個性化需求</div>
-                        <div class="text5">讓每一份禮物更加獨特而珍貴</div>
+                        <div class="text1 smoove" data-move-y="10px">在Mélange</div>
+                        <div class="text2 smoove1" data-move-y="10px">巧克力都可以根據你的需求量身定制</div>
+                        <div class="text3 smoove2" data-move-y="10px">無論是刻上名字，還是融入特殊元素</div>
+                        <div class="text4 smoove3" data-move-y="10px">我們都能滿足你的個性化需求</div>
+                        <div class="text5 smoove3" data-move-y="10px">讓每一份禮物更加獨特而珍貴</div>
                     </div>
                 </div>
-                <img class="circle_title" src="./index_images/about--circle-text.png" alt="">
+                <img class="circle_title smoovecircle" src="./index_images/about--circle-text.png" alt="">
 
 
             </div>
@@ -132,10 +156,10 @@
 
                     <div class="arch"></div>
                     <div class="text_all">
-                        <div class="text1">我們秉持著精益求精的態度，從全球各地</div>
-                        <div class="text2">精選最優質的可可豆，每一顆都經過</div>
-                        <div class="text3">嚴格篩選與手工處理，確保呈現給您的</div>
-                        <div class="text4">每一口都是純粹的享受。</div>
+                        <div class="text1 smoove" data-move-y="10px">我們秉持著精益求精的態度，從全球各地</div>
+                        <div class="text2 smoove1" data-move-y="10px">精選最優質的可可豆，每一顆都經過</div>
+                        <div class="text3 smoove2" data-move-y="10px">嚴格篩選與手工處理，確保呈現給您的</div>
+                        <div class="text4 smoove3" data-move-y="10px">每一口都是純粹的享受。</div>
                     </div>
                 </div>
             </div>
@@ -147,10 +171,10 @@
                 <div class="box_br">
                     <div class="arch"></div>
                     <div class="text_all">
-                        <div class="text1">巧克力的世界無限可能。無論您是熱</div>
-                        <div class="text2">愛經典的黑巧克力，還是偏好細膩的</div>
-                        <div class="text3">牛奶巧克力，甚至是充滿驚喜的果仁和</div>
-                        <div class="text4">香料，我們都能滿足您的味蕾</div>
+                        <div class="text1 smoove" data-move-y="10px">巧克力的世界無限可能。無論您是熱</div>
+                        <div class="text2 smoove1" data-move-y="10px">愛經典的黑巧克力，還是偏好細膩的</div>
+                        <div class="text3 smoove2" data-move-y="10px">牛奶巧克力，甚至是充滿驚喜的果仁和</div>
+                        <div class="text4 smoove3" data-move-y="10px">香料，我們都能滿足您的味蕾</div>
                     </div>
                     <div class="cn_title">多樣化的口味自由搭配</div>
                 </div>
@@ -164,6 +188,7 @@
         </section>
         <section id="APPERANCE">
             <div class="section_apperance">
+
                 <div class="cn_title">可品嚐的視覺饗宴</div>
                 <img class="title" src="./index_images/appearance--title.svg" alt="">
                 <img class="pic" src="./index_images/appearance--pic.svg" alt="">
@@ -171,21 +196,31 @@
                 <div class="box_br"></div>
 
                 <div class="text_all">
-                    <div class="text1">我們的巧克力不僅僅是味覺的饗宴</div>
-                    <div class="text2">更是一件藝術品。</div>
-                    <div class="text3">無論是節日慶典還是重要場合</div>
-                    <div class="text4">都是表達心意的最佳選擇</div>
-                    <div class="text5">讓您的贈禮更添品味與心意</div>
+                    <div class="text1 smoove" data-move-y="10px">我們的巧克力不僅僅是味覺的饗宴</div>
+                    <div class="text2 smoove1" data-move-y="10px">更是一件藝術品。</div>
+                    <div class="text3 smoove2" data-move-y="10px">無論是節日慶典還是重要場合</div>
+                    <div class="text4 smoove3" data-move-y="10px">都是表達心意的最佳選擇</div>
+                    <div class="text5 smoove3" data-move-y="10px">讓您的贈禮更添品味與心意</div>
 
                 </div>
 
 
             </div>
-        </section>
-        <div class="bottom">
-            <div class="bottom_content"></div>
+            <div class="bottom">
+                <div class="bottom_content">
+                    <div><img src="./index_images/logo.svg" alt=""></div>
+                    <div class="icon">
+                        <a href="#"><img src="./index_images/icon_fb_b.svg" alt=""></a>
+                        <a href="#"><img src="./index_images/icon_ig_b.svg" alt=""></a>
+                        <a href="#"><img src="./index_images/icon_x_b.svg" alt=""></a>
 
-        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
         <!-- footer -->
         <div id="footer"></div>
         <!-- 引用footer -->
@@ -205,7 +240,14 @@
 
 
 </main>
-<script src="./js/index2.js"></script>
+<!-- 可以使用套件給的 or官網的最新版 但只能擇一使用 -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<!-- JQuery smoove CDN -->
+<!-- src內的連結一定要有https: 有的CDN複製時沒有寫,要自己補上 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
+
+<script src="./js/index.js"></script>
 <script src="./js/Menu.js"></script>
 
 </body>
