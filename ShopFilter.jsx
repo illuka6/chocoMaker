@@ -1,4 +1,4 @@
-function ShopFilter({ handleFestivalFilter,handlePriceFilter, handleCountsFilter, toggleDropdown, showPriceDropdown, showCountsDropdown, showFestivalDropdown ,showPermutationDropdown }) {
+function ShopFilter({handlePermutationFilter, handleFestivalFilter,handlePriceFilter, handleCountsFilter, toggleDropdown, showPriceDropdown, showCountsDropdown, showFestivalDropdown ,showPermutationDropdown }) {
     const { useState, useRef, useEffect } = React;
     
         // 使用 useRef 來引用下拉菜單和按鈕
@@ -82,10 +82,10 @@ function ShopFilter({ handleFestivalFilter,handlePriceFilter, handleCountsFilter
                     <img src="./images/shop_images/permutation.svg" alt="" />
                     {showPermutationDropdown && (
                     <ul id="permutationList">
-                        <li><a href="">熱門</a></li>
-                        <li><a href="">推薦</a></li>
-                        <li><a href="">價格由低到高</a></li>
-                        <li><a href="">價格由高到低</a></li>
+                        <li onClick={() => handlePermutationFilter('popular')}><a>熱門</a></li>
+                        <li onClick={() => handlePermutationFilter('recommended')}><a>推薦</a></li>
+                        <li onClick={() => handlePermutationFilter('priceAsc')}><a>價格由低到高</a></li>
+                        <li onClick={() => handlePermutationFilter('priceDesc')}><a>價格由高到低</a></li>
                     </ul>
                     )}
                 </div>

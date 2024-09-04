@@ -198,6 +198,8 @@
                 const [selectedPriceRange, setSelectedPriceRange] = React.useState(null);
                 const [selecteCountsRange, setSelectedCountsRange] = React.useState(null);
                 const [selecteFestivalRange, setSelectedFestivalRange] = React.useState(null);
+                const [selectedPermutation, setSelectedPermutation] = React.useState(null);
+
 
                 // 創建狀態來控制每個下拉菜單的顯示狀態
                 const [showFestivalDropdown, setShowFestivalDropdown] = React.useState(false);
@@ -263,7 +265,7 @@
                     });
                     setFilteredItems(filtered);
                 };
-                
+
 
                 // 函數：切換下拉菜單的顯示狀態
                 //    const toggleDropdown = (dropdownSetter) => {
@@ -301,17 +303,50 @@
                             break;
                         case 'permutation':
                             setShowPermutationDropdown(show);
+                            /* if (show) {
+                                // 在顯示 permutation 下拉選單時，進行排序
+                                sortItems(selectedPermutation);
+                            } */
                             break;
                         default:
                             break;
                     }
                 };
+                const sortItems = (permutation) => {
+                    let sortedItems = [...filteredItems]; // 創建 `filteredItems` 的副本以進行排序
+
+                    switch (permutation) {
+                        case 'popular':
+                            // 根據熱門排序，這裡假設 items 本身沒有熱門排序，根據需求可以更改
+                            sortedItems.sort((a, b) => a.id - b.id); // 替換為實際的熱門排序邏輯
+                            break;
+                        case 'recommended':
+                            // 根據推薦排序
+                            sortedItems.sort((a, b) => b.id - a.id); // 替換為實際的推薦排序邏輯
+                            break;
+                        case 'priceAsc':
+                            sortedItems.sort((a, b) => parseInt(a.price.replace(',', '')) - parseInt(b.price.replace(',', '')));
+                            break;
+                        case 'priceDesc':
+                            sortedItems.sort((a, b) => parseInt(b.price.replace(',', '')) - parseInt(a.price.replace(',', '')));
+                            break;
+                        default:
+                            break;
+                    }
+
+                    setFilteredItems(sortedItems);
+                };
+                const handlePermutationFilter = (option) => {
+                    setSelectedPermutation(option);
+                    sortItems(option); // 根據選擇的 permutation 進行排序
+                };
+
 
 
                 return (<>
                     <section id="items_content">
                         <ShopFilter
-
+                            handlePermutationFilter={handlePermutationFilter}
                             handleFestivalFilter={handleFestivalFilter}
                             handleCountsFilter={handleCountsFilter}
                             handlePriceFilter={handlePriceFilter}
