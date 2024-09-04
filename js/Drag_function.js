@@ -1316,88 +1316,88 @@ middle_div1_box_div1.addEventListener('click', (e) => {
 
 /* 取得第二個盒子的XY範圍 */
 let middle_box2 = middle_div1_box_div2.getBoundingClientRect();
-let xStart2 = middle_box1.left;  // 左邊界的 X 座標
-let yStart2 = middle_box1.top;   // 上邊界的 Y 座標
-let xEnd2 = middle_box1.right;   // 右邊界的 X 座標
-let yEnd2 = middle_box1.bottom;  // 下邊界的 Y 座標
+let xStart2 = middle_box2.left;  // 左邊界的 X 座標
+let yStart2 = middle_box2.top;   // 上邊界的 Y 座標
+let xEnd2 = middle_box2.right;   // 右邊界的 X 座標
+let yEnd2 = middle_box2.bottom;  // 下邊界的 Y 座標
 /* 取得第三個盒子的XY範圍 */
 let middle_box3 = middle_div1_box_div3.getBoundingClientRect();
-let xStart3 = middle_box1.left;  // 左邊界的 X 座標
-let yStart3 = middle_box1.top;   // 上邊界的 Y 座標
-let xEnd3 = middle_box1.right;   // 右邊界的 X 座標
-let yEnd3 = middle_box1.bottom;  // 下邊界的 Y 座標
+let xStart3 = middle_box3.left;  // 左邊界的 X 座標
+let yStart3 = middle_box3.top;   // 上邊界的 Y 座標
+let xEnd3 = middle_box3.right;   // 右邊界的 X 座標
+let yEnd3 = middle_box3.bottom;  // 下邊界的 Y 座標
 /* 取得第四個盒子的XY範圍 */
 let middle_box4 = middle_div1_box_div4.getBoundingClientRect();
-let xStart4 = middle_box1.left;  // 左邊界的 X 座標
-let yStart4 = middle_box1.top;   // 上邊界的 Y 座標
-let xEnd4 = middle_box1.right;   // 右邊界的 X 座標
-let yEnd4 = middle_box1.bottom;  // 下邊界的 Y 座標
+let xStart4 = middle_box4.left;  // 左邊界的 X 座標
+let yStart4 = middle_box4.top;   // 上邊界的 Y 座標
+let xEnd4 = middle_box4.right;   // 右邊界的 X 座標
+let yEnd4 = middle_box4.bottom;  // 下邊界的 Y 座標
 /* 取得第五個盒子的XY範圍 */
 let middle_box5 = middle_div1_box_div5.getBoundingClientRect();
-let xStart5 = middle_box1.left;  // 左邊界的 X 座標
-let yStart5 = middle_box1.top;   // 上邊界的 Y 座標
-let xEnd5 = middle_box1.right;   // 右邊界的 X 座標
-let yEnd5 = middle_box1.bottom;  // 下邊界的 Y 座標
+let xStart5 = middle_box5.left;  // 左邊界的 X 座標
+let yStart5 = middle_box5.top;   // 上邊界的 Y 座標
+let xEnd5 = middle_box5.right;   // 右邊界的 X 座標
+let yEnd5 = middle_box5.bottom;  // 下邊界的 Y 座標
 /* 取得第六個盒子的XY範圍 */
 let middle_box6 = middle_div1_box_div6.getBoundingClientRect();
-let xStart6 = middle_box1.left;  // 左邊界的 X 座標
-let yStart6 = middle_box1.top;   // 上邊界的 Y 座標
-let xEnd6 = middle_box1.right;   // 右邊界的 X 座標
-let yEnd6 = middle_box1.bottom;  // 下邊界的 Y 座標
+let xStart6 = middle_box6.left;  // 左邊界的 X 座標
+let yStart6 = middle_box6.top;   // 上邊界的 Y 座標
+let xEnd6 = middle_box6.right;   // 右邊界的 X 座標
+let yEnd6 = middle_box6.bottom;  // 下邊界的 Y 座標
 /* 取得第七個盒子的XY範圍 */
 let middle_box7 = middle_div1_box_div7.getBoundingClientRect();
-let xStart7 = middle_box1.left;  // 左邊界的 X 座標
-let yStart7 = middle_box1.top;   // 上邊界的 Y 座標
-let xEnd7 = middle_box1.right;   // 右邊界的 X 座標
-let yEnd7 = middle_box1.bottom;  // 下邊界的 Y 座標
+let xStart7 = middle_box7.left;  // 左邊界的 X 座標
+let yStart7 = middle_box7.top;   // 上邊界的 Y 座標
+let xEnd7 = middle_box7.right;   // 右邊界的 X 座標
+let yEnd7 = middle_box7.bottom;  // 下邊界的 Y 座標
 /* 取得第八個盒子的XY範圍 */
 let middle_box8 = middle_div1_box_div8.getBoundingClientRect();
-let xStart8 = middle_box1.left;  // 左邊界的 X 座標
-let yStart8 = middle_box1.top;   // 上邊界的 Y 座標
-let xEnd8 = middle_box1.right;   // 右邊界的 X 座標
-let yEnd8 = middle_box1.bottom;  // 下邊界的 Y 座標
+let xStart8 = middle_box8.left;  // 左邊界的 X 座標
+let yStart8 = middle_box8.top;   // 上邊界的 Y 座標
+let xEnd8 = middle_box8.right;   // 右邊界的 X 座標
+let yEnd8 = middle_box8.bottom;  // 下邊界的 Y 座標
 /* 取得第九個盒子的XY範圍 */
 let middle_box9 = middle_div1_box_div9.getBoundingClientRect();
-let xStart9 = middle_box1.left;  // 左邊界的 X 座標
-let yStart9 = middle_box1.top;   // 上邊界的 Y 座標
-let xEnd9 = middle_box1.right;   // 右邊界的 X 座標
-let yEnd9 = middle_box1.bottom;  // 下邊界的 Y 座標
+let xStart9 = middle_box9.left;  // 左邊界的 X 座標
+let yStart9 = middle_box9.top;   // 上邊界的 Y 座標
+let xEnd9 = middle_box9.right;   // 右邊界的 X 座標
+let yEnd9 = middle_box9.bottom;  // 下邊界的 Y 座標
 /* 取得第十個盒子的XY範圍 */
 let middle_box10 = middle_div1_box_div10.getBoundingClientRect();
-let xStart10 = middle_box1.left;  // 左邊界的 X 座標
-let yStart10 = middle_box1.top;   // 上邊界的 Y 座標
-let xEnd10 = middle_box1.right;   // 右邊界的 X 座標
-let yEnd10 = middle_box1.bottom;  // 下邊界的 Y 座標
+let xStart10 = middle_box10.left;  // 左邊界的 X 座標
+let yStart10 = middle_box10.top;   // 上邊界的 Y 座標
+let xEnd10 = middle_box10.right;   // 右邊界的 X 座標
+let yEnd10 = middle_box10.bottom;  // 下邊界的 Y 座標
 /* 取得第十一個盒子的XY範圍 */
 let middle_box11 = middle_div1_box_div11.getBoundingClientRect();
-let xStart11 = middle_box1.left;  // 左邊界的 X 座標
-let yStart11 = middle_box1.top;   // 上邊界的 Y 座標
-let xEnd11 = middle_box1.right;   // 右邊界的 X 座標
-let yEnd11 = middle_box1.bottom;  // 下邊界的 Y 座標
+let xStart11 = middle_box11.left;  // 左邊界的 X 座標
+let yStart11 = middle_box11.top;   // 上邊界的 Y 座標
+let xEnd11 = middle_box11.right;   // 右邊界的 X 座標
+let yEnd11 = middle_box11.bottom;  // 下邊界的 Y 座標
 /* 取得第十二個盒子的XY範圍 */
 let middle_box12 = middle_div1_box_div12.getBoundingClientRect();
-let xStart12 = middle_box1.left;  // 左邊界的 X 座標
-let yStart12 = middle_box1.top;   // 上邊界的 Y 座標
-let xEnd12 = middle_box1.right;   // 右邊界的 X 座標
-let yEnd12 = middle_box1.bottom;  // 下邊界的 Y 座標
+let xStart12 = middle_box12.left;  // 左邊界的 X 座標
+let yStart12 = middle_box12.top;   // 上邊界的 Y 座標
+let xEnd12 = middle_box12.right;   // 右邊界的 X 座標
+let yEnd12 = middle_box12.bottom;  // 下邊界的 Y 座標
 /* 取得第十三個盒子的XY範圍 */
 let middle_box13 = middle_div1_box_div13.getBoundingClientRect();
-let xStart13 = middle_box1.left;  // 左邊界的 X 座標
-let yStart13 = middle_box1.top;   // 上邊界的 Y 座標
-let xEnd13 = middle_box1.right;   // 右邊界的 X 座標
-let yEnd13 = middle_box1.bottom;  // 下邊界的 Y 座標
+let xStart13 = middle_box13.left;  // 左邊界的 X 座標
+let yStart13 = middle_box13.top;   // 上邊界的 Y 座標
+let xEnd13 = middle_box13.right;   // 右邊界的 X 座標
+let yEnd13 = middle_box13.bottom;  // 下邊界的 Y 座標
 /* 取得第十四個盒子的XY範圍 */
 let middle_box14 = middle_div1_box_div14.getBoundingClientRect();
-let xStart14 = middle_box1.left;  // 左邊界的 X 座標
-let yStart14 = middle_box1.top;   // 上邊界的 Y 座標
-let xEnd14 = middle_box1.right;   // 右邊界的 X 座標
-let yEnd14 = middle_box1.bottom;  // 下邊界的 Y 座標
+let xStart14 = middle_box14.left;  // 左邊界的 X 座標
+let yStart14 = middle_box14.top;   // 上邊界的 Y 座標
+let xEnd14 = middle_box14.right;   // 右邊界的 X 座標
+let yEnd14 = middle_box14.bottom;  // 下邊界的 Y 座標
 /* 取得第十五個盒子的XY範圍 */
 let middle_box15 = middle_div1_box_div15.getBoundingClientRect();
-let xStart15 = middle_box1.left;  // 左邊界的 X 座標
-let yStart15 = middle_box1.top;   // 上邊界的 Y 座標
-let xEnd15 = middle_box1.right;   // 右邊界的 X 座標
-let yEnd15 = middle_box1.bottom;  // 下邊界的 Y 座標
+let xStart15 = middle_box15.left;  // 左邊界的 X 座標
+let yStart15 = middle_box15.top;   // 上邊界的 Y 座標
+let xEnd15 = middle_box15.right;   // 右邊界的 X 座標
+let yEnd15 = middle_box15.bottom;  // 下邊界的 Y 座標
 
 
 
