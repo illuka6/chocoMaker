@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /*UTF-8 一定要在行數1 */
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&Noto+Sans+TC+Noto+Serif+TC:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
 
 /* @import只允許@charset在上面 註解行也會影響*/
 @font-face {
@@ -142,7 +143,7 @@ max-width:100px ;
 .drop-down-menu {
     display: flex;
     font-size: 1.2rem;
-    font-family: "Noto Serif TC", "Noto Serif TC", serif;
+    font-family: "Noto+Sans+TC";
     font-weight: 900;
     
 }
@@ -201,7 +202,7 @@ border-bottom:var(--block_brown) solid 2px
     width: 100%;
     height: 30px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: end;
     padding-top: 0.6vh;
     z-index: 99;
     /* background-color: #E1CBAA; */
@@ -219,24 +220,29 @@ border-bottom:var(--block_brown) solid 2px
     margin-left: 50px;
     display: block;
     /* 去除底部的空白間隙 */
-    width: 50px;
+    width: 6vw;
+    max-width: 50px;
     height: 100%;
     object-fit: cover;
     /* 確保圖片覆蓋整個容器 */
 }
 
 .permutation_btn ul {
+    
     position: relative;
     background-color: white;
-    border:3px solid var(--block_brown);
+    border:2px solid var(--block_brown);
     font-size: 0.8rem;
+    
 }
 .permutation_btn ul>li {
     font-weight: 900;
-    margin:2px;
+    padding:6px;
+    font-family: "Noto+Sans+TC";
 }
 .permutation_btn ul>li:hover {
-    background-color: var(--block_brown);
+    background-color: rgb(245, 236, 224);
+    
 }
 
 
