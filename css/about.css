@@ -74,21 +74,28 @@ a {
 }
 
 .sec_about {
-    padding-top: 10vw;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background-image: url(../index_images/bg-w.png);
     height: 100%;
+    padding-top: 20vw;
 }
-.title {
+/* 以下標題 */
+
+.title_wrap{
+    position: absolute;
+    top:100px;
+
     width: 100%;
     align-items: start;
 }
-.title>img{
+.title_wrap>img{
     width: 30vw;
+    min-width: 300px;
 }
+/* 以上標題 */
 .content{
     width: 80%;
 }
@@ -113,7 +120,7 @@ a {
     font-size: 2.4vw;
     font-weight: 600;
     border-bottom: solid 2px var(--block_brown);
-    padding: 0 20px 20px;
+    padding: 0 20px 20px 0;
     margin-bottom: 20px;
 
 }
@@ -136,4 +143,14 @@ address {
     flex:1;
     align-items: center;
     justify-content: center;
+}
+@media (max-width: 1024px) {
+    iframe {
+        width: 200px;
+        height: 200px;
+        
+    }
+    .sec_about{
+        padding-top:200px;
+    }
 }

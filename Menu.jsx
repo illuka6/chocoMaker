@@ -9,7 +9,7 @@ function Menu() {
                     <li id="menu_id_li"><a href="#">NEWS</a></li>
                     <li id="menu_id_li"><a href="./QnA.html">Q&A</a></li>
                     <li id="menu_id_menu_icon"><a href="./Customization.html" id="customized">
-                        <p>customized</p>
+                        <p >customized</p>
                     </a></li>
                 </div>
                 <div id="menu_id_icon">

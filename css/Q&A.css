@@ -1,4 +1,3 @@
-
 @charset "UTF-8";
 /*UTF-8 一定要在行數1 */
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&Noto+Sans+TC+Noto+Serif+TC:wght@100..900&display=swap');
@@ -43,7 +42,8 @@ h6 {
 }
 
 /* 重置列表 */
-ul,li,
+ul,
+li,
 ol {
     list-style: none;
 }
@@ -88,33 +88,62 @@ section {
     /* RWD語法 */
     /* 用vh 不要用vw不好控制 */
     background-image: url(../index_images/bg-w.png);
-    padding: 200px 50px;
+    padding: 22vw 10vw;
+
+}
+
+@media (max-width: 1024px) {
+    section {
+        padding-top: 200px;
+        /* 屏幕寬度大於 1200px 時，進一步增加 padding */
+    }
+
+    .title_wrap {
+        margin-left: -6vw;
+    }
+
+}
+
+.title_wrap {
+    position: absolute;
+    top: 100px;
+
+    width: 100%;
+    align-items: start;
+}
+
+.title_wrap>img {
+    width: 30vw;
+    min-width: 300px;
 }
 
 .qType {
-    width: 700px;/*從100%改成寫死 解決ios瀏覽器第一次渲染時出現的寬度錯誤*/
+    width: auto;
+    /*從100%改成寫死 解決ios瀏覽器第一次渲染時出現的寬度錯誤*/
     display: flex;
     align-items: start;
     /* border:#E1CBAA 3px solid; */
-    
+
 }
-.qType .btn{
+
+.qType .btn {
     font-size: 1rem;
     color: var(--text);
     font-weight: 900;
-    border:#E1CBAA 3px solid;
+    border: #E1CBAA 3px solid;
     border-bottom: 0;
     padding: 10px 3%;
     margin: 0 3px;
-    border-radius: 15px 15px 0 0 ;
+    border-radius: 15px 15px 0 0;
     cursor: pointer;
 }
+
 .qType .btn_type1 {
-    margin-left: 0 ;
-  
+    margin-left: 0;
+
 }
 
-.btn.active{
+.btn.active {
     background-color: var(--block_brown);
 }
 
@@ -128,91 +157,104 @@ section {
     /* position: absolute;
     top:-50%;
     left:-50%; */
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
     height: 100%;
     width: 100%;
-   
-    
-    border:#E1CBAA 3px solid;
-    border-radius: 0 15px 15px 15px ;
-    padding:50px;
+
+
+    border: #E1CBAA 3px solid;
+    border-radius: 0 15px 15px 15px;
+    padding: 50px;
 }
 
-.per_qna_block{
+.per_qna_block {
 
     max-width: 900px;
     width: 100%;
 }
 
-.question{    
+.question {
     font-size: 1rem;
     color: #6B3B20;
     font-weight: bold;
-    border-bottom: var(--block_brown) solid 3px ;
-    padding:18px 10px 0 0 ;
+    border-bottom: var(--block_brown) solid 3px;
+    padding: 18px 10px 0 0;
 
 }
 
-.question:hover{
+.question:hover {
     color: var(--block_brown);
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
-.question a {    
+
+.question a {
     display: flex;
     align-items: center;
     align-content: center;
-    justify-content:space-between;
-    
+    justify-content: space-between;
+
 }
-.q_part{
+
+.q_part {
     display: flex;
 }
-.pinkball{
-    width: 0.8rem;         /* 圆形的直径 */
-    height: 0.8rem;        /* 圆形的直径 */
-    border-radius: 50%; /* 使元素的边角圆润，形成圆形 */
-    background-color: var(--primary_pink); /* 圆形的背景色，可以根据需要调整 */
+
+.pinkball {
+    width: 0.8rem;
+    /* 圆形的直径 */
+    height: 0.8rem;
+    /* 圆形的直径 */
+    border-radius: 50%;
+    /* 使元素的边角圆润，形成圆形 */
+    background-color: var(--primary_pink);
+    /* 圆形的背景色，可以根据需要调整 */
 }
-.ballwrap{
-    padding: 0 12px 0 0 ;
+
+.ballwrap {
+    padding: 0 12px 0 0;
 }
+
 .vector {
     width: 30px;
     height: 20px;
-    margin-bottom:10px ;
+    margin-bottom: 10px;
     background-image: url(../images/Q&A_images/down_vector.svg);
-    transition:  0.4s ease-in-out; 
+    transition: 0.4s ease-in-out;
     background-position: center;
     /* 置中背景圖片 */
     background-size: cover;
     /* 背景圖片填滿整個元素 */
     background-repeat: no-repeat;/
 }
+
 .vector.expanded_vec {
     width: 30px;
     height: 20px;
-    background-image: url(../images/Q&A_images/up_vector.svg);    
+    background-image: url(../images/Q&A_images/up_vector.svg);
 }
 
-.ans{
+.ans {
     font-size: 0.9rem;
     color: #6B3B20;
     font-weight: bold;
-    max-height: 0; /* 初始状态 */
+    max-height: 0;
+    /* 初始状态 */
     overflow: hidden;
     opacity: 0;
 }
-.ans.expanded {    
+
+.ans.expanded {
     opacity: 1;
-    max-height: 500px; /* 设置为一个比内容实际高度大的值 */
-    transition:    0.4s ease-in-out; /* 展开和收起的过渡效果 */
-}
-.ans p{
-padding: 10px;
+    max-height: 500px;
+    /* 设置为一个比内容实际高度大的值 */
+    transition: 0.4s ease-in-out;
+    /* 展开和收起的过渡效果 */
 }
 
-
+.ans p {
+    padding: 10px;
+}

@@ -322,7 +322,7 @@ border-bottom:var(--block_brown) solid 2px
 .item_name {
     font-weight: 600;
     font-family: "Noto Serif TC";
-    font-size: 1rem;
+    font-size: 18px;
     font-weight: 700;
     padding: 5px 0;
 }
@@ -334,7 +334,7 @@ border-bottom:var(--block_brown) solid 2px
 }
 
 .item_text {
-    font-size: 0.7rem;
+    font-size: 14px;
     font-family: 'Inter';
     overflow: hidden;
     /* 文字溢出時出現省略號,若有設定line-clamp時,瀏覽器會自動加入 */

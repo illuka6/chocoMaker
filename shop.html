@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- 引用ShopFilter元件 -->
     <script type="text/babel" src="./ShopFilter.jsx"></script>
-    <title>SHOP 商品頁2</title>
+    <title>SHOP 經典商品</title>
     <!-- 引用menu -->
     <script type="text/babel" src="./Menu.jsx"></script>
     <link rel="stylesheet" href="./css/Menu.css">
-    <link rel="stylesheet" href="./css/shop2.css">
+    <link rel="stylesheet" href="./css/shop.css">
 </head>
 
 <body>
@@ -59,6 +59,7 @@
             }
 
             const App = () => {
+
 
 
                 const items = [
@@ -157,9 +158,10 @@
                         id: '12',
                         counts: '4',
                         pic: './images/shop_images/item12.jpg',
-                        name: '璀璨星河禮盒4入',
+                        name: '生日星河禮盒4入',
                         price: '380',
-                        text: '璀璨星河禮盒帶來星光般的美麗，內含精緻巧克力，每一口都充滿浪漫與驚喜。'
+                        text: '璀璨星河禮盒帶來星光般的美麗，內含精緻巧克力，每一口都充滿浪漫與驚喜。',
+                        fes: 'birthday'
                     },
                     {
                         id: '13',
@@ -261,32 +263,49 @@
                     });
                     setFilteredItems(filtered);
                 };
-                console.log(typeof handleCountsFilter);
+                
 
                 // 函數：切換下拉菜單的顯示狀態
                 //    const toggleDropdown = (dropdownSetter) => {
                 //       dropdownSetter(prevState => !prevState); 
                 // };
-                const toggleDropdown = (dropdown) => {
+                /*     const toggleDropdown = (dropdown) => {
+                        switch (dropdown) {
+                            case 'price':
+                                setShowPriceDropdown(prevState => !prevState);
+                                break;
+                            case 'counts':
+                                setShowCountsDropdown(prevState => !prevState);
+                                break;
+                            case 'festival':
+                                setShowFestivalDropdown(prevState => !prevState);
+                                break;
+                            case 'permutation':
+                                setShowPermutationDropdown(prevState => !prevState);
+                                break;
+                            default:
+                                break;
+                        }
+                    }; */
+
+                const toggleDropdown = (dropdown, show) => {
                     switch (dropdown) {
                         case 'price':
-                            setShowPriceDropdown(prevState => !prevState);
+                            setShowPriceDropdown(show);
                             break;
                         case 'counts':
-                            setShowCountsDropdown(prevState => !prevState);
+                            setShowCountsDropdown(show);
                             break;
                         case 'festival':
-                            setShowFestivalDropdown(prevState => !prevState);
+                            setShowFestivalDropdown(show);
                             break;
                         case 'permutation':
-                            setShowPermutationDropdown(prevState => !prevState);
+                            setShowPermutationDropdown(show);
                             break;
                         default:
                             break;
                     }
                 };
-
-
 
 
                 return (<>

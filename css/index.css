@@ -425,10 +425,8 @@ section {
     z-index: 5;
     display: flex;
     color: var(--text);
-    font-size: .9vw;
     align-items: self-start;
     font-style: 'Noto+Sans+TC';
-    font-weight: bold;
     /* margin-top: 20vh; */
     margin-right: 5vw;
     margin-top: -13vw;
@@ -581,10 +579,13 @@ section {
     text-align: center;
     background-repeat: no-repeat;
     background-position: center center;
-    padding: 3.5vw;
+    padding: 3.5vw  ;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+
+    
 }
 
 
@@ -599,18 +600,33 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-
     text-align: center;
     overflow: hidden;
+    
+    /* height: 100%; */
+    
+    perspective: 0.1px;
+	transform-style: preserve-3d;
+  overflow-y: scroll;
+  overflow-x: hidden;
+    
+    
 
 }
 
 
 #QUALITY .quality_title {
+    position: absolute;
+    top:20vw;
     font-family: "Lucida Bright";
     font-size: 21.5vw;
     text-align: center;
     color: white;
+
+    height: 100vh;
+    /* transform: translateZ(.4px) scale(.6); */
+    transform-style: inherit;
+    transform: translateZ(-3.1px) scale(4.5) /*  ranslateY(180%)*/t;
 }
 
 
