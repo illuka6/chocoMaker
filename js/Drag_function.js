@@ -1731,11 +1731,11 @@ for (let i = 0; i < allBtnevent.length; i++) {
                             console.log('你按了刪除');
                         }
                     }));
-                    if (imgsClone.addEventListener('dragend', () => {
-                        // console.log('有成功嗎');
-                        imgsClone.remove();
-                        imgsClone2.remove();
-                    }));
+                    // if (imgsClone.addEventListener('dragend', () => {
+                    //     // console.log('有成功嗎');
+                    //     imgsClone.remove();
+                    //     imgsClone2.remove();
+                    // }));
                     if (menu_below_li_right3.addEventListener('click', () => {
                         console.log('0000');
                         location.reload();
@@ -1906,61 +1906,61 @@ for (let i = 0; i < Close_prompt.length; i++) {
 
 
 let Operation_tips_box1_first_row3_img2 = document.getElementById('Operation_tips_box1_first_row3_img2');
-let Operation_tips_box1_div=document.getElementById('Operation_tips_box1_div');
+let Operation_tips_box1_div = document.getElementById('Operation_tips_box1_div');
 
 let Operation_tips_box2_first_row3_img3 = document.getElementById('Operation_tips_box2_first_row3_img3');
 let Operation_tips_box1_first_row3_img2_1 = document.getElementById('Operation_tips_box1_first_row3_img2_1');
-let Operation_tips_box2_div=document.getElementById('Operation_tips_box2_div');
+let Operation_tips_box2_div = document.getElementById('Operation_tips_box2_div');
 
 let Operation_tips_box3_first_row3_img3 = document.getElementById('Operation_tips_box3_first_row3_img3');
 let Operation_tips_box3_first_row3_img2_1 = document.getElementById('Operation_tips_box3_first_row3_img2_1');
-let Operation_tips_box3_div=document.getElementById('Operation_tips_box3_div');
+let Operation_tips_box3_div = document.getElementById('Operation_tips_box3_div');
 
 let Operation_tips_box4_first_row3_img3 = document.getElementById('Operation_tips_box4_first_row3_img3');
 let Operation_tips_box4_first_row3_img2_1 = document.getElementById('Operation_tips_box4_first_row3_img2_1');
-let Operation_tips_box4_div=document.getElementById('Operation_tips_box4_div');
+let Operation_tips_box4_div = document.getElementById('Operation_tips_box4_div');
 
 let Operation_tips_box1_first_row3_img3_1 = document.getElementById('Operation_tips_box1_first_row3_img3_1');
-let Operation_tips_box5_div=document.getElementById('Operation_tips_box5_div');
+let Operation_tips_box5_div = document.getElementById('Operation_tips_box5_div');
 
-Operation_tips_box1_first_row3_img2.addEventListener('click',()=>{
-    Operation_tips_box1_div.style.display='none';
-    Operation_tips_box2_div.style.display='block';
+Operation_tips_box1_first_row3_img2.addEventListener('click', () => {
+    Operation_tips_box1_div.style.display = 'none';
+    Operation_tips_box2_div.style.display = 'block';
 });
 
-Operation_tips_box2_first_row3_img3.addEventListener('click',()=>{
-    Operation_tips_box1_div.style.display='block';
-    Operation_tips_box2_div.style.display='none';
+Operation_tips_box2_first_row3_img3.addEventListener('click', () => {
+    Operation_tips_box1_div.style.display = 'block';
+    Operation_tips_box2_div.style.display = 'none';
 });
 
-Operation_tips_box1_first_row3_img2_1.addEventListener('click',()=>{
-    Operation_tips_box2_div.style.display='none';
-    Operation_tips_box3_div.style.display='block';
+Operation_tips_box1_first_row3_img2_1.addEventListener('click', () => {
+    Operation_tips_box2_div.style.display = 'none';
+    Operation_tips_box3_div.style.display = 'block';
 });
 
-Operation_tips_box3_first_row3_img3.addEventListener('click',()=>{
-    Operation_tips_box2_div.style.display='block';
-    Operation_tips_box3_div.style.display='none';
+Operation_tips_box3_first_row3_img3.addEventListener('click', () => {
+    Operation_tips_box2_div.style.display = 'block';
+    Operation_tips_box3_div.style.display = 'none';
 });
 
-Operation_tips_box3_first_row3_img2_1.addEventListener('click',()=>{
-    Operation_tips_box3_div.style.display='none';
-    Operation_tips_box4_div.style.display='block';
+Operation_tips_box3_first_row3_img2_1.addEventListener('click', () => {
+    Operation_tips_box3_div.style.display = 'none';
+    Operation_tips_box4_div.style.display = 'block';
 });
 
-Operation_tips_box4_first_row3_img3.addEventListener('click',()=>{
-    Operation_tips_box3_div.style.display='block';
-    Operation_tips_box4_div.style.display='none';
+Operation_tips_box4_first_row3_img3.addEventListener('click', () => {
+    Operation_tips_box3_div.style.display = 'block';
+    Operation_tips_box4_div.style.display = 'none';
 });
 
-Operation_tips_box4_first_row3_img2_1.addEventListener('click',()=>{
-    Operation_tips_box4_div.style.display='none';
-    Operation_tips_box5_div.style.display='block';
+Operation_tips_box4_first_row3_img2_1.addEventListener('click', () => {
+    Operation_tips_box4_div.style.display = 'none';
+    Operation_tips_box5_div.style.display = 'block';
 });
 
-Operation_tips_box1_first_row3_img3_1.addEventListener('click',()=>{
-    Operation_tips_box4_div.style.display='block';
-    Operation_tips_box5_div.style.display='none';
+Operation_tips_box1_first_row3_img3_1.addEventListener('click', () => {
+    Operation_tips_box4_div.style.display = 'block';
+    Operation_tips_box5_div.style.display = 'none';
 });
 
 
