@@ -39,30 +39,30 @@ function background() {
 
 /* ↑↑左邊側邊欄位(共用區塊顯示器)↑↑ */
 
-// /* ↓↓標籤列↓↓ */
-// let customized = document.getElementById('customized');
-// customized.addEventListener('mouseover', function () {
-//     customized.style.color = '#FFFFFF';
-//     customized.textContent = '客製化';
-// });
+/* ↓↓標籤列↓↓ */
+let customized = document.getElementById('customized');
+customized.addEventListener('mouseover', function () {
+    customized.style.color = '#FFFFFF';
+    customized.textContent = '客製化';
+});
 
-// customized.addEventListener('mouseout', function () {
-//     customized.style.color = '#3F1A09';
-//     customized.textContent = 'customized';
-// });
-// let menu_id = document.getElementById('menu_id');
-// let menu_id_search = document.getElementById('menu_id_search');
-// let menu_id_icon_search = document.getElementById('menu_id_icon_search');
-// let menu_id_search_divBox_a2 = document.getElementById('menu_id_search_divBox_a2');
-// menu_id_icon_search.addEventListener('click', () => {
-//     menu_id.style.display = 'none';
-//     menu_id_search.style.display = 'flex';
-// });
+customized.addEventListener('mouseout', function () {
+    customized.style.color = '#3F1A09';
+    customized.textContent = 'customized';
+});
+let menu_id = document.getElementById('menu_id');
+let menu_id_search = document.getElementById('menu_id_search');
+let menu_id_icon_search = document.getElementById('menu_id_icon_search');
+let menu_id_search_divBox_a2 = document.getElementById('menu_id_search_divBox_a2');
+menu_id_icon_search.addEventListener('click', () => {
+    menu_id.style.display = 'none';
+    menu_id_search.style.display = 'flex';
+});
 
-// menu_id_search_divBox_a2.addEventListener('click', () => {
-//     menu_id.style.display = 'flex';
-//     menu_id_search.style.display = 'none';
-// });
+menu_id_search_divBox_a2.addEventListener('click', () => {
+    menu_id.style.display = 'flex';
+    menu_id_search.style.display = 'none';
+});
 
 /* ↑↑標籤列↑↑ */
 
