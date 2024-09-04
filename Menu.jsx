@@ -28,8 +28,8 @@ function Menu() {
 
                         <a href="#" id="menu_id_search_divBox_a1"><img src="./images/Custom_block/menu/search.svg"
                             alt="" />
-                            <input type="text" placeholder="搜尋" id="menu_id_search_divBox_a1_input"/>
-                            {/* <p>搜尋</p> */}
+                            {/* <input type="text" placeholder="搜尋" id="menu_id_search_divBox_a1_input"/> */}
+                            <p>搜尋</p>
                         </a>
 
                         <a href="#" id="menu_id_search_divBox_a2"><img src="./images/Custom_block/menu/Xicon.svg"
