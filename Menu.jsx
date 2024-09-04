@@ -18,7 +18,7 @@ function Menu() {
                     </li>
                     <li id="menu_id_icon_show"><a href="#"><img src="./images/Custom_block/menu/Vector.svg" alt="" /></a>
                     </li>
-                    <li><a href="#"><img src="./images/Custom_block/menu/shopping-cart-basket-1--shopping-basket.svg"
+                    <li><a href="./shopping_cart.html"><img src="./images/Custom_block/menu/shopping-cart-basket-1--shopping-basket.svg"
                         alt="" /></a></li>
                 </div>
             </ul>
@@ -36,7 +36,7 @@ function Menu() {
                     </div>
                     <li><a href="#" id="menu_id_search_li2"><img src="./images/Custom_block/menu/Vector.svg" alt="" /></a>
                     </li>
-                    <li><a href="#" id="menu_id_search_li3"><img
+                    <li><a href="./shopping_cart.html" id="menu_id_search_li3"><img
                         src="./images/Custom_block/menu/shopping-cart-basket-1--shopping-basket.svg" alt="" /></a>
                     </li>
                 </li>
