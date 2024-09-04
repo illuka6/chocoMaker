@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.banner_box img {
+
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.banner_box {
+    position: relative;
+    /* border: 5px solid wheat; */
+    /* 對位基準點 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #f0f0f0;
+    /* 可选: 设置背景颜色 */
+}
+
+#imgCycle {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    object-fit: cover;
+    overflow: hidden;
+    justify-content: center;
+}
+
+#nav {
+position: absolute;
+bottom: 0;
+z-index: 99;
+}
+
+
+#nav a {
+    color: transparent;
+    /* 要將字設置消失,也可以將fontSize設為0 */
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 20px 20px 0;
+    border: 1px solid #fff;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    /* justify-content: center; */
+    line-height: 20px;
+    /* 行高與高度一樣時 垂直置中 */
+    border-radius: 50%;
+}
+
+/* 作用中的數字底色會改變 */
+#nav a.activeSlide {
+    background-color: white;
+}
