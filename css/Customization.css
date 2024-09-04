@@ -230,7 +230,7 @@ body {
     z-index: 1;
     width: 100%;
     height: 111%;
-    /* background-color: rgba(192, 191, 191, 0.5); */
+    /* background-color: rgba(0, 0, 0, 0.4); */
     background-color: rgba(192, 191, 191, 1);
     /* background-color: #C0BFBF; */
 }
@@ -267,7 +267,7 @@ body {
 }
 
 #Operation_tips_box1_first_row img {
-    margin-left: 30%;
+    margin-left: 31%;
     width: 8%;
 }
 
@@ -280,7 +280,7 @@ body {
 #Operation_tips_box1_first_row2 p {
     font-size: 18px;
     font-family: 'Inter';
-    font-weight: 900;
+    font-weight: 500;
     color: #3F1A09;
 }
 
@@ -358,6 +358,7 @@ body {
 
 #Operation_tips_box1_first_row3_img2_1 {
     width: 5%;
+    margin-bottom: 2%;
 }
 
 
@@ -417,8 +418,11 @@ body {
 
 #Operation_tips_box3_first_row3_img3 {
     width: 5%;
-    margin-right: 8%;
+    margin-right: 6%;
+    margin-top: 1%;
+    margin-left: 1%;
 }
+
 
 /* #Operation_tips_box3_first_row3_img3-1 {
     width: 10%;
@@ -427,15 +431,21 @@ body {
 
 #Operation_tips_box3_first_row3_img2_1 {
     width: 5%;
+    margin-right: 1%;
+    margin-bottom: 2%;
 }
 
 #Operation_tips_box4_first_row3_img2_1 {
     width: 5%;
+    margin-right: 1%;
+    margin-bottom: 1%;
 }
 
 #Operation_tips_box4_first_row3_img3 {
     width: 5%;
-    margin-right: 8%;
+    margin-right: 7%;
+    margin-top: 2%;
+    margin-left: 1%;
 }
 
 #Operation_tips_box5_first_row3_img2 {
@@ -444,8 +454,9 @@ body {
 
 #Operation_tips_box1_first_row3_img3_1 {
     width: 5%;
-    margin-right: 20%;
-    margin-left: 5;
+    margin-right: 18%;
+    margin-top: 3%;
+    margin-left: 2%;
 }
 
 /* ↑↑提示區塊↑↑ */
