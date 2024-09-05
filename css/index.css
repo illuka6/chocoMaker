@@ -419,6 +419,11 @@ section {
     z-index: 5;
 }
 
+#CLASSIC .class_btn:hover {
+    trans;
+
+}
+
 
 
 #CLASSIC .text_all {

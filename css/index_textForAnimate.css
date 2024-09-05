@@ -487,14 +487,15 @@ section {
 
 .btn_diy {
     background-color: var(--primary_pink);
-    width: 200px;
-    height: 20vh;
+    width: 180px;
+    height: 150px;
     clip-path: polygon(10% 38%, 90% 38%, 100% 50%, 90% 62%, 10% 62%, 0% 50%);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: transform 0.5s ease;
-    margin-top: -2vw;
+    margin-top: -1vw;
+    margin-bottom: 3vw;
 }
 
 .btn_diy {
