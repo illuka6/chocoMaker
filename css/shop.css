@@ -190,7 +190,9 @@ ul.drop-down-menu>li li{
     width: 8vw;
     min-width: 85px;
     padding: 10px ;
-    
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 700;
+    color:#6B3B20;
 }
 ul.drop-down-menu>li li>a{
 border-bottom:var(--block_brown) solid 2px
@@ -236,9 +238,10 @@ border-bottom:var(--block_brown) solid 2px
     
 }
 .permutation_btn ul>li {
-    font-weight: 900;
+    font-weight: 500;
+    color:#6B3B20;
     padding:6px;
-    font-family: "Noto+Sans+TC";
+    font-family: 'Noto Sans TC', sans-serif;
 }
 .permutation_btn ul>li:hover {
     background-color: rgb(245, 236, 224);
@@ -334,14 +337,17 @@ border-bottom:var(--block_brown) solid 2px
 }
 
 .item_price {
-    font-family: "inter";
     font-size: 0.9rem;
     padding: 4px 0;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 500;
 }
 
 .item_text {
     font-size: 14px;
-    font-family: 'Inter';
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 500;
+    color:#6B3B20;
     overflow: hidden;
     /* 文字溢出時出現省略號,若有設定line-clamp時,瀏覽器會自動加入 */
     text-overflow: ellipsis;
