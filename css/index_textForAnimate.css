@@ -515,7 +515,7 @@ section {
 .btn_diy .btn_content {
     position: absolute;
     color: white;
-    letter-spacing: 2px;
+    letter-spacing: 0.2px;
     font-size: 22px;
 
     /* top: 50%; 
@@ -524,6 +524,10 @@ section {
     z-index: 1;
     text-align: center;
     transition: transform 0.5s ease;
+    font-family: 'Noto Serif HK',sans-serif;
+    font-weight: 600;
+    padding-bottom: 2px;
+    
 
 }
 
