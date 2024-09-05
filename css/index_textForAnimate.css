@@ -792,6 +792,24 @@ section {
     font-size: 21.5vw;
     text-align: center;
     color: white;
+    display: flex;
+}
+ .quality_title span {
+    display: block;
+    perspective: 600px; /* 透視效果 */
+}
+
+.quality_title span.flip {
+    animation: flip 1s ease forwards;
+} 
+
+@keyframes flip {
+    from {
+        transform: rotateX(0deg);
+    }
+    to {
+        transform: rotateX(355deg);
+    }
 }
 
 
