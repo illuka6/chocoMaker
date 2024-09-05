@@ -36,46 +36,62 @@
     </script>
     <header></header>
     <main>
-        
-            <div id="bannerCycle"></div>
-            <script type="text/babel">
 
-                const { useEffect } = React;
+        <div id="bannerCycle"></div>
+        <script type="text/babel">
 
-                function App() {
+            const { useEffect } = React;
 
-                    useEffect(() => {
-                        $(function () {
-                            $('#imgCycle').after('<div id="nav"></div>').cycle({
+            function App() {
+                const initCycle = () => {
+                    $(function () {
+                        $('#imgCycle').after('<div id="nav"></div>').cycle({
 
-                                fx: 'fade', //輪播方式
-                                timeout: 4000, //輪播速度
-                                delay: 5000, //第一次第一章圖停留時間
-                                pager: '#nav',
-                            });
+                            fx: 'fade', //輪播方式
+                            timeout: 4000, //輪播速度
+                            delay: 5000, //第一次第一章圖停留時間
+                            pager: '#nav',
+                            fit: true,
                         });
-                    }, []);
-                    return (<>
-                        <div id="cycle">
+                    });
 
-                            <div class="banner_box" >
-                                <div id="imgCycle">
-                                    <img src="../images/shop_images/shop_banner.jpg" alt="" />
-                                    <img src="../images/shop_images/shop_banner2.jpg" alt="" />
-                                </div>
-                                {/* <div className="navWrap"><nav>導覽列位置</nav><div> */}
-                            </div>
-
-
-                        </div>
-                    </>)
                 }
 
-                ReactDOM
-                    .createRoot(document.querySelector('#bannerCycle'))
-                    .render(<App />)
-            </script>
-        
+                useEffect(() => {
+                    initCycle();
+                    // 當視窗大小改變時，重新初始化輪播
+                    const handleResize = () => {
+                        $('#imgCycle').cycle('destroy'); // 先銷毀原本的輪播
+                        initCycle(); // 重新初始化
+                    };
+                    window.addEventListener('resize', handleResize);
+
+                    // 清理事件監聽器
+                    return () => {
+                        window.removeEventListener('resize', handleResize);
+                    };
+                }, []);
+                return (<>
+                    <div id="cycle">
+
+                        <div class="banner_box" >
+                            <div id="imgCycle">
+                                <img src="./images/shop_images/shop_banner.jpg" alt="" />
+                                <img src="./images/shop_images/shop_banner2.jpg" alt="" />
+                            </div>
+                            {/* <div className="navWrap"><nav>導覽列位置</nav><div> */}
+                        </div>
+
+
+                    </div>
+                </>)
+            }
+
+            ReactDOM
+                .createRoot(document.querySelector('#bannerCycle'))
+                .render(<App />)
+        </script>
+
 
 
 
@@ -462,7 +478,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="./js/shop.js"></script>
     <script src="./js/jQuery/jquery.cycle.all.js"></script>
-    
+
     <script src="./js/Menu.js"></script>
 </body>
 
