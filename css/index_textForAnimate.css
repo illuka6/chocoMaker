@@ -808,7 +808,7 @@ section {
         transform: rotateX(0deg);
     }
     to {
-        transform: rotateX(355deg);
+        transform: rotateX(359deg);
     }
 }
 

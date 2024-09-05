@@ -45,7 +45,7 @@ $('.smoovecircle').smoove({
            const spans = document.querySelectorAll('#quality span');
            spans.forEach((span, index) => {
                // 設置每個字母的動畫延遲
-               span.style.animationDelay = `${index * .2}s`; // 每個字母延遲 2 秒
+               span.style.animationDelay = `${index * .33}s`; // 每個字母延遲 2 秒
            });
        }
 
