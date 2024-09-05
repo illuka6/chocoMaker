@@ -112,6 +112,7 @@ section {
 
 .filter {
     position: absolute;
+    z-index: 999;
     top: 0;
     height: 80px;
     width: 80%;
@@ -195,8 +196,9 @@ ul.drop-down-menu>li li{
     color:#6B3B20;
 }
 ul.drop-down-menu>li li>a{
-border-bottom:var(--block_brown) solid 2px
+border-bottom:var(--block_brown) solid 1px
 }
+
 /* 排序按鈕 */
 
 .permutation {
