@@ -102,9 +102,15 @@
         <script type="text/babel">
 
             function Item(props) {
+                /* 由item.id指定new標籤所顯示的指定商品項目 */
+                const newItemIds = ['2','4', '5', '7','13','14'];
                 return (
                     <div className="item_wrap">
                         <a className="item" href="./Product_details_page.html">
+                             {/* 檢查 id 是否在 newItemIds 列表中 */}
+                {newItemIds.includes(props.id) && (
+                    <img className="new_tag" src="./images/shop_images/item_new.svg" alt="New" />
+                )}
                             <div className="item_pic"> <img src={props.pic} /></div>
                             <div className="item_name">{props.name}</div>
                             <div className="item_price">NT {props.price}</div>
@@ -417,7 +423,12 @@
                             {/*items => filteredItems*/}
                             {filteredItems.map((item) => {
                                 return (
-                                    <Item key={item.id} pic={item.pic} name={item.name} price={item.price} text={item.text} />
+                                    <Item key={item.id} 
+                                    id={item.id}
+                                    pic={item.pic} 
+                                    name={item.name} 
+                                    price={item.price} 
+                                    text={item.text} />
                                 )
                             })
                             }
