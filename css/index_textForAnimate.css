@@ -800,7 +800,7 @@ section {
 }
 
 .quality_title span.flip {
-    animation: flip 1s ease forwards;
+    animation: flip 1s ease-in forwards;
 } 
 
 @keyframes flip {
