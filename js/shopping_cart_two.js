@@ -111,23 +111,41 @@ let full_list_box_right_box3_divbox_p3 = document.getElementById('full_list_box_
 let full_list_box_right_box3_divbox_p4 = document.getElementById('full_list_box_right_box3_divbox_p4');
 
 
+function box_right_display() {
+    full_list_box_right_box3_divbox_p1.style.display = 'flex';
+    full_list_box_right_box3_divbox_p2.style.display = 'flex';
+    full_list_box_right_box3_divbox_p3.style.display = 'flex';
+    full_list_box_right_box3_divbox_p4.style.display = 'flex';
+};
+
+
+
+
 
 full_list_box_right_box3_divbox_p1.addEventListener('click', () => {
     Detailed_display();
+    box_right_display();
+    full_list_box_right_box3_divbox_p1.style.display = 'none';
     full_list_box_right_box3_divbox_p1_box_details.style.display = 'block';
 });
 
 full_list_box_right_box3_divbox_p2.addEventListener('click', () => {
     Detailed_display();
+    box_right_display();
+    full_list_box_right_box3_divbox_p2.style.display = 'none';
     full_list_box_right_box3_divbox_p2_box_details.style.display = 'block';
 });
 
 full_list_box_right_box3_divbox_p3.addEventListener('click', () => {
     Detailed_display();
+    box_right_display();
+    full_list_box_right_box3_divbox_p3.style.display = 'none';
     full_list_box_right_box3_divbox_p3_box_details.style.display = 'block';
 });
 
 full_list_box_right_box3_divbox_p4.addEventListener('click', () => {
     Detailed_display();
+    box_right_display();
+    full_list_box_right_box3_divbox_p4.style.display = 'none';
     full_list_box_right_box3_divbox_p4_box_details.style.display = 'block';
 });
