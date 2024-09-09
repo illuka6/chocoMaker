@@ -487,14 +487,15 @@ section {
 
 .btn_diy {
     background-color: var(--primary_pink);
-    width: 200px;
-    height: 20vh;
+    width: 180px;
+    height: 150px;
     clip-path: polygon(10% 38%, 90% 38%, 100% 50%, 90% 62%, 10% 62%, 0% 50%);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: transform 0.5s ease;
-    margin-top: -2vw;
+    margin-top: -1vw;
+    margin-bottom: 3vw;
 }
 
 .btn_diy {
@@ -791,6 +792,24 @@ section {
     font-size: 21.5vw;
     text-align: center;
     color: white;
+    display: flex;
+}
+ .quality_title span {
+    display: block;
+    perspective: 600px; /* 透視效果 */
+}
+
+.quality_title span.flip {
+    animation: flip 1s ease-in forwards;
+} 
+
+@keyframes flip {
+    from {
+        transform: rotateX(0deg);
+    }
+    to {
+        transform: rotateX(359deg);
+    }
 }
 
 

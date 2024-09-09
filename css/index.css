@@ -419,6 +419,11 @@ section {
     z-index: 5;
 }
 
+#CLASSIC .class_btn:hover {
+    trans;
+
+}
+
 
 
 #CLASSIC .text_all {
@@ -604,11 +609,7 @@ section {
     overflow: hidden;
     
     /* height: 100%; */
-    
-    perspective: 0.1px;
-	transform-style: preserve-3d;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  
     
     
 
@@ -623,12 +624,27 @@ section {
     text-align: center;
     color: white;
 
-    height: 100vh;
-    /* transform: translateZ(.4px) scale(.6); */
-    transform-style: inherit;
-    transform: translateZ(-3.1px) scale(4.5) /*  ranslateY(180%)*/t;
+    
+   
+   
+}
+.quality_title span {
+    display: inline-block;
+    perspective: 600px; /* 透視效果 */
 }
 
+.quality_title span.flip {
+    animation: flip 1s ease forwards;
+}
+
+@keyframes flip {
+    from {
+        transform: rotateX(0deg);
+    }
+    to {
+        transform: rotateX(359deg);
+    }
+}
 
 #INGREDIENT {
     position: relative;
