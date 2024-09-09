@@ -3266,7 +3266,7 @@ footer .logo {
     margin: 0 15px;
     color: #3F1A09;
     font-size: 20px;
-   font-weight: 900;
+    font-weight: 900;
     font-family: 'Noto Serif TC';
 }
 
@@ -3362,8 +3362,16 @@ footer .logo {
     display: flex;
     justify-content: space-between;
     margin: 0 5%;
-    margin-top: 12%;
+    margin-top: 5%;
 }
+
+
+@media(max-width:1440px) {
+    #Checkout_area_commodity__content1 {
+        margin-top: 12%;
+    }
+}
+
 
 #Checkout_area_commodity__content1 p {
     font-size: 18px;
@@ -3411,8 +3419,21 @@ footer .logo {
 
 
 #Checkout_area_hr {
+    width: 90%;
+    border-bottom: 2px solid #EACEB1;
     padding: 0 5%;
 }
+
+
+
+
+@media(max-width:1440px) {
+    #Checkout_area_hr {
+        padding: 0 5%;
+    }
+}
+
+
 
 #Checkout_area_product_display_hr1 {
     /* padding: 0 5%; */
@@ -3438,7 +3459,7 @@ footer .logo {
     color: #3F1A09;
 }
 
-#Checkout_area_Subtotal_div p{
+#Checkout_area_Subtotal_div p {
     font-size: 18px;
     font-weight: 900;
     font-family: 'Inter';
@@ -3510,7 +3531,17 @@ footer .logo {
     margin-top: 20%;
     position: absolute;
     bottom: 0;
+    width: 80%;
+    margin-left: 10%;
 }
+
+@media(max-width:1440px) {
+    #Checkout_area_btn_box {
+        width: 100%;
+        /* margin-left: 10%; */
+    }
+}
+
 
 #Checkout_area_box {
     display: flex;
@@ -3883,11 +3914,13 @@ footer .logo {
     margin-right: 30px;
 }
 
-#out_time1,#out_time2,#out_time3{
+#out_time1,
+#out_time2,
+#out_time3 {
     margin-right: 8px;
 }
 
-#full_list_box_left_box4_box_date_day{
+#full_list_box_left_box4_box_date_day {
     padding: 5px 0;
     border: 2px solid #E1CBAA;
     border-radius: 5px;
@@ -4080,7 +4113,7 @@ footer .logo {
     margin: 2% 0;
 }
 
-.oder{
+.oder {
     font-size: 16px;
     color: #6B3B20;
 }
