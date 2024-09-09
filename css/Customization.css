@@ -3312,8 +3312,14 @@ footer .logo {
 
 #Checkout_area_product_display_hr_2 {
     /* padding: 0 3% 0 22%; */
+
     margin-bottom: 20%;
-    padding: 0 3% 0 3%;
+    padding: 0 3%;
+}
+
+
+#Checkout_area_product_display_hr_2_hr {
+    border-bottom: 2px solid #EACEB1;
 }
 
 
@@ -3439,8 +3445,13 @@ footer .logo {
     /* padding: 0 5%; */
     /* padding: 0 3% 0 22%; */
     /* height: 5%; */
-    padding: 0 3% 0 3%;
+    padding: 0 3%;
 }
+
+#Checkout_area_product_display_hr1_hr{
+    border-bottom:2px solid #EACEB1 ;
+}
+
 
 #Checkout_area_Subtotal {
     display: flex;
@@ -3539,6 +3550,19 @@ footer .logo {
     #Checkout_area_btn_box {
         width: 100%;
         /* margin-left: 10%; */
+    }
+}
+
+
+@media(max-width:1024px) {
+    #Checkout_area_btn_box {
+        width: 80%;
+        /* margin-left: 10%; */
+    }
+
+    #Checkout_area_box_a1_img {
+        width: 85%;
+        margin-left: 5%;
     }
 }
 
