@@ -4,67 +4,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login 會員登入</title>
-    <link rel="stylesheet" href="./css/login-style.css">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> -->
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/login-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif+TC:wght@200..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Matemasie&family=New+Amsterdam&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
-    <section id="login">
-        <header>
-            <h1>LOGIN</h1>
-            <h3>會員登入</h3>
-            <img src="./img/箭頭方塊.svg" alt="">
-        </header>
+    <div class="background">
+        <nav class="menu">
+            <div class="list_box">
+                <!-- <div class="list_logo"><img src="../imgs/list_logo.png" alt=""></div>
+                <label for="list_opening"><img src="../icons/list.svg" alt=""></label> -->
 
-        <div id="login_box">
-
-            <div class="login_box-s">
-                <figure><img src="./img/user.svg" alt=""></figure>
-                <p>電子信箱</p>
             </div>
+            <input type="checkbox" id="list_opening"><!--選單開關-->
+            <ul class="menu_list hidden">
+                <!-- <a href="#">
+                    <li class="menu_list_item">HOME</li>
+                </a>
+                <a href="#">
+                    <li class="menu_list_item">SHOP</li>
+                </a>
+                <a href="#">
+                    <li class="menu_list_item">ABOUT</li>
+                </a>
+                <a href="#">
+                    <li class="menu_list_item">NEWS</li>
+                </a>
+                <a href="#">
+                    <li class="menu_list_item">Q & A</li>
+                </a>
+                <a href="#">
+                    <li id="customized" class="menu_list_item">
+                        <p>客製化</p> -->
+                    </li>
+                </a>
+            </ul>
 
-            <div class="login_box-s">
-                <figure><img src="./img/unlock.svg" alt=""></figure>
-                <p>密碼</p>
+            <ul class="menu_icon hidden">
+            </ul>
+        </nav>
+
+        <main class="main">
+            <div class="half-circle">
+                <header class="title">
+                    <img src="./imge/Rectangle.png" alt="" class="rectangle">
+                    <h1>LOGIN</h1>
+                    <h3>會員登入</h3>
+                </header>
+                <div class="login_box">
+                    <form action="">
+                        <!--<div style="position: relative;">
+                            <i class="icon" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%);">🔍</i>
+                            <input type="text" style="padding-left: 30px;" placeholder="輸入內容...">
+                        </div>-->
+                        <div class="box_item key">
+                            <i class="icon" style="margin:0 10px;display: block;"><img src="./imge/user.svg"
+                                    alt=""></i>
+                            <input type="email" placeholder="電子信箱">
+                        </div>
+                        <div class="box_item key">
+                            <i class="icon" style="margin:0 10px;display: block;"><img src="./imge/unlock.svg"
+                                    alt=""></i>
+                            <input type="password" placeholder="密碼">
+                        </div>
+                        <div class="links_box">
+                            <a href="" class="link_item">註冊帳號</a>
+                            <a href="" class="link_item">忘記密碼</a>
+                        </div>
+                        <button class="box_item button">登入會員</button>
+                        <div class="horizon">
+                            <hr class="horizon_line" noshade="true">
+                            <p class="horizon_text">或</p>
+                            <hr class="horizon_line" noshade="true">
+                        </div>
+                        <div class="box_item another_key">
+                            <a href="">
+                                <!-- <i class="icon" style="margin:0 10px;display: inline-block;"><img
+                                        src="../icons/google.png" alt=""></i> -->
+                                        <i class="icon"><img src="./imge/google.png" alt=""></i>
+                                <p class="another_key_item">Google帳號登入</p>
+                            </a>
+                        </div>
+                        <div class="box_item another_key">
+                            <a href="">
+                                <i class="icon"><img src="./imge/Line.png" alt=""></i>
+                                <p class="another_key_item">Line登入</p>
+                            </a>
+                        </div>
+                        <p style="text-align: center; color: #6B3B20; font-size: 1rem;">隱私權政策</p>
+
+
+                    </form>
+
+                </div>
+
             </div>
-
-            <div class="content">
-                <p>註冊帳號</p>
-                <p>忘記密碼</p>
-            </div>
-
-            <div id="btn">
-                <p>登入會員</p>
-            </div>
-
-            <div id="boundary">
-                <hr class="line left">
-                <p>或</p>
-                <hr class="line right">
-            </div>
-
-            <div class="login_box-s-other">
-                <figure><img src="./img/google.png" alt=""></figure>
-                <p>Google帳號登入</p>
-            </div>
-
-            <div class="login_box-s-other">
-                <figure><img src="./img/Line.png" alt=""></figure>
-                <p>LINE登入</p>
-            </div>
-
-            <div class="content">
-                <p>隱私權政策</p>
-            </div>
-
-            <!-- <div id=" background"> -->
-
-
-        </div>
-
-        </div>
-    </section>
+        </main>
+    
+    </div>
 </body>
 
 </html>
