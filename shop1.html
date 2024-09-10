@@ -4,179 +4,472 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/shop.css">
-    <title>SHOP 商品頁</title>
-    <!-- react CDN bable-->
+    <link rel="stylesheet" href="./css/Circle_shopBanner.css">
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <!-- 引用footer -->
-    <script type="text/babel" src="./Footer.jsx"></script>
-    <link rel="stylesheet" href="./css/Footer.css">
-
+    <!-- 引用ShopFilter元件 -->
+    <script type="text/babel" src="./ShopFilter.jsx"></script>
+    <title>SHOP 經典商品</title>
+    <!-- 引用menu -->
+    <link rel="stylesheet" href="./css/Menu.css">
+    <script type="text/babel" src="./Menu.jsx"></script>
 
 </head>
 
 <body>
+    <div id="menu"></div>
+    <script type="text/babel">
+        function App() {
+            React.useEffect(() => {
+                menuJS();
+            }, []); // 确保 toggleDropdown 在组件渲染后调用
+            return (
+                <Menu />
+            )
+        }
+        ReactDOM
+            .createRoot(document.getElementById('menu'))
+            .render(<App />);
+    </script>
     <header></header>
     <main>
-        <section id="banner">
-            <div class="img_container"></div>
-        </section>
-        <section id="items_content">
-            <div id="filter" class="filter">
-                <div class="filter_list">
-                    <ul class="drop-down-menu">
-                        <li id="festivalBtn"><img class="BtnPic" src="./images/shop_images/filter_btn1_down.svg"
-                                alt="" />
-                            <ul id="festivalList">
-                                <li><a href="#">情人節</a>
-                                </li>
-                                <li><a href="#">生日</a>
-                                </li>
-                                <li><a href="#">畢業</a>
-                                </li>
-                                <li><a href="#">其它節慶</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li id="countsBtn"><img class="BtnPic" src="./images/shop_images/filter_btn2_down.svg" alt="" />
-                            <ul id="countsList">
-                                <li><a href="#">4入</a>
-                                </li>
-                                <li><a href="#">6入</a>
-                                </li>
-                                <li><a href="#">12入</a>
-                                </li>
-                                <li><a href="#">24入</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li id="priceBtn"><img class="BtnPic" src="./images/shop_images/filter_btn3_down.svg" alt="" />
-                            <ul id="priceList">
-                                <li><a href="#">500元以下</a>
-                                </li>
-                                <li><a href="#">1000元以下</a>
-                                </li>
-                                <li><a href="#">2000元以下</a>
-                                </li>
-                                <li><a href="#">2000元以上</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="permutation">
-                    <div class="permutation_btn" id="permutationBtn">
-                        <a><img src="./images/shop_images/permutation.svg" alt="" /></a>
-                        <ul id="permutationList">
-                            <li><a href="">熱門</a></li>
-                            <li><a href="">推薦</a></li>
-                            <li><a href="">價格由低到高</a></li>
-                            <li><a href="">價格由高到低</a></li>
-                        </ul>
+
+        <div id="bannerCycle"></div>
+        <script type="text/babel">
+
+            const { useEffect } = React;
+
+            function App() {
+                const initCycle = () => {
+                    $(function () {
+                        $('#imgCycle').after('<div id="nav"></div>').cycle({
+                            fx: 'fade', //輪播方式
+                            timeout: 4000, //輪播速度
+                            delay: 5000, //第一次第一章圖停留時間
+                            pager: '#nav',
+                            // fit: true,
+                        });
+                    });
+
+                }
+
+                useEffect(() => {
+                    initCycle();
+
+                    const handleResize = () => {
+                        // 手動重設輪播圖
+                        $('#imgCycle').cycle('destroy'); // 假設有destroy方法來清理插件狀態
+                        $('#imgCycle').cycle(initCycle); // 重新初始化
+                    };
+
+                    window.addEventListener('resize', handleResize);
+
+                    return () => {
+                        window.removeEventListener('resize', handleResize);
+                        $('#imgCycle').cycle('destroy'); // 清理插件狀態
+                    };
+               
+
+            }, []);
+            return (<>
+                <div id="cycle">
+                    <div className="banner_box" >
+                        <div id="imgCycle">
+                            <img src="./images/shop_images/shop_banner.jpg" alt="" />
+                            <img src="./images/shop_images/shop_banner2.jpg" alt="" />
+                        </div>
+                        {/* <div className="navWrap"><nav>導覽列位置</nav><div> */}
                     </div>
                 </div>
-            </div>
+            </>)
+            }
 
-            <!-- 商品區 -->
-            <div class="items_list">
-                <div class="items_list">
+            ReactDOM
+                .createRoot(document.querySelector('#bannerCycle'))
+                .render(<App />)
+        </script>
 
-                    <div class="item_wrap">
-                        <a class="item" href="#">
-                            <div class="item_pic"> <img src="./images/shop_images/item1.jpg" alt=""></div>
-                            <div class="item_name">黃金典雅禮盒12入</div>
-                            <div class="item_price">NT 2,000</div>
-                            <div class="item_text">這款黃金典雅禮盒內含精選巧克力，包裝豪華，適合送禮自用皆宜，展現品味與高貴。</div>
+
+
+
+        <div id="root"></div>
+
+
+
+        <script type="text/babel">
+
+            function Item(props) {
+                /* 由item.id指定new標籤所顯示的指定商品項目 */
+                const newItemIds = ['2', '4', '5', '7', '13', '14'];
+                return (
+                    <div className="item_wrap">
+                        <a className="item" href="./Product_details_page.html">
+                            {/* 檢查 id 是否在 newItemIds 列表中 */}
+                            {newItemIds.includes(props.id) && (
+                                <img className="new_tag" src="./images/shop_images/item_new.svg" alt="New" />
+                            )}
+                            <div className="item_pic"> <img src={props.pic} /></div>
+                            <div className="item_name">{props.name}</div>
+                            <div className="item_price">NT {props.price}</div>
+                            <div className="item_text">{props.text}</div>
                         </a>
-                    </div>
-                    <div class="item_wrap">
-                        <a class="item" href="#">
-                            <div class="item_pic"> <img src="./images/shop_images/item2.jpg" alt=""></div>
-                            <div class="item_name">手工奢華巧克力禮盒12入</div>
-                            <div class="item_price">NT 2,600</div>
-                            <div class="item_text">每顆巧克力皆由大師手工製作，結合頂級原料，讓您體驗無可比擬的奢華口感。</div>
-                        </a>
-                    </div>
-                    <div class="item_wrap">
-                        <a class="item" href="#">
-                            <div class="item_pic"> <img src="./images/shop_images/item3.jpg" alt=""></div>
-                            <div class="item_name">璀璨星河禮盒12入</div>
-                            <div class="item_price">NT 2,800</div>
-                            <div class="item_text">璀璨星河禮盒帶來星光般的美麗，內含精緻巧克力，每一口都充滿浪漫與驚喜。</div>
-                        </a>
-                    </div>
-                    <div class="item_wrap">
-                        <a class="item" href="#">
-                            <img class="new_tag" src="./images/shop_images/item_new.svg"></img>
-                            <div class="item_pic"> <img src="./images/shop_images/item4.jpg" alt=""></div>
-                            <div class="item_name">璀璨七夕-情人節禮盒</div>
-                            <div class="item_price">NT 3,000</div>
-                            <div class="item_text">專為情人節設計的璀璨禮盒，展現愛意，巧克力的每一口都彷彿融化在心中。</div>
-                        </a>
-                    </div>
-                    <div class="item_wrap">
-                        <a class="item" href="#">
-                            <img class="new_tag" src="./images/shop_images/item_new.svg"></img>
-                            <div class="item_pic"> <img src="./images/shop_images/item5-1.jpg" alt=""></div>
-                            <div class="item_name">熱戀之吻-情人節禮盒</div>
-                            <div class="item_price">NT 3,000</div>
-                            <div class="item_text">熱戀之吻巧克力禮盒，特別為情人節打造，甜美的巧克力表達最深情的告白。</div>
-                        </a>
-                    </div>
-                    <div class="item_wrap">
-                        <a class="item" href="#">
-                            <div class="item_pic"> <img src="./images/shop_images/item6.jpg" alt=""></div>
-                            <div class="item_name">90%黑金巧克力禮盒</div>
-                            <div class="item_price">NT 2,500</div>
-                            <div class="item_text">90%高濃度黑巧克力，帶來深邃的苦甜風味，滿足對巧克力的高標準需求。</div>
-                        </a>
-                    </div>
-                    <div class="item_wrap">
-                        <a class="item" href="#">
-                            <div class="item_pic"> <img src="./images/shop_images/item7.jpg" alt=""></div>
-                            <div class="item_name">生日快樂-巧克力禮盒</div>
-                            <div class="item_price">NT 2,800</div>
-                            <div class="item_text">為生日精心準備的巧克力禮盒，充滿甜蜜和祝福，讓每一口都帶來快樂與驚喜。</div>
-                        </a>
-                    </div>
-                    <div class="item_wrap">
-                        <a class="item" href="#">
-                            <div class="item_pic"> <img src="./images/shop_images/item8.jpg" alt=""></div>
-                            <div class="item_name">摩卡經典禮盒12入</div>
-                            <div class="item_price">NT 3,000</div>
-                            <div class="item_text">摩卡風味巧克力禮盒，結合濃郁咖啡香與細膩巧克力，帶來獨特的品味體驗。</div>
-                        </a>
-                    </div>
-                    <div class="item_wrap">
+                    </div>)
+            }
+
+            const App = () => {
+
+
+
+
+                const items = [
+                    {
+                        id: '1',
+                        counts: '12',
+                        pic: './images/shop_images/item1.jpg',
+                        name: '黃金典雅禮盒12入',
+                        price: '1,800',
+                        text: '這款黃金典雅禮盒內含精選巧克力，包裝豪華，適合送禮自用皆宜，展現品味與高貴。'
+                    },
+                    {
+                        id: '2',
+                        counts: '12',
+                        pic: './images/shop_images/item2.jpg',
+                        name: '手工奢華巧克力禮盒12入',
+                        price: '2,600',
+                        text: '每顆巧克力皆由大師手工製作，結合頂級原料，讓您體驗無可比擬的奢華口感。'
+                    },
+                    {
+                        id: '3',
+                        counts: '24',
+                        pic: './images/shop_images/item3.jpg',
+                        name: '璀璨星河禮盒24入',
+                        price: '2,800',
+                        text: '璀璨星河禮盒帶來星光般的美麗，內含精緻巧克力，每一口都充滿浪漫與驚喜。'
+                    },
+                    {
+                        id: '4',
+                        counts: '12',
+                        pic: './images/shop_images/item4.jpg',
+                        name: '璀璨七夕-情人節禮盒',
+                        price: '3,000',
+                        text: '專為情人節設計的璀璨禮盒，展現愛意，巧克力的每一口都彷彿融化在心中。',
+                        fes: 'valentines'
+                    },
+                    {
+                        id: '5',
+                        counts: '12',
+                        pic: './images/shop_images/item5-1.jpg',
+                        name: '熱戀之吻-情人節禮盒',
+                        price: '3,000',
+                        text: '熱戀之吻巧克力禮盒，特別為情人節打造，甜美的巧克力表達最深情的告白。',
+                        fes: 'valentines'
+                    },
+                    {
+                        id: '6',
+                        counts: '12',
+                        pic: './images/shop_images/item6.jpg',
+                        name: '90%黑金巧克力禮盒',
+                        price: '2,500',
+                        text: '90%高濃度黑巧克力，帶來深邃的苦甜風味，滿足對巧克力的高標準需求。'
+                    },
+                    {
+                        id: '7',
+                        counts: '12',
+                        pic: './images/shop_images/item7.jpg',
+                        name: '生日快樂-巧克力禮盒',
+                        price: '1,800',
+                        text: '為生日精心準備的巧克力禮盒，充滿甜蜜和祝福，讓每一口都帶來快樂與驚喜。',
+                        fes: 'birthday'
+                    },
+                    {
+                        id: '8',
+                        counts: '12',
+                        pic: './images/shop_images/item8.jpg',
+                        name: '摩卡經典禮盒12入',
+                        price: '1,000',
+                        text: '摩卡風味巧克力禮盒，結合濃郁咖啡香與細膩巧克力，帶來獨特的品味體驗。'
+                    },
+                    {
+                        id: '9',
+                        counts: '12',
+                        pic: './images/shop_images/item9.jpg',
+                        name: '麋鹿聖誕-巧克力禮盒',
+                        price: '3,000',
+                        text: '聖誕節限定巧克力禮盒，精緻設計與美味巧克力，增添節日的歡樂與喜悅。',
+                        fes: 'otherDays'
+                    }, {
+                        id: '10',
+                        counts: '4',
+                        pic: './images/shop_images/item10.jpg',
+                        name: '黃金典雅禮盒4入',
+                        price: '480',
+                        text: '這款黃金典雅禮盒內含精選巧克力，包裝豪華，適合送禮自用皆宜，展現品味與高貴。'
+                    },
+                    {
+                        id: '11',
+                        counts: '4',
+                        pic: './images/shop_images/item11.jpg',
+                        name: '手工奢華巧克力禮盒4入',
+                        price: '300',
+                        text: '每顆巧克力皆由大師手工製作，結合頂級原料，讓您體驗無可比擬的奢華口感。'
+                    },
+                    {
+                        id: '12',
+                        counts: '4',
+                        pic: './images/shop_images/item12.jpg',
+                        name: '生日星河禮盒4入',
+                        price: '380',
+                        text: '璀璨星河禮盒帶來星光般的美麗，內含精緻巧克力，每一口都充滿浪漫與驚喜。',
+                        fes: 'birthday'
+                    },
+                    {
+                        id: '13',
+                        counts: '6',
+                        pic: './images/shop_images/item13.jpg',
+                        name: '璀璨七夕-情人節禮盒',
+                        price: '800',
+                        text: '專為情人節設計的璀璨禮盒，展現愛意，巧克力的每一口都彷彿融化在心中。',
+                        fes: 'valentines'
+                    },
+                    {
+                        id: '14',
+                        counts: '6',
+                        pic: './images/shop_images/item14.jpg',
+                        name: '熱戀之吻-情人節禮盒',
+                        price: '980',
+                        text: '熱戀之吻巧克力禮盒，特別為情人節打造，甜美的巧克力表達最深情的告白。',
+                        fes: 'valentines'
+                    },
+                    {
+                        id: '15',
+                        counts: '6',
+                        pic: './images/shop_images/item15.jpg',
+                        name: '生日快樂-慶生禮盒',
+                        price: '980',
+                        text: '生日巧克力禮盒，特別為慶祝生日打造，甜美的巧克力表達最真誠的祝福。',
+                        fes: 'birthday'
+                    }
+                ];
+
+
+                // 創建狀態來管理篩選條件
+                const [filteredItems, setFilteredItems] = React.useState(items);
+                const [selectedPriceRange, setSelectedPriceRange] = React.useState(null);
+                const [selecteCountsRange, setSelectedCountsRange] = React.useState(null);
+                const [selecteFestivalRange, setSelectedFestivalRange] = React.useState(null);
+                const [selectedPermutation, setSelectedPermutation] = React.useState(null);
+
+
+                // 創建狀態來控制每個下拉菜單的顯示狀態
+                const [showFestivalDropdown, setShowFestivalDropdown] = React.useState(false);
+                const [showCountsDropdown, setShowCountsDropdown] = React.useState(false);
+                const [showPriceDropdown, setShowPriceDropdown] = React.useState(false);
+                const [showPermutationDropdown, setShowPermutationDropdown] = React.useState(false);
+                const handleFestivalFilter = (range) => {
+                    setSelectedFestivalRange(range);
+                    const filtered = items.filter(item => {
+                        const fes = item.fes;
+                        switch (range) {
+                            case 'valentines':
+                                return fes === 'valentines';
+                            case 'birthday':
+                                return fes === 'birthday';
+                            case 'graduation':
+                                return fes === 'graduation';
+                            case 'otherDay':
+                                return fes === 'otherDay';
+                            default:
+                                return true;
+                        }
+                    });
+                    setFilteredItems(filtered);
+                };
+                const handlePriceFilter = (range) => {
+                    setSelectedPriceRange(range);
+                    const filtered = items.filter(item => {
+                        const price = parseInt(item.price.replace(',', '').trim());
+                        switch (range) {
+                            case 'below500':
+                                return price < 501;
+                            case 'below1000':
+                                return price < 1001;
+                            case 'below2000':
+                                return price < 2001;
+                            case 'above2000':
+                                return price > 2000;
+                            default:
+                                return true;
+                        }
+                    });
+                    setFilteredItems(filtered);
+                };
+                const handleCountsFilter = (range) => {
+                    console.log('Selected counts range:', range); // 確認選擇的篩選條件
+                    setSelectedCountsRange(range);
+                    const filtered = items.filter(item => {
+                        const counts = parseInt(item.counts.replace(',', '').trim());
+                        console.log('Item counts:', counts); // 確認每個 item 的 counts
+                        switch (range) {
+                            case 'are4':
+                                return counts === 4;
+                            case 'are6':
+                                return counts === 6;
+                            case 'are12':
+                                return counts === 12;
+                            case 'are24':
+                                return counts === 24;
+                            default:
+                                return true;
+                        }
+                    });
+                    setFilteredItems(filtered);
+                };
+
+
+                // 函數：切換下拉菜單的顯示狀態
+                //    const toggleDropdown = (dropdownSetter) => {
+                //       dropdownSetter(prevState => !prevState); 
+                // };
+                /*     const toggleDropdown = (dropdown) => {
+                        switch (dropdown) {
+                            case 'price':
+                                setShowPriceDropdown(prevState => !prevState);
+                                break;
+                            case 'counts':
+                                setShowCountsDropdown(prevState => !prevState);
+                                break;
+                            case 'festival':
+                                setShowFestivalDropdown(prevState => !prevState);
+                                break;
+                            case 'permutation':
+                                setShowPermutationDropdown(prevState => !prevState);
+                                break;
+                            default:
+                                break;
+                        }
+                    }; */
+
+                const toggleDropdown = (dropdown, show) => {
+                    switch (dropdown) {
+                        case 'price':
+                            setShowPriceDropdown(show);
+                            break;
+                        case 'counts':
+                            setShowCountsDropdown(show);
+                            break;
+                        case 'festival':
+                            setShowFestivalDropdown(show);
+                            break;
+                        case 'permutation':
+                            setShowPermutationDropdown(show);
+                            break;
+                        default:
+                            break;
+                    }
+                };
+                const sortItems = (permutation) => {
+                    let sortedItems = [...filteredItems]; // 創建 `filteredItems` 的副本以進行排序
+
+                    switch (permutation) {
+                        case 'popular':
+                            // 根據熱門排序，這裡假設 items 本身沒有熱門排序，根據需求可以更改
+                            sortedItems.sort((a, b) => a.id - b.id); // 替換為實際的熱門排序邏輯
+                            break;
+                        case 'recommended':
+                            // 根據推薦排序
+                            sortedItems.sort((a, b) => b.id - a.id); // 替換為實際的推薦排序邏輯
+                            break;
+                        case 'priceAsc':
+                            sortedItems.sort((a, b) => parseInt(a.price.replace(',', '')) - parseInt(b.price.replace(',', '')));
+                            break;
+                        case 'priceDesc':
+                            sortedItems.sort((a, b) => parseInt(b.price.replace(',', '')) - parseInt(a.price.replace(',', '')));
+                            break;
+                        default:
+                            break;
+                    }
+
+                    setFilteredItems(sortedItems);
+                };
+                const handlePermutationFilter = (option) => {
+                    setSelectedPermutation(option);
+                    sortItems(option); // 根據選擇的 permutation 進行排序
+                };
+
+
+
+                return (<>
+                    <section id="items_content">
+                        <ShopFilter
+                            handlePermutationFilter={handlePermutationFilter}
+                            handleFestivalFilter={handleFestivalFilter}
+                            handleCountsFilter={handleCountsFilter}
+                            handlePriceFilter={handlePriceFilter}
+                            toggleDropdown={toggleDropdown}
+                            showPriceDropdown={showPriceDropdown}
+                            showCountsDropdown={showCountsDropdown}
+                            showFestivalDropdown={showFestivalDropdown}
+                            showPermutationDropdown={showPermutationDropdown}
+                        />
+
+                        <div className="items_list">
+                            {/*items => filteredItems*/}
+                            {filteredItems.map((item) => {
+                                return (
+                                    <Item key={item.id}
+                                        id={item.id}
+                                        pic={item.pic}
+                                        name={item.name}
+                                        price={item.price}
+                                        text={item.text} />
+                                )
+                            })
+                            }
+
+                        </div>
+                        <div className="change_page">
+                            <div id="pages_num">
+                                <a href="./shop.html">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                            </div>
+                            <div className="next_pages">
+                                <a href="#" className="next_page_text"><img src="./images/footer_btn_nextpage.svg" alt="" /></a>
+                            </div>
+                        </div>
+                    </section>
+                    <Footer />
+
+                </>)
+            };
+            ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+        </script>
+
+
+        <!-- <div class="item_wrap">
                         <a class="item" href="#">
                             <div class="item_pic"> <img src="./images/shop_images/item9.jpg" alt=""></div>
                             <div class="item_name">麋鹿聖誕-巧克力禮盒</div>
                             <div class="item_price">NT 3,000</div>
                             <div class="item_text">聖誕節限定巧克力禮盒，精緻設計與美味巧克力，增添節日的歡樂與喜悅。</div>
                         </a>
-                    </div>
+                    </div> -->
 
-                </div>
-            </div>
+        </div>
 
-            <!-- 換頁區 -->
-            <div class="change_page">
-                <div id="pages_num">
-                    <a href="#">1</a>
-                    <a href="./shop_page2.html">2</a>
-                    <a href="./shop_page2.html">3</a>
-                </div>
-                <div class="next_pages" id="next_pages">
-                    <a href="#" class="next_page_text"><img src="./images/footer_btn_nextpage.svg" alt=""></a>
-                </div>
-            </div>
-        </section>
+
+
+
 
     </main>
-    <!-- footer -->
-    <div id="footer"></div>
+    <!-- 引用Footer元件 -->
+    <script type="text/babel" src="./Footer.jsx"></script>
+    <link rel="stylesheet" href="./css/Footer.css">
+    <!-- <div id="footer"></div>
+    
     <script type="text/babel">
         function App() {
             return (
@@ -184,12 +477,16 @@
             )
         }
         ReactDOM
-        .createRoot(document.getElementById('footer'))
-        .render(<App />);
-    </script>
-
+            .createRoot(document.getElementById('footer'))
+            .render(<App />);
+    </script> -->
     <!-- js -->
+    <!-- 可以使用套件給的 or官網的最新版 但只能擇一使用 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="./js/shop.js"></script>
+    <script src="./js/jQuery/jquery.cycle.all.js"></script>
+
+    <script src="./js/Menu.js"></script>
 </body>
 
 </html>
