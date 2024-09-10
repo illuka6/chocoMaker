@@ -35,10 +35,10 @@ function ShopFilter({handlePermutationFilter, handleFestivalFilter,handlePriceFi
 
    
     return (<>
-        <div id="filter" class="filter">
-            <div class="filter_list">
-                <ul class="drop-down-menu">
-                    <li id="festivalBtn"  ref={festivalRef} onClick={() => toggleDropdown('festival', !showFestivalDropdown)} ><img class="BtnPic" src="./images/shop_images/filter_btn1_down.svg" alt="" />
+        <div id="filter" className="filter">
+            <div className="filter_list">
+                <ul className="drop-down-menu">
+                    <li id="festivalBtn"  ref={festivalRef} onClick={() => toggleDropdown('festival', !showFestivalDropdown)} ><img className="BtnPic" src="./images/shop_images/filter_btn1_down.svg" alt="" />
                         {showFestivalDropdown && (
                         <ul id="festivalList">
                             <li onClick={() => handleFestivalFilter('valentines')}><a>情人節</a>
@@ -53,7 +53,7 @@ function ShopFilter({handlePermutationFilter, handleFestivalFilter,handlePriceFi
                         )}
                     </li>
                     <li id="countsBtn" ref={countsRef}
-                            onClick={() => toggleDropdown('counts', !showCountsDropdown)}><img class="BtnPic" src="./images/shop_images/filter_btn2_down.svg" alt="" />
+                            onClick={() => toggleDropdown('counts', !showCountsDropdown)}><img className="BtnPic" src="./images/shop_images/filter_btn2_down.svg" alt="" />
                     {showCountsDropdown  && (
                         <ul id="countsList">
                             <li onClick={() => handleCountsFilter('are4')}><a>4入</a></li>
@@ -64,7 +64,7 @@ function ShopFilter({handlePermutationFilter, handleFestivalFilter,handlePriceFi
                     )}
                     </li>
                     <li id="priceBtn" ref={priceRef}
-                            onClick={() => toggleDropdown('price', !showPriceDropdown)} ><img class="BtnPic" src="./images/shop_images/filter_btn3_down.svg" alt=""/>
+                            onClick={() => toggleDropdown('price', !showPriceDropdown)} ><img className="BtnPic" src="./images/shop_images/filter_btn3_down.svg" alt=""/>
                         {showPriceDropdown && (
                             <ul id="priceList">
                                 <li onClick={() => handlePriceFilter('below500')}><a >500元以下</a></li>
@@ -76,8 +76,8 @@ function ShopFilter({handlePermutationFilter, handleFestivalFilter,handlePriceFi
                     </li>
                 </ul>
             </div>
-            <div class="permutation">
-                <div class="permutation_btn" id="permutationBtn" ref={permutationRef}
+            <div className="permutation">
+                <div className="permutation_btn" id="permutationBtn" ref={permutationRef}
                         onClick={() => toggleDropdown('permutation', !showPermutationDropdown)}>
                     <img src="./images/shop_images/permutation.svg" alt="" />
                     {showPermutationDropdown && (

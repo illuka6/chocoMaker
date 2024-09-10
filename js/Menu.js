@@ -24,5 +24,16 @@ menu_id_search_divBox_a2.addEventListener('click', () => {
     menu_id_search.style.display = 'none';
 });
 
-/* ↑↑標籤列↑↑ */
+/* ↑↑標籤搜尋轉換↑↑ */
+
+
+window.addEventListener('scroll', function() {
+    var navbar = document.getElementById('menu');
+    if (window.scrollY > 0) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
 }
