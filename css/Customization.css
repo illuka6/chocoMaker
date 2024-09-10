@@ -15,7 +15,7 @@ body {
         /*西文*/
         -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
         /*中文*/
-        "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif, "Noto Sans Traditional Chinese";
+        "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif,"Noto Sans HK", "Noto Sans Traditional Chinese";
     font-size: 100%;
     line-height: 1.5;
 }
@@ -3625,8 +3625,9 @@ footer .logo {
 
 #full_list_box_left_box1_content_p1 p {
     color: #3F1A09;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 20px;
+    font-family: "Noto Sans HK", sans-serif;
 }
 
 #full_list_box_left_box1_content_p2 {
@@ -3731,13 +3732,15 @@ footer .logo {
 #full_list_box_left_box2_div_recipient p {
     font-size: 20px;
     color: #3F1A09;
-    font-weight: 900;
+    font-weight: 700;
+font-family:"Noto Sans HK", sans-serif;
 }
 
 #cashuseer {
     font-size: 20px;
     font-weight: 900;
     color: #3F1A09;
+    font-family:"Noto Sans HK", sans-serif;
 }
 
 #full_list_box_left_box2_input1,
@@ -3901,10 +3904,11 @@ footer .logo {
     margin-bottom: 5%;
 }
 
-.useofter {
+#useofter {
     font-size: 20px;
     color: #3F1A09;
-    font-weight: 900
+    font-weight: 900;
+    font-family: "Noto Sans HK", sans-serif;;
 }
 
 #full_list_box_left_box4_box1 {
