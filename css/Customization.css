@@ -3297,10 +3297,11 @@ footer .logo {
 }
 
 #product_tips_cash1 p {
-    font-size: 25px;
+    font-size: 26px;
     color: #3F1A09;
     font-weight: 900;
-    font-family: 'Inter';
+    font-family: "Noto Sans HK";
+    /* font-family: 'Inter'; */
 }
 
 #product_tips_garbage_can {
@@ -3515,7 +3516,7 @@ footer .logo {
 #Checkout_area_total_div p {
     font-size: 28px;
     color: #3F1A09;
-    font-weight: 600;
+    font-weight: 800;
     font-family: "Noto Sans HK", sans-serif;
 }
 
@@ -3643,7 +3644,7 @@ footer .logo {
 
 #full_list_box_left_box1_content_p1 p {
     color: #3F1A09;
-    font-weight: 700;
+    font-weight: 800;
     font-size: 20px;
     font-family: "Noto Sans HK", sans-serif;
 }
@@ -3659,6 +3660,7 @@ footer .logo {
 
 .full_list_box_left_box1_content_text {
     display: flex;
+    margin-bottom: 2%;
 }
 
 .full_list_box_left_box1_content_text_special {
@@ -3668,8 +3670,9 @@ footer .logo {
 
 .classusename {
     color: #3F1A09;
-    font-weight: 900;
+    font-weight: 500;
     font-size: 18px;
+    font-family: "Noto Sans HK";
 }
 
 #full_list_box_left_box1_content_input {
@@ -3705,7 +3708,8 @@ footer .logo {
 
 #full_list_box_left_box1_content_p3 {
     margin-left: 20px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
+    margin-top: 5%;
 }
 
 #full_list_box_left_box1_content_input2 {
@@ -3722,7 +3726,9 @@ footer .logo {
 
 #full_list_box_left_box1_content_p4 {
     margin-left: 20px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
+    margin-top: 3%;
+
 }
 
 #full_list_box_left_box1_content_input3 {
@@ -3759,12 +3765,12 @@ footer .logo {
 }
 
 #full_list_box_left_box2_div {
-    margin: 0 38px 10% 38px;
+    margin: 0 38px 7% 38px;
 }
 
 #full_list_box_left_box2_div_recipient {
     display: flex;
-    margin-top: 10%;
+    margin-top: 7%;
     margin-bottom: 5%;
 }
 
@@ -3915,11 +3921,11 @@ footer .logo {
 }
 
 #full_list_box_left_box3_div {
-    margin: 0 38px 10% 38px;
+    margin: 0 38px 7% 38px;
 }
 
 #full_list_box_left_box3_div_payment {
-    margin-top: 10%;
+    margin-top: 7%;
 }
 
 #full_list_box_left_box3_div_box {
@@ -3959,11 +3965,11 @@ footer .logo {
 }
 
 #full_list_box_left_box4_div {
-    margin: 0 38px 10% 38px;
+    margin: 0 38px 7% 38px;
 }
 
 #full_list_box_left_box4_transport {
-    margin-top: 10%;
+    margin-top: 7%;
     margin-bottom: 5%;
 }
 
@@ -4005,7 +4011,8 @@ footer .logo {
 .timeClass {
     font-size: 18px;
     color: #3F1A09;
-    font-weight: 600;
+    font-weight: 500;
+    font-family: "Noto Sans HK";
 }
 
 
