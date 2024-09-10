@@ -15,7 +15,7 @@ body {
         /*西文*/
         -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
         /*中文*/
-        "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif,"Noto Sans HK", "Noto Sans Traditional Chinese";
+        "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif, "Noto Sans HK", "Noto Sans Traditional Chinese";
     font-size: 100%;
     line-height: 1.5;
 }
@@ -3177,8 +3177,8 @@ footer .logo {
 #product_tips_p1_p1 {
     font-size: 18px;
     color: #3F1A09;
-    font-weight: 900;
-    font-size: 'Inter';
+    font-weight: 700;
+    font-family: "Noto Sans HK", sans-serif;
 }
 
 #product_tips_p1_p2,
@@ -3516,6 +3516,7 @@ footer .logo {
     font-size: 28px;
     color: #3F1A09;
     font-weight: 600;
+    font-family: "Noto Sans HK", sans-serif;
 }
 
 @media(max-width:1440px) {
@@ -3588,6 +3589,13 @@ footer .logo {
     margin-bottom: 5%;
 }
 
+@media(max-width:1441px) {
+    #Checkout_area_box_a1 {
+        width: 100%;
+    }
+}
+
+
 @media(max-width:1024px) {
     #Checkout_area_box_a1 {
         width: 150%;
@@ -3635,16 +3643,9 @@ footer .logo {
 
 #full_list_box_left_box1_content_p1 p {
     color: #3F1A09;
-<<<<<<< HEAD
     font-weight: 700;
     font-size: 20px;
     font-family: "Noto Sans HK", sans-serif;
-=======
-    font-size: 20px;
-    font-weight: 900;
-    /* font-family: 'Inter'; */
-    font-family: 'Noto Sans TC', sans-serif;
->>>>>>> a945459733e67de9cae93f336fd8c5316a302ff3
 }
 
 #full_list_box_left_box1_content_p2 {
@@ -3771,14 +3772,14 @@ footer .logo {
     font-size: 20px;
     color: #3F1A09;
     font-weight: 700;
-font-family:"Noto Sans HK", sans-serif;
+    font-family: "Noto Sans HK", sans-serif;
 }
 
 #cashuseer {
     font-size: 20px;
     font-weight: 900;
     color: #3F1A09;
-    font-family:"Noto Sans HK", sans-serif;
+    font-family: "Noto Sans HK", sans-serif;
 }
 
 #full_list_box_left_box2_input1,
@@ -3970,11 +3971,9 @@ font-family:"Noto Sans HK", sans-serif;
     font-size: 20px;
     font-weight: 900;
     color: #3F1A09;
-<<<<<<< HEAD
     font-weight: 900;
-    font-family: "Noto Sans HK", sans-serif;;
-=======
->>>>>>> a945459733e67de9cae93f336fd8c5316a302ff3
+    font-family: "Noto Sans HK", sans-serif;
+    ;
 }
 
 #full_list_box_left_box4_box1 {
@@ -4057,6 +4056,7 @@ font-family:"Noto Sans HK", sans-serif;
     font-size: 20px;
     font-weight: 900;
     color: #3F1A09;
+    font-family: "Noto Sans HK", sans-serif;
 }
 
 #full_list_box_right_order_box {
@@ -4080,8 +4080,9 @@ font-family:"Noto Sans HK", sans-serif;
 .chbox1 {
     font-size: 18px;
     color: #3F1A09;
-    font-weight: 900;
-
+    font-weight: 700;
+    font-family: "Noto Sans HK", sans-serif;
+    ;
 }
 
 
@@ -4478,6 +4479,7 @@ font-family:"Noto Sans HK", sans-serif;
     font-size: 28px;
     color: #3F1A09;
     font-weight: 700;
+    font-family: "Noto Sans HK", sans-serif;
 }
 
 #full_list_box_right_order_box6_total_cash {
