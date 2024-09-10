@@ -3391,8 +3391,8 @@ footer .logo {
 #Checkout_area_commodity__content1 p {
     font-size: 18px;
     color: #3F1A09;
-    font-family: 'Inter';
-    font-weight: 900;
+    font-family: "Noto Sans HK";
+    font-weight: 500;
 }
 
 @media(max-width:1440px) {
@@ -3416,8 +3416,8 @@ footer .logo {
 #Checkout_area_commodity__content2 p {
     font-size: 18px;
     color: #3F1A09;
-    font-family: 'Inter';
-    font-weight: 900;
+    font-family: "Noto Sans HK";
+    font-weight: 500;
 }
 
 @media(max-width:1440px) {
@@ -3481,8 +3481,8 @@ footer .logo {
 
 #Checkout_area_Subtotal_div p {
     font-size: 18px;
-    font-weight: 900;
-    font-family: 'Inter';
+    font-weight: 500;
+    font-family: "Noto Sans HK";
 }
 
 @media(max-width:1440px) {
@@ -3771,7 +3771,7 @@ footer .logo {
 #full_list_box_left_box2_div_recipient {
     display: flex;
     margin-top: 7%;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
 }
 
 #full_list_box_left_box2_div_recipient p {
@@ -3930,7 +3930,7 @@ footer .logo {
 
 #full_list_box_left_box3_div_box {
     margin-left: 25px;
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 #full_list_box_left_box3_divcredit_card {
@@ -3945,13 +3945,13 @@ footer .logo {
 
 
 #full_list_box_left_box3_divcredit_card img {
-    width: 50%;
+    width: 30%;
 }
 
 #full_list_box_left_box3_divcredit_card_cash_on_delivery {
     display: flex;
     align-items: center;
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 #full_list_box_left_box3_divcredit_card_cash_on_delivery label {
@@ -3992,10 +3992,12 @@ footer .logo {
 
 /* ↑↑行事曆↑↑ */
 
-
+#full_list_box_left_box4_calendar{
+    margin-right: 8%;
+}
 
 #full_list_box_left_box4_calendar img {
-    width: 80%;
+    width: 100%;
 }
 
 #full_list_box_left_box4_box_shipping_time {
@@ -4015,6 +4017,10 @@ footer .logo {
     font-family: "Noto Sans HK";
 }
 
+#full_list_box_left_box4_box2{
+  
+}
+
 
 .full_list_box_left_box4_box_date_div {
     display: flex;
@@ -4023,7 +4029,7 @@ footer .logo {
 
 #full_list_box_left_box4_box_date_input label {
     /* margin-right: 10px; */
-    margin-right: 30px;
+    margin-right: 20px;
 }
 
 #out_time1,
@@ -4034,7 +4040,7 @@ footer .logo {
 
 #full_list_box_left_box4_box_date_day {
     /* padding: 5px 0; */
-    padding: 4% 0;
+    padding: 5% 0;
     border: 2px solid #E1CBAA;
     border-radius: 5px;
     margin-top: 8px;
