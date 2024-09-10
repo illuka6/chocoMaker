@@ -46,12 +46,11 @@
                 const initCycle = () => {
                     $(function () {
                         $('#imgCycle').after('<div id="nav"></div>').cycle({
-
                             fx: 'fade', //輪播方式
                             timeout: 4000, //輪播速度
                             delay: 5000, //第一次第一章圖停留時間
                             pager: '#nav',
-                            fit: true,
+                            // fit: true,
                         });
                     });
 
@@ -59,32 +58,33 @@
 
                 useEffect(() => {
                     initCycle();
-                    // 當視窗大小改變時，重新初始化輪播
+
                     const handleResize = () => {
-                        $('#imgCycle').cycle('destroy'); // 先銷毀原本的輪播
-                        initCycle(); // 重新初始化
+                        // 手動重設輪播圖
+                        $('#imgCycle').cycle('destroy'); // 假設有destroy方法來清理插件狀態
+                        $('#imgCycle').cycle(initCycle); // 重新初始化
                     };
+
                     window.addEventListener('resize', handleResize);
 
-                    // 清理事件監聽器
                     return () => {
                         window.removeEventListener('resize', handleResize);
+                        $('#imgCycle').cycle('destroy'); // 清理插件狀態
                     };
-                }, []);
-                return (<>
-                    <div id="cycle">
+               
 
-                        <div class="banner_box" >
-                            <div id="imgCycle">
-                                <img src="./images/shop_images/shop_banner.jpg" alt="" />
-                                <img src="./images/shop_images/shop_banner2.jpg" alt="" />
-                            </div>
-                            {/* <div className="navWrap"><nav>導覽列位置</nav><div> */}
+            }, []);
+            return (<>
+                <div id="cycle">
+                    <div className="banner_box" >
+                        <div id="imgCycle">
+                            <img src="./images/shop_images/shop_banner.jpg" alt="" />
+                            <img src="./images/shop_images/shop_banner2.jpg" alt="" />
                         </div>
-
-
+                        {/* <div className="navWrap"><nav>導覽列位置</nav><div> */}
                     </div>
-                </>)
+                </div>
+            </>)
             }
 
             ReactDOM
@@ -103,14 +103,14 @@
 
             function Item(props) {
                 /* 由item.id指定new標籤所顯示的指定商品項目 */
-                const newItemIds = ['2','4', '5', '7','13','14'];
+                const newItemIds = ['2', '4', '5', '7', '13', '14'];
                 return (
                     <div className="item_wrap">
                         <a className="item" href="./Product_details_page.html">
-                             {/* 檢查 id 是否在 newItemIds 列表中 */}
-                {newItemIds.includes(props.id) && (
-                    <img className="new_tag" src="./images/shop_images/item_new.svg" alt="New" />
-                )}
+                            {/* 檢查 id 是否在 newItemIds 列表中 */}
+                            {newItemIds.includes(props.id) && (
+                                <img className="new_tag" src="./images/shop_images/item_new.svg" alt="New" />
+                            )}
                             <div className="item_pic"> <img src={props.pic} /></div>
                             <div className="item_name">{props.name}</div>
                             <div className="item_price">NT {props.price}</div>
@@ -415,29 +415,29 @@
                             showPermutationDropdown={showPermutationDropdown}
                         />
 
-                        <div class="items_list">
+                        <div className="items_list">
                             {/*items => filteredItems*/}
                             {filteredItems.map((item) => {
                                 return (
-                                    <Item key={item.id} 
-                                    id={item.id}
-                                    pic={item.pic} 
-                                    name={item.name} 
-                                    price={item.price} 
-                                    text={item.text} />
+                                    <Item key={item.id}
+                                        id={item.id}
+                                        pic={item.pic}
+                                        name={item.name}
+                                        price={item.price}
+                                        text={item.text} />
                                 )
                             })
                             }
 
                         </div>
-                        <div class="change_page">
+                        <div className="change_page">
                             <div id="pages_num">
                                 <a href="./shop.html">1</a>
                                 <a href="#">2</a>
                                 <a href="#">3</a>
                             </div>
-                            <div class="next_pages">
-                                <a href="#" class="next_page_text"><img src="./images/footer_btn_nextpage.svg" alt="" /></a>
+                            <div className="next_pages">
+                                <a href="#" className="next_page_text"><img src="./images/footer_btn_nextpage.svg" alt="" /></a>
                             </div>
                         </div>
                     </section>
