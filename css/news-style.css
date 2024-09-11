@@ -129,6 +129,10 @@ header {
 .main .news_center .news_box .box__list .content:first-child {
     margin-top: 0px;
 }
+
+.news_content  p{
+    line-height: 2rem;
+}
 /* 
 .main .title {
     margin: 5rem 7rem 5rem 5rem;
@@ -158,32 +162,6 @@ header {
 
 /* Mobile Styles */
 @media only screen and (max-width: 435px) {
-    .title .rectangle {
-        margin-top: 130px;
-    }
-
-    .title h1 {
-        border-top: 136px;
-        font-size: 1.5rem;
-        letter-spacing: 4px;
-        color: #CFB286;
-    }
-
-    .title h3 {
-        margin-left: 6.5rem;
-        font-size: 1rem;
-    }
-
-    .title .rectangle {
-        position: absolute;
-        top: 12rem;
-        left: 100px;
-    }
-
-    .background::before {
-        background-size: cover;
-    }
-
 
     .main .news_center {
         justify-content: center;
@@ -214,6 +192,7 @@ header {
     .main .news_center .news_box .news .news_content {
         display: none;
     }
+    
 
     .main .news_center .news_box .box__list .content {
         margin: 46px 0 46px 0;
