@@ -4105,6 +4105,12 @@ footer .logo {
     font-family: "Noto Sans HK";
 }
 
+@media(max-width:1025px){
+    .timeClass {
+    font-size: 14px
+    } 
+}
+
 #full_list_box_left_box4_box2 {}
 
 
@@ -4689,6 +4695,12 @@ footer .logo {
     color: #3F1A09;
     font-weight: 700;
     font-family: "Noto Sans HK", sans-serif;
+}
+
+@media(max-width:1025px){
+    #full_list_box_right_order_box6_total p {
+        font-size: 24px;
+    }
 }
 
 #full_list_box_right_order_box6_total_cash {
