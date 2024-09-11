@@ -3464,13 +3464,13 @@ footer .logo {
 
 #Checkout_area_Subtotal {
     display: flex;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
     width: 100%;
 }
 
 #Checkout_area_Subtotal_div {
     display: flex;
-    margin-top: 5%;
+    margin-top: 3%;
     margin-left: 5%;
 }
 
@@ -3504,7 +3504,7 @@ footer .logo {
 #Checkout_area_total {
     display: flex;
     width: 100%;
-    margin-top: 5%;
+    margin-top: 3%;
     margin-left: 12%;
 
 }
@@ -3550,7 +3550,7 @@ footer .logo {
 
 #Checkout_area_btn_box {
     margin-top: 20%;
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     width: 80%;
     margin-left: 10%;
@@ -3570,10 +3570,10 @@ footer .logo {
         /* margin-left: 10%; */
     }
 
-    #Checkout_area_box_a1_img {
+    /* #Checkout_area_box_a1_img {
         width: 85%;
         margin-left: 5%;
-    }
+    } */
 }
 
 
@@ -3584,34 +3584,122 @@ footer .logo {
     align-items: center;
 }
 
+/* 
+@media(max-width:1441px) {
+    #Checkout_area_box2 {
+        margin-right: 150px;
+    }
+}
+
+
+@media(max-width:1025px) {
+    #Checkout_area_box2 {
+        margin-right: 10px;
+    }
+}
+
+
+
+
+@media(max-width:1441px) {
+    #Checkout_area_box_a1 {
+        width: 110%;
+    }
+}
+
+
+
 #Checkout_area_box_a1 {
-    width: 80%;
+    width: 90%;
     margin-right: 16%;
     margin-bottom: 5%;
 }
 
 @media(max-width:1441px) {
     #Checkout_area_box_a1 {
-        width: 100%;
+        width: 110%;
     }
 }
 
 
-@media(max-width:1024px) {
+@media(max-width:1025px) {
     #Checkout_area_box_a1 {
         width: 150%;
     }
+} */
+
+#cash_div_img1 {
+   position: absolute;
+   bottom: 18%;
+   right: 100px;
+   width: 75%;
 }
+
+@media(max-width:1441px) {
+    #cash_div_img1 {
+        right: 23%;
+        bottom: 15%;
+    }
+}
+
+
+@media(max-width:1200px) {
+    #cash_div_img1 {
+        right: 17%;
+        bottom: 12%;
+    }
+}
+
+
+
+#cash_div_img2{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 90%;
+}
+
+
+
+@media(max-width:1441px) {
+    #cash_div_img2 {
+        right: 40px;
+    }
+}
+
+
+@media(max-width:1200px) {
+    #cash_div_img2 {
+        right: 3%;
+    }
+}
+
+/* 
+@media(max-width:1025px) {
+    #Checkout_area_box_a1 {
+        margin-right: 190px;
+    }
+}
+
+
 
 #Checkout_area_box_a2 {
     margin-bottom: 5%;
+    width: 110%;
 }
+
+@media(max-width:1441px) {
+    #Checkout_area_box_a2 {
+        width: 130%;
+    }
+}
+
 
 @media(max-width:1024px) {
     #Checkout_area_box_a2 {
         width: 150%;
     }
-}
+} */
 
 
 /* 購物車第二頁 */
@@ -3622,7 +3710,7 @@ footer .logo {
 }
 
 #full_list_box_left {
-    margin-right: 2%;
+    margin-right: 1.5%;
 }
 
 #full_list_box_left_box1 {
@@ -3992,7 +4080,7 @@ footer .logo {
 
 /* ↑↑行事曆↑↑ */
 
-#full_list_box_left_box4_calendar{
+#full_list_box_left_box4_calendar {
     margin-right: 8%;
 }
 
@@ -4017,9 +4105,7 @@ footer .logo {
     font-family: "Noto Sans HK";
 }
 
-#full_list_box_left_box4_box2{
-  
-}
+#full_list_box_left_box4_box2 {}
 
 
 .full_list_box_left_box4_box_date_div {
@@ -4150,7 +4236,7 @@ footer .logo {
 #full_list_box_right_order_box_but1_div_p3 {
     display: flex;
     align-items: center;
-    margin: 0 10px;
+    margin: 0 15px;
     font-size: 20px;
     font-weight: 900;
     font-family: 'Noto Serif TC';
@@ -4159,7 +4245,7 @@ footer .logo {
 #full_list_box_right_order_box_butbox_p3 {
     display: flex;
     align-items: center;
-    margin: 0 10px;
+    margin: 0 15px;
     font-size: 20px;
     font-weight: 900;
     font-family: 'Noto Serif TC';
@@ -4436,6 +4522,11 @@ footer .logo {
     margin-top: 40%;
 }
 
+#full_list_box_right_order_box4_hr{
+    border-bottom: 2px solid #EACEB1;
+}
+
+
 @media(min-width:1440px) {
     #full_list_box_right_order_box4 {
         margin-top: 0%;
@@ -4477,6 +4568,10 @@ footer .logo {
 #full_list_box_right_order_box5 {
     margin: 0 8%;
     margin-top: 5%;
+}
+
+#full_list_box_right_order_box5_hr{
+    border-bottom: 2px solid #EACEB1;
 }
 
 #full_list_box_right_order_box6 {
