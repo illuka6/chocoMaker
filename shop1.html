@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/shop.css">
-    <link rel="stylesheet" href="./css/Circle_shopBanner.css">
+    
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -16,6 +15,9 @@
     <!-- 引用menu -->
     <link rel="stylesheet" href="./css/Menu.css">
     <script type="text/babel" src="./Menu.jsx"></script>
+    <!-- 引用swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/shop.css">
 
 </head>
 
@@ -43,48 +45,49 @@
             const { useEffect } = React;
 
             function App() {
-                const initCycle = () => {
-                    $(function () {
-                        $('#imgCycle').after('<div id="nav"></div>').cycle({
-                            fx: 'fade', //輪播方式
-                            timeout: 4000, //輪播速度
-                            delay: 5000, //第一次第一章圖停留時間
-                            pager: '#nav',
-                            // fit: true,
-                        });
-                    });
-
-                }
 
                 useEffect(() => {
-                    initCycle();
 
-                    const handleResize = () => {
-                        // 手動重設輪播圖
-                        $('#imgCycle').cycle('destroy'); // 假設有destroy方法來清理插件狀態
-                        $('#imgCycle').cycle(initCycle); // 重新初始化
-                    };
+                    const swiper = new Swiper('.swiper', {
+                        // Swiper 設定選項
+                        loop: true, // 無限循環模式
+                        autoplay: {
+                            delay: 5000, // 自動輪播時間，單位是毫秒
+                        },
+                        speed: 800, // 變化過渡動畫持續 600 毫秒
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                        scrollbar: {
+                            el: '.swiper-scrollbar',
+                            hide: true,
+                        },
+                        // If we need pagination
+                        pagination: {
+                            el: '.swiper-pagination',
+                        },
+                    });
 
-                    window.addEventListener('resize', handleResize);
+                }, []);
 
-                    return () => {
-                        window.removeEventListener('resize', handleResize);
-                        $('#imgCycle').cycle('destroy'); // 清理插件狀態
-                    };
-               
+                return (<>
 
-            }, []);
-            return (<>
-                <div id="cycle">
-                    <div className="banner_box" >
-                        <div id="imgCycle">
-                            <img src="./images/shop_images/shop_banner.jpg" alt="" />
-                            <img src="./images/shop_images/shop_banner2.jpg" alt="" />
+                    <div className="swiper" >
+                        <div className="swiper-wrapper">
+                            <div className="swiper-slide">
+                                <img src="./images/shop_images/shop_banner.jpg" alt="" />
+                            </div>
+                            <div className="swiper-slide">
+                                <img src="./images/shop_images/shop_banner2.jpg" alt="" />
+                            </div>
                         </div>
-                        {/* <div className="navWrap"><nav>導覽列位置</nav><div> */}
+                        {/* pagination */}
+                        <div className="swiper-pagination"></div>
+ 
                     </div>
-                </div>
-            </>)
+
+                </>)
             }
 
             ReactDOM
@@ -331,24 +334,24 @@
 
                 // 函數：切換下拉菜單的顯示狀態
                 //    const toggleDropdown = (dropdownSetter) => {
-                //       dropdownSetter(prevState => !prevState); 
+                //       dropdownSetter(prevState => !prevState);
                 // };
                 /*     const toggleDropdown = (dropdown) => {
                         switch (dropdown) {
                             case 'price':
                                 setShowPriceDropdown(prevState => !prevState);
-                                break;
-                            case 'counts':
+                        break;
+                        case 'counts':
                                 setShowCountsDropdown(prevState => !prevState);
-                                break;
-                            case 'festival':
+                        break;
+                        case 'festival':
                                 setShowFestivalDropdown(prevState => !prevState);
-                                break;
-                            case 'permutation':
+                        break;
+                        case 'permutation':
                                 setShowPermutationDropdown(prevState => !prevState);
-                                break;
-                            default:
-                                break;
+                        break;
+                        default:
+                        break;
                         }
                     }; */
 
@@ -484,7 +487,8 @@
     <!-- 可以使用套件給的 or官網的最新版 但只能擇一使用 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="./js/shop.js"></script>
-    <script src="./js/jQuery/jquery.cycle.all.js"></script>
+    <!-- 引用swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="./js/Menu.js"></script>
 </body>

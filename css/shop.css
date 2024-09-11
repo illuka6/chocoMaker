@@ -109,6 +109,22 @@ section {
     
 }
 
+/* Pagination bullet */
+.swiper-pagination-bullet {
+  background: #9f9f9f; 
+
+}
+
+/* Active pagination bullet */
+.swiper-pagination-bullet-active {
+  background: var(--block_brown) /* 改變激活點的顏色 */
+}
+/* .swiper-button-prev, .swiper-button-next {
+    color: #ffffffad; 
+} */
+/* .swiper-scrollbar {
+    background-color: #E1CBAA;
+}*/
 
 .filter {
     position: absolute;
