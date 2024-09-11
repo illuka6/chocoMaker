@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/login-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif+TC:wght@200..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Matemasie&family=New+Amsterdam&display=swap"
+        rel="stylesheet">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- 引用menu -->
+    <link rel="stylesheet" href="./css/Menu.css">
+    <script type="text/babel" src="./Menu.jsx"></script>
+    <script src="./js/Menu.js"></script>
+
+</head>
+
+<body>
+    <div id="menu"></div>
+    <script type="text/babel">
+        function App() {
+            React.useEffect(() => {
+                menuJS();
+            }, []); // 确保 toggleDropdown 在组件渲染后调用
+            return (
+                <Menu />
+            )
+        }
+        ReactDOM
+            .createRoot(document.getElementById('menu'))
+            .render(<App />);
+    </script>
+    <div class="background">
+        <nav class="menu">
+            <div class="list_box">
+                <!-- <div class="list_logo"><img src="../imgs/list_logo.png" alt=""></div>
+                <label for="list_opening"><img src="../icons/list.svg" alt=""></label> -->
+
+            </div>
+            <input type="checkbox" id="list_opening"><!--選單開關-->
+            <ul class="menu_list hidden">
+
+                </li>
+                </a>
+            </ul>
+
+            <ul class="menu_icon hidden">
+            </ul>
+        </nav>
+
+        <main class="main">
+            <div class="half-circle">
+                <header class="title">
+                    <img src="./images/News_shopingcar_Login/Rectangle.png" alt="" class="rectangle">
+                    <h1>LOGIN</h1>
+                    <h3>會員登入</h3>
+                </header>
+                <div class="login_box">
+                    <form action="">
+                        <!--<div style="position: relative;">
+                            <i class="icon" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%);">🔍</i>
+                            <input type="text" style="padding-left: 30px;" placeholder="輸入內容...">
+                        </div>-->
+                        <div class="box_item key">
+                            <i class="icon" style="margin:0 10px;display: block;"><img
+                                    src="./images/News_shopingcar_Login/user.svg" alt=""></i>
+                            <input type="email" placeholder="電子信箱">
+                        </div>
+                        <div class="box_item key">
+                            <i class="icon" style="margin:0 10px;display: block;"><img
+                                    src="./images/News_shopingcar_Login/unlock.svg" alt=""></i>
+                            <input type="password" placeholder="密碼">
+                        </div>
+                        <div class="links_box">
+                            <a href="" class="link_item">註冊帳號</a>
+                            <a href="" class="link_item">忘記密碼</a>
+                        </div>
+                        <button class="box_item button">登入會員</button>
+                        <div class="horizon">
+                            <hr class="horizon_line" noshade="true">
+                            <p class="horizon_text">或</p>
+                            <hr class="horizon_line" noshade="true">
+                        </div>
+                        <div class="box_item another_key">
+                            <a href="">
+                                <!-- <i class="icon" style="margin:0 10px;display: inline-block;"><img
+                                        src="../icons/google.png" alt=""></i> -->
+                                <i class="icon"><img src="./images/News_shopingcar_Login/google.png" alt=""></i>
+                                <p class="another_key_item">Google帳號登入</p>
+                            </a>
+                        </div>
+                        <div class="box_item another_key">
+                            <a href="">
+                                <i class="icon"><img src="./images/News_shopingcar_Login/Line.png" alt=""></i>
+                                <p class="another_key_item">Line登入</p>
+                            </a>
+                        </div>
+                        <p style="text-align: center; color: #6B3B20; font-size: 1rem;">隱私權政策</p>
+
+
+                    </form>
+
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+</body>
+
+</html>

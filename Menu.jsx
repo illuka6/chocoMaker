@@ -6,7 +6,7 @@ function Menu() {
                     <li id="menu_id_li"><a href="./index.html">HOME</a></li>
                     <li id="menu_id_li"><a href="./shop.html">SHOP</a></li>
                     <li id="menu_id_li"><a href="./about.html">ABOUT</a></li>
-                    <li id="menu_id_li"><a href="#">NEWS</a></li>
+                    <li id="menu_id_li"><a href="./news.html">NEWS</a></li>
                     <li id="menu_id_li"><a href="./QnA.html">Q&A</a></li>
                     <li id="menu_id_menu_icon"><a href="./Customization.html" id="customized">
                         <p >customized</p>
@@ -16,7 +16,7 @@ function Menu() {
                     <li><a id="menu_id_icon_search"><img
                         src="./images/Custom_block/menu/material-symbols-light_search.svg" alt="" /></a>
                     </li>
-                    <li id="menu_id_icon_show"><a href="#"><img src="./images/Custom_block/menu/Vector.svg" alt="" /></a>
+                    <li id="menu_id_icon_show"><a href="./login.html"><img src="./images/Custom_block/menu/Vector.svg" alt="" /></a>
                     </li>
                     <li><a href="./shopping_cart.html"><img src="./images/Custom_block/menu/shopping-cart-basket-1--shopping-basket.svg"
                         alt="" /></a></li>

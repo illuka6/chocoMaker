@@ -8,18 +8,41 @@
     <link rel="stylesheet" href="./css/news-style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link  
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">  
-    <link  
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif+TC:wght@200..900&display=swap"
-        rel="stylesheet">  
-    <link  
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Matemasie&family=New+Amsterdam&display=swap"
-        rel="stylesheet">  
-</head>  
 
-<body>  
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+     <!-- 引用menu -->
+     <link rel="stylesheet" href="../css/Menu.css">
+     <script type="text/babel" src="../Menu.jsx"></script>
+     <script src="../js/Menu.js"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif+TC:wght@200..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Matemasie&family=New+Amsterdam&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="menu"></div>
+    <script type="text/babel">
+        function App() {
+            React.useEffect(() => {
+                menuJS();
+            }, []); // 确保 toggleDropdown 在组件渲染后调用
+            return (
+                <Menu />
+            )
+        }
+        ReactDOM
+            .createRoot(document.getElementById('menu'))
+            .render(<App />);
+    </script>
 
 
 
