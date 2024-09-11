@@ -57,7 +57,7 @@ a {
     background-image: url(../index_images/bg-w.png);
 }
 header {
-    height: 300px;
+    height: 20vw;
 }
 .title_wrap {
     position: absolute;
@@ -75,6 +75,7 @@ header {
 .main .news_center {
     display: flex;
     justify-content: center;
+    margin: 1vw auto 100px;
 }
 
 .main .news_center .news_box {
