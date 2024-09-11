@@ -76,7 +76,7 @@ footer .wrap {
     justify-content: space-between;
 }
 
-.bottom_nav {
+footer .bottom_nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -88,18 +88,18 @@ footer .logo {
     width: 120px;
 }
 
-.bottom_nav .menu {
+footer .bottom_nav .menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 0.8rem;;
 }
 
-.bottom_nav .menu li {
+footer .bottom_nav .menu li {
     padding: 1.2vw;
 }
 
-.icon {
+footer .icon {
     background-color: transparent;
     display: flex;
     align-items: center;
@@ -109,14 +109,14 @@ footer .logo {
 
 }
 
-.icon a {
+footer .icon a {
     width: 30px;
     height: 30px;
 
 
 }
 
-.icon .fb {
+footer .icon .fb {
     background-image: url(../images/footer_icon_fb.svg);
     background-position: center;
     /* 置中背景圖片 */
@@ -125,7 +125,7 @@ footer .logo {
     background-repeat: no-repeat;/
 }
 
-.icon .ig {
+footer .icon .ig {
     background-image: url(../images/footer_icon_ig.svg);
     background-position: center;
     /* 置中背景圖片 */
@@ -134,7 +134,7 @@ footer .logo {
     background-repeat: no-repeat;/
 }
 
-.icon .x {
+footer .icon .x {
     background-image: url(../images/footer_icon_x.svg);
     background-position: center;
     /* 置中背景圖片 */

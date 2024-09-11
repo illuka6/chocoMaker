@@ -17,10 +17,31 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Matemasie&family=New+Amsterdam&display=swap"
         rel="stylesheet">
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- 引用menu -->
+    <link rel="stylesheet" href="./css/Menu.css">
+    <script type="text/babel" src="./Menu.jsx"></script>
+    <script src="./js/Menu.js"></script>
 
 </head>
-
+<div id="menu"></div>
+    <script type="text/babel">
+        function App() {
+            React.useEffect(() => {
+                menuJS();
+            }, []); // 确保 toggleDropdown 在组件渲染后调用
+            return (
+                <Menu />
+            )
+        }
+        ReactDOM
+            .createRoot(document.getElementById('menu'))
+            .render(<App />);
+    </script>
 <body>
+    
     <!-- <div class="background"> -->
 
         <main class="main">
@@ -48,7 +69,7 @@
             </div>
             <div class="box">
                 <h1>你已完成訂單!</h1>
-                <img src="./imge/shoppingSuccess.svg" alt="">
+                <img src="./images/News_shopingcar_Login/shoppingSuccess.svg" alt="">
             </div>
 
             <div class="background">

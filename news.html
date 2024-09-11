@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 
-<head>  
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News 最新消息</title>
@@ -12,15 +12,9 @@
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif+TC:wght@200..900&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Matemasie&family=New+Amsterdam&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif+TC:wght@200..900&display=swap"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Matemasie&family=New+Amsterdam&display=swap" rel="stylesheet">
      <!-- 引用menu -->
      <link rel="stylesheet" href="./css/Menu.css">
      <script type="text/babel" src="./Menu.jsx"></script>
@@ -48,10 +42,11 @@
 
     <main class="main">
         <header class="title">
-            <img src="../images/News_shopingcar_Login/Rectangle.png" alt="" class="rectangle">
+            <!-- <img src="../images/News_shopingcar_Login/Rectangle.png" alt="" class="rectangle">
             <h1>NEWS</h1>
-            <h3>最新消息</h3>
+            <h3>最新消息</h3> -->
         </header>
+        <div class="title_wrap"><img src="./images/News_shopingcar_Login/title_news.svg" alt=""></div>
         <article class="news_center">
             <section class="news_box">
                 <section class="news">
@@ -74,8 +69,8 @@
                             <p class="font">新品上市</h3>
                                 <!-- <p>巧克力的世界無限可能。無論您是熱愛經典的黑巧克力，
                     還是偏好細膩的牛奶巧克力，甚至是充滿驚喜的果仁和香料.</p> -->
-                        </div>      
-                    </a>      
+                        </div>
+                    </a>
 
                     <a href="#">
                         <div class="content">
@@ -85,8 +80,8 @@
 
                                 <!-- <p>巧克力的世界無限可能。無論您是熱愛經典的黑巧克力，
                     還是偏好細膩的牛奶巧克力，甚至是充滿驚喜的果仁和香料.</p> -->
-                        </div>      
-                    </a>      
+                        </div>
+                    </a>
 
                     <a href="#">
                         <div class="content">
@@ -101,6 +96,21 @@
                 </aside>
             </section>
         </article>
+         <!-- footer -->
+         <div id="footer"></div>
+         <!-- 引用footer -->
+         <script type="text/babel" src="./Footer.jsx"></script>
+         <link rel="stylesheet" href="./css/Footer.css">
+         <script type="text/babel">
+             function App() {
+                 return (
+                     <Footer />
+                 )
+             }
+             ReactDOM
+                 .createRoot(document.getElementById('footer'))
+                 .render(<App />);
+         </script>
     </main>
 
 </body>

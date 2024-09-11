@@ -47,116 +47,49 @@ a {
   text-decoration: none;
   color: #3F1A09;
 }
-
-.background {
+header {
+  height: 300px;
+}
+main {
+    height: 100vh;
+    padding-top: 270px;
+}
+section {
   position: relative;
   height: 100%;
+  background-image: url("../images/News_shopingcar_Login/Half-circle.png"),url("../index_images/bg-w.png");
+  background-position: top+130px center, center;
+  background-size: cover, cover;
+  background-repeat: no-repeat, no-repeat;
 }
-.background::before {
-  content: "";
-  background-image: url("../images/News_shopingcar_Login/paper.png");
-  background-size: cover;
-  opacity: 0.1;
+.title_wrap {
   position: absolute;
-  inset: 0;
-  z-index: -1;
+  top: 100px;
+
+  width: 100%;
+  align-items: start;
+  z-index: 99;
 }
 
-.menu {
-  width: 100vw;
-  height: 15vh;
-  padding: 2.25rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-}
-.menu #list_opening {
-  display: none;
-}
-.menu .list_logo {
-  display: none;
-}
-.menu label {
-  display: none;
-}
-.menu label svg {
-  width: 50px;
-}
-.menu .menu_list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.menu .menu_list .menu_list_item {
-  margin: 0 1rem;
-  font-size: 1.1rem;
-  font-weight: 400;
-}
-.menu .menu_list .menu_list_item:hover {
-  color: #F1BFC1;
-}
-.menu .menu_list #customized {
-  padding: 0.5rem 2rem;
-  border-radius: 20%/50%;
-  color: white;
-  background-color: #6B3B20;
-  text-align: center;
-}
-.menu .menu_list #customized p {
-  font-weight: 700;
-}
-.menu .menu_icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-left: 1rem;
-}
-.menu .menu_icon .menu_icon_item {
-  width: 1.5rem;
-  height: 1.5rem;
-  margin: 0 0.5rem;
+.title_wrap>img {
+  width: 30vw;
+  min-width: 300px;
 }
 
-.main {
-  height: 90vh;
-}
-.main .half-circle {
-  background-image: url("../images/News_shopingcar_Login/Half-circle.png");
-  background-size: cover;
-  height: inherit;
-  background-position: top  center;
-}
-.main .half-circle .title {
-  margin: 0 0 0 5rem;
-  font-family: "Noto Serif TC", serif;
-}
-.main .half-circle .title h1 {
-  font-size: 2.5rem;
-  letter-spacing: 4px;
-  color: #CFB286;
-}
-.main .half-circle .title h3 {
-  margin-left: 6.5rem;
-  font-size: 1.75rem;
-}
-.main .half-circle .title .rectangle {
-  width: 11vw;
-  height: 5vh;
-  z-index: -1;
-  position: absolute;
-  top: 140px;
-  left: 100px;
-}
-.main .half-circle .login_box {
+ .login_box {
   background-color: white;
   width: 28vw;
-  height: 65vh;
+  height: 90%;
   margin: auto;
   border-radius: 5px;
-  padding: 75px 20px;
+  padding: 35px 20px;
+  
 }
-.main .half-circle .login_box .box_item {
+form {
+  align-items: center;
+  justify-content: center;
+}
+ .login_box .box_item {
   width: 80%;
   height: 6vh;
   margin: 16px auto;
@@ -166,10 +99,10 @@ a {
   align-items: center;
   justify-content: center;
 }
-.main .half-circle .login_box .key {
+ .login_box .key {
   border: 2px #E1CBAA solid;
 }
-.main .half-circle .login_box .key input {
+ .login_box .key input {
   border: none;
   font-size: 20px;
   padding: 0;
@@ -177,30 +110,30 @@ a {
   width: 100%;
   color: #CFB286;
 }
-.main .half-circle .login_box .key input:focus {
+ .login_box .key input:focus {
   outline: none;
   /* 取消焦點輪廓 */
   box-shadow: none;
   /* 取消陰影效果 */
 }
-.main .half-circle .login_box .key input::placeholder {
+ .login_box .key input::placeholder {
   color: #CFB286;
   font-weight: 700;
 }
-.main .half-circle .login_box .links_box {
+ .login_box .links_box {
   margin: auto;
   text-align: end;
   width: 80%;
 }
-.main .half-circle .login_box .links_box .link_item {
+ .login_box .links_box .link_item {
   margin: 0 8px;
   font-size: 1rem;
   color: #6B3B20;
 }
-.main .half-circle .login_box .links_box .link_item:last-child {
+ .login_box .links_box .link_item:last-child {
   margin-right: 0;
 }
-.main .half-circle .login_box .button {
+ .login_box .button {
   background-color: #F1BFC1;
   border: none;
   color: white;
@@ -208,42 +141,45 @@ a {
   font-size: 1.5rem;
   font-weight: bold;
 }
-.main .half-circle .login_box .horizon {
+ .login_box .horizon {
   color: #E1CBAA;
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.main .half-circle .login_box .horizon .horizon_line {
+ .login_box .horizon .horizon_line {
   display: inline-block;
   width: 40%;
   height: 1px;
   border-color: #E1CBAA;
 }
-.main .half-circle .login_box .horizon .horizon_text {
+ .login_box .horizon .horizon_text {
   display: inline;
   margin: 0 1rem;
 }
-.main .half-circle .login_box .another_key {
+ .login_box .another_key {
   border: 2px #E1CBAA solid;
+  border-radius: 50%;
   flex-direction: row;
   align-self: center;
+  width: 48px;
+  height: 48px;
+  
 }
-.main .half-circle .login_box .another_key i {
+ .login_box .another_key i {
   width: 24px;
   height: 24px;
-  position: absolute;
   left: 830px;
 }
 
-.main .half-circle .login_box .another_key p {
-  color: #6B3B20;
-  display: inline-block;
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin-left: 16px;
-  font-family: "Noto Serif TC", sans-serif;
-  
-}
 
+
+.icon_wrap {
+  display: flex;
+  height:  50px;
+
+  align-items: center;
+  margin: 1vw 5vw;
+
+}

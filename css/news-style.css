@@ -13,7 +13,7 @@
 body {
     font-family: "Inter", sans-serif;
     font-size: 100%;
-    line-height: 1.5;
+    line-height: 1.7;
     color: #3F1A09;
     font-weight: 600;
     height: 100%;
@@ -54,6 +54,22 @@ a {
 
 .main {
     height: auto;
+    background-image: url(../index_images/bg-w.png);
+}
+header {
+    height: 300px;
+}
+.title_wrap {
+    position: absolute;
+    top: 100px;
+
+    width: 100%;
+    align-items: start;
+}
+
+.title_wrap>img {
+    width: 30vw;
+    min-width: 300px;
 }
 
 .main .news_center {
@@ -113,7 +129,7 @@ a {
 .main .news_center .news_box .box__list .content:first-child {
     margin-top: 0px;
 }
-
+/* 
 .main .title {
     margin: 5rem 7rem 5rem 5rem;
     font-family: "Noto Serif TC", serif;
@@ -128,16 +144,16 @@ a {
 .main .title h3 {
     margin-left: 6.5rem;
     font-size: 1.75rem;
-}
+} */
 
-.main .title .rectangle {
+/* .main .title .rectangle {
     width: 12vw;
     height: 7.5vh;
     z-index: -1;
     position: absolute;
     top: 110px;
     left: 100px;
-}
+} */
 
 
 /* Mobile Styles */

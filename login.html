@@ -42,31 +42,10 @@
             .createRoot(document.getElementById('menu'))
             .render(<App />);
     </script>
-    <div class="background">
-        <nav class="menu">
-            <div class="list_box">
-                <!-- <div class="list_logo"><img src="../imgs/list_logo.png" alt=""></div>
-                <label for="list_opening"><img src="../icons/list.svg" alt=""></label> -->
-
-            </div>
-            <input type="checkbox" id="list_opening"><!--選單開關-->
-            <ul class="menu_list hidden">
-
-                </li>
-                </a>
-            </ul>
-
-            <ul class="menu_icon hidden">
-            </ul>
-        </nav>
-
-        <main class="main">
-            <div class="half-circle">
-                <header class="title">
-                    <img src="./images/News_shopingcar_Login/Rectangle.png" alt="" class="rectangle">
-                    <h1>LOGIN</h1>
-                    <h3>會員登入</h3>
-                </header>
+    
+    <div class="title_wrap"><img src="./images/News_shopingcar_Login/title_login.svg" alt="" class="rectangle"></div>
+    <section class="background">
+        <main>
                 <div class="login_box">
                     <form action="">
                         <!--<div style="position: relative;">
@@ -93,31 +72,53 @@
                             <p class="horizon_text">或</p>
                             <hr class="horizon_line" noshade="true">
                         </div>
+                        <div class="icon_wrap">
                         <div class="box_item another_key">
                             <a href="">
                                 <!-- <i class="icon" style="margin:0 10px;display: inline-block;"><img
                                         src="../icons/google.png" alt=""></i> -->
                                 <i class="icon"><img src="./images/News_shopingcar_Login/google.png" alt=""></i>
-                                <p class="another_key_item">Google帳號登入</p>
+                                
+                            </a>
+                        </div>
+                        <div class="box_item another_key">
+                            <a href="">
+                                <i class="icon"><img src="./images/News_shopingcar_Login/fb.svg" alt=""></i>
+                                
                             </a>
                         </div>
                         <div class="box_item another_key">
                             <a href="">
                                 <i class="icon"><img src="./images/News_shopingcar_Login/Line.png" alt=""></i>
-                                <p class="another_key_item">Line登入</p>
+                                
                             </a>
                         </div>
+                    </div>
                         <p style="text-align: center; color: #6B3B20; font-size: 1rem;">隱私權政策</p>
-
-
                     </form>
 
                 </div>
 
-            </div>
+            
         </main>
 
-    </div>
+    </section>
+           <!-- footer -->
+           <div id="footer"></div>
+           <!-- 引用footer -->
+           <script type="text/babel" src="./Footer.jsx"></script>
+           <link rel="stylesheet" href="./css/Footer.css">
+           <script type="text/babel">
+               function App() {
+                   return (
+                       <Footer />
+                   )
+               }
+               ReactDOM
+                   .createRoot(document.getElementById('footer'))
+                   .render(<App />);
+           </script>
+   
 </body>
 
 </html>

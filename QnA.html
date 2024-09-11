@@ -13,6 +13,7 @@
     <!-- 引用menu -->
     <script type="text/babel" src="./Menu.jsx"></script>
     <link rel="stylesheet" href="./css/Menu.css">
+    <script src="./js/Menu.js"></script>
 
     <title>Q&A</title>
 </head>
@@ -20,6 +21,9 @@
 <div id="menu"></div>
 <script type="text/babel">
     function App() {
+                React.useEffect(() => {
+                    menuJS();
+                }, []); 
         return (
             <Menu />
         )
