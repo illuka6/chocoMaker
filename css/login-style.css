@@ -78,7 +78,7 @@ section {
 
  .login_box {
   background-color: white;
-  width: 28vw;
+  width: 420px;
   height: 80%;
   margin: auto;
   border-radius: 5px;
@@ -180,6 +180,6 @@ form {
   height:  50px;
 
   align-items: center;
-  margin: 1vw 5vw;
+  margin:20px 20px;
 
 }
