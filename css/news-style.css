@@ -15,7 +15,7 @@ body {
     font-size: 100%;
     line-height: 1.7;
     color: #3F1A09;
-    font-weight: 600;
+    
     height: 100%;
     /* background-color: rgb(116, 107, 95); */
 }
@@ -79,6 +79,7 @@ header {
 }
 
 .main .news_center .news_box {
+    font-weight: 600;
     display: flex;
     width: 70vw;
 }
