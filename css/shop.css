@@ -321,7 +321,7 @@ border-bottom:var(--block_brown) solid 1px
 
 
 .item .new_tag {
-    z-index: 99;
+    z-index: 9;
     position: absolute;
     width: 24%;
     height: auto;
