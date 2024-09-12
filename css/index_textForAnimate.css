@@ -1195,9 +1195,9 @@ section {
 
 #gotop.show {
     opacity: 1;
-    transform: translateY(0);
-    
+    transform: translateY(0);    
 }
+
 #gotop:hover #arrow-img {
     content: url(../index_images/up_arrow-p.svg);
 }
