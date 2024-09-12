@@ -15,7 +15,7 @@ body {
     font-size: 100%;
     line-height: 1.5;
     color: #3F1A09;
-    font-weight: 600;
+    
     /* background-color: rgb(116, 107, 95); */
 }
 
@@ -49,10 +49,12 @@ a {
 }
 
 .process {
+    font-weight: 600;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 50px 0;
+    /* margin: 50px 0; */
+    padding:100px 0 0;
 }
 
 .process .process_item {
@@ -109,7 +111,7 @@ a {
 }
 
 .background {
-    background-image:url(../imge/background.svg) ;
+    background-image:url(../index_images/bg-w.png) ;
 margin: 157px;
 } 
 

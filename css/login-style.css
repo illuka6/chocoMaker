@@ -116,6 +116,11 @@ form {
   box-shadow: none;
   /* 取消陰影效果 */
 }
+
+.box_item {
+  cursor: pointer;
+}
+
  .login_box .key input::placeholder {
   color: #CFB286;
   font-weight: 700;

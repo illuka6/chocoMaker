@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Matemasie&family=New+Amsterdam&display=swap"
         rel="stylesheet">
-        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- 引用menu -->
@@ -26,7 +26,9 @@
     <script src="./js/Menu.js"></script>
 
 </head>
-<div id="menu"></div>
+
+<body>
+    <div id="menu"></div>
     <script type="text/babel">
         function App() {
             React.useEffect(() => {
@@ -40,42 +42,55 @@
             .createRoot(document.getElementById('menu'))
             .render(<App />);
     </script>
-<body>
-    
     <!-- <div class="background"> -->
 
-        <main class="main">
-            <div class="process">
-                <div class="process_item">
-                    <div class="process_border">
-                        1
-                    </div>
-                    <p class="process_text">確認資料</p>
+    <main class="main">
+        <div class="process">
+            <div class="process_item">
+                <div class="process_border">
+                    1
                 </div>
-                <hr>
-                <div class="process_item">
-                    <div class="process_border">
-                        2
-                    </div>
-                    <p class="process_text">填寫訂單</p>
-                </div>
-                <hr>
-                <div class="process_item complated">
-                    <div class="process_border ">
-                        3
-                    </div>
-                    <p class="process_text">完成訂單</p>
-                </div>
+                <p class="process_text">確認資料</p>
             </div>
-            <div class="box">
-                <h1>你已完成訂單!</h1>
-                <img src="./images/News_shopingcar_Login/shoppingSuccess.svg" alt="">
+            <hr>
+            <div class="process_item">
+                <div class="process_border">
+                    2
+                </div>
+                <p class="process_text">填寫訂單</p>
             </div>
+            <hr>
+            <div class="process_item complated">
+                <div class="process_border ">
+                    3
+                </div>
+                <p class="process_text">完成訂單</p>
+            </div>
+        </div>
+        <div class="box">
+            <h1>你已完成訂單!</h1>
+            <img src="./images/News_shopingcar_Login/shoppingSuccess.svg" alt="">
+        </div>
 
-            <div class="background">
-            </div>
+        <div class="background">
+        </div>
+        <!-- footer -->
+        <div id="footer"></div>
+        <!-- 引用footer -->
+        <link rel="stylesheet" href="./css/Footer.css">
+        <script type="text/babel" src="./Footer.jsx"></script>
+        <script type="text/babel">
+            function App() {
+                return (
+                    <Footer />
+                )
+            }
+            ReactDOM
+                .createRoot(document.getElementById('footer'))
+                .render(<App />);
+        </script>
 
-        </main>
+    </main>
     </div>
 </body>
 

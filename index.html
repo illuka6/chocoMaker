@@ -221,22 +221,26 @@
 
             </div>
         </section>
+        
 
         <!-- footer -->
         <div id="footer"></div>
         <!-- 引用footer -->
+         <link rel="stylesheet" href="./css/Footer.css">
         <script type="text/babel" src="./Footer.jsx"></script>
-        <link rel="stylesheet" href="./css/Footer.css">
         <script type="text/babel">
             function App() {
-                return (
+                return (<>
                     <Footer />
-                )
+                    
+               </> )
             }
             ReactDOM
                 .createRoot(document.getElementById('footer'))
                 .render(<App />);
         </script>
+        <div id="gotop"><img id="arrow-img" src="./index_images/up_arrow-w.svg" alt=""/></div>
+        
 
 
 
