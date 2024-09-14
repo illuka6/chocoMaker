@@ -1,36 +1,36 @@
-let full_list_box_right_order_box_but1 = document.getElementById('full_list_box_right_order_box_but1');
-let full_list_box_right_order_box_but2 = document.getElementById('full_list_box_right_order_box_but2');
-let full_list_box_right_order_box_but1_div_p3 = document.getElementById('full_list_box_right_order_box_but1_div_p3');
-let full_list_box_right_order_box_but12 = document.getElementById('full_list_box_right_order_box_but12');
-let full_list_box_right_order_box_but13 = document.getElementById('full_list_box_right_order_box_but13');
-let full_list_box_right_order_box_butbox_p3 = document.getElementById('full_list_box_right_order_box_butbox_p3');
+let plus3 = document.getElementById('plus3');
+let minus3 = document.getElementById('minus3');
+let numberWhich3 = document.getElementById('numberWhich3');
+let plus4 = document.getElementById('plus4');
+let minus4 = document.getElementById('minus4');
+let numberWhich4 = document.getElementById('numberWhich4');
 
 
 let quantity_add = 0;
 
 
-if (full_list_box_right_order_box_but1_div_p3.textContent < 10) {
-    full_list_box_right_order_box_but2.addEventListener('click', () => {
+if (numberWhich3.textContent < 10) {
+    minus3.addEventListener('click', () => {
         quantity_add = quantity_add + 1;
-        full_list_box_right_order_box_but1_div_p3.textContent = quantity_add + 1;
+        numberWhich3.textContent = quantity_add + 1;
     });
-    full_list_box_right_order_box_but1.addEventListener('click', () => {
+    plus3.addEventListener('click', () => {
         quantity_add = quantity_add - 1;
-        full_list_box_right_order_box_but1_div_p3.textContent = full_list_box_right_order_box_but1_div_p3.textContent - 1;
+        numberWhich3.textContent = numberWhich3.textContent - 1;
     });
 };
 
 let quantity_add_b = 0;
 
 
-if (full_list_box_right_order_box_butbox_p3.textContent < 10) {
-    full_list_box_right_order_box_but13.addEventListener('click', () => {
+if (numberWhich4.textContent < 10) {
+    minus4.addEventListener('click', () => {
         quantity_add_b = quantity_add_b + 1;
-        full_list_box_right_order_box_butbox_p3.textContent = quantity_add_b + 1;
+        numberWhich4.textContent = quantity_add_b + 1;
     });
-    full_list_box_right_order_box_but12.addEventListener('click', () => {
+    plus4.addEventListener('click', () => {
         quantity_add_b = quantity_add_b - 1;
-        full_list_box_right_order_box_butbox_p3.textContent = full_list_box_right_order_box_butbox_p3.textContent - 1;
+        numberWhich4.textContent = numberWhich4.textContent - 1;
     });
 };
 
