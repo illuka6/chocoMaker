@@ -3192,18 +3192,117 @@ footer .logo {
 #product_tips_btn1 {
     display: flex;
     align-items: center;
+    /* padding: 0 10%; */
     /* margin-right: 30%; */
 }
 
 #product_tips_btn1_div1 {
     display: flex;
-    border: 2px solid #E1CBAA;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     width: 100%;
-    border-radius: 5px;
+    /* margin: 0 50%; */
 }
 
-#product_tips_btn1_div1_btn1 {
+#btn1 {
+    border: 2px solid #E1CBAA;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#numberWhich1 {
+    display: flex;
+    align-items: center;
+    /* margin: 5px 20px; */
+    padding: 0px 20px;
+    color: #3F1A09;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Noto Serif TC';
+}
+
+#plus1 {
+    padding: 0px 8px;
+    padding-bottom: 2px;
+    /* padding-left: 10px; */
+    border-right: 2px solid #E1CBAA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3F1A09;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+#minus1 {
+    padding: 0px 8px;
+    padding-bottom: 2px;
+    /* padding-right: 10px; */
+    border-left: 2px solid #E1CBAA;
+    color: #3F1A09;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+
+
+
+#product_tips_btn1_div1 {
+    display: flex;
+    /* justify-content: space-between; */
+    width: 100%;
+    /* margin: 0 50%; */
+}
+
+#btn2 {
+    border: 2px solid #E1CBAA;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#numberWhich2 {
+    display: flex;
+    align-items: center;
+    /* margin: 5px 20px; */
+    padding: 0px 20px;
+    color: #3F1A09;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Noto Serif TC';
+}
+
+#plus2 {
+    padding: 0px 8px;
+    padding-bottom: 2px;
+    /* padding-left: 10px; */
+    border-right: 2px solid #E1CBAA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3F1A09;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+
+
+#minus2 {
+    padding: 0px 8px;
+    padding-bottom: 2px;
+    /* padding-right: 10px; */
+    border-left: 2px solid #E1CBAA;
+    color: #3F1A09;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+
+
+/* #product_tips_btn1_div1_btn1 {
     display: flex;
     justify-content: center;
     align-items: stretch;
@@ -3215,9 +3314,9 @@ footer .logo {
 
 #product_tips_btn1_div1_btn1 img {
     width: 100%;
-}
+} */
 
-
+/* 
 #product_tips_btn1_div1_btn2 {
     display: flex;
     justify-content: center;
@@ -3226,8 +3325,9 @@ footer .logo {
     border: 0;
     height: auto;
     cursor: pointer;
-}
+} */
 
+/* 
 #product_tips_btn1_div1_btn2 img {
     width: 100%;
 }
@@ -3262,31 +3362,41 @@ footer .logo {
     width: 100%;
 }
 
+ */
 
 
 
-
-#product_tips_btn1_div1_p1 {
+/* #product_tips_btn1_div1_p1 {
     display: flex;
     align-items: center;
-    /* padding: 0 10px; */
     margin: 0 15px;
     color: #3F1A09;
     font-size: 20px;
     font-weight: 900;
     font-family: 'Noto Serif TC';
-}
-
+} */
+/* 
 #product_tips_btn1_div1_p2 {
     display: flex;
     align-items: center;
-    /* padding: 0 10px; */
     margin: 0 15px;
     color: #3F1A09;
     font-size: 20px;
     font-weight: 900;
     font-family: 'Noto Serif TC';
-}
+} */
+
+
+
+
+
+
+
+
+
+
+
+
 
 #product_tips_cash1 {
     display: flex;
@@ -3348,6 +3458,7 @@ footer .logo {
     margin-left: 2%;
     margin-right: 10%;
     position: relative;
+    height: 550px;
 }
 
 @media(max-width:1440px) {
@@ -3553,7 +3664,7 @@ footer .logo {
     /* position: absolute; */
     bottom: 0;
     width: 80%;
-    margin-left: 10%;
+    /* margin-left: 10%; */
 }
 
 @media(max-width:1440px) {
@@ -3582,6 +3693,18 @@ footer .logo {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+
+#Checkout_area_box2 {
+    position: absolute;
+    /* border: 2px solid #444; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20%;
+    bottom: 20px;
 }
 
 /* 
@@ -3629,48 +3752,49 @@ footer .logo {
 } */
 
 #cash_div_img1 {
-    position: absolute;
-    bottom: 18%;
-    right: 100px;
-    width: 75%;
+    /* position: absolute; */
+    /* bottom: 18%; */
+    /* right: 100px; */
+    /* width: 70%; */
 }
 
 @media(max-width:1441px) {
     #cash_div_img1 {
-        right: 23%;
-        bottom: 15%;
+        /* right: 23%; */
+        /* bottom: 15%; */
     }
 }
 
 
 @media(max-width:1200px) {
     #cash_div_img1 {
-        right: 17%;
-        bottom: 12%;
+        /* right: 17%;
+        bottom: 12%; */
     }
 }
 
 
 
 #cash_div_img2 {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    width: 90%;
+    /* position: absolute; */
+    /* bottom: 20px; */
+    /* right: 20px; */
+    /* width: 70%; */
+    margin-top: 5%;
 }
 
 
 
 @media(max-width:1441px) {
     #cash_div_img2 {
-        right: 40px;
+        /* right: 40px; */
     }
 }
 
 
 @media(max-width:1200px) {
     #cash_div_img2 {
-        right: 3%;
+        /* right: 3%; */
     }
 }
 
@@ -4105,10 +4229,10 @@ footer .logo {
     font-family: "Noto Sans HK";
 }
 
-@media(max-width:1025px){
+@media(max-width:1025px) {
     .timeClass {
-    font-size: 14px
-    } 
+        font-size: 14px
+    }
 }
 
 #full_list_box_left_box4_box2 {}
@@ -4384,9 +4508,9 @@ footer .logo {
     padding: 6px 20px;
 }
 
-@media(max-width:1024px){
-    #full_list_box_right_box3_divbox_p1_details_Gallery_plate_like{
-        padding: 6px 10px;  
+@media(max-width:1024px) {
+    #full_list_box_right_box3_divbox_p1_details_Gallery_plate_like {
+        padding: 6px 10px;
     }
 }
 
@@ -4470,12 +4594,12 @@ footer .logo {
         display: flex;
         justify-content: center;
     }
-    
-    #plate_modification_area p{
-     font-size: 12px;  
-     padding:5px 7px; 
-     margin: 0;
-     
+
+    #plate_modification_area p {
+        font-size: 12px;
+        padding: 5px 7px;
+        margin: 0;
+
     }
 }
 
@@ -4697,7 +4821,7 @@ footer .logo {
     font-family: "Noto Sans HK", sans-serif;
 }
 
-@media(max-width:1025px){
+@media(max-width:1025px) {
     #full_list_box_right_order_box6_total p {
         font-size: 24px;
     }

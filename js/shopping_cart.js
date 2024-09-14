@@ -1,35 +1,36 @@
-let product_tips_btn1_div1_btn1 = document.getElementById('product_tips_btn1_div1_btn1');
-let product_tips_btn1_div1_btn2 = document.getElementById('product_tips_btn1_div1_btn2');
-let product_tips_btn1_div1_p1 = document.getElementById('product_tips_btn1_div1_p1');
-let product_tips_btn1_div1_btn3 = document.getElementById('product_tips_btn1_div1_btn3');
-let product_tips_btn1_div1_btn4 = document.getElementById('product_tips_btn1_div1_btn4');
-let product_tips_btn1_div1_p2 = document.getElementById('product_tips_btn1_div1_p2');
+let plus1 = document.getElementById('plus1');
+let minus1 = document.getElementById('minus1');
+let numberWhich1 = document.getElementById('numberWhich1');
+let plus2 = document.getElementById('plus2');
+let minus2 = document.getElementById('minus2');
+let numberWhich2 = document.getElementById('numberWhich2');
 
 
 
 
-let quantity_add = 0;
+let quantity_add1 = 0;
 
-if (product_tips_btn1_div1_p1.textContent < 10) {
-    product_tips_btn1_div1_btn2.addEventListener('click', () => {
-        quantity_add = quantity_add + 1;
-        product_tips_btn1_div1_p1.textContent = quantity_add + 1;
+if (numberWhich1.textContent < 10) {
+    minus1.addEventListener('click', () => {
+        quantity_add1 = quantity_add1 + 1;
+        numberWhich1.textContent = quantity_add1 + 1;
     });
-    product_tips_btn1_div1_btn1.addEventListener('click', () => {
-        quantity_add = quantity_add - 1;
-        product_tips_btn1_div1_p1.textContent = product_tips_btn1_div1_p1.textContent - 1;
+    plus1.addEventListener('click', () => {
+        quantity_add1 = quantity_add1 - 1;
+        numberWhich1.textContent = numberWhich1.textContent - 1;
     });
 };
 
+let quantity_add2 = 0;
 
-if (product_tips_btn1_div1_p2.textContent < 10) {
-    product_tips_btn1_div1_btn4.addEventListener('click', () => {
-        quantity_add = quantity_add + 1;
-        product_tips_btn1_div1_p2.textContent = quantity_add + 1;
+if (numberWhich2.textContent < 10) {
+    minus2.addEventListener('click', () => {
+        quantity_add2 = quantity_add2 + 1;
+        numberWhich2.textContent = quantity_add2 + 1;
     });
-    product_tips_btn1_div1_btn3.addEventListener('click', () => {
-        quantity_add = quantity_add - 1;
-        product_tips_btn1_div1_p2.textContent = product_tips_btn1_div1_p2.textContent - 1;
+    plus2.addEventListener('click', () => {
+        quantity_add2 = quantity_add2 - 1;
+        numberWhich2.textContent = numberWhich2.textContent - 1;
     });
 };
 
