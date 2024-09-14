@@ -286,9 +286,9 @@ border-bottom:var(--block_brown) solid 1px
     padding: 80px ; /* 容器的内边距 */
     align-self: center;
     justify-self:center;
-    justify-content: center; /* 水平居中网格 */
-    align-content: center; /* 垂直居中网格 */
-    align-items: center; /* 垂直居中所有网格项 */
+    justify-content: center; 
+    /* align-content: center;  修復在ios上顯示問題*/
+    /*align-items: center;  修復在ios上顯示問題*/
     justify-items: center; /* 水平居中所有网格项 */
    
 }
