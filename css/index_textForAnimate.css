@@ -327,7 +327,7 @@ section {
     position: relative;
     align-items: center;
     display: flex;
-    font-family: "Lucida Bright";
+    font-family: "Playfair Display", serif;
     width: 100vw;
 
 }
@@ -790,11 +790,13 @@ section {
 
 
 #QUALITY .quality_title {
-    font-family: "Lucida Bright";
-    font-size: 21.5vw;
+    font-family: "Playfair Display", serif;
+    font-size: 22.5vw;
     text-align: center;
     color: white;
     display: flex;
+    align-items: center;
+    letter-spacing: 8px;
 }
  .quality_title span {
     display: block;
