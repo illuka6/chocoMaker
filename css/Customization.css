@@ -15,7 +15,7 @@ body {
         /*西文*/
         -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
         /*中文*/
-        "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif, "Noto Sans HK", "Noto Sans Traditional Chinese";
+        "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif, "Noto Sans HK", 'Noto Sans Hong Kong', "Noto Sans Traditional Chinese";
     font-size: 100%;
     line-height: 1.5;
 }
@@ -181,8 +181,9 @@ body {
 
 #menu_id a {
     margin-right: 32px;
-    color: #6B3B20;
+    color: #3F1A09;
     font-size: 20px;
+    font-weight: 400;
 }
 
 #menu_id li a:hover {
@@ -202,6 +203,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 20px;
+    font-weight: 400;
 }
 
 #customized:hover {
@@ -269,8 +271,8 @@ body {
 #Operation_tips_box1_first_row p {
     font-size: 20px;
     /* font-family: "Noto Sans Traditional Chinese"; */
-    font-family: 'Noto Sans TC';
-    font-weight: 900;
+    font-family: "Noto Sans HK";
+    font-weight: 700;
     color: #3F1A09;
 }
 
@@ -287,33 +289,39 @@ body {
 
 #Operation_tips_box1_first_row2 p {
     font-size: 18px;
-    font-family: 'Inter';
+    font-family: "Noto Sans HK";
     font-weight: 500;
     color: #3F1A09;
 }
 
 #Operation_tips_box1_first_row3 {
     display: flex;
-    justify-content: flex-end;
-    align-items: c;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 10%;
     /* margin-right: 5%; */
     position: absolute;
     width: 100%;
-    right: 5%;
+    /* right: 5%; */
+    padding: 0 5%;
+}
+
+#Operation_tips_box2_first_row3_img0 {
+    width: 30px;
+    height: 30px;
 }
 
 #Operation_tips_box1_first_row3_img1 {
-    width: 55%;
+    width: 50%;
 }
 
 #Operation_tips_box1_first_row3_img2 {
-    margin-left: 10%;
-    width: 5%;
+    /* margin-left: 10%; */
+    /* width: 5%; */
 }
 
 #Operation_tips_box2_first_row3_img3 {
-    width: 5%;
+    /* width: 5%; */
 }
 
 #Operation_tips_box1_first_row4 {
@@ -345,27 +353,39 @@ body {
 
 #Operation_tips_box2_first_row3_2 {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 20%;
+    margin-top: 18.5%;
     position: absolute;
     width: 100%;
+    padding: 0 5%;
 }
 
 
 
 #Operation_tips_box1_first_row3_2 {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10.5%;
+    position: absolute;
+    width: 100%;
+    padding: 0 5%;
+}
+
+#Operation_tips_box1_first_row3_3 {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     margin-top: 10%;
     position: absolute;
     width: 100%;
+    padding: 0 5%;
 }
 
 
 #Operation_tips_box1_first_row3_img2_1 {
-    width: 5%;
+    /* width: 5%; */
     margin-bottom: 2%;
 }
 
@@ -416,19 +436,20 @@ body {
 
 #Operation_tips_box1_first_row5_2 {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     position: absolute;
     margin-top: 6%;
     width: 100%;
-    left: 4%;
+    /* left: 4%; */
+    padding: 0 5%;
 }
 
 #Operation_tips_box3_first_row3_img3 {
-    width: 5%;
-    margin-right: 6%;
+    /* width: 5%; */
+    /* margin-right: 6%;
     margin-top: 1%;
-    margin-left: 1%;
+    margin-left: 1%; */
 }
 
 
@@ -438,22 +459,22 @@ body {
 } */
 
 #Operation_tips_box3_first_row3_img2_1 {
-    width: 5%;
-    margin-right: 1%;
-    margin-bottom: 2%;
+    /* width: 5%; */
+    /* margin-right: 1%;
+    margin-bottom: 2%; */
 }
 
 #Operation_tips_box4_first_row3_img2_1 {
-    width: 5%;
+    /* width: 5%;
     margin-right: 1%;
-    margin-bottom: 1%;
+    margin-bottom: 1%; */
 }
 
 #Operation_tips_box4_first_row3_img3 {
-    width: 5%;
+    /* width: 5%;
     margin-right: 7%;
     margin-top: 2%;
-    margin-left: 1%;
+    margin-left: 1%; */
 }
 
 #Operation_tips_box5_first_row3_img2 {
@@ -461,10 +482,10 @@ body {
 }
 
 #Operation_tips_box1_first_row3_img3_1 {
-    width: 5%;
+    /* width: 5%;
     margin-right: 18%;
     margin-top: 3%;
-    margin-left: 2%;
+    margin-left: 2%; */
 }
 
 /* ↑↑提示區塊↑↑ */
@@ -511,7 +532,8 @@ body {
     flex-direction: column;
     align-items: center;
     color: #6B3B20;
-    /* margin-bottom: 20PX; */
+    font-family: "Noto Sans HK";
+    font-weight: 600;
 }
 
 /* ↑↑左邊側邊欄位↑↑ */
@@ -537,8 +559,9 @@ body {
     justify-content: center;
     margin-top: 16.5px;
     font-size: 24px;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-weight: 900;
+    font-family: "Noto Sans HK";
+    font-weight: 700;
+    color: #3F1A09;
 }
 
 
@@ -594,6 +617,9 @@ body {
     justify-content: center;
     margin-top: 16.5px;
     font-size: 24px;
+    color: #3F1A09;
+    font-family: "Noto Sans HK";
+    font-weight: 700;
 }
 
 .left_menu2_div1 {
@@ -609,6 +635,9 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 7px;
+    color: #3F1A09;
+    font-family: "Noto Sans HK";
+    font-weight: 500;
 }
 
 .left_menu2_div1 ul {
@@ -646,6 +675,12 @@ body {
     height: 62px;
 }
 
+.ingredients_text {
+    color: #3F1A09;
+    font-family: "Noto Sans HK";
+    font-weight: 500;
+}
+
 /* 第三層 */
 .left_menu3 {
     width: 341px;
@@ -670,6 +705,8 @@ body {
     margin-bottom: 18px;
     color: #3F1A09;
     font-size: 24px;
+    font-family: "Noto Sans HK";
+    font-weight: 600;
 }
 
 .left_menu3_div_input {
@@ -691,6 +728,8 @@ body {
     margin-top: 12px;
     color: #6B3B20;
     font-size: 15px;
+    font-family: "Noto Sans HK";
+    font-weight: 500;
 }
 
 .left_menu3 ul {
@@ -711,6 +750,10 @@ body {
 #left_menu3_div3_div p {
     display: flex;
     justify-content: center;
+    color: #6B3B20;
+    font-size: 15px;
+    font-family: "Noto Sans HK";
+    font-weight: 600;
 }
 
 
@@ -769,6 +812,10 @@ body {
     margin-top: 16.5px;
     margin-bottom: 18px;
     font-size: 24px;
+    color: #3F1A09;
+    font-family: "Noto Sans HK";
+    font-weight: 800;
+
 }
 
 .left_menu4_div_input {
@@ -781,8 +828,25 @@ body {
     height: 40px;
     border: 2px solid #ECDCC6;
     border-radius: 5px;
-    padding: 2px 0 2px 4px;
+    padding: 1% 0 0px 12%;
+    display: flex;
+    align-items: center;
+    /* background-image: url('./images/Custom_block/menu/search.svg'); */
+    background-image: url('../images/Custom_block/menu/search2.svg');
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    font-size: 18px;
 }
+
+.left_menu4_input::placeholder {
+    color: #ACA7A1;
+    font-size: 18px;
+    font-family: "Noto Sans HK";
+    font-weight: 300;
+    /* padding-left: 15%; */
+}
+
 
 .left_menu4_search_p {
     display: flex;
@@ -804,6 +868,9 @@ body {
     background-color: #F1BFC1;
     margin-right: 20px;
     font-size: 15px;
+    font-family: "Noto Sans HK";
+    font-weight: 400;
+    color: #655046;
 }
 
 .left_menu4_search_p_2 {
@@ -817,6 +884,9 @@ body {
     background-color: #F1BFC1;
     margin-right: 20px;
     font-size: 15px;
+    font-family: "Noto Sans HK";
+    font-weight: 400;
+    color: #655046;
 }
 
 .left_menu4_search_p_3 {
@@ -830,6 +900,9 @@ body {
     background-color: #F1BFC1;
     margin-right: 20px;
     font-size: 15px;
+    font-family: "Noto Sans HK";
+    font-weight: 400;
+    color: #655046;
 }
 
 .left_menu4_in_hr_p {
@@ -837,6 +910,9 @@ body {
     display: flex;
     justify-content: center;
     font-size: 15px;
+    font-family: "Noto Sans HK";
+    font-weight: 800;
+    color: #3F1A09;
 }
 
 
@@ -885,7 +961,9 @@ body {
     margin-top: 16.5px;
     margin-bottom: 28px;
     font-size: 24px;
-
+    font-family: "Noto Sans HK";
+    font-weight: 600;
+    color: #3F1A09;
 }
 
 .left_menu5_img {
@@ -1395,6 +1473,12 @@ body {
     padding-top: 20px;
 }
 
+.right_sidebar_div_p {
+    color: #3F1A09;
+    font-family: "Noto Sans HK";
+    font-weight: 500;
+}
+
 
 
 .right_sidebar_div p {
@@ -1647,6 +1731,10 @@ body {
     justify-content: center;
     color: #3F1A09;
     font-size: 20px;
+    font-family: "Noto Sans HK";
+    font-weight: 400;
+
+
 }
 
 /* ↑↑左邊側邊欄位區塊↑↑ */
@@ -1674,6 +1762,16 @@ body {
     z-index: 1;
 }
 
+#select_field1__second_page p {
+    display: flex;
+    justify-content: center;
+    margin: 27.5px 141px 45.5px 140px;
+    font-size: 24px;
+    font-family: "Noto Sans HK";
+    font-weight: 600;
+    color: #3F1A09;
+}
+
 #select_field1__second_page_div {
     display: flex;
     /* flex-direction: column; */
@@ -1686,13 +1784,7 @@ body {
     border: 0px solid #444;
 }
 
-#select_field1__second_page p {
-    display: flex;
-    justify-content: center;
-    margin: 27.5px 141px 45.5px 140px;
-    font-size: 24px;
-    font-size: 24px;
-}
+
 
 #select_field1__second_page a {
     margin-right: 20px;
@@ -1750,12 +1842,19 @@ body {
     justify-content: center;
     margin: 17px 151px 22px 120px;
     font-size: 24px;
+    font-family: "Noto Sans HK";
+    font-weight: 600;
+    color: #3F1A09;
+
 }
 
 #select_field2__second_page_p2,
 #select_field2__second_page_p3 {
-    margin: 5px 0 8px 10px;
+    margin: 5px 0 8px 5%;
     font-size: 15px;
+    font-family: "Noto Sans HK";
+    font-weight: 500;
+    color: #3F1A09;
 }
 
 #select_field2__second_page_btn {
@@ -1800,6 +1899,9 @@ body {
     justify-content: center;
     margin: 16px 151px 0px 120px;
     font-size: 24px;
+    font-family: "Noto Sans HK";
+    font-weight: 600;
+    color: #3F1A09;
 }
 
 #select_field3__second_page_div {
@@ -2087,6 +2189,10 @@ body {
     justify-content: center;
     margin: 16px 151px 28px 120px;
     font-size: 24px;
+    color: #3F1A09;
+    font-family: "Noto Sans HK";
+    font-weight: 600;
+
 }
 
 #left_sidebar_three_page_div1_1 div {
@@ -2096,9 +2202,12 @@ body {
 }
 
 #left_sidebar_three_page_div1_2 p {
-    margin-left: 10px;
+    margin-left: 5%;
     margin-top: 5px;
-    font-size: 15px;
+    /* font-size: 15px; */
+    color: #3F1A09;
+    font-family: "Noto Sans HK";
+    font-weight: 400;
 }
 
 #left_sidebar_three_page_div1_2 div {
@@ -2114,8 +2223,11 @@ body {
 }
 
 #left_sidebar_three_page_div1_3 p {
-    margin-left: 10px;
+    margin-left: 5%;
     margin-top: 5px;
+    color: #3F1A09;
+    font-family: "Noto Sans HK";
+    font-weight: 400;
 }
 
 #left_sidebar_three_page_div1_hr {
@@ -2161,6 +2273,9 @@ body {
     justify-content: center;
     margin: 27px 131px 18px 130px;
     font-size: 24px;
+    color: #3F1A09;
+    font-family: "Noto Sans HK";
+    font-weight: 600;
 }
 
 
@@ -2216,6 +2331,9 @@ body {
     justify-content: center;
     margin: 16px 100px 0px 100px;
     font-size: 24px;
+    color: #3F1A09;
+    font-family: "Noto Sans HK";
+    font-weight: 600;
 }
 
 #left_sidebar_three_page_div3_div_p {
@@ -2223,6 +2341,9 @@ body {
     justify-content: center;
     margin: 33px 100px 10px 100px;
     font-size: 15px;
+    color: #3F1A09;
+    font-family: "Noto Sans HK";
+    font-weight: 600;
 }
 
 #left_sidebar_three_page_div3_div_1 {
@@ -2323,6 +2444,10 @@ body {
     justify-content: center;
     margin: 16px 120px 34px 120px;
     font-size: 24px;
+    color: #3F1A09;
+    font-family: "Noto Sans HK";
+    font-weight: 600;
+
 }
 
 
@@ -2382,6 +2507,9 @@ body {
     justify-content: center;
     margin: 27.5px 120px 18px 120px;
     font-size: 24px;
+    color: #3F1A09;
+    font-family: "Noto Sans HK";
+    font-weight: 600;
 }
 
 #left_sidebar_four_page_div2_1 {
@@ -2435,6 +2563,10 @@ body {
     display: flex;
     justify-content: center;
     margin: 16px 120px 24px 120px;
+    font-size: 24px;
+    color: #3F1A09;
+    font-family: "Noto Sans HK";
+    font-weight: 600;
 }
 
 #left_sidebar_four_page_div3_div2 {
@@ -2450,12 +2582,27 @@ body {
     border-radius: 5px;
     padding-bottom: 97px;
     padding-left: 8px;
+    font-size: 18px;
+}
+
+#left_sidebar_four_page_div3_input::placeholder {
+    color: #ACA7A1;
+    font-size: 16px;
+    font-family: "Noto Sans HK";
+    font-weight: 400;
 }
 
 #left_sidebar_four_page_div3_div1_p2 {
     display: flex;
     justify-content: center;
     margin-top: 25px;
+}
+
+#left_sidebar_four_page_div3_div1_p2 p {
+    color: #3F1A09;
+    font-size: 16px;
+    font-family: "Noto Sans HK";
+    font-weight: 600;
 }
 
 #left_sidebar_four_page_div3_div3 {
@@ -2477,6 +2624,10 @@ body {
 
 #left_sidebar_four_page_div3_div1_p3 {
     margin: 17px 100px 10px 100px;
+    color: #3F1A09;
+    font-size: 16px;
+    font-family: "Noto Sans HK";
+    font-weight: 600;
 }
 
 #left_sidebar_four_page_div3_div4_div {

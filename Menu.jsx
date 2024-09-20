@@ -35,7 +35,7 @@ function Menu() {
                         <a id="menu_id_search_divBox_a2"><img src="./images/Custom_block/menu/Xicon.svg"
                             alt="" /></a>
                     </div>
-                    <li><a id="menu_id_search_li2"><img src="./images/Custom_block/menu/Vector.svg" alt="" /></a>
+                    <li><a href="./login.html" id="menu_id_search_li2"><img src="./images/Custom_block/menu/Vector.svg" alt="" /></a>
                     </li>
                     <li><a href="./shopping_cart.html" id="menu_id_search_li3"><img
                         src="./images/Custom_block/menu/shopping-cart-basket-1--shopping-basket.svg" alt="" /></a>

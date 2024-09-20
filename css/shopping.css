@@ -47,6 +47,15 @@ a {
     text-decoration: none;
     color: #3F1A09;
 }
+.process div{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 2%;
+}
+.process img{
+    width: 80%;
+}
 
 .process {
     font-weight: 600;
