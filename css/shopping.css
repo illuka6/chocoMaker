@@ -47,6 +47,17 @@ a {
     text-decoration: none;
     color: #3F1A09;
 }
+
+.main{
+    background-image: url(../images/Custom_block/menu-background2.svg);
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+
 .process div{
     display: flex;
     justify-content: center;
