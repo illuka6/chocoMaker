@@ -20,7 +20,7 @@
         function App() {
             React.useEffect(() => {
                 menuJS();
-            }, []); // 确保 toggleDropdown 在组件渲染后调用
+            }, []);
             return (
                 <Menu />
             )
@@ -30,20 +30,6 @@
             .render(<App />);
     </script>
     <main id="main">
-        <!-- <div id="menu">
-            <ul id="menu_id">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">SHOP</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">NEWS</a></li>
-                <li><a href="#">Q&A</a></li>
-                <li><a href="#" id="customized">customized</a></li>
-                <li><a href="#"><img src="./images/Custom_block/menu/material-symbols-light_search.svg" alt=""></a></li>
-                <li><a href="#"><img src="./images/Custom_block/menu/shopping-cart-basket-1--shopping-basket.svg"
-                            alt=""></a></li>
-                <li><a href="#"><img src="./images/Custom_block/menu/Vector.svg" alt=""></a></li>
-            </ul>
-        </div> -->
         <div id="all">
             <div id="left_sidebar_second_page">
                 <ul>
@@ -165,8 +151,6 @@
                                 src="./images/Custom_block/box/left_sidebar/Frame 23.svg" alt="" id="bow_tie3_img"></a>
                         <a href="javascript:void(0)" id="bow_tie4"><img
                                 src="./images/Custom_block/box/left_sidebar/Frame 24.svg" alt="" id="bow_tie4_img"></a>
-                        <!-- <a href="javascript:void(0)"><img src="./images/Custom_block/box/left_sidebar/Frame 25.svg" alt=""></a> -->
-                        <!-- <a href="javascript:void(0)"><img src="./images/Custom_block/box/left_sidebar/Frame 26.svg" alt=""></a> -->
                     </div>
                     <div id="left_sidebar_three_page_div3_box">
                         <img src="./images/Custom_block/small_chocolate/Frame btn.svg" alt="">
@@ -213,34 +197,27 @@
                 <ul>
                     <li class="menu_below_li" id="Select_function"><a href="javascript:void(0)"><img
                                 src="./images/Custom_block/menu_below/Frame 1.svg" alt="" id="Select_function_img">
-                            <!-- <p>選取</p> -->
                         </a></li>
                     <li class="menu_below_li" id="menu_below_li_left2"><a href="javascript:void(0)"><img
                                 src="./images/Custom_block/menu_below/Frame 2.svg" alt="" id="menu_below_li_left2_img">
-                            <!-- <p>縮放</p> -->
                         </a></li>
                     <li class="menu_below_li" id="menu_below_li_left1"><a href="javascript:void(0)"
                             id="menu_below_bug"><img src="./images/Custom_block/menu_below/Frame 3.svg" alt=""
                                 id="menu_below_bug_img">
-                            <!-- <p>旋轉</p> -->
                         </a></li>
                     <li class="menu_below_li" id="garbage_can"><a href="javascript:void(0)"><img
                                 src="./images/Custom_block/menu_below/Frame 4.svg" alt="" id="garbage_can_img">
-                            <!-- <p>刪除</p> -->
                         </a>
                     </li>
                     <li class="menu_below_li" id="menu_below_li_right1"><a href="javascript:void(0)"><img
                                 src="./images/Custom_block/menu_below/Frame 5.svg" alt="" id="menu_below_li_right1_img">
-                            <!-- <p>翻轉</p> -->
                         </a></li>
                     <li class="menu_below_li" id="menu_below_li_right2"><a href="javascript:void(0)"><img
                                 src="./images/Custom_block/menu_below/Frame 6.svg" alt="" id="menu_below_li_right2_img">
-                            <!-- <p>上一步</p> -->
                         </a></li>
                     <li class="menu_below_li" id="menu_below_li_right3"><a href="javascript:void(0)">
                             <img src="./images/Custom_block/menu_below/Frame 7.svg" alt=""
                                 id="menu_below_li_right3_img">
-                            <!-- <p>重製</p> -->
                         </a></li>
                 </ul>
             </div>

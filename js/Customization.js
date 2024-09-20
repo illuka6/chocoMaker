@@ -281,8 +281,6 @@ function allImg() {
 /* ↓↓牛奶巧克力選擇區塊↓↓ */
 let middle_div1_box = document.getElementById('middle_div1_box');
 let left_menu_img1 = document.getElementsByClassName('left_menu_img1');
-// let left_menu_img1 = document.getElementsByClassName('left_menu_img1');
-// console.log(left_menu_img1);
 let flag = true;
 left_menu_img1[0].addEventListener('click', function () {
     middle_div1_box.style.display = '';
@@ -303,8 +301,6 @@ left_menu_img1[0].addEventListener('click', function () {
 
 /* ↓↓黑巧克力選擇區塊↓↓ */
 let left_menu_img2 = document.getElementsByClassName('left_menu_img2');
-// let left_menu_img1 = document.getElementsByClassName('left_menu_img1');
-// console.log(left_menu_img1);
 flag = true;
 left_menu_img2[0].addEventListener('click', function () {
     middle_img_none();
@@ -323,8 +319,6 @@ left_menu_img2[0].addEventListener('click', function () {
 
 /* ↓↓白巧克力選擇區塊↓↓ */
 let left_menu_img3 = document.getElementsByClassName('left_menu_img3');
-// let left_menu_img1 = document.getElementsByClassName('left_menu_img1');
-// console.log(left_menu_img1);
 flag = true;
 left_menu_img3[0].addEventListener('click', function () {
     middle_img_none();
@@ -343,9 +337,6 @@ left_menu_img3[0].addEventListener('click', function () {
 
 /* ↓↓草莓巧克力選擇區塊↓↓ */
 let left_menu_img4 = document.getElementsByClassName('left_menu_img4');
-// let left_menu_img1 = document.getElementsByClassName('left_menu_img1');
-// console.log(left_menu_img1);
-
 flag = true;
 left_menu_img4[0].addEventListener('click', function () {
     middle_img_none();
@@ -368,8 +359,6 @@ left_menu_img4[0].addEventListener('click', function () {
 
 /* ↓↓抹茶巧克力選擇區塊↓↓ */
 let left_menu_img5 = document.getElementsByClassName('left_menu_img5');
-// let left_menu_img1 = document.getElementsByClassName('left_menu_img1');
-// console.log(left_menu_img1);
 
 flag = true;
 left_menu_img5[0].addEventListener('click', function () {
@@ -390,8 +379,6 @@ left_menu_img5[0].addEventListener('click', function () {
 
 /* ↓↓焦糖巧克力選擇區塊↓↓ */
 let left_menu_img6 = document.getElementsByClassName('left_menu_img6');
-// let left_menu_img1 = document.getElementsByClassName('left_menu_img1');
-// console.log(left_menu_img1);
 
 flag = true;
 left_menu_img6[0].addEventListener('click', function () {
@@ -421,8 +408,7 @@ let left_menu5_img_a1 = document.getElementById('left_menu5_img_a1');
 left_menu5_img_a1.addEventListener('click', function () {
     middle_img_none();
     middle_img5[0].style.display = "block";
-    // middle_div1_box.style.display = 'block;'
-    middle_div1_box.style.display = 'none';
+       middle_div1_box.style.display = 'none';
     middle_box_allimg();
     middle_box_img7.style.display = 'block';
 });
@@ -568,27 +554,15 @@ left_menu3_p2_a4.addEventListener('click', () => {
 });
 
 
-
 /* 中間小顯示區塊 */
-// let middle_box = document.getElementsByClassName('middle_box');
-// middle_box[0].addEventListener('resize', () => {
-//     middle_box.style.margin = '0px 500px 0px 0px';
-// });
-// left_menu = document.getElementsByClassName{'letf_menu'};
+
 
 /* 客製化第一頁的左邊選擇欄位 */
 let menu_below = document.getElementById('menu_below');
 let left_sidebar = document.getElementById('left_sidebar');
 let oldWidth = window.innerWidth;
 window.addEventListener('resize', () => {
-    // let newWidth = window.innerWidth;
-    // let allWidth = oldWidth - newWidth;
-    // menu_below.style.left = window_width * 0.1 + 'px';
-    // left_menu[0].style.right = allWidth + 'px';
-    // allWidth = newWidth;
-    // let left_sidebar_left = left_sidebar[0].getBoundingClientRect().left;
-    // left_menu[0].style.left = left_sidebar_left + 'px';
-    left_menu[0].style.left = (left_sidebar.offsetWidth) + "px";
+       left_menu[0].style.left = (left_sidebar.offsetWidth) + "px";
     left_menu2[0].style.left = (left_sidebar.offsetWidth) + "px";
     left_menu3[0].style.left = (left_sidebar.offsetWidth) + "px";
     left_menu4[0].style.left = (left_sidebar.offsetWidth) + "px";
@@ -598,17 +572,10 @@ window.addEventListener('resize', () => {
 
 
 /* 客製化第一頁的中間小框框顯示區 */
-// let all = document.getElementById('all');
-// let middle = document.getElementsByClassName('middle')[0];
-// let middle_box = document.getElementsByClassName('middle_box')[0];
-// window.addEventListener('resize', () => {
-//     middle_box.style.right = (middle.offsetWidth) + 'px';
-// });
 
 
-// let middle_box_img12 = document.getElementById('middle_box_img12');
 /* 圖片儲存到loco上面 */
-// let middle_box_img1 = document.getElementById('middle_box_img1');
+
 Prompt_field_img5.addEventListener('click', () => {
     console.log("click");
     localStorage.setItem('slab_chocolate', middle_box_img1.src);

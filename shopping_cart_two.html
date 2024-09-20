@@ -18,7 +18,7 @@
     function App() {
         React.useEffect(() => {
             menuJS();
-        }, []); // 确保 toggleDropdown 在组件渲染后调用
+        }, []);
         return (
             <Menu />
         )
@@ -147,8 +147,6 @@
                                             id="Data_filling_block_box_input4">
                                     </div>
                                 </div>
-
-
                             </div>
                             <div id="full_list_box_left_box2_input3">
                                 <input type="radio" name="recipient" id="gift_giving">
@@ -183,7 +181,6 @@
                             <div id="full_list_box_left_box4_box1">
                                 <div id="full_list_box_left_box4_calendar">
                                     <img src="./images/shopping_cart_two/calendar.svg" alt="">
-
                                 </div>
                                 <div id="full_list_box_left_box4_box2">
                                     <div id="full_list_box_left_box4_box_date">
@@ -193,7 +190,6 @@
                                         </div>
                                         <div>
                                             <input type="text" placeholder="" id="full_list_box_left_box4_box_date_day">
-                                            <!-- <input type="date" placeholder=""> -->
                                         </div>
                                     </div>
                                     <div id="full_list_box_left_box4_box_shipping_time">
@@ -213,7 +209,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <div id="full_list_box_right">
@@ -235,13 +230,6 @@
                             </div>
                             <div id="full_list_box_right_order_box_butbox">
                                 <div id="full_list_box_right_order_box_but1_div">
-                                    <!-- <button id="full_list_box_right_order_box_but1">
-                                        <img src="./images/Product-details-page/first_block/Frame 5.svg" alt="">
-                                    </button>
-                                    <p id="full_list_box_right_order_box_but1_div_p3">1</p>
-                                    <button id="full_list_box_right_order_box_but2">
-                                        <img src="./images/Product-details-page/first_block/Frame 6.svg" alt="">
-                                    </button> -->
                                     <div id="btn3">
                                         <div id="plus3">
                                             <p>-</p>
@@ -422,13 +410,6 @@
                 </div>
                 <div id="full_list_box_right_order_box_butbox">
                     <div id="full_list_box_right_order_box_but1_div">
-                        <!-- <button id="full_list_box_right_order_box_but12">
-                            <img src="./images/Product-details-page/first_block/Frame 5.svg" alt="">
-                        </button>
-                        <p id="full_list_box_right_order_box_butbox_p3">1</p>
-                        <button id="full_list_box_right_order_box_but13">
-                            <img src="./images/Product-details-page/first_block/Frame 6.svg" alt="">
-                        </button> -->
                         <div id="btn4">
                             <div id="plus4">
                                 <p>-</p>
@@ -477,7 +458,6 @@
         <div id="checkout_block">
             <div id="full_list_box_right_order_box4">
                 <div id="full_list_box_right_order_box4_hr">
-                    <!-- <img src="./images/shopping_cart_two/hr.svg" alt="" id="full_list_box_right_order_box4_img"> -->
                 </div>
             </div>
             <div id="full_list_box_right_order_box5">
@@ -496,7 +476,6 @@
             </div>
             <div id="full_list_box_right_order_box5">
                 <div id="full_list_box_right_order_box5_hr">
-                    <!-- <img src="./images/shopping_cart_two/hr.svg" alt=""> -->
                 </div>
             </div>
             <div id="full_list_box_right_order_box6">
@@ -505,7 +484,6 @@
                     <p id="full_list_box_right_order_box6_total_cash">NT 5,200</p>
                     <p>元</p>
                 </div>
-
             </div>
             <div id="full_list_box_bottom">
                 <div><a href="./ShoppingCar 3.html">
@@ -514,13 +492,7 @@
                 </div>
             </div>
         </div>
-        </div>
-
-        </div>
-        </div>
-
     </main>
-    <!-- footer -->
     <div id="footer"></div>
     <script type="text/babel">
         function App() {
@@ -532,13 +504,6 @@
             .createRoot(document.getElementById('footer'))
             .render(<App />);
     </script>
-
-
-    </div>
-    </main>
-    <!-- <script src="./js/Customization.js"></script> -->
-    <!-- <script src="./js/Product_details_page.js"></script> -->
-    <!-- js -->
     <script type="text/babel" src="./Footer.jsx"></script>
     <script src="./js/shopping_cart_two.js"></script>
 </body>

@@ -79,16 +79,6 @@ for (let i = 0; i < imgs.length; i++) {
 
 
 /* 拖曳結束 */
-// left_menu4_img1.addEventListener('dragend', () => {
-//     left_menu4_img1.style.border = "none";
-//     middle_div1.style.border = 'none';
-//     middle_div1_box_div1.style.border = 'none';
-//     middle_div1_box_div2.style.border = 'none';
-//     middle_div1_box_div3.style.border = 'none';
-//     middle_div1_box_div4.style.border = 'none';
-//     middle_div1_box_div5.style.border = 'none';
-//     middle_div1_box_div6.style.border = 'none';
-// });
 
 for (let i = 0; i < imgs.length; i++) {
     imgs[i].addEventListener('dragend', (e) => {
@@ -100,135 +90,6 @@ for (let i = 0; i < imgs.length; i++) {
     )
 };
 
-
-
-
-/* 拖曳進去目標時 */
-
-// left_menu4_img1.addEventListener('dragenter', () => {
-//     middle_div1.style.border = '2px solid #444';
-// });
-
-
-/* 讓圖片進去目標區域 (暫時完成)  */
-// left_menu4_img1.addEventListener('drag', (e) => {
-//     e.preventDefault;
-//     let img = document.getElementById('left_menu4_img1');
-//     img.src = './images/Custom_block/Ellipse 5.svg';
-//     middle_div1.appendChild(img);
-//     console.log(img);
-// });
-
-
-
-
-
-
-// left_menu4_img1.addEventListener('mousedown', (e) => {
-//     e.preventDefault();
-//     // let img = document.getElementById('left_menu4_img1');
-//     img.src = './images/Custom_block/Ellipse 5.svg';
-//     middle_div1_box_div1.addEventListener('mouseup', (e) => {
-//         // if (e.target === middle_div1_box_div1) {
-//         middle_div1_box_div1.appendChild(img);
-//         middle_div1_box_div1.style.border = '2px solid #999'
-//         console.log('有在目標內');
-//         // }
-//     })
-//     // console.log(img);
-//     // console.log(middle_div1_box_div1);
-// });
-
-
-
-
-
-// // 拖曳花時
-// imgs[i].addEventListener('drag', (e) => {
-//     console.log('拖曳中');
-//     // e.preventDefault();
-//     // let img = document.getElementById('left_menu4_img1');
-//     // img.src = './images/Custom_block/Ellipse 5.svg';
-//     // console.log(img);
-//     // console.log(middle_div1_box_div1);
-// });
-
-
-
-
-
-/*
-
-
-
-// 放開花時   (盒子一)
-for (let i = 0; i < imgs.length; i++) {
-    imgs[i].addEventListener('dragend', (e) => {
-        console.log('拖曳中');
-        console.log(imgs[i]);
-        if (e.clientX >= center_display_second_page_box1.left && e.clientX <= center_display_second_page_box1.right &&
-            e.clientY >= center_display_second_page_box1.top && e.clientY <= center_display_second_page_box1.bottom) {
-            console.log('在盒子內2');
-            console.log('在範圍內2');
-            if (center_display_second_page_box_div1.childElementCount < 1) {
-                let imgsClone = imgs[i].cloneNode(true);
-                center_display_second_page_box_div1.appendChild(imgsClone);
-            } else {
-                console.log('目標區域已達上限')
-            }
-        } else {
-            console.log('不在盒子內2');
-            console.log('不在範圍內2');
-        }
-    });
-};
-
-
-// 放開花時   (盒子二)
-for (let i = 0; i < imgs.length; i++) {
-    imgs[i].addEventListener('dragend', (e) => {
-        console.log('拖曳中');
-        console.log(imgs[i]);
-        if (e.clientX >= center_display_second_page_box2.left && e.clientX <= center_display_second_page_box2.right &&
-            e.clientY >= center_display_second_page_box2.top && e.clientY <= center_display_second_page_box2.bottom) {
-            console.log('在盒子內2');
-            console.log('在範圍內2');
-            if (center_display_second_page_box_div2.childElementCount < 1) {
-                let imgsClone = imgs[i].cloneNode(true);
-                center_display_second_page_box_div2.appendChild(imgsClone);
-            } else {
-                console.log('目標區域已達上限')
-            }
-        } else {
-            console.log('不在盒子內2');
-            console.log('不在範圍內2');
-        }
-    });
-};
-
-
-// 放開花時   (盒子三)
-for (let i = 0; i < imgs.length; i++) {
-    imgs[i].addEventListener('dragend', (e) => {
-        console.log('拖曳中');
-        console.log(imgs[i]);
-        if (e.clientX >= center_display_second_page_box3.left && e.clientX <= center_display_second_page_box3.right &&
-            e.clientY >= center_display_second_page_box3.top && e.clientY <= center_display_second_page_box3.bottom) {
-            console.log('在盒子內2');
-            console.log('在範圍內2');
-            if (center_display_second_page_box_div3.childElementCount < 1) {
-                let imgsClone = imgs[i].cloneNode(true);
-                center_display_second_page_box_div3.appendChild(imgsClone);
-            } else {
-                console.log('目標區域已達上限')
-            }
-        } else {
-            console.log('不在盒子內2');
-            console.log('不在範圍內2');
-        }
-    });
-};
-*/
 
 
 
@@ -437,16 +298,6 @@ let Basic_chocolate2 = [
     Basic_small_chocolate5,
     Basic_small_chocolate6]
 
-// let second_page_box1 = document.getElementById('center_display_second_page_box1');
-// let second_page_box2 = document.getElementById('Basic_small_chocolate2');
-// let second_page_box3 = document.getElementById('Basic_small_chocolate3');
-
-// let Basic_chocolate = [
-//     Basic_small_chocolate1,
-//     Basic_small_chocolate2,
-//     Basic_small_chocolate3]
-
-
 
 for (let i = 0; i < center_display_second_page_box_allDiv.length; i++) {
     if (center_display_second_page_box_allDiv[i].addEventListener('click', () => {
@@ -471,15 +322,13 @@ for (let i = 0; i < center_display_second_page_box_allDiv.length; i++) {
         }));
         if (menu_below_li_left1.addEventListener('click', () => {
             if (Basic_chocolate) {
-                // Basic_chocolate = imgsClone2;
-                angle = angle + 45;
+                            angle = angle + 45;
                 Basic_chocolate[i].style.transform = `rotate(${angle}deg)`;
                 console.log(angle);
                 console.log('你按了旋轉');
             }
             if (Lock_picture2) {
-                // Basic_chocolate2 = imgsClone2;
-                angle2 = angle2 + 45;
+                            angle2 = angle2 + 45;
                 Basic_chocolate2[i].style.transform = `rotate(${angle2}deg)`;
             }
         }));
@@ -533,220 +382,10 @@ Basic_small_chocolate3.addEventListener('dragend', () => {
 });
 
 
-
-
-
 menu_below_li_right3.addEventListener('click', () => {
     location.reload();
 });
 
-
-// menu_below_li_right3.addEventListener('click', () => {
-//     Basic_small_chocolate1.remove();
-//     Basic_small_chocolate2.remove();
-//     Basic_small_chocolate3.remove();
-// });
-
-// for (let i = 0; i < imgs.length; i++) {
-//     imgs[i].addEventListener('dragend', (e) => {
-//         console.log('拖曳中');
-//         console.log(imgs[i]);
-//         for (let j = 0; j < All_boxes_second_page.length; j++) {
-//             if ((e.clientX >= All_boxes_second_page[j].left) && (e.clientX <= All_boxes_second_page[j].right) &&
-//                 (e.clientY >= All_boxes_second_page[j].top) && (e.clientY <= All_boxes_second_page[j].bottom)) {
-//                 console.log('在盒子內2');
-//                 console.log('在範圍內2');
-//                 if (center_display_second_page_box_allDiv[j].childElementCount < 2) {
-//                     let imgsClone = allBtnevent[i].cloneNode(true);
-//                     center_display_second_page_box_allDiv[j].appendChild(imgsClone);
-//                     // number = number + 1;
-//                     // let key = 'a' + number;
-//                     // window.localStorage.setItem(key, middle_div1_box_allDiv[j]);
-//                     // allBox[j].style.border = '0px solid #999'
-//                     if (imgsClone.addEventListener('click', () => {
-//                         Lock_picture = imgsClone;
-//                         Lock_picture.style.border = "2px solid #444"
-//                         console.log(Lock_picture);
-//                     }));
-//                     if (Select_function.addEventListener('click', () => {
-//                         Lock_picture = imgsClone;
-//                         Lock_picture.style.border = "0px solid #444"
-//                         console.log("xxx");
-//                     }));
-//                     if (menu_below_li_left2.addEventListener('click', () => {
-//                         if (Lock_picture) {
-//                             Lock_picture.style.width = '30px';
-//                             Lock_picture.style.height = '30px';
-//                             console.log('你按了縮放');
-//                         }
-//                     }));
-//                     if (menu_below_li_left1.addEventListener('click', () => {
-//                         if (Lock_picture) {
-//                             angle = angle + 45;
-//                             Lock_picture.style.transform = `rotate(${angle}deg)`;
-//                             console.log(angle);
-//                             console.log('你按了旋轉');
-//                         }
-//                     }));
-//                     if (menu_below_li_right1.addEventListener('click', () => {
-//                         if (Lock_picture) {
-//                             flip = flip + 180;
-//                             Lock_picture.style.transform = `rotate(${flip}deg)`;
-//                             console.log('你按了翻轉');
-//                         }
-//                     }));
-//                     if (garbage_can.addEventListener('click', () => {
-//                         if (Lock_picture) {
-//                             Lock_picture.remove();
-//                             console.log('你按了刪除');
-//                         }
-//                     })); /* console.log(key); */
-//                     if (menu_below_li_right1.addEventListener('click', () => {
-//                         if (Lock_picture) {
-//                             flip = flip + 180;
-//                             Lock_picture.style.transform = `rotate(${flip}deg)`;
-//                             console.log('你按了翻轉');
-//                         }
-//                     }));
-//                 } else {
-//                     console.log('目標區域已達上限');
-//                     console.log(allBox)
-//                     console.log(middle_div1_box_allDiv)
-//                 }
-//             } else {
-//                 console.log('不在盒子內2');
-//                 console.log('不在範圍內2');
-//             }
-//         }
-//     });
-// };
-
-
-// /* 取得第四個盒子的XY範圍 */
-// let middle_box4 = middle_div1_box_div4.getBoundingClientRect();
-// let xStart4 = middle_box1.left;  // 左邊界的 X 座標
-// let yStart4 = middle_box1.top;   // 上邊界的 Y 座標
-// let xEnd4 = middle_box1.right;   // 右邊界的 X 座標
-// let yEnd4 = middle_box1.bottom;  // 下邊界的 Y 座標
-// /* 取得第五個盒子的XY範圍 */
-// let middle_box5 = middle_div1_box_div5.getBoundingClientRect();
-// let xStart5 = middle_box1.left;  // 左邊界的 X 座標
-// let yStart5 = middle_box1.top;   // 上邊界的 Y 座標
-// let xEnd5 = middle_box1.right;   // 右邊界的 X 座標
-// let yEnd5 = middle_box1.bottom;  // 下邊界的 Y 座標
-// /* 取得第六個盒子的XY範圍 */
-// let middle_box6 = middle_div1_box_div6.getBoundingClientRect();
-// let xStart6 = middle_box1.left;  // 左邊界的 X 座標
-// let yStart6 = middle_box1.top;   // 上邊界的 Y 座標
-// let xEnd6 = middle_box1.right;   // 右邊界的 X 座標
-// let yEnd6 = middle_box1.bottom;  // 下邊界的 Y 座標
-// /* 取得第七個盒子的XY範圍 */
-// let middle_box7 = middle_div1_box_div7.getBoundingClientRect();
-// let xStart7 = middle_box1.left;  // 左邊界的 X 座標
-// let yStart7 = middle_box1.top;   // 上邊界的 Y 座標
-// let xEnd7 = middle_box1.right;   // 右邊界的 X 座標
-// let yEnd7 = middle_box1.bottom;  // 下邊界的 Y 座標
-// /* 取得第八個盒子的XY範圍 */
-// let middle_box8 = middle_div1_box_div8.getBoundingClientRect();
-// let xStart8 = middle_box1.left;  // 左邊界的 X 座標
-// let yStart8 = middle_box1.top;   // 上邊界的 Y 座標
-// let xEnd8 = middle_box1.right;   // 右邊界的 X 座標
-// let yEnd8 = middle_box1.bottom;  // 下邊界的 Y 座標
-// /* 取得第九個盒子的XY範圍 */
-// let middle_box9 = middle_div1_box_div9.getBoundingClientRect();
-// let xStart9 = middle_box1.left;  // 左邊界的 X 座標
-// let yStart9 = middle_box1.top;   // 上邊界的 Y 座標
-// let xEnd9 = middle_box1.right;   // 右邊界的 X 座標
-// let yEnd9 = middle_box1.bottom;  // 下邊界的 Y 座標
-// /* 取得第十個盒子的XY範圍 */
-// let middle_box10 = middle_div1_box_div10.getBoundingClientRect();
-// let xStart10 = middle_box1.left;  // 左邊界的 X 座標
-// let yStart10 = middle_box1.top;   // 上邊界的 Y 座標
-// let xEnd10 = middle_box1.right;   // 右邊界的 X 座標
-// let yEnd10 = middle_box1.bottom;  // 下邊界的 Y 座標
-// /* 取得第十一個盒子的XY範圍 */
-// let middle_box11 = middle_div1_box_div11.getBoundingClientRect();
-// let xStart11 = middle_box1.left;  // 左邊界的 X 座標
-// let yStart11 = middle_box1.top;   // 上邊界的 Y 座標
-// let xEnd11 = middle_box1.right;   // 右邊界的 X 座標
-// let yEnd11 = middle_box1.bottom;  // 下邊界的 Y 座標
-// /* 取得第十二個盒子的XY範圍 */
-// let middle_box12 = middle_div1_box_div12.getBoundingClientRect();
-// let xStart12 = middle_box1.left;  // 左邊界的 X 座標
-// let yStart12 = middle_box1.top;   // 上邊界的 Y 座標
-// let xEnd12 = middle_box1.right;   // 右邊界的 X 座標
-// let yEnd12 = middle_box1.bottom;  // 下邊界的 Y 座標
-// /* 取得第十三個盒子的XY範圍 */
-// let middle_box13 = middle_div1_box_div13.getBoundingClientRect();
-// let xStart13 = middle_box1.left;  // 左邊界的 X 座標
-// let yStart13 = middle_box1.top;   // 上邊界的 Y 座標
-// let xEnd13 = middle_box1.right;   // 右邊界的 X 座標
-// let yEnd13 = middle_box1.bottom;  // 下邊界的 Y 座標
-// /* 取得第十四個盒子的XY範圍 */
-// let middle_box14 = middle_div1_box_div14.getBoundingClientRect();
-// let xStart14 = middle_box1.left;  // 左邊界的 X 座標
-// let yStart14 = middle_box1.top;   // 上邊界的 Y 座標
-// let xEnd14 = middle_box1.right;   // 右邊界的 X 座標
-// let yEnd14 = middle_box1.bottom;  // 下邊界的 Y 座標
-// /* 取得第十五個盒子的XY範圍 */
-// let middle_box15 = middle_div1_box_div15.getBoundingClientRect();
-// let xStart15 = middle_box1.left;  // 左邊界的 X 座標
-// let yStart15 = middle_box1.top;   // 上邊界的 Y 座標
-// let xEnd15 = middle_box1.right;   // 右邊界的 X 座標
-// let yEnd15 = middle_box1.bottom;  // 下邊界的 Y 座標
-
-
-
-// let allBox = [
-//     middle_box1,
-//     middle_box2,
-//     middle_box3,
-//     middle_box4,
-//     middle_box5,
-//     middle_box6,
-//     middle_box7,
-//     middle_box8,
-//     middle_box9,
-//     middle_box10,
-//     middle_box11,
-//     middle_box12,
-//     middle_box13,
-//     middle_box14,
-//     middle_box15]
-
-
-// // 放開花時   (盒子整合器)
-// for (let i = 0; i < ingredients.length; i++) {
-//     ingredients[i].addEventListener('dragend', (e) => {
-//         console.log('拖曳中');
-//         console.log(ingredients[i]);
-//         for (let j = 0; j < allBox.length; j++) {
-//             if (e.clientX >= allBox[j].left && e.clientX <= allBox[j].right &&
-//                 e.clientY >= allBox[j].top && e.clientY <= allBox[j].bottom) {
-//                 console.log('在盒子內2');
-//                 console.log('在範圍內2');
-//                 if (allBox[j].childElementCount < 2) {
-//                     let imgsClone = ingredients[i].cloneNode(true);
-//                     allBox[j].appendChild(imgsClone);
-//                     allBox[j].style.border = '0px solid #999'
-//                 } else {
-//                     console.log('目標區域已達上限');
-//                     console.log(allBox)
-//                     console.log(middle_div1_box_allDiv)
-//                 }
-//             } else {
-//                 console.log('不在盒子內2');
-//                 console.log('不在範圍內2');
-//             }
-//         }
-//     });
-// };
-
-
-
-// let all_Divbox = window.localStorage.getItem('middle_div1_box_allDiv');
-// let all_Divbox_Reorganize = JSON.parse(all_Divbox);
-// console.log(all_Divbox_Reorganize);
 
 
 /* 下方功能按鈕切換器 */

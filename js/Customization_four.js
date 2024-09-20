@@ -1,21 +1,4 @@
 
-
-// /* ↓↓標籤列↓↓ */
-// let customized = document.getElementById('customized');
-// customized.addEventListener('mouseover', function () {
-//     customized.style.color = '#FFFFFF';
-//     customized.textContent = '客製化';
-// });
-
-// customized.addEventListener('mouseout', function () {
-//     customized.style.color = '#3F1A09';
-//     customized.textContent = 'customized';
-// });
-
-// /* ↑↑標籤列↑↑ */
-
-
-
 /* 客製化第四頁 */
 /* ↓↓左邊側邊欄位↓↓ */
 let left_sidebar_img_1 = document.getElementById('left_sidebar_img_1');
@@ -114,8 +97,6 @@ window.addEventListener('resize', () => {
     left_sidebar_four_page_div2.style.left = (left_sidebar_second_page.offsetWidth) + "px";
     left_sidebar_four_page_div3_div1.style.left = (left_sidebar_second_page.offsetWidth) + "px";
 });
-
-
 
 
 /* 樣式盒子的按鈕 */
@@ -226,11 +207,8 @@ let center_display_second_page_divp = document.getElementById('center_display_se
 four_page_div3_input.addEventListener('keyup', () => {
     console.log('有改文字');
     let textInput = four_page_div3_input.value;
-    // center_display_second_page_divp=textInput;
     center_display_second_page_divp.textContent = textInput;
 });
-
-
 
 
 let Zone_four_white = document.getElementById('Zone_four_white');

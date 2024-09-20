@@ -35,10 +35,6 @@ if (numberWhich4.textContent < 10) {
 };
 
 
-
-
-
-
 let full_list_box_right_box_details2 = document.getElementById('full_list_box_right_box_details2');
 let full_list_box_right_box2 = document.getElementById('full_list_box_right_box2');
 let full_list_box_right_box3 = document.getElementById('full_list_box_right_box3');
@@ -46,10 +42,8 @@ let full_list_box_right_order_box4_img = document.getElementById('full_list_box_
 full_list_box_right_box2.addEventListener('click', () => {
     if (full_list_box_right_box3.style.display === 'none') {
         full_list_box_right_box3.style.display = '';
-        // full_list_box_right_box_details2.style.marginBottom = '0%';
     } else {
         full_list_box_right_box3.style.display = 'none';
-        // full_list_box_right_box_details2.style.marginBottom = '130%';
     }
 });
 

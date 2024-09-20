@@ -1,21 +1,5 @@
 
 
-// /* ↓↓標籤列↓↓ */
-// let customized = document.getElementById('customized');
-// customized.addEventListener('mouseover', function () {
-//     customized.style.color = '#FFFFFF';
-//     customized.textContent = '客製化';
-// });
-
-// customized.addEventListener('mouseout', function () {
-//     customized.style.color = '#3F1A09';
-//     customized.textContent = 'customized';
-// });
-
-// /* ↑↑標籤列↑↑ */
-
-
-
 /* 客製化第三頁 */
 /* ↓↓左邊側邊欄位↓↓ */
 let left_sidebar_img_1 = document.getElementById('left_sidebar_img_1');
