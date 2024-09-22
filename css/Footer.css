@@ -60,7 +60,7 @@ footer a {
 
 footer {
     width: 100%;
-    background-image: url(../images/foot--bg.svg);
+    background-image: url(../images/foot--bg.jpg);
     display: flex;
     flex-direction: column;
     justify-content: center;
