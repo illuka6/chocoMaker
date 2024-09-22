@@ -598,7 +598,7 @@ section {
 #QUALITY .pic_box {
     width: 100%;
     height: 100%;
-    background-image: url(../index_images/quality_justpic.png);
+    background-image: url(../index_images/quality_justpic);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
