@@ -54,7 +54,7 @@ a {
 
 /* 共用區 */
 body {
-    background-image: url(../images/Custom_block/Frame\ 37.svg);
+    background-image: url(../images/Custom_block/Frame\ 37.png);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: auto;
@@ -1350,10 +1350,10 @@ body {
 }
 
 #middle_box_img7 {
-    width: 43%;
+    width: 65%;
     position: absolute;
-    top: 24%;
-    right: 36%;
+    top: 20%;
+    right: 25%;
     display: none;
 }
 
@@ -1835,6 +1835,18 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 8px;
+}
+
+#original_flavor_img,
+#nut_img,
+#cranberry_img,
+#tangerine_img,
+#comprehensive_img,
+#berries_img,
+#citrus_filling_img,
+#lemon_img {
+    width: 30%;
+    cursor: pointer;
 }
 
 #select_field2__second_page_p1 {
@@ -2670,7 +2682,7 @@ body {
 /* ↓↓第一層↓↓ */
 
 #product_details_page {
-    background-image: url(../images/Custom_block/menu-background2.svg);
+    background-image: url(../images/Custom_block/menu-background2.png);
     background-position: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2705,7 +2717,7 @@ body {
 }
 
 #product_details_page_tab_div1_left a {
-    margin-bottom: 81px;
+    margin-bottom: 50px;
     margin-right: 32px;
 }
 

@@ -286,87 +286,87 @@ let citrus_filling_a = document.getElementById('citrus_filling_a');
 let lemon_a = document.getElementById('lemon_a');
 
 function Filling_switch() {
-    original_flavor_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 8.svg';
-    nut_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 9.svg';
-    cranberry_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 10.svg';
-    tangerine_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 11.svg';
-    comprehensive_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 12.svg';
-    berries_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 13.svg';
-    citrus_filling_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 14.svg';
-    lemon_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 15.svg';
+    original_flavor_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 8.png';
+    nut_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 9.png';
+    cranberry_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 10.png';
+    tangerine_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 11.png';
+    comprehensive_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 12.png';
+    berries_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 13.png';
+    citrus_filling_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 14.png';
+    lemon_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 15.png';
 };
 
 
 
-original_flavor_a.addEventListener('click', () => {
+original_flavor_img.addEventListener('click', () => {
     Filling_switch();
     if (flag) {
-        original_flavor_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 8_click.svg';
+        original_flavor_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 8_click.png';
     } else {
-        original_flavor_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 8.svg'
+        original_flavor_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 8.png'
     }
 });
 
-nut_a.addEventListener('click', () => {
+nut_img.addEventListener('click', () => {
     Filling_switch();
     if (flag) {
-        nut_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 9_click.svg';
+        nut_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 9_click.png';
     } else {
-        nut_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 9.svg'
+        nut_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 9.png'
     }
 });
 
-cranberry_a.addEventListener('click', () => {
+cranberry_img.addEventListener('click', () => {
     Filling_switch();
     if (flag) {
-        cranberry_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 10_click.svg';
+        cranberry_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 10_click.png';
     } else {
-        cranberry_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 10.svg'
+        cranberry_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 10.png'
     }
 });
 
-tangerine_a.addEventListener('click', () => {
+tangerine_img.addEventListener('click', () => {
     Filling_switch();
     if (flag) {
-        tangerine_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 11_click.svg';
+        tangerine_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 11_click.png';
     } else {
-        tangerine_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 11.svg'
+        tangerine_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 11.png'
     }
 });
 
-comprehensive_a.addEventListener('click', () => {
+comprehensive_img.addEventListener('click', () => {
     Filling_switch();
     if (flag) {
-        comprehensive_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 12_click.svg';
+        comprehensive_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 12_click.png';
     } else {
-        comprehensive_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 12.svg'
+        comprehensive_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 12.png'
     }
 });
 
-berries_a.addEventListener('click', () => {
+berries_img.addEventListener('click', () => {
     Filling_switch();
     if (flag) {
-        berries_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 13_click.svg';
+        berries_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 13_click.png';
     } else {
-        berries_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 13.svg'
+        berries_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 13.png'
     }
 });
 
-citrus_filling_a.addEventListener('click', () => {
+citrus_filling_img.addEventListener('click', () => {
     Filling_switch();
     if (flag) {
-        citrus_filling_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 14_click.svg';
+        citrus_filling_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 14_click.png';
     } else {
-        citrus_filling_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 14.svg'
+        citrus_filling_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 14.png'
     }
 });
 
-lemon_a.addEventListener('click', () => {
+lemon_img.addEventListener('click', () => {
     Filling_switch();
     if (flag) {
-        lemon_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 15_click.svg';
+        lemon_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 15_click.png';
     } else {
-        lemon_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 15.svg'
+        lemon_img.src = './images/Custom_block/small_chocolate/left_sidebar/Frame 15.png'
     }
 });
 

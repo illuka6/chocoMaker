@@ -236,12 +236,12 @@ for (let i = 0; i < ingredients.length; i++) {
 
 for (let i = 0; i < ingredients.length; i++) {
     ingredients[i].addEventListener('mouseout', (e) => {
-        pistachio_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 1.svg';
-        almond_img_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse_2.svg';
-        dried_strawberries_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 3.svg';
-        dried_orange_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 4.svg';
-        dried_kiwi_fruit_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 5.svg';
-        dry_petals_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 6.svg';
+        pistachio_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 1.png';
+        almond_img_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 2.png';
+        dried_strawberries_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 3.png';
+        dried_orange_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 4.png';
+        dried_kiwi_fruit_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 5.png';
+        dry_petals_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 6.png';
     }
     )
 };
