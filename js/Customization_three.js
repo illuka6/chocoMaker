@@ -181,21 +181,21 @@ let Zone_three_brown_img = document.getElementById('Zone_three_brown_img');
 let Zone_three_green_img = document.getElementById('Zone_three_green_img');
 
 function color_Filling() {
-    Zone_three_white_img.src = './images/Custom_block/box/left_sidebar/Frame 9.svg';
-    Zone_three_almonds_img.src = './images/Custom_block/box/left_sidebar/Frame 10.svg';
-    Zone_three_blue_img.src = './images/Custom_block/box/left_sidebar/Frame 11.svg';
-    District_three_pink_img.src = './images/Custom_block/box/left_sidebar/Frame 12.svg';
-    Zone_three_brown_img.src = './images/Custom_block/box/left_sidebar/Frame 13.svg';
-    Zone_three_green_img.src = './images/Custom_block/box/left_sidebar/Frame 14.svg';
+    Zone_three_white_img.src = './images/Custom_block/box/left_sidebar/Frame9.svg';
+    Zone_three_almonds_img.src = './images/Custom_block/box/left_sidebar/Frame10.svg';
+    Zone_three_blue_img.src = './images/Custom_block/box/left_sidebar/Frame11.svg';
+    District_three_pink_img.src = './images/Custom_block/box/left_sidebar/Frame12.svg';
+    Zone_three_brown_img.src = './images/Custom_block/box/left_sidebar/Frame13.svg';
+    Zone_three_green_img.src = './images/Custom_block/box/left_sidebar/Frame14.svg';
 };
 
 let box_color = true;
 Zone_three_white.addEventListener('click', () => {
     color_Filling();
     if (box_color) {
-        Zone_three_white_img.src = './images/Custom_block/box/left_sidebar/Frame 9-click.svg';
+        Zone_three_white_img.src = './images/Custom_block/box/left_sidebar/Frame9-click.svg';
     } else {
-        Zone_three_white_img.src = './images/Custom_block/box/left_sidebar/Frame 9.svg';
+        Zone_three_white_img.src = './images/Custom_block/box/left_sidebar/Frame9.svg';
     }
 });
 
@@ -203,9 +203,9 @@ Zone_three_white.addEventListener('click', () => {
 Zone_three_almonds.addEventListener('click', () => {
     color_Filling();
     if (box_color) {
-        Zone_three_almonds_img.src = './images/Custom_block/box/left_sidebar/Frame 10-click.svg';
+        Zone_three_almonds_img.src = './images/Custom_block/box/left_sidebar/Frame10-click.svg';
     } else {
-        Zone_three_almonds_img.src = './images/Custom_block/box/left_sidebar/Frame 10.svg';
+        Zone_three_almonds_img.src = './images/Custom_block/box/left_sidebar/Frame10.svg';
     }
 });
 
@@ -213,9 +213,9 @@ Zone_three_almonds.addEventListener('click', () => {
 Zone_three_blue.addEventListener('click', () => {
     color_Filling();
     if (box_color) {
-        Zone_three_blue_img.src = './images/Custom_block/box/left_sidebar/Frame 11-click.svg';
+        Zone_three_blue_img.src = './images/Custom_block/box/left_sidebar/Frame11-click.svg';
     } else {
-        Zone_three_blue_img.src = './images/Custom_block/box/left_sidebar/Frame 11.svg';
+        Zone_three_blue_img.src = './images/Custom_block/box/left_sidebar/Frame11.svg';
     }
 });
 
@@ -225,9 +225,9 @@ Zone_three_blue.addEventListener('click', () => {
 District_three_pink.addEventListener('click', () => {
     color_Filling();
     if (box_color) {
-        District_three_pink_img.src = './images/Custom_block/box/left_sidebar/Frame 12-click.svg';
+        District_three_pink_img.src = './images/Custom_block/box/left_sidebar/Frame12-click.svg';
     } else {
-        District_three_pink_img.src = './images/Custom_block/box/left_sidebar/Frame 12.svg';
+        District_three_pink_img.src = './images/Custom_block/box/left_sidebar/Frame12.svg';
     }
 });
 
@@ -235,9 +235,9 @@ District_three_pink.addEventListener('click', () => {
 Zone_three_brown.addEventListener('click', () => {
     color_Filling();
     if (box_color) {
-        Zone_three_brown_img.src = './images/Custom_block/box/left_sidebar/Frame 13-click.svg';
+        Zone_three_brown_img.src = './images/Custom_block/box/left_sidebar/Frame13-click.svg';
     } else {
-        Zone_three_brown_img.src = './images/Custom_block/box/left_sidebar/Frame 13.svg';
+        Zone_three_brown_img.src = './images/Custom_block/box/left_sidebar/Frame13.svg';
     }
 });
 
@@ -245,9 +245,9 @@ Zone_three_brown.addEventListener('click', () => {
 Zone_three_green.addEventListener('click', () => {
     color_Filling();
     if (box_color) {
-        Zone_three_green_img.src = './images/Custom_block/box/left_sidebar/Frame 14-click.svg';
+        Zone_three_green_img.src = './images/Custom_block/box/left_sidebar/Frame14-click.svg';
     } else {
-        Zone_three_green_img.src = './images/Custom_block/box/left_sidebar/Frame 14.svg';
+        Zone_three_green_img.src = './images/Custom_block/box/left_sidebar/Frame14.svg';
     }
 });
 
@@ -267,10 +267,10 @@ let ribbon_yellow_img = document.getElementById('ribbon_yellow_img');
 let ribbon_pink_img = document.getElementById('ribbon_pink_img');
 
 function ribbon_color() {
-    ribbon_red_img.src = './images/Custom_block/box/left_sidebar/Frame 16.svg';
-    ribbon_orange_img.src = './images/Custom_block/box/left_sidebar/Frame 17.svg';
-    ribbon_yellow_img.src = './images/Custom_block/box/left_sidebar/Frame 18.svg';
-    ribbon_pink_img.src = './images/Custom_block/box/left_sidebar/Frame 19.svg';
+    ribbon_red_img.src = './images/Custom_block/box/left_sidebar/Frame16.svg';
+    ribbon_orange_img.src = './images/Custom_block/box/left_sidebar/Frame17.svg';
+    ribbon_yellow_img.src = './images/Custom_block/box/left_sidebar/Frame18.svg';
+    ribbon_pink_img.src = './images/Custom_block/box/left_sidebar/Frame19.svg';
 };
 
 
@@ -278,9 +278,9 @@ function ribbon_color() {
 ribbon_red.addEventListener('click', () => {
     ribbon_color();
     if (box_color) {
-        ribbon_red_img.src = './images/Custom_block/box/left_sidebar/Frame 16-click.svg';
+        ribbon_red_img.src = './images/Custom_block/box/left_sidebar/Frame16-click.svg';
     } else {
-        ribbon_red_img.src = './images/Custom_block/box/left_sidebar/Frame 16.svg';
+        ribbon_red_img.src = './images/Custom_block/box/left_sidebar/Frame16.svg';
     }
 });
 
@@ -290,9 +290,9 @@ ribbon_red.addEventListener('click', () => {
 ribbon_orange.addEventListener('click', () => {
     ribbon_color();
     if (box_color) {
-        ribbon_orange_img.src = './images/Custom_block/box/left_sidebar/Frame 17-click.svg';
+        ribbon_orange_img.src = './images/Custom_block/box/left_sidebar/Frame17-click.svg';
     } else {
-        ribbon_orange_img.src = './images/Custom_block/box/left_sidebar/Frame 17.svg';
+        ribbon_orange_img.src = './images/Custom_block/box/left_sidebar/Frame17.svg';
     }
 });
 
@@ -300,9 +300,9 @@ ribbon_orange.addEventListener('click', () => {
 ribbon_yellow.addEventListener('click', () => {
     ribbon_color();
     if (box_color) {
-        ribbon_yellow_img.src = './images/Custom_block/box/left_sidebar/Frame 18-click.svg';
+        ribbon_yellow_img.src = './images/Custom_block/box/left_sidebar/Frame18-click.svg';
     } else {
-        ribbon_yellow_img.src = './images/Custom_block/box/left_sidebar/Frame 18.svg';
+        ribbon_yellow_img.src = './images/Custom_block/box/left_sidebar/Frame18.svg';
     }
 });
 
@@ -310,9 +310,9 @@ ribbon_yellow.addEventListener('click', () => {
 ribbon_pink.addEventListener('click', () => {
     ribbon_color();
     if (box_color) {
-        ribbon_pink_img.src = './images/Custom_block/box/left_sidebar/Frame 19-click.svg';
+        ribbon_pink_img.src = './images/Custom_block/box/left_sidebar/Frame19-click.svg';
     } else {
-        ribbon_pink_img.src = './images/Custom_block/box/left_sidebar/Frame 19.svg';
+        ribbon_pink_img.src = './images/Custom_block/box/left_sidebar/Frame19.svg';
     }
 });
 
@@ -333,10 +333,10 @@ let bow_tie3_img = document.getElementById('bow_tie3_img');
 let bow_tie4_img = document.getElementById('bow_tie4_img');
 
 function bow_tie() {
-    bow_tie1_img.src = './images/Custom_block/box/left_sidebar/Frame 21.svg';
-    bow_tie2_img.src = './images/Custom_block/box/left_sidebar/Frame 22.svg';
-    bow_tie3_img.src = './images/Custom_block/box/left_sidebar/Frame 23.svg';
-    bow_tie4_img.src = './images/Custom_block/box/left_sidebar/Frame 24.svg';
+    bow_tie1_img.src = './images/Custom_block/box/left_sidebar/Frame21.svg';
+    bow_tie2_img.src = './images/Custom_block/box/left_sidebar/Frame22.svg';
+    bow_tie3_img.src = './images/Custom_block/box/left_sidebar/Frame23.svg';
+    bow_tie4_img.src = './images/Custom_block/box/left_sidebar/Frame24.svg';
 };
 
 
@@ -344,9 +344,9 @@ function bow_tie() {
 bow_tie1.addEventListener('click', () => {
     bow_tie();
     if (box_color) {
-        bow_tie1_img.src = './images/Custom_block/box/left_sidebar/Frame 21_click.svg';
+        bow_tie1_img.src = './images/Custom_block/box/left_sidebar/Frame21_click.svg';
     } else {
-        bow_tie1_img.src = './images/Custom_block/box/left_sidebar/Frame 21.svg';
+        bow_tie1_img.src = './images/Custom_block/box/left_sidebar/Frame21.svg';
     }
 });
 
@@ -356,9 +356,9 @@ bow_tie1.addEventListener('click', () => {
 bow_tie2.addEventListener('click', () => {
     bow_tie();
     if (box_color) {
-        bow_tie2_img.src = './images/Custom_block/box/left_sidebar/Frame 22_click.svg';
+        bow_tie2_img.src = './images/Custom_block/box/left_sidebar/Frame22_click.svg';
     } else {
-        bow_tie2_img.src = './images/Custom_block/box/left_sidebar/Frame 22.svg';
+        bow_tie2_img.src = './images/Custom_block/box/left_sidebar/Frame22.svg';
     }
 });
 
@@ -366,9 +366,9 @@ bow_tie2.addEventListener('click', () => {
 bow_tie3.addEventListener('click', () => {
     bow_tie();
     if (box_color) {
-        bow_tie3_img.src = './images/Custom_block/box/left_sidebar/Frame 23_click.svg';
+        bow_tie3_img.src = './images/Custom_block/box/left_sidebar/Frame23_click.svg';
     } else {
-        bow_tie3_img.src = './images/Custom_block/box/left_sidebar/Frame 23.svg';
+        bow_tie3_img.src = './images/Custom_block/box/left_sidebar/Frame23.svg';
     }
 });
 
@@ -376,9 +376,9 @@ bow_tie3.addEventListener('click', () => {
 bow_tie4.addEventListener('click', () => {
     bow_tie();
     if (box_color) {
-        bow_tie4_img.src = './images/Custom_block/box/left_sidebar/Frame 24_click.svg';
+        bow_tie4_img.src = './images/Custom_block/box/left_sidebar/Frame24_click.svg';
     } else {
-        bow_tie4_img.src = './images/Custom_block/box/left_sidebar/Frame 24.svg';
+        bow_tie4_img.src = './images/Custom_block/box/left_sidebar/Frame24.svg';
     }
 });
 

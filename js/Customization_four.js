@@ -226,21 +226,21 @@ let Zone_four_brown_img = document.getElementById('Zone_four_brown_img');
 let Zone_four_Green_img = document.getElementById('Zone_four_Green_img');
 
 function card_Filling() {
-    Zone_four_white_img.src = './images/Custom_block/box/left_sidebar/Frame 9.svg';
-    Zone_four_Almonds_img.src = './images/Custom_block/box/left_sidebar/Frame 10.svg';
-    Zone_four_Blue_img.src = './images/Custom_block/box/left_sidebar/Frame 11.svg';
-    Zone_four_pink_img.src = './images/Custom_block/box/left_sidebar/Frame 12.svg';
-    Zone_four_brown_img.src = './images/Custom_block/box/left_sidebar/Frame 13.svg';
-    Zone_four_Green_img.src = './images/Custom_block/box/left_sidebar/Frame 14.svg';
+    Zone_four_white_img.src = './images/Custom_block/box/left_sidebar/Frame9.svg';
+    Zone_four_Almonds_img.src = './images/Custom_block/box/left_sidebar/Frame10.svg';
+    Zone_four_Blue_img.src = './images/Custom_block/box/left_sidebar/Frame11.svg';
+    Zone_four_pink_img.src = './images/Custom_block/box/left_sidebar/Frame12.svg';
+    Zone_four_brown_img.src = './images/Custom_block/box/left_sidebar/Frame13.svg';
+    Zone_four_Green_img.src = './images/Custom_block/box/left_sidebar/Frame14.svg';
 };
 
 let card_color = true;
 Zone_four_white.addEventListener('click', () => {
     card_Filling();
     if (card_color) {
-        Zone_four_white_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 2_click.svg';
+        Zone_four_white_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame2_click.svg';
     } else {
-        Zone_four_white_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 2.svg';
+        Zone_four_white_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame2.svg';
     }
 });
 
@@ -248,9 +248,9 @@ Zone_four_white.addEventListener('click', () => {
 Zone_four_Almonds.addEventListener('click', () => {
     card_Filling();
     if (card_color) {
-        Zone_four_Almonds_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 3_click.svg';
+        Zone_four_Almonds_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame3_click.svg';
     } else {
-        Zone_four_Almonds_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 3.svg';
+        Zone_four_Almonds_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame3.svg';
     }
 });
 
@@ -258,9 +258,9 @@ Zone_four_Almonds.addEventListener('click', () => {
 Zone_four_Blue.addEventListener('click', () => {
     card_Filling();
     if (card_color) {
-        Zone_four_Blue_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 4_click.svg';
+        Zone_four_Blue_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame4_click.svg';
     } else {
-        Zone_four_Blue_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 4.svg';
+        Zone_four_Blue_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame4.svg';
     }
 });
 
@@ -270,9 +270,9 @@ Zone_four_Blue.addEventListener('click', () => {
 Zone_four_pink.addEventListener('click', () => {
     card_Filling();
     if (card_color) {
-        Zone_four_pink_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 5_click.svg';
+        Zone_four_pink_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame5_click.svg';
     } else {
-        Zone_four_pink_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 5.svg';
+        Zone_four_pink_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame5.svg';
     }
 });
 
@@ -280,9 +280,9 @@ Zone_four_pink.addEventListener('click', () => {
 Zone_four_brown.addEventListener('click', () => {
     card_Filling();
     if (card_color) {
-        Zone_four_brown_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 6_click.svg';
+        Zone_four_brown_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame6_click.svg';
     } else {
-        Zone_four_brown_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 6.svg';
+        Zone_four_brown_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame6.svg';
     }
 });
 
@@ -290,9 +290,9 @@ Zone_four_brown.addEventListener('click', () => {
 Zone_four_Green.addEventListener('click', () => {
     card_Filling();
     if (card_color) {
-        Zone_four_Green_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 7_click.svg';
+        Zone_four_Green_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame7_click.svg';
     } else {
-        Zone_four_Green_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 7.svg';
+        Zone_four_Green_img.src = './images/Custom_block/Customized_cards/left_sidebar/Frame7.svg';
     }
 });
 
@@ -306,18 +306,18 @@ let left_sidebar_four_page_div3_div4_div_img2 = document.getElementById('left_si
 let left_sidebar_four_page_div3_div4_div_img3 = document.getElementById('left_sidebar_four_page_div3_div4_div_img3');
 
 function text_color() {
-    left_sidebar_four_page_div3_div4_div_img1.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 12.svg';
-    left_sidebar_four_page_div3_div4_div_img2.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 13.svg';
-    left_sidebar_four_page_div3_div4_div_img3.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 104.svg';
+    left_sidebar_four_page_div3_div4_div_img1.src = './images/Custom_block/Customized_cards/left_sidebar/Frame12.svg';
+    left_sidebar_four_page_div3_div4_div_img2.src = './images/Custom_block/Customized_cards/left_sidebar/Frame13.svg';
+    left_sidebar_four_page_div3_div4_div_img3.src = './images/Custom_block/Customized_cards/left_sidebar/Frame104.svg';
 };
 
 let flag = true;
 left_sidebar_four_page_div3_div4_diva1.addEventListener('click', () => {
     text_color();
     if (flag) {
-        left_sidebar_four_page_div3_div4_div_img1.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 12_click.svg';
+        left_sidebar_four_page_div3_div4_div_img1.src = './images/Custom_block/Customized_cards/left_sidebar/Frame12_click.svg';
     } else {
-        left_sidebar_four_page_div3_div4_div_img1.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 12.svg';
+        left_sidebar_four_page_div3_div4_div_img1.src = './images/Custom_block/Customized_cards/left_sidebar/Frame12.svg';
     }
 });
 
@@ -325,9 +325,9 @@ left_sidebar_four_page_div3_div4_diva1.addEventListener('click', () => {
 left_sidebar_four_page_div3_div4_diva2.addEventListener('click', () => {
     text_color();
     if (flag) {
-        left_sidebar_four_page_div3_div4_div_img2.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 13_click.svg';
+        left_sidebar_four_page_div3_div4_div_img2.src = './images/Custom_block/Customized_cards/left_sidebar/Frame13_click.svg';
     } else {
-        left_sidebar_four_page_div3_div4_div_img2.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 13.svg';
+        left_sidebar_four_page_div3_div4_div_img2.src = './images/Custom_block/Customized_cards/left_sidebar/Frame13.svg';
     }
 });
 
@@ -335,9 +335,9 @@ left_sidebar_four_page_div3_div4_diva2.addEventListener('click', () => {
 left_sidebar_four_page_div3_div4_diva3.addEventListener('click', () => {
     text_color();
     if (flag) {
-        left_sidebar_four_page_div3_div4_div_img3.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 104_click.svg';
+        left_sidebar_four_page_div3_div4_div_img3.src = './images/Custom_block/Customized_cards/left_sidebar/Frame104_click.svg';
     } else {
-        left_sidebar_four_page_div3_div4_div_img3.src = './images/Custom_block/Customized_cards/left_sidebar/Frame 104.svg';
+        left_sidebar_four_page_div3_div4_div_img3.src = './images/Custom_block/Customized_cards/left_sidebar/Frame104.svg';
     }
 });
 

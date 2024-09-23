@@ -263,12 +263,12 @@ let strawberry_chocolate = document.getElementById('strawberry_chocolate');
 let matcha_chocolate = document.getElementById('matcha_chocolate');
 let caramel_chocolate = document.getElementById('caramel_chocolate');
 function allImg() {
-    milk_chocolate.src = './images/Custom_block/left_menu/first_floor/Frame 1.svg';
-    dark_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 2.svg';
-    white_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 3.svg';
-    strawberry_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 4.svg';
-    matcha_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 5.svg';
-    caramel_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 6.svg';
+    milk_chocolate.src = './images/Custom_block/left_menu/first_floor/Frame1.svg';
+    dark_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse2.svg';
+    white_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse3.svg';
+    strawberry_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse4.svg';
+    matcha_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse5.svg';
+    caramel_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse6.svg';
 };
 
 
@@ -290,9 +290,9 @@ left_menu_img1[0].addEventListener('click', function () {
     middle_box_allimg();
     middle_box_img1.style.display = 'block';
     if (flag) {
-        milk_chocolate.src = './images/Custom_block/left_menu/first_floor/Frame 1_hover.svg';
+        milk_chocolate.src = './images/Custom_block/left_menu/first_floor/Frame1_hover.svg';
     } else {
-        milk_chocolate.src = './images/Custom_block/left_menu/first_floor/Frame 1.svg';
+        milk_chocolate.src = './images/Custom_block/left_menu/first_floor/Frame1.svg';
     }
 });
 /* ↑↑牛奶巧克力選擇區塊↑↑ */
@@ -309,9 +309,9 @@ left_menu_img2[0].addEventListener('click', function () {
     middle_box_allimg();
     middle_box_img5.style.display = 'block';
     if (flag) {
-        dark_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 2_hover.svg';
+        dark_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse2_hover.svg';
     } else {
-        dark_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 2.svg';
+        dark_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse2.svg';
     }
 });
 
@@ -327,9 +327,9 @@ left_menu_img3[0].addEventListener('click', function () {
     middle_box_allimg();
     middle_box_img6.style.display = 'block';
     if (flag) {
-        white_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 3_hover.svg';
+        white_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse3_hover.svg';
     } else {
-        white_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 3.svg';
+        white_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse3.svg';
     }
 });
 /* ↑↑白巧克力選擇區塊↑↑ */
@@ -346,9 +346,9 @@ left_menu_img4[0].addEventListener('click', function () {
     middle_box_allimg();
     middle_box_img2.style.display = 'block';
     if (flag) {
-        strawberry_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 4_hover.svg';
+        strawberry_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse4_hover.svg';
     } else {
-        strawberry_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 4.svg'
+        strawberry_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse4.svg'
     }
 });
 /* ↑↑草莓巧克力選擇區塊↑↑ */
@@ -369,9 +369,9 @@ left_menu_img5[0].addEventListener('click', function () {
     middle_box_allimg();
     middle_box_img3.style.display = 'block';
     if (flag) {
-        matcha_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 5_hover.svg';
+        matcha_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse5_hover.svg';
     } else {
-        matcha_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 5.svg'
+        matcha_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse5.svg'
     }
 });
 /* ↑↑抹茶巧克力選擇區塊↑↑ */
@@ -389,9 +389,9 @@ left_menu_img6[0].addEventListener('click', function () {
     middle_box_allimg();
     middle_box_img4.style.display = 'block';
     if (flag) {
-        caramel_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 6_hover.svg';
+        caramel_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse6_hover.svg';
     } else {
-        caramel_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse 6.svg'
+        caramel_chocolate.src = './images/Custom_block/left_menu/first_floor/Ellipse6.svg'
     }
 });
 /* ↑↑抹茶巧克力選擇區塊↑↑ */
@@ -509,10 +509,10 @@ let left_menu3_p2_a1_img4 = document.getElementById('left_menu3_p2_a1_img4');
 
 
 function allChocolateText() {
-    left_menu3_p2_a1_img1.src = './images/Custom_block/left_menu/third_floor/Ellipse 1.svg';
-    left_menu3_p2_a1_img2.src = './images/Custom_block/left_menu/third_floor/Ellipse 2.svg';
-    left_menu3_p2_a1_img3.src = './images/Custom_block/left_menu/third_floor/Ellipse 3.svg';
-    left_menu3_p2_a1_img4.src = './images/Custom_block/left_menu/third_floor/Ellipse 4.svg';
+    left_menu3_p2_a1_img1.src = './images/Custom_block/left_menu/third_floor/Ellipse1.svg';
+    left_menu3_p2_a1_img2.src = './images/Custom_block/left_menu/third_floor/Ellipse2.svg';
+    left_menu3_p2_a1_img3.src = './images/Custom_block/left_menu/third_floor/Ellipse3.svg';
+    left_menu3_p2_a1_img4.src = './images/Custom_block/left_menu/third_floor/Ellipse4.svg';
 }
 
 
@@ -520,36 +520,36 @@ function allChocolateText() {
 left_menu3_p2_a1.addEventListener('click', () => {
     allChocolateText();
     if (flag) {
-        left_menu3_p2_a1_img1.src = './images/Custom_block/left_menu/third_floor/Ellipse 1_click.svg';
+        left_menu3_p2_a1_img1.src = './images/Custom_block/left_menu/third_floor/Ellipse1_click.svg';
     } else {
-        left_menu3_p2_a1_img1.src = './images/Custom_block/left_menu/third_floor/Ellipse 1.svg'
+        left_menu3_p2_a1_img1.src = './images/Custom_block/left_menu/third_floor/Ellipse1.svg'
     }
 });
 
 left_menu3_p2_a2.addEventListener('click', () => {
     allChocolateText();
     if (flag) {
-        left_menu3_p2_a1_img2.src = './images/Custom_block/left_menu/third_floor/Ellipse 2_click.svg';
+        left_menu3_p2_a1_img2.src = './images/Custom_block/left_menu/third_floor/Ellipse2_click.svg';
     } else {
-        left_menu3_p2_a1_img2.src = './images/Custom_block/left_menu/third_floor/Ellipse 2.svg'
+        left_menu3_p2_a1_img2.src = './images/Custom_block/left_menu/third_floor/Ellipse2.svg'
     }
 });
 
 left_menu3_p2_a3.addEventListener('click', () => {
     allChocolateText();
     if (flag) {
-        left_menu3_p2_a1_img3.src = './images/Custom_block/left_menu/third_floor/Ellipse 3_click.svg';
+        left_menu3_p2_a1_img3.src = './images/Custom_block/left_menu/third_floor/Ellipse3_click.svg';
     } else {
-        left_menu3_p2_a1_img3.src = './images/Custom_block/left_menu/third_floor/Ellipse 3.svg'
+        left_menu3_p2_a1_img3.src = './images/Custom_block/left_menu/third_floor/Ellipse3.svg'
     }
 });
 
 left_menu3_p2_a4.addEventListener('click', () => {
     allChocolateText();
     if (flag) {
-        left_menu3_p2_a1_img4.src = './images/Custom_block/left_menu/third_floor/Ellipse 4_click.svg';
+        left_menu3_p2_a1_img4.src = './images/Custom_block/left_menu/third_floor/Ellipse4_click.svg';
     } else {
-        left_menu3_p2_a1_img4.src = './images/Custom_block/left_menu/third_floor/Ellipse 4.svg'
+        left_menu3_p2_a1_img4.src = './images/Custom_block/left_menu/third_floor/Ellipse4.svg'
     }
 });
 

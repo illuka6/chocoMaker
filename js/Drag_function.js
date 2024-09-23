@@ -220,15 +220,16 @@ for (let i = 0; i < ingredients.length; i++) {
     )
 };
 
+
 /* 滑鼠點擊後切換圖片 */
 for (let i = 0; i < ingredients.length; i++) {
     ingredients[i].addEventListener('mouseover', (e) => {
-        pistachio_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 1-1.svg';
-        almond_img_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse_2-2.svg';
-        dried_strawberries_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 3-3.svg';
-        dried_orange_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 4-4.svg';
-        dried_kiwi_fruit_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 5-5.svg';
-        dry_petals_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 6-6.svg';
+        pistachio_img.src = './images/Custom_block/left_menu/second_floor/Ellipse1-1.svg';
+        almond_img_img.src = './images/Custom_block/left_menu/second_floor/Ellipse_2-2.svg';
+        dried_strawberries_img.src = './images/Custom_block/left_menu/second_floor/Ellipse3-3.svg';
+        dried_orange_img.src = './images/Custom_block/left_menu/second_floor/Ellipse4-4.svg';
+        dried_kiwi_fruit_img.src = './images/Custom_block/left_menu/second_floor/Ellipse5-5.svg';
+        dry_petals_img.src = './images/Custom_block/left_menu/second_floor/Ellipse6-6.svg';
     }
     )
 };
@@ -236,12 +237,12 @@ for (let i = 0; i < ingredients.length; i++) {
 
 for (let i = 0; i < ingredients.length; i++) {
     ingredients[i].addEventListener('mouseout', (e) => {
-        pistachio_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 1.png';
-        almond_img_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 2.png';
-        dried_strawberries_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 3.png';
-        dried_orange_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 4.png';
-        dried_kiwi_fruit_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 5.png';
-        dry_petals_img.src = '../images/Custom_block/left_menu/second_floor/Ellipse 6.png';
+        pistachio_img.src = './images/Custom_block/left_menu/second_floor/Ellipse1.png';
+        almond_img_img.src = './images/Custom_block/left_menu/second_floor/Ellipse2.png';
+        dried_strawberries_img.src = './images/Custom_block/left_menu/second_floor/Ellipse3.png';
+        dried_orange_img.src = './images/Custom_block/left_menu/second_floor/Ellipse4.png';
+        dried_kiwi_fruit_img.src = './images/Custom_block/left_menu/second_floor/Ellipse5.png';
+        dry_petals_img.src = './images/Custom_block/left_menu/second_floor/Ellipse6.png';
     }
     )
 };
@@ -255,7 +256,7 @@ middle_div1_box_div1.addEventListener('drop', (e) => {
 
 /* 監聽滑鼠座標位置 */
 window.addEventListener('mousemove', (e) => {
-  });
+});
 
 /* 監聽滑鼠座標位置是否在框框內 */
 
@@ -603,7 +604,7 @@ for (let i = 0; i < allBtnevent.length; i++) {
                             Delete_parent_box = Lock_picture.parentNode;
                             Lock_picture.remove();
                             console.log('你按了刪除');
-                                                    }
+                        }
                         if (Lock_picture2) {
                             Delete_box2 = Lock_picture2;
                             Delete_parent_box2 = Lock_picture2.parentNode;
@@ -611,7 +612,7 @@ for (let i = 0; i < allBtnevent.length; i++) {
                             console.log('你按了刪除');
                         }
                     }));
-                                      if (menu_below_li_right3.addEventListener('click', () => {
+                    if (menu_below_li_right3.addEventListener('click', () => {
                         console.log('0000');
                         location.reload();
                     }));
@@ -636,7 +637,7 @@ for (let i = 0; i < allBtnevent.length; i++) {
                             flip2 = flip2 - 180;
                             Lock_picture2.style.transform = `rotate(${flip2}deg)`;
                         };
-                                        }));
+                    }));
                 } else {
                     console.log('目標區域已達上限');
                     console.log(allBox)
