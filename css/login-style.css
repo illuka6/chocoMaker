@@ -79,7 +79,7 @@ section {
   font-weight: 600;
   background-color: white;
   width: 420px;
-  height: 80%;
+  height: 450px;
   margin: auto;
   border-radius: 5px;
   padding: 45px 20px;
@@ -91,7 +91,6 @@ form {
 }
  .login_box .box_item {
   width: 80%;
-  height: 6vh;
   margin: 16px auto;
   padding: 5px;
   border-radius: 5px;
